@@ -1,0 +1,22 @@
+* {
+  background-color: #121212;
+  color: white;
+}
+
+/*--------------- HEAD SECTION ---------------*/
+
+/*--------------- BODY SECTION ---------------*/
+
+li a {
+  color: #ff4c4c;
+}
+
+/*--------------- FOOTER SECTION ---------------*/
+footer {
+  height: 300vh;
+  margin: 0 1rem;
+}
+
+footer p {
+  color: #ffffff; /* Use 'color' property for text color */
+}
