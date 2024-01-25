@@ -1,22 +1,59 @@
 * {
-  background-color: #121212;
+  background-color: #19181c;
+  color: #777777;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/*------------------ HEAD SECTION ------------------*/
+
+/*--------------- Navigation SECTION ---------------*/
+
+#top-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10; /* Set a high z-index to ensure it appears above other elements */
+}
+
+#top-nav .nav-owner {
   color: white;
 }
 
-/*--------------- HEAD SECTION ---------------*/
+nav {
+  justify-content: space-around;
+  align-items: center;
+  height: 10vh;
+}
 
-/*--------------- BODY SECTION ---------------*/
+nav,
+.nav-links {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+  font-size: 1.5rem;
+}
 
-li a {
-  color: #ff4c4c;
+.nav-links a {
+  text-decoration: none; /* Remove underline from text links */
+  font-size: 1.5rem;
+  padding: 10px;
+}
+
+.nav-links a:hover {
+  color: white;
 }
 
 /*--------------- FOOTER SECTION ---------------*/
 footer {
-  height: 300vh;
+  height: 26vh;
   margin: 0 1rem;
 }
 
 footer p {
-  color: #ffffff; /* Use 'color' property for text color */
+  text-align: center;
+  color: white;
 }
