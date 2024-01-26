@@ -22,8 +22,7 @@ h2 {
   margin-top: 100px;
 }
 section {
-  /* height: 100vh; */
-  margin: 0 10rem;
+  /* margin: 0 10rem; */
   box-sizing: border-box;
   min-height: fit-content;
 }
