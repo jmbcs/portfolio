@@ -1,6 +1,10 @@
 * {
-  background-color: #19181c;
-  color: #777777;
+  background-color: #121212;
+  color: white;
+}
+
+body {
+  font-family: sans-serif;
 }
 
 html {
@@ -8,6 +12,16 @@ html {
 }
 
 /*------------------ HEAD SECTION ------------------*/
+h2 {
+  margin-top: 100px;
+}
+section {
+  padding-top: 4vh;
+  height: 96vh;
+  margin: 0 10rem;
+  box-sizing: border-box;
+  min-height: fit-content;
+}
 
 /*--------------- Navigation SECTION ---------------*/
 
@@ -17,14 +31,43 @@ html {
   left: 0;
   width: 100%;
   z-index: 10; /* Set a high z-index to ensure it appears above other elements */
+  height: 5%;
+  transition: transform 0.25s ease-in-out; /* Add a smooth transition effect */
+}
+
+#top-nav,
+#top-nav .nav-links,
+#top-nav .nav-owner,
+#top-nav a,
+#top-nav div {
+  background-color: #121212;
+  z-index: 0;
+}
+
+#top-nav.show {
+  transform: translateY(0);
+}
+
+#top-nav.hide {
+  transform: translateY(-100%);
 }
 
 #top-nav .nav-owner {
+  margin-left: 5vw;
+}
+#top-nav .nav-links {
+  margin-right: 5vw;
+}
+
+#top-nav .nav-owner,
+.nav-links a {
   color: white;
+  font-size: 1.2rem;
+  padding: 10px;
 }
 
 nav {
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   height: 10vh;
 }
@@ -33,18 +76,53 @@ nav,
 .nav-links {
   display: flex;
   gap: 2rem;
-  list-style: none;
-  font-size: 1.5rem;
+  font-size: 0;
 }
 
 .nav-links a {
-  text-decoration: none; /* Remove underline from text links */
-  font-size: 1.5rem;
-  padding: 10px;
+  text-decoration: none;
 }
 
 .nav-links a:hover {
-  color: white;
+  color: #ff4c4c;
+}
+
+/*--------------- sub SECTION ---------------*/
+
+#profile {
+  height: 75vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#profile .profile-name,
+#profile .profile-job {
+  font-size: 2rem;
+  top: 5vh;
+  position: relative;
+  align-items: center;
+  text-align: center;
+  margin: auto;
+}
+
+#profile .profile-job {
+  color: #ff4c4c;
+}
+
+#techstack {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#techstack img {
+  width: 30px;
+  height: 30px;
+  margin-left: 15px;
+  margin-right: 15px;
+  margin-top: 5rem;
+  /* top: 1vh; */
 }
 
 /*--------------- FOOTER SECTION ---------------*/
