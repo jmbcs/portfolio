@@ -1,3 +1,4 @@
+/*------------------ Generic SECTION ------------------*/
 * {
   background-color: #121212;
   color: white;
@@ -5,13 +6,13 @@
 
 body {
   font-family: sans-serif;
+  overflow-x: hidden;
 }
 
 html {
   scroll-behavior: smooth;
 }
 
-/*------------------ HEAD SECTION ------------------*/
 h2 {
   margin-top: 100px;
 }
@@ -25,6 +26,20 @@ section {
 
 /*--------------- Navigation SECTION ---------------*/
 
+nav {
+  justify-content: space-between;
+  align-items: center;
+  height: 10vh;
+  overflow: hidden;
+}
+
+nav,
+.nav-links {
+  display: flex;
+  gap: 2rem;
+  font-size: 0;
+}
+
 #top-nav {
   position: fixed;
   top: 0;
@@ -33,15 +48,6 @@ section {
   z-index: 10; /* Set a high z-index to ensure it appears above other elements */
   height: 5%;
   transition: transform 0.25s ease-in-out; /* Add a smooth transition effect */
-}
-
-#top-nav,
-#top-nav .nav-links,
-#top-nav .nav-owner,
-#top-nav a,
-#top-nav div {
-  background-color: #121212;
-  z-index: 0;
 }
 
 #top-nav.show {
@@ -66,17 +72,13 @@ section {
   padding: 10px;
 }
 
-nav {
-  justify-content: space-between;
-  align-items: center;
-  height: 10vh;
-}
-
-nav,
-.nav-links {
-  display: flex;
-  gap: 2rem;
-  font-size: 0;
+#top-nav,
+#top-nav .nav-links,
+#top-nav .nav-owner,
+#top-nav a,
+#top-nav div {
+  background-color: #121212;
+  z-index: 0;
 }
 
 .nav-links a {
@@ -85,6 +87,7 @@ nav,
 
 .nav-links a:hover {
   color: #ff4c4c;
+  background-color: #a7a7a7;
 }
 
 /*--------------- sub SECTION ---------------*/
