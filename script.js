@@ -32,36 +32,40 @@ window.addEventListener("scroll", () => {
 //   menu.classList.toggle("open");
 //   icon.classList.toggle("open");
 // }
-
-function toggleMenu() {
-  var menu = document.getElementById("hamburger-menu");
+function toggleHamburgerMenu() {
+  var menuHamburger = document.getElementById("hamburger-menu");
   var mainContent = document.getElementById("main-content");
-  if (menu.style.left === "-100%") {
-    menu.style.left = "0";
+  var menuBar = document.getElementById("menu-icon");
+
+  if (menuHamburger.style.left === "-100%") {
+    menuHamburger.style.left = "0";
     mainContent.classList.add("pushed");
+    menuBar.innerHTML = "&#10006; Close";
+
     // Add event listener to close menu when clicking outside
     document.addEventListener("click", closeMenuOutside);
   } else {
-    menu.style.left = "-100%";
+    menuHamburger.style.left = "-100%";
     mainContent.classList.remove("pushed");
     // Remove event listener when menu is closed
     document.removeEventListener("click", closeMenuOutside);
+    menuBar.innerHTML = "&#9776; Menu";
   }
 }
 
-function closeMenu() {
-  var menu = document.getElementById("hamburger-menu");
+function closeHamburgerMenu() {
+  var menuHamburger = document.getElementById("hamburger-menu");
   var mainContent = document.getElementById("main-content");
-  menu.style.left = "-100%";
+  menuHamburger.style.left = "-100%";
   mainContent.classList.remove("pushed");
   // Remove event listener when menu is closed
   document.removeEventListener("click", closeMenuOutside);
 }
 
 function closeMenuOutside(event) {
-  var menu = document.getElementById("hamburger-menu");
-  var menuIcon = document.getElementById("menu-icon");
-  if (!menu.contains(event.target) && event.target !== menuIcon) {
+  var menuHamburger = document.getElementById("hamburger-menu");
+  var menuIcon = document.getElementById("menu-bar");
+  if (!menuHamburger.contains(event.target) && event.target !== menuIcon) {
     closeMenu();
   }
 }
