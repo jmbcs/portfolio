@@ -64,8 +64,8 @@ function closeHamburgerMenu() {
 
 function closeMenuOutside(event) {
   var menuHamburger = document.getElementById("hamburger-menu");
-  var menuIcon = document.getElementById("menu-bar");
+  var menuIcon = document.getElementById("menu-icon");
   if (!menuHamburger.contains(event.target) && event.target !== menuIcon) {
-    closeMenu();
+    closeHamburgerMenu();
   }
 }
