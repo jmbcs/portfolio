@@ -8,8 +8,11 @@
 
   background-color: #121212;
   color: white;
+  -webkit-tap-highlight-color: transparent !important;
 }
-
+/* a {
+  -webkit-tap-highlight-color: transparent !important;
+} */
 body {
   font-family: "Poppins", sans-serif;
 }
@@ -78,17 +81,20 @@ section {
   position: relative;
   z-index: 1;
 }
+
 .techstack {
   display: flex;
   align-items: center;
   justify-content: center;
 }
+
 .techstack img {
   min-width: 30px;
   max-width: 30px;
 
   margin: 5rem 15px 0;
 }
+
 /*--------------- Footer SECTION ---------------*/
 
 footer {
@@ -106,7 +112,8 @@ footer p {
 #menu-icon {
   position: fixed;
   cursor: pointer;
-  padding: 15px; /* Adjust this value as needed */
+  padding: 15px;
+  /* Adjust this value as needed */
   background-color: #333;
   color: #fff;
   border-radius: 20px;
@@ -114,9 +121,9 @@ footer p {
   z-index: 1000;
   top: 2vh;
   left: 2vw;
-  width: calc(
-    100% - 4vw - 30px
-  ); /* 30px is twice the padding value (15px on each side) */
+  width: calc(100% - 4vw - 30px);
+
+  /* 30px is twice the padding value (15px on each side) */
   &:hover {
     color: red;
   }
@@ -125,6 +132,7 @@ footer p {
 #menu-icon.show {
   transform: translateY(0);
 }
+
 #menu-icon.hide {
   transform: translateY(-200%);
 }
