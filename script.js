@@ -4,7 +4,7 @@
 let lastScrollPosition = 0;
 let scrollingTimer;
 
-const topNav = document.getElementById("top-nav");
+const topNav = document.getElementById("desktop-nav");
 
 window.addEventListener("scroll", () => {
   clearTimeout(scrollingTimer);
@@ -25,3 +25,10 @@ window.addEventListener("scroll", () => {
     lastScrollPosition = currentScrollPosition;
   });
 });
+
+function toggleMenu() {
+  const menu = document.querySelector(".menu-links");
+  const icon = document.querySelector(".hamburger-icon");
+  menu.classList.toggle("open");
+  icon.classList.toggle("open");
+}

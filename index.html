@@ -6,13 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>My Portfolio</title>
     <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="profile.css" />
-    <!-- <link rel="stylesheet" href="mediaqueries.css" /> -->
+   
+    <link rel="stylesheet" href="mediaqueries.css" />
   </head>
 
   <body>
-    <nav id="top-nav" class="show">
-      <div class="nav-owner">Júlio Silva</div>
+    <nav id="desktop-nav" class="show">
+      <div class="logo">Júlio Silva</div>
       <div>
         <ul class="nav-links">
           <li><a href="#about">About</a></li>
@@ -23,37 +23,50 @@
         </ul>
       </div>
     </nav>
-    <section id="profile">
-      <div class="container">
-        <div class="box">
-          <div class="spin-container">
-            <div class="shape">
-              <div class="bd">
-                <img src="./assets/profile.jpg" alt="Enric Domingo" />
-              </div>
-            </div>
-          </div>
-          <h2 class="profile-name">Júlio Silva</h2>
-          <h2 class="profile-job">Software Developer</h2>
-          <div id="techstack">
-            <img src="https://img.icons8.com/color/96/000000/python.png" />
-            <img src="https://www.svgrepo.com/download/331370/docker.svg" />
-            <img
-              src="https://upload.wikimedia.org/wikipedia/commons/3/3b/Grafana_icon.svg"
-            />
-            <img
-              src="https://static-00.iconduck.com/assets.00/prometheus-icon-2047x2048-b3aicxlu.png"
-            />
-            <img
-              src="https://cdn-icons-png.flaticon.com/512/5968/5968342.png"
-            />
-            <img
-              src="https://static-00.iconduck.com/assets.00/github-icon-512x497-oppthre2.png"
-            />
-          </div>
+
+    <nav id="hamburger-nav">
+      <div class="logo">Júlio Silva</div>
+      <div class="hamburger-menu">
+        <div class="hamburger-icon" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
         </div>
+        <div class="menu-links">
+          <li><a href="#about" onclick="toggleMenu()">About</a></li>
+          <li><a href="#experience"  onclick="toggleMenu()">Experience</a></li>
+          <li><a href="#skills"  onclick="toggleMenu()">Skills</a></li>
+          <li><a href="#projects"  onclick="toggleMenu()">Projects</a></li>
+          <li><a href="#contact"  onclick="toggleMenu()">Contact</a></li>
+ 
+      </div>
+    </nav>
+    <section id="profile">
+      <div class="section__pic-container">
+        <img src="assets/profile.jpg" alt="John Doe profile picture" />
+      </div>
+      <h2 class="profile-name">Júlio Silva</h2> 
+      <br> <br>
+      <h2 class="profile-job">Software Developer</h3>
+      <div class="techstack">
+        <img src="https://img.icons8.com/color/96/000000/python.png" />
+        <img src="https://www.svgrepo.com/download/331370/docker.svg" />
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/3/3b/Grafana_icon.svg"
+        />
+        <img
+          src="https://static-00.iconduck.com/assets.00/prometheus-icon-2047x2048-b3aicxlu.png"
+        />
+        <img
+          src="https://cdn-icons-png.flaticon.com/512/5968/5968342.png"
+        />
+        <img
+          src="https://static-00.iconduck.com/assets.00/github-icon-512x497-oppthre2.png"
+        />
       </div>
     </section>
+    
+   
     <section id="randomtext"></section>
     <div>
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat eveniet
