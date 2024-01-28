@@ -18,6 +18,10 @@ body {
   font-family: "Poppins", sans-serif;
 }
 
+body.menu-open {
+  overflow: hidden;
+}
+
 body,
 ul {
   margin-right: 1.5vw;
@@ -60,9 +64,6 @@ section {
   min-height: fit-content;
 }
 
-body.menu-open {
-  overflow: hidden;
-}
 
 
 
@@ -169,7 +170,7 @@ body.menu-open {
 }
 
 
-.section-container {
+.section__pic-container {
   display: flex;
 }
 

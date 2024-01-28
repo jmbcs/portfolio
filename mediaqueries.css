@@ -107,7 +107,7 @@
   }
 
   #nav.active #menu {
-    height: 60vh;
+    height: 35rem;
     border-bottom: 5px solid;
     visibility: visible;
     overflow-y: hidden;
