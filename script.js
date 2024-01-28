@@ -6,15 +6,6 @@ function toggleMenu(event) {
   nav.classList.toggle("active");
   const header = document.getElementById("header");
   header.classList.toggle("active");
-
-  const active = nav.classList.contains("active");
-  event.currentTarget.setAttribute("aria-expanded", active);
-
-  if (active) {
-    event.currentTarget.setAttribute("aria-label", "Fechar Menu");
-  } else {
-    event.currentTarget.setAttribute("aria-label", "Abrir Menu");
-  }
 }
 
 btnMobile.addEventListener("click", toggleMenu);
