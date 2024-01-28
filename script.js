@@ -15,7 +15,6 @@ const sectionText = {
   "section-work": "Work Experience",
   "section-skills": "Skills",
   "section-projects": "Projects",
-  "section-curriculum": "Curriculum",
   "section-contact": "Contact Me",
 };
 

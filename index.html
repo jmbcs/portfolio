@@ -1,169 +1,192 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="mediaqueries.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>My Portfolio</title>
-  <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="mediaqueries.css" />
-</head>
+  <body>
+    <header id="header">
+      <p id="logo">Júlio Silva</p>
+      <nav id="nav">
+        <button id="btn-mobile">
+          <span id="hamburger"></span>
+        </button>
+        <ul id="menu" role="menu">
+          <li><a href="#section-cover">Cover</a></li>
+          <li><a href="#section-about">About Me</a></li>
+          <li><a href="#section-work">Work Experience</a></li>
+          <li><a href="#section-skills">Skills</a></li>
+          <li><a href="#section-projects">Projects</a></li>
+         
+          <li><a href="#section-contact">Contact Me</a></li>
+        </ul>
+      </nav>
+    </header>
 
-<body>
-
-  <header id="header">
-    <p id="logo">Júlio Silva</p>
-    <nav id="nav">
-      <button id="btn-mobile">
-        <span id="hamburger"></span>
-      </button>
-      <ul id="menu" role="menu">
-        <li><a href="#section-cover">Cover</a></li>
-        <li><a href="#section-about">About Me</a></li>
-        <li><a href="#section-work">Work Experience</a></li>
-        <li><a href="#section-skills">Skills</a></li>
-        <li><a href="#section-projects">Projects</a></li>
-        <li><a href="#section-curriculum">Curriculum</a></li>
-        <li><a href="#section-contact">Contact Me</a></li>
-      </ul>
-    </nav>
-  </header>
-
-
-  <div>
-    <section id="section-cover">
-      <div class="section__pic-container">
-        <img src="assets/profile.jpg" alt="Júlio Silva Profile Picture" />
-      </div>
-      <div class="section__text">
-        <h4 class="title">Júlio Silva</h4>
-        <p class="section__text__p2">Software Developer</p>
-        <div class="btn-container">
+    <div>
+      <section id="section-cover">
+        <div class="section__pic-container">
+          <img src="assets/profile.jpg" alt="Júlio Silva Profile Picture" />
+        </div>
+        <div class="section__text">
+          <h4 class="title">Júlio Silva</h4>
+          <p class="section__text__p2">
+            Software Developer <br> Data Analyst
+          </p>
+      
+          <div class="btn-container">
+            <button
+              class="btn btn-color-2"
+              onclick="window.open('https://github.com/jmbcs/curriculum/blob/main/curriculum.pdf')"
+            >
+              Check my Curriculum
+            </button>
           <div class="techstack">
             <img src="https://img.icons8.com/color/96/000000/python.png" />
             <img src="https://www.svgrepo.com/download/331370/docker.svg" />
-            <img src="https://upload.wikimedia.org/wikipedia/commons/3/3b/Grafana_icon.svg" />
-            <img src="https://static-00.iconduck.com/assets.00/prometheus-icon-2047x2048-b3aicxlu.png" />
-            <img src="https://cdn-icons-png.flaticon.com/512/5968/5968342.png" />
-            <img src="https://static-00.iconduck.com/assets.00/github-icon-512x497-oppthre2.png" />
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/3/3b/Grafana_icon.svg"
+            />
+            <img
+              src="https://static-00.iconduck.com/assets.00/prometheus-icon-2047x2048-b3aicxlu.png"
+            />
+            <img
+              src="https://cdn-icons-png.flaticon.com/512/5968/5968342.png"
+            />
+            <img
+              src="https://static-00.iconduck.com/assets.00/github-icon-512x497-oppthre2.png"
+            />
           </div>
         </div>
-    </section>
+      </section>
 
-    <section id="section-about">
-      <h4>ABOUT</h4>
+      <section id="section-about">
+        <h1>ABOUT</h1>
 
-      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aut, quisquam. Harum in suscipit eos repellat debitis
-        voluptatem voluptate, dolor illum minus eveniet, molestiae commodi quasi temporibus voluptatum vitae maiores
-        perspiciatis.
-        Ex vel consectetur necessitatibus porro, doloremque commodi non provident molestiae dignissimos, a molestias
-        quidem at quas natus perferendis odio iure, officia assumenda corporis sequi qui! Corporis eius temporibus
-        labore placeat.
-        Rerum optio saepe dolore nulla esse, sapiente enim veniam distinctio aperiam at sit cum dolores laboriosam minus
-        ut perspiciatis recusandae quos nisi dignissimos vel quidem, sunt ullam. Amet, dolor eos?
-        Dolores architecto tenetur excepturi vero eos aspernatur adipisci, quisquam accusamus nihil dolorum, quidem ad
-        amet vel quia aperiam rem neque quis. Et earum amet dolorum dolore illo numquam ratione dolores?
-        Quod illo architecto reiciendis. Adipisci sit nulla doloribus. Voluptatum quas officia sequi itaque, nihil minus
-        eos doloremque sint saepe quaerat laboriosam nobis. Error mollitia unde magni ipsum veritatis architecto
-        similique?</p>
-    </section>
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aut,
+          quisquam. Harum in suscipit eos repellat debitis voluptatem voluptate,
+          dolor illum minus eveniet, molestiae commodi quasi temporibus
+          voluptatum vitae maiores perspiciatis. Ex vel consectetur
+          necessitatibus porro, doloremque commodi non provident molestiae
+          dignissimos, a molestias quidem at quas natus perferendis odio iure,
+          officia assumenda corporis sequi qui! Corporis eius temporibus labore
+          placeat. Rerum optio saepe dolore nulla esse, sapiente enim veniam
+          distinctio aperiam at sit cum dolores laboriosam minus ut perspiciatis
+          recusandae quos nisi dignissimos vel quidem, sunt ullam. Amet, dolor
+          eos? Dolores architecto tenetur excepturi vero eos aspernatur
+          adipisci, quisquam accusamus nihil dolorum, quidem ad amet vel quia
+          aperiam rem neque quis. Et earum amet dolorum dolore illo numquam
+          ratione dolores? Quod illo architecto reiciendis. Adipisci sit nulla
+          doloribus. Voluptatum quas officia sequi itaque, nihil minus eos
+          doloremque sint saepe quaerat laboriosam nobis. Error mollitia unde
+          magni ipsum veritatis architecto similique?
+        </p>
+      </section>
 
-    <section id="section-work">
-      <h4>WORK</h4>
-      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aut, quisquam. Harum in suscipit eos repellat debitis
-        voluptatem voluptate, dolor illum minus eveniet, molestiae commodi quasi temporibus voluptatum vitae maiores
-        perspiciatis.
-        Ex vel consectetur necessitatibus porro, doloremque commodi non provident molestiae dignissimos, a molestias
-        quidem at quas natus perferendis odio iure, officia assumenda corporis sequi qui! Corporis eius temporibus
-        labore placeat.
-        Rerum optio saepe dolore nulla esse, sapiente enim veniam distinctio aperiam at sit cum dolores laboriosam minus
-        ut perspiciatis recusandae quos nisi dignissimos vel quidem, sunt ullam. Amet, dolor eos?
-        Dolores architecto tenetur excepturi vero eos aspernatur adipisci, quisquam accusamus nihil dolorum, quidem ad
-        amet vel quia aperiam rem neque quis. Et earum amet dolorum dolore illo numquam ratione dolores?
-        Quod illo architecto reiciendis. Adipisci sit nulla doloribus. Voluptatum quas officia sequi itaque, nihil minus
-        eos doloremque sint saepe quaerat laboriosam nobis. Error mollitia unde magni ipsum veritatis architecto
-        similique?</p>
-    </section>
-    <section id="section-skills">
-      <h4>SKILLS</h4>
+      <section id="section-work">
+        <h4>WORK</h4>
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aut,
+          quisquam. Harum in suscipit eos repellat debitis voluptatem voluptate,
+          dolor illum minus eveniet, molestiae commodi quasi temporibus
+          voluptatum vitae maiores perspiciatis. Ex vel consectetur
+          necessitatibus porro, doloremque commodi non provident molestiae
+          dignissimos, a molestias quidem at quas natus perferendis odio iure,
+          officia assumenda corporis sequi qui! Corporis eius temporibus labore
+          placeat. Rerum optio saepe dolore nulla esse, sapiente enim veniam
+          distinctio aperiam at sit cum dolores laboriosam minus ut perspiciatis
+          recusandae quos nisi dignissimos vel quidem, sunt ullam. Amet, dolor
+          eos? Dolores architecto tenetur excepturi vero eos aspernatur
+          adipisci, quisquam accusamus nihil dolorum, quidem ad amet vel quia
+          aperiam rem neque quis. Et earum amet dolorum dolore illo numquam
+          ratione dolores? Quod illo architecto reiciendis. Adipisci sit nulla
+          doloribus. Voluptatum quas officia sequi itaque, nihil minus eos
+          doloremque sint saepe quaerat laboriosam nobis. Error mollitia unde
+          magni ipsum veritatis architecto similique?
+        </p>
+      </section>
+      <section id="section-skills">
+        <h4>SKILLS</h4>
 
-      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aut, quisquam. Harum in suscipit eos repellat debitis
-        voluptatem voluptate, dolor illum minus eveniet, molestiae commodi quasi temporibus voluptatum vitae maiores
-        perspiciatis.
-        Ex vel consectetur necessitatibus porro, doloremque commodi non provident molestiae dignissimos, a molestias
-        quidem at quas natus perferendis odio iure, officia assumenda corporis sequi qui! Corporis eius temporibus
-        labore placeat.
-        Rerum optio saepe dolore nulla esse, sapiente enim veniam distinctio aperiam at sit cum dolores laboriosam minus
-        ut perspiciatis recusandae quos nisi dignissimos vel quidem, sunt ullam. Amet, dolor eos?
-        Dolores architecto tenetur excepturi vero eos aspernatur adipisci, quisquam accusamus nihil dolorum, quidem ad
-        amet vel quia aperiam rem neque quis. Et earum amet dolorum dolore illo numquam ratione dolores?
-        Quod illo architecto reiciendis. Adipisci sit nulla doloribus. Voluptatum quas officia sequi itaque, nihil minus
-        eos doloremque sint saepe quaerat laboriosam nobis. Error mollitia unde magni ipsum veritatis architecto
-        similique?</p>
-    </section>
-    <section id="section-projects">
-      <h4>PROJECTS</h4>
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aut,
+          quisquam. Harum in suscipit eos repellat debitis voluptatem voluptate,
+          dolor illum minus eveniet, molestiae commodi quasi temporibus
+          voluptatum vitae maiores perspiciatis. Ex vel consectetur
+          necessitatibus porro, doloremque commodi non provident molestiae
+          dignissimos, a molestias quidem at quas natus perferendis odio iure,
+          officia assumenda corporis sequi qui! Corporis eius temporibus labore
+          placeat. Rerum optio saepe dolore nulla esse, sapiente enim veniam
+          distinctio aperiam at sit cum dolores laboriosam minus ut perspiciatis
+          recusandae quos nisi dignissimos vel quidem, sunt ullam. Amet, dolor
+          eos? Dolores architecto tenetur excepturi vero eos aspernatur
+          adipisci, quisquam accusamus nihil dolorum, quidem ad amet vel quia
+          aperiam rem neque quis. Et earum amet dolorum dolore illo numquam
+          ratione dolores? Quod illo architecto reiciendis. Adipisci sit nulla
+          doloribus. Voluptatum quas officia sequi itaque, nihil minus eos
+          doloremque sint saepe quaerat laboriosam nobis. Error mollitia unde
+          magni ipsum veritatis architecto similique?
+        </p>
+      </section>
+      <section id="section-projects">
+        <h4>PROJECTS</h4>
 
-      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aut, quisquam. Harum in suscipit eos repellat debitis
-        voluptatem voluptate, dolor illum minus eveniet, molestiae commodi quasi temporibus voluptatum vitae maiores
-        perspiciatis.
-        Ex vel consectetur necessitatibus porro, doloremque commodi non provident molestiae dignissimos, a molestias
-        quidem at quas natus perferendis odio iure, officia assumenda corporis sequi qui! Corporis eius temporibus
-        labore placeat.
-        Rerum optio saepe dolore nulla esse, sapiente enim veniam distinctio aperiam at sit cum dolores laboriosam minus
-        ut perspiciatis recusandae quos nisi dignissimos vel quidem, sunt ullam. Amet, dolor eos?
-        Dolores architecto tenetur excepturi vero eos aspernatur adipisci, quisquam accusamus nihil dolorum, quidem ad
-        amet vel quia aperiam rem neque quis. Et earum amet dolorum dolore illo numquam ratione dolores?
-        Quod illo architecto reiciendis. Adipisci sit nulla doloribus. Voluptatum quas officia sequi itaque, nihil minus
-        eos doloremque sint saepe quaerat laboriosam nobis. Error mollitia unde magni ipsum veritatis architecto
-        similique?</p>
-    </section>
-    <section id="section-curriculum">CURRICULUM
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aut,
+          quisquam. Harum in suscipit eos repellat debitis voluptatem voluptate,
+          dolor illum minus eveniet, molestiae commodi quasi temporibus
+          voluptatum vitae maiores perspiciatis. Ex vel consectetur
+          necessitatibus porro, doloremque commodi non provident molestiae
+          dignissimos, a molestias quidem at quas natus perferendis odio iure,
+          officia assumenda corporis sequi qui! Corporis eius temporibus labore
+          placeat. Rerum optio saepe dolore nulla esse, sapiente enim veniam
+          distinctio aperiam at sit cum dolores laboriosam minus ut perspiciatis
+          recusandae quos nisi dignissimos vel quidem, sunt ullam. Amet, dolor
+          eos? Dolores architecto tenetur excepturi vero eos aspernatur
+          adipisci, quisquam accusamus nihil dolorum, quidem ad amet vel quia
+          aperiam rem neque quis. Et earum amet dolorum dolore illo numquam
+          ratione dolores? Quod illo architecto reiciendis. Adipisci sit nulla
+          doloribus. Voluptatum quas officia sequi itaque, nihil minus eos
+          doloremque sint saepe quaerat laboriosam nobis. Error mollitia unde
+          magni ipsum veritatis architecto similique?
+        </p>
+      </section>
+   
 
-      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aut, quisquam. Harum in suscipit eos repellat debitis
-        voluptatem voluptate, dolor illum minus eveniet, molestiae commodi quasi temporibus voluptatum vitae maiores
-        perspiciatis.
-        Ex vel consectetur necessitatibus porro, doloremque commodi non provident molestiae dignissimos, a molestias
-        quidem at quas natus perferendis odio iure, officia assumenda corporis sequi qui! Corporis eius temporibus
-        labore placeat.
-        Rerum optio saepe dolore nulla esse, sapiente enim veniam distinctio aperiam at sit cum dolores laboriosam minus
-        ut perspiciatis recusandae quos nisi dignissimos vel quidem, sunt ullam. Amet, dolor eos?
-        Dolores architecto tenetur excepturi vero eos aspernatur adipisci, quisquam accusamus nihil dolorum, quidem ad
-        amet vel quia aperiam rem neque quis. Et earum amet dolorum dolore illo numquam ratione dolores?
-        Quod illo architecto reiciendis. Adipisci sit nulla doloribus. Voluptatum quas officia sequi itaque, nihil minus
-        eos doloremque sint saepe quaerat laboriosam nobis. Error mollitia unde magni ipsum veritatis architecto
-        similique?</p>
-    </section>
+      <section id="section-contact">
+        Contact
 
-    <section id="section-contact">Contact
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aut,
+          quisquam. Harum in suscipit eos repellat debitis voluptatem voluptate,
+          dolor illum minus eveniet, molestiae commodi quasi temporibus
+          voluptatum vitae maiores perspiciatis. Ex vel consectetur
+          necessitatibus porro, doloremque commodi non provident molestiae
+          dignissimos, a molestias quidem at quas natus perferendis odio iure,
+          officia assumenda corporis sequi qui! Corporis eius temporibus labore
+          placeat. Rerum optio saepe dolore nulla esse, sapiente enim veniam
+          distinctio aperiam at sit cum dolores laboriosam minus ut perspiciatis
+          recusandae quos nisi dignissimos vel quidem, sunt ullam. Amet, dolor
+          eos? Dolores architecto tenetur excepturi vero eos aspernatur
+          adipisci, quisquam accusamus nihil dolorum, quidem ad amet vel quia
+          aperiam rem neque quis. Et earum amet dolorum dolore illo numquam
+          ratione dolores? Quod illo architecto reiciendis. Adipisci sit nulla
+          doloribus. Voluptatum quas officia sequi itaque, nihil minus eos
+          doloremque sint saepe quaerat laboriosam nobis. Error mollitia unde
+          magni ipsum veritatis architecto similique?
+        </p>
+      </section>
+    </div>
 
-      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aut, quisquam. Harum in suscipit eos repellat debitis
-        voluptatem voluptate, dolor illum minus eveniet, molestiae commodi quasi temporibus voluptatum vitae maiores
-        perspiciatis.
-        Ex vel consectetur necessitatibus porro, doloremque commodi non provident molestiae dignissimos, a molestias
-        quidem at quas natus perferendis odio iure, officia assumenda corporis sequi qui! Corporis eius temporibus
-        labore placeat.
-        Rerum optio saepe dolore nulla esse, sapiente enim veniam distinctio aperiam at sit cum dolores laboriosam minus
-        ut perspiciatis recusandae quos nisi dignissimos vel quidem, sunt ullam. Amet, dolor eos?
-        Dolores architecto tenetur excepturi vero eos aspernatur adipisci, quisquam accusamus nihil dolorum, quidem ad
-        amet vel quia aperiam rem neque quis. Et earum amet dolorum dolore illo numquam ratione dolores?
-        Quod illo architecto reiciendis. Adipisci sit nulla doloribus. Voluptatum quas officia sequi itaque, nihil minus
-        eos doloremque sint saepe quaerat laboriosam nobis. Error mollitia unde magni ipsum veritatis architecto
-        similique?</p>
-    </section>
-
-
-
-  </div>
-
-
-
-
-  <!-- <footer>
+    <!-- <footer>
       <p>Copyright &#169; 2024 Júlio Silva. All Rights Reserved.</p>
     </footer> -->
-  <script src="script.js"></script>
-</body>
-
+    <script src="script.js"></script>
+  </body>
 </html>

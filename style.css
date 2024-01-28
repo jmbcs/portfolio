@@ -28,6 +28,13 @@ ul {
   padding: 0px;
 }
 
+h1,
+h2,
+h3,
+h4 {
+  margin-left: 0.8rem;
+}
+
 
 a {
   text-decoration: none;
@@ -57,13 +64,17 @@ footer p {
 
 
 section {
-  padding-top: 4vh;
-  height: 96vh;
-  margin: 0 10rem;
+  height: 100vh;
+  margin: 2rem 2rem 2rem 2rem;
   box-sizing: border-box;
   min-height: fit-content;
 }
 
+#section-cover {
+  display: flex;
+  justify-content: center;
+
+}
 
 
 
@@ -113,12 +124,7 @@ section {
 
 
 
-#section-cover {
-  display: flex;
-  justify-content: center;
-  gap: 5rem;
-  height: 80vh;
-}
+
 
 .section__pic-container {
   display: flex;
@@ -149,12 +155,9 @@ section {
 .title {
   font-size: 3rem;
   text-align: center;
+
 }
 
-.box {
-  position: relative;
-  z-index: 1;
-}
 
 .techstack {
   display: flex;
@@ -166,13 +169,59 @@ section {
   min-width: 30px;
   max-width: 30px;
 
-  margin: 5rem 15px 0;
+  margin: 5rem 1rem 0;
 }
 
 
-.section__pic-container {
-  display: flex;
-}
+
 
 
 /*--------------- Footer SECTION ---------------*/
+
+
+.btn-container {
+  display: block;
+  gap: 1rem;
+}
+
+.btn {
+  font-weight: 600;
+  transition: all 300ms ease;
+  padding: 1rem;
+  width: 15rem;
+  border-radius: 2rem;
+
+}
+
+.btn-color-1,
+.btn-color-2 {
+  /* border: rgb(255, 90, 90) 0.1rem solid; */
+  border: white 0.1rem solid;
+}
+
+.btn-color-1:hover,
+.btn-color-2:hover {
+  cursor: pointer;
+}
+
+.btn-color-1,
+.btn-color-2:hover {
+
+  color: white;
+}
+
+.btn-color-1:hover {
+  background: rgb(255, 90, 90)
+}
+
+.btn-color-2 {
+  background: none;
+}
+
+.btn-color-2:hover {
+  border: rgb(255, 90, 90) 0.1rem solid;
+}
+
+.btn-container {
+  margin-top: 4rem;
+}
