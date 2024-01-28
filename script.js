@@ -1,71 +1,75 @@
 // script.js
 
-// Navigation bar scroll animation
+// Variables to store scroll position, scrolling timer, and DOM elements
 let lastScrollPosition = 0;
 let scrollingTimer;
 
-const topNav = document.getElementById("menu-icon");
+const menuBar = document.getElementById("menu-bar");
+const menuHamburger = document.getElementById("menu-hamburger");
+const mainContent = document.getElementById("main-content");
 
-window.addEventListener("scroll", () => {
+// Event listeners for scroll and click events
+window.addEventListener("scroll", handleScroll);
+window.addEventListener("click", handleMenuClick);
+
+// window.addEventListener("pushed", closeMenuOutside);
+// Function to handle scroll events with a debounce effect
+function handleScroll() {
+  // Clear any previous scrolling timer
   clearTimeout(scrollingTimer);
 
+  // Set a new scrolling timer to debounce the scroll event
   scrollingTimer = setTimeout(() => {
+    // Get the current scroll position
     const currentScrollPosition = window.scrollY;
 
-    if (currentScrollPosition > lastScrollPosition) {
-      // Scrolling down
-      topNav.classList.remove("show");
-      topNav.classList.add("hide");
-    } else {
-      // Scrolling up
-      topNav.classList.remove("hide");
-      topNav.classList.add("show");
-    }
+    // Determine the scroll direction
+    const scrollingDown = currentScrollPosition > lastScrollPosition;
 
+    // Toggle classes based on scroll direction for menu bar animation
+    menuBar.classList.toggle("show", !scrollingDown);
+    menuBar.classList.toggle("hide", scrollingDown);
+
+    // Update the last scroll position
     lastScrollPosition = currentScrollPosition;
   });
-});
+}
 
-// function toggleMenu() {
-//   const menu = document.querySelector(".menu-links");
-//   const icon = document.querySelector(".hamburger-icon");
-//   menu.classList.toggle("open");
-//   icon.classList.toggle("open");
-// }
+// Function to handle click events on the document
+function handleMenuClick() {
+  // Set the inner HTML of the menu bar based on whether the main content is pushed
+  menuBar.innerHTML = mainContent.classList.contains("pushed")
+    ? "&#10006; Close"
+    : "&#9776; Menu";
+}
+
+// Function to toggle the visibility of the hamburger menu
 function toggleHamburgerMenu() {
-  var menuHamburger = document.getElementById("hamburger-menu");
-  var mainContent = document.getElementById("main-content");
-  var menuBar = document.getElementById("menu-icon");
+  // Check if the menu is currently hidden
+  const menuHidden = menuHamburger.style.left === "-100%";
 
-  if (menuHamburger.style.left === "-100%") {
-    menuHamburger.style.left = "0";
-    mainContent.classList.add("pushed");
-    menuBar.innerHTML = "&#10006; Close";
-
-    // Add event listener to close menu when clicking outside
+  // Toggle the menu visibility and update the main content class
+  menuHamburger.style.left = menuHidden ? "0" : "-100%";
+  mainContent.classList.toggle("pushed", menuHidden);
+  if (menuHidden) {
     document.addEventListener("click", closeMenuOutside);
   } else {
-    menuHamburger.style.left = "-100%";
-    mainContent.classList.remove("pushed");
-    // Remove event listener when menu is closed
     document.removeEventListener("click", closeMenuOutside);
-    menuBar.innerHTML = "&#9776; Menu";
   }
 }
 
+// Function to close the hamburger menu
 function closeHamburgerMenu() {
-  var menuHamburger = document.getElementById("hamburger-menu");
-  var mainContent = document.getElementById("main-content");
+  // Hide the menu and remove the pushed class from the main content
   menuHamburger.style.left = "-100%";
   mainContent.classList.remove("pushed");
-  // Remove event listener when menu is closed
-  document.removeEventListener("click", closeMenuOutside);
 }
 
+// Function to close the hamburger menu when clicking outside
 function closeMenuOutside(event) {
-  var menuHamburger = document.getElementById("hamburger-menu");
-  var menuIcon = document.getElementById("menu-icon");
-  if (!menuHamburger.contains(event.target) && event.target !== menuIcon) {
+  // Check if the click is outside the menu and not on the menu bar
+  if (!menuHamburger.contains(event.target) && event.target !== menuBar) {
+    // Close the hamburger menu
     closeHamburgerMenu();
   }
 }
