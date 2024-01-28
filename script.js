@@ -30,16 +30,20 @@ function toggleMenu(event) {
 // Event listeners for mobile button
 
 btnMobile.addEventListener("click", toggleMenu);
-btnMobile.addEventListener("touchstart", toggleMenu);
 
-// Event listener for menu item click
-menu.addEventListener("click", () => {
+// Event listener for menu item click and touchstart
+menu.addEventListener("click", handleMenuInteraction);
+
+// Event listener for nav click and touchstart
+nav.addEventListener("click", handleNavInteraction);
+
+function handleMenuInteraction() {
   nav.classList.remove("active");
   header.classList.remove("active");
-});
+}
 
-// Event listener for nav click
-nav.addEventListener("click", () => {
+function handleNavInteraction() {
+  console.log(nav.classList.contains("active"));
   if (nav.classList.contains("active")) {
     body.classList.toggle("menu-open");
     logo.textContent = "Menu";
@@ -62,7 +66,7 @@ nav.addEventListener("click", () => {
       }
     });
   }
-});
+}
 
 // Scroll event to dynamically change the name in the nav bar
 window.addEventListener("scroll", () => {
