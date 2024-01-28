@@ -20,14 +20,15 @@ const sectionText = {
 };
 
 // Toggle menu function
-function toggleMenu(event) {
-  if (event.type === "touchstart") event.preventDefault();
+function toggleMenu() {
+  // if (event.type === "touchstart") event.preventDefault();
 
   nav.classList.toggle("active");
   header.classList.toggle("active");
 }
 
 // Event listeners for mobile button
+btnMobile.addEventListener("touchstart", toggleMenu);
 btnMobile.addEventListener("click", toggleMenu);
 btnMobile.addEventListener("touchstart", toggleMenu);
 
