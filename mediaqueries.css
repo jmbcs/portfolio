@@ -78,6 +78,13 @@
 
   }
 
+  #header {
+    margin-left: -0.5vw;
+  }
+
+
+
+
   #menu {
     display: block;
     position: absolute;
@@ -98,7 +105,6 @@
   #nav.active #menu {
     height: 50vh;
 
-
     visibility: visible;
     overflow-y: hidden;
     border-radius: 5px;
@@ -109,7 +115,9 @@
     background-color: rgb(255, 255, 255);
     border-radius: 5px;
     color: #1b1d24;
-    margin: 4vw;
+    margin-top: 3.5vw;
+    margin-left: 5.5vw;
+    margin-right: 5.5vw;
     font-weight: bold;
 
 
@@ -128,7 +136,10 @@
     background: none;
     cursor: pointer;
     gap: 0.5rem;
+    margin-right: 2vw;
   }
+
+
 
   #hamburger {
     border-top: 2px solid;
