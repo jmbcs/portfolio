@@ -204,7 +204,16 @@
   cursor: pointer;
   gap: 0.5rem;
   margin-right: 2vw;
+
+
+  &:active {
+    color: rgb(255, 90, 90);
+
+  }
+
+
 }
+
 
 
 
@@ -231,6 +240,7 @@
     color: rgb(255, 90, 90);
 
   }
+
 
 
 }
