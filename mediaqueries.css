@@ -96,8 +96,7 @@
   }
 
   #nav.active #menu {
-    /* height: 47vh; */
-    height: 47vh;
+    height: calc(60vh - 100px);
 
 
     visibility: visible;
