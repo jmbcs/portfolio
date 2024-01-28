@@ -32,9 +32,16 @@ a:hover {
   font-size: 1.5rem;
   margin: 1.5vw;
   font-weight: bold;
+  color: white;
 }
 
+
+
 #header {
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  width: 100%;
   box-sizing: border-box;
   text-align: center;
   height: 70px;
@@ -43,7 +50,11 @@ a:hover {
   align-items: center;
   justify-content: space-between;
 
-  /* background: #e7e7e7; */
+}
+
+
+body.menu-open {
+  overflow: hidden;
 }
 
 ul {
@@ -62,6 +73,7 @@ ul {
 }
 
 #btn-mobile {
+
   display: none;
 }
 
@@ -74,7 +86,7 @@ html {
 }
 
 p {
-  color: rgb(85, 85, 85);
+  color: rgb(140, 142, 148);
 }
 
 section {
@@ -89,9 +101,9 @@ section {
   display: flex;
 }
 
-/*--------------- Profile SECTION ---------------*/
+/*--------------- section-section-section-section-section-section-section-section-section-cover SECTION ---------------*/
 
-#profile {
+#section-cover {
   display: flex;
   justify-content: center;
   gap: 5rem;
