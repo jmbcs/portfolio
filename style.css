@@ -152,6 +152,7 @@ dotlottie-player {
   width: auto;
   height: max-content;
   justify-content: center;
+  align-items: center;
   /* max-width: 600px; */
 }
 
