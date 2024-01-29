@@ -127,7 +127,7 @@
     display: block;
     position: absolute;
     width: 100%;
-    right: 0px;
+    right: -1rem;
     transition: 0.5s;
     z-index: 1000;
     height: 0px;
