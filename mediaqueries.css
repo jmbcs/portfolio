@@ -123,9 +123,11 @@
     border-bottom: #404453 solid 3.5px;
   }
 
-  #header.active{
+  #header.active::before {
     border-bottom:transparent
   }
+  
+  
 
 
   #menu {
