@@ -166,7 +166,7 @@ dotlottie-player {
   /* max-width: 600px; */
 }
 
-#section-container {
+#sections-container{
   display: flex;
   justify-content: center;
   align-items: center;
@@ -178,6 +178,10 @@ dotlottie-player {
   font-weight: bold;
 }
 
+
+
+
+/*--------------- Cover Section   ---------------*/
 
 .section__pic-container {
   display: flex;
@@ -191,25 +195,19 @@ dotlottie-player {
   text-align: center;
 }
 
-.section__text p {
-  font-weight: 600;
-}
-
-.section__text__p1 {
-  text-align: center;
-}
-
-.section__text__p2 {
-  font-size: 1.75rem;
-  margin-bottom: 1rem;
-  color: rgb(255, 90, 90);
-}
-
 .title {
   font-size: 3rem;
   text-align: center;
 
 }
+
+.section__text__p1{
+  font-size: 1.75rem;
+  margin-bottom: 1rem;
+  color: rgb(255, 90, 90);
+  font-weight: 600;
+}
+
 
 
 .techstack {
@@ -221,20 +219,18 @@ dotlottie-player {
 .techstack img {
   min-width: 30px;
   max-width: 30px;
-
   margin: 5rem 1rem 0;
 }
 
 
 
-
-
-/*--------------- Footer SECTION ---------------*/
+/*--------------- Buttons  ---------------*/
 
 
 .btn-container {
   display: block;
   gap: 1rem;
+  margin-top: 4rem;
 }
 
 .btn {
@@ -246,35 +242,12 @@ dotlottie-player {
 
 }
 
-.btn-color-1,
-.btn-color-2 {
-  /* border: rgb(255, 90, 90) 0.1rem solid; */
+.btn-color-1 {
   border: white 0.1rem solid;
 }
 
-.btn-color-1:hover,
-.btn-color-2:hover {
-  cursor: pointer;
-}
-
-.btn-color-1,
-.btn-color-2:hover {
-  background: rgb(255, 90, 90);
-
-}
-
 .btn-color-1:hover {
-  background: rgb(255, 90, 90)
-}
-
-.btn-color-2 {
-  background: none;
-}
-
-.btn-color-2:hover {
-  border: rgb(255, 90, 90) 0.1rem solid;
-}
-
-.btn-container {
-  margin-top: 4rem;
-}
+  cursor: pointer;
+  background: rgb(255, 90, 90);
+  border: transparent;
+} 

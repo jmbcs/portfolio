@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="mediaqueries.css" />
   </head>
+
   <body>
     <header id="header">
       <p id="logo">Júlio Silva</p>
@@ -26,183 +27,146 @@
       </nav>
     </header>
 
-    <div>
-      <section id="section-cover">
-        <div class="section__pic-container">
-          <img src="assets/profile.jpg" alt="Júlio Silva Profile Picture" />
-        </div>
-        <div class="section__text">
-          <h4 class="title">Júlio Silva</h4>
-          <p class="section__text__p2">
-            Software Developer <br> Data Analyst
-          </p>
-      
-          <div class="btn-container">
-            <button
-              class="btn btn-color-2"
-              onclick="window.open('https://github.com/jmbcs/curriculum/blob/main/curriculum.pdf', '_blank')"
-            >
-              Check my Curriculum
-            </button>
+    <section id="section-cover">
+      <div class="section__pic-container">
+        <img src="assets/profile.jpg" alt="Júlio Silva Profile Picture" />
+      </div>
+      <div class="section__text">
+        <h4 class="title">Júlio Silva</h4>
+        <p class="section__text__p1">Software Engineer</p>
+
+        <div class="btn-container">
+          <button
+            class="btn btn-color-1"
+            onclick="window.open('https://github.com/jmbcs/curriculum/blob/main/curriculum.pdf', '_blank')"
+          >
+            Check my Curriculum
+          </button>
           <div class="techstack">
-            <img src="https://img.icons8.com/color/96/000000/python.png" />
-            <img src="https://www.svgrepo.com/download/331370/docker.svg" />
+            <img
+              src="https://img.icons8.com/color/96/000000/python.png"
+              alt="Python"
+            />
+            <img
+              src="https://www.svgrepo.com/download/331370/docker.svg"
+              alt="Docker"
+            />
             <img
               src="https://upload.wikimedia.org/wikipedia/commons/3/3b/Grafana_icon.svg"
+              alt="Grafana"
             />
             <img
               src="https://static-00.iconduck.com/assets.00/prometheus-icon-2047x2048-b3aicxlu.png"
+              alt="Prometheus"
             />
             <img
               src="https://cdn-icons-png.flaticon.com/512/5968/5968342.png"
+              alt="Your Alt Text"
             />
             <img
               src="https://static-00.iconduck.com/assets.00/github-icon-512x497-oppthre2.png"
+              alt="GitHub"
             />
           </div>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <div id="section-container">
-        <section id="section-about">
+    <div id="sections-container">
+      <section id="section-about">
         <h1>About Me</h1>
         <ul>
-            <li> Hi there! 👋</li>
-            <li> My name is Júlio Silva and I am a developer.</li>
-            <br>
-            <li>📅 <strong >Age</strong> 27</li>
-            <li>🇵🇹 <strong >Nationality</strong> Portuguese</li>
-            <li>💼 <strong >Current Position</strong> Research & Development Engineer at Wavecom
-            </li>
-            <li>🎓 <strong >Education</strong> M.Sc Electronics and Telecommunications
-                Engineering, <br>University of Aveiro</a></li>
+          <li>Hi there! 👋</li>
+          <li>My name is Júlio Silva and I am a developer.</li>
+        </ul>
+        <ul>
+          <li>📅 <strong>Age</strong> 27</li>
+          <li>🇵🇹 <strong>Nationality</strong> Portuguese</li>
+          <li>
+            💼 <strong>Current Position</strong> Research & Development Engineer
+            at Wavecom
+          </li>
+          <li>
+            🎓 <strong>Education</strong> M.Sc Electronics and
+            Telecommunications Engineering, <br />University of Aveiro
+          </li>
         </ul>
         <h1>Hobbies & Interests</h1>
         <ul>
-            <li>😄 <strong >Comedy</strong> Ricky Gervais, Daniel Sloss, and Anthony Jeselnik fan
-            </li>
-            <li>📖 <strong >Reading</strong> Reading is essential to keep my mind sharp</li>
-            <li>🎮 <strong >Videogames</strong> I am a certified gamer since 6 years old</li>
-            <li>🍿 <strong >Movies & Series</strong> You know nothing Jon Snow!</li>
-            <li>🏞️ <strong >Hiking</strong> Hiking with the family is a time well spent</li>
-            <li>💻 <strong >Coding</strong> I love bringing ideas to life with code</li>
-            <li>💪 <strong >Gym</strong> Keeping both my mind and body in shape is crucial for my
-                happiness</li>
-            <li>🎵 <strong >Music</strong> Who doesn't like a good beat?</li>
-            <li>🌇 <strong >Travelling</strong> There is so much to see out there</li>
-            <li>💵 <strong >Finances & Investing</strong> I like to keep up with financial
-                markets and exploring new investment opportunities</li>
-                
+          <li>
+            😄 <strong>Comedy</strong> Ricky Gervais, Daniel Sloss, and Anthony
+            Jeselnik fan
+          </li>
+          <li>
+            📖 <strong>Reading</strong> Reading is essential to keep my mind
+            sharp
+          </li>
+          <li>
+            🎮 <strong>Videogames</strong> I am a certified gamer since 6 years
+            old
+          </li>
+          <li>
+            🍿 <strong>Movies & Series</strong> You know nothing Jon Snow!
+          </li>
+          <li>
+            🏞️ <strong>Hiking</strong> Hiking with the family is a time well
+            spent
+          </li>
+          <li>
+            💻 <strong>Coding</strong> I love bringing ideas to life with code
+          </li>
+          <li>
+            💪 <strong>Gym</strong> Keeping both my mind and body in shape is
+            crucial for my happiness
+          </li>
+          <li>🎵 <strong>Music</strong> Who doesn't like a good beat?</li>
+          <li>
+            🌇 <strong>Travelling</strong> There is so much to see out there
+          </li>
+          <li>
+            💵 <strong>Finances & Investing</strong> I like to keep up with
+            financial markets and exploring new investment opportunities
+          </li>
         </ul>
       </section>
-        <div id="animation-container">
-          <dotlottie-player src="animations/about.json" background="transparent" speed="2.25" direction="1" playMode="normal" loop autoplay>
-          </dotlottie-player>
-       </div>
-      </div>
-       
 
-      </section>
-
-      <section id="section-work">
-        <h4>WORK</h4>
-        <p>
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aut,
-          quisquam. Harum in suscipit eos repellat debitis voluptatem voluptate,
-          dolor illum minus eveniet, molestiae commodi quasi temporibus
-          voluptatum vitae maiores perspiciatis. Ex vel consectetur
-          necessitatibus porro, doloremque commodi non provident molestiae
-          dignissimos, a molestias quidem at quas natus perferendis odio iure,
-          officia assumenda corporis sequi qui! Corporis eius temporibus labore
-          placeat. Rerum optio saepe dolore nulla esse, sapiente enim veniam
-          distinctio aperiam at sit cum dolores laboriosam minus ut perspiciatis
-          recusandae quos nisi dignissimos vel quidem, sunt ullam. Amet, dolor
-          eos? Dolores architecto tenetur excepturi vero eos aspernatur
-          adipisci, quisquam accusamus nihil dolorum, quidem ad amet vel quia
-          aperiam rem neque quis. Et earum amet dolorum dolore illo numquam
-          ratione dolores? Quod illo architecto reiciendis. Adipisci sit nulla
-          doloribus. Voluptatum quas officia sequi itaque, nihil minus eos
-          doloremque sint saepe quaerat laboriosam nobis. Error mollitia unde
-          magni ipsum veritatis architecto similique?
-        </p>
-      </section>
-      <section id="section-skills">
-        <h4>SKILLS</h4>
-
-        <p>
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aut,
-          quisquam. Harum in suscipit eos repellat debitis voluptatem voluptate,
-          dolor illum minus eveniet, molestiae commodi quasi temporibus
-          voluptatum vitae maiores perspiciatis. Ex vel consectetur
-          necessitatibus porro, doloremque commodi non provident molestiae
-          dignissimos, a molestias quidem at quas natus perferendis odio iure,
-          officia assumenda corporis sequi qui! Corporis eius temporibus labore
-          placeat. Rerum optio saepe dolore nulla esse, sapiente enim veniam
-          distinctio aperiam at sit cum dolores laboriosam minus ut perspiciatis
-          recusandae quos nisi dignissimos vel quidem, sunt ullam. Amet, dolor
-          eos? Dolores architecto tenetur excepturi vero eos aspernatur
-          adipisci, quisquam accusamus nihil dolorum, quidem ad amet vel quia
-          aperiam rem neque quis. Et earum amet dolorum dolore illo numquam
-          ratione dolores? Quod illo architecto reiciendis. Adipisci sit nulla
-          doloribus. Voluptatum quas officia sequi itaque, nihil minus eos
-          doloremque sint saepe quaerat laboriosam nobis. Error mollitia unde
-          magni ipsum veritatis architecto similique?
-        </p>
-      </section>
-      <section id="section-projects">
-        <h4>PROJECTS</h4>
-
-        <p>
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aut,
-          quisquam. Harum in suscipit eos repellat debitis voluptatem voluptate,
-          dolor illum minus eveniet, molestiae commodi quasi temporibus
-          voluptatum vitae maiores perspiciatis. Ex vel consectetur
-          necessitatibus porro, doloremque commodi non provident molestiae
-          dignissimos, a molestias quidem at quas natus perferendis odio iure,
-          officia assumenda corporis sequi qui! Corporis eius temporibus labore
-          placeat. Rerum optio saepe dolore nulla esse, sapiente enim veniam
-          distinctio aperiam at sit cum dolores laboriosam minus ut perspiciatis
-          recusandae quos nisi dignissimos vel quidem, sunt ullam. Amet, dolor
-          eos? Dolores architecto tenetur excepturi vero eos aspernatur
-          adipisci, quisquam accusamus nihil dolorum, quidem ad amet vel quia
-          aperiam rem neque quis. Et earum amet dolorum dolore illo numquam
-          ratione dolores? Quod illo architecto reiciendis. Adipisci sit nulla
-          doloribus. Voluptatum quas officia sequi itaque, nihil minus eos
-          doloremque sint saepe quaerat laboriosam nobis. Error mollitia unde
-          magni ipsum veritatis architecto similique?
-        </p>
-      </section>
-   
-
-      <section id="section-contact">
-        Contact
-
-        <p>
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aut,
-          quisquam. Harum in suscipit eos repellat debitis voluptatem voluptate,
-          dolor illum minus eveniet, molestiae commodi quasi temporibus
-          voluptatum vitae maiores perspiciatis. Ex vel consectetur
-          necessitatibus porro, doloremque commodi non provident molestiae
-          dignissimos, a molestias quidem at quas natus perferendis odio iure,
-          officia assumenda corporis sequi qui! Corporis eius temporibus labore
-          placeat. Rerum optio saepe dolore nulla esse, sapiente enim veniam
-          distinctio aperiam at sit cum dolores laboriosam minus ut perspiciatis
-          recusandae quos nisi dignissimos vel quidem, sunt ullam. Amet, dolor
-          eos? Dolores architecto tenetur excepturi vero eos aspernatur
-          adipisci, quisquam accusamus nihil dolorum, quidem ad amet vel quia
-          aperiam rem neque quis. Et earum amet dolorum dolore illo numquam
-          ratione dolores? Quod illo architecto reiciendis. Adipisci sit nulla
-          doloribus. Voluptatum quas officia sequi itaque, nihil minus eos
-          doloremque sint saepe quaerat laboriosam nobis. Error mollitia unde
-          magni ipsum veritatis architecto similique?
-        </p>
-      </section>
+      <dotlottie-player
+        src="animations/about.json"
+        background="transparent"
+        speed="2.25"
+        direction="1"
+        playMode="normal"
+        loop
+        autoplay
+      >
+      </dotlottie-player>
     </div>
 
-    <!-- <footer>
-      <p>Copyright &#169; 2024 Júlio Silva. All Rights Reserved.</p>
-    </footer> -->
-    <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script>
+    <section id="section-work">
+      <h4>WORK</h4>
+      <p>test</p>
+    </section>
+    <section id="section-skills">
+      <h4>SKILLS</h4>
+
+      <p>test</p>
+    </section>
+    <section id="section-projects">
+      <h4>PROJECTS</h4>
+
+      <p>test</p>
+    </section>
+
+    <section id="section-contact">
+      <h4>Contact</h4>
+
+      <p>test</p>
+    </section>
+
+    <script
+      src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs"
+      type="module"
+    ></script>
     <script src="script.js"></script>
   </body>
 </html>
