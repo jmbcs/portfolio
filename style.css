@@ -118,6 +118,13 @@ section {
 }
 
 
+/* Apply adjustments only when the section is the target */
+:target {
+  padding-top: 5rem;
+
+  margin-top: -5rem;
+
+}
 
 #header {
   position: fixed;
