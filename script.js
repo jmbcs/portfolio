@@ -84,7 +84,7 @@ window.addEventListener("scroll", () => {
       logo.textContent = sectionText["header"];
       link.style.borderBottom = "none"; // Remove underline
     } else if (isInSection) {
-      link.style.borderBottom = `2px solid ${underlineColor}`; // Add colored underline
+      link.style.borderBottom = `3px solid ${underlineColor}`; // Add colored underline
     } else {
       link.style.borderBottom = "none"; // Remove underline
     }

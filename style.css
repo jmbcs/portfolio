@@ -142,9 +142,19 @@ section {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  border-bottom: #404453 solid 3.5px;
- 
 }
+
+#header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -1rem; /* Adjust the left position for the border */
+  width: calc(100% + 1rem); /* Adjust the width to include the negative left value */
+  height: 100%;
+  border-bottom: #404453 solid 3.5px;
+  z-index: -1; /* Place the border behind the header content */
+}
+
 
 
 dotlottie-player {
