@@ -138,6 +138,8 @@ section {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  border-bottom: #404453 solid 3.5px;
+  margin-left: -1rem;
 
 }
 
