@@ -50,9 +50,13 @@ a {
 
 p {
   margin: 2.35vw;
-  color: rgb(140, 142, 148);
+
 }
 
+p,
+li {
+  color: rgb(168, 170, 177);
+}
 
 footer {
   height: 26vh;
