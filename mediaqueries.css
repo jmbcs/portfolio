@@ -1,4 +1,5 @@
 @media screen and (max-width: 1400px) {
+
   #section-container {
     display: block;
     align-items: center;
@@ -119,15 +120,19 @@
   }
 
   #header{
-    margin-left: -1rem;
     border-bottom: #404453 solid 3.5px;
   }
+
+  #header.active{
+    border-bottom:transparent
+  }
+
 
   #menu {
     display: block;
     position: absolute;
     width: 100%;
-    right: -1rem;
+    right: 0;
     transition: 0.5s;
     z-index: 1000;
     height: 0px;
@@ -141,6 +146,7 @@
   #nav.active #btn-mobile,
   #nav #btn-mobile {
     margin-right: 2rem;
+    
   }
 
   #nav.active #menu {

@@ -98,9 +98,14 @@ section {
 
 }
 
+#nav{
+  background-color: transparent;
+}
+
 #menu a {
   display: block;
   padding: 0.5rem;
+  
 }
 
 #btn-mobile {
@@ -115,22 +120,21 @@ section {
   margin: 1.5vw;
   font-weight: bold;
   color: white;
+  background-color: transparent;
 }
 
 
 /* Apply adjustments only when the section is the target */
 :target {
   padding-top: 5rem;
-
   margin-top: -5rem;
-
 }
 
 #header {
   position: fixed;
   z-index: 1000;
   top: 0;
-  width: 100%;
+  width: 100vw;
   box-sizing: border-box;
   text-align: center;
   height: 70px;
@@ -139,8 +143,7 @@ section {
   align-items: center;
   justify-content: space-between;
   border-bottom: #404453 solid 3.5px;
-  margin-left: -1rem;
-
+ 
 }
 
 
