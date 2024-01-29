@@ -26,13 +26,15 @@ body,
 ul {
   margin-right: 1.5vw;
   padding: 0px;
+  list-style-type: none;
+
 }
 
 h1,
 h2,
 h3,
 h4 {
-  margin-left: 0.8rem;
+  margin-left: -1rem;
 }
 
 
@@ -64,10 +66,17 @@ footer p {
 
 
 section {
-  height: 100vh;
+  height: fit-content;
   margin: 2rem 2rem 2rem 2rem;
   box-sizing: border-box;
   min-height: fit-content;
+  margin-left: 10rem;
+  margin-right: 10rem;
+  /* margin */
+}
+
+#section-cover {
+  height: 100vh;
 }
 
 #section-cover {
@@ -122,14 +131,25 @@ section {
 }
 
 
+dotlottie-player {
+
+  width: auto;
+  height: max-content;
+  justify-content: center;
+  /* max-width: 600px; */
+}
+
 #section-container {
   display: flex;
-  /* justify-content: space-between; */
-  align-items: flex-start;
+  justify-content: center;
+  align-items: center;
   /* Align items to the top of the section */
 }
 
-
+#section-about ul li strong {
+  color: rgb(255, 90, 90);
+  font-weight: bold;
+}
 
 
 .section__pic-container {

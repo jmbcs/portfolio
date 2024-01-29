@@ -1,10 +1,15 @@
 @media screen and (max-width: 1400px) {
+  #section-container {
+    display: block;
+    align-items: center;
+
+  }
 
   h1,
   h2,
   h3,
   h4 {
-    margin-left: 0.8rem;
+    margin-left: -1.5rem;
   }
 
   #section-cover {
@@ -26,11 +31,7 @@
 
 
 @media screen and (max-width: 1200px) {
-  #section-container {
-    display: block;
-    align-items: center;
 
-  }
 
   h1,
   h2,
@@ -94,7 +95,7 @@
   h2,
   h3,
   h4 {
-    margin-left: 0.5rem;
+    margin-left: -1rem;
   }
 
   #header.active~div {
@@ -114,9 +115,6 @@
 
   }
 
-  #header p {
-    margin-left: 2rem;
-  }
 
 
 
@@ -172,7 +170,7 @@
     background: none;
     cursor: pointer;
     gap: 0.5rem;
-    margin-right: 1rem;
+
   }
 
 
@@ -180,7 +178,7 @@
   #hamburger {
     border-top: 2px solid;
     width: 20px;
-    margin-right: -1.5vw;
+    margin-right: -2rem;
 
     &::after,
     &::before {
