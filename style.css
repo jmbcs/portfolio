@@ -228,3 +228,8 @@ section:target {
   background: rgb(255, 90, 90);
   border: transparent;
 }
+
+* {
+  scrollbar-color: rgb(255, 90, 90) transparent;
+  scrollbar-width: thin;
+}

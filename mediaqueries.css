@@ -53,13 +53,11 @@
     margin-left: -1rem;
   }
 
-
   #section-cover {
     height: 83vh;
     margin-bottom: 0;
   }
 
-  
   #header {
     border-bottom: #404453 solid 3.5px;
   }
@@ -81,7 +79,6 @@
     margin: 4vw;
   }
 
- 
   #menu {
     display: block;
     position: absolute;
@@ -110,7 +107,6 @@
       color: white;
     }
   }
-
 
   #btn-mobile {
     display: flex;
@@ -147,15 +143,11 @@
     border-radius: 5px;
   }
 
-
-
   #nav.active #btn-mobile,
   #nav #btn-mobile {
     margin-right: 2rem;
   }
 
- 
-  
   #nav.active #hamburger {
     color: rgb(255, 90, 90);
     border-top-color: transparent;
@@ -170,13 +162,10 @@
     }
   }
 
- 
-
   .logo {
     font-size: 1.5rem;
   }
 
-  
   .btn-container {
     flex-wrap: wrap;
   }
