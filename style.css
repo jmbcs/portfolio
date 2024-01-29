@@ -6,6 +6,8 @@
   background-color: #1b1d24;
   color: white;
   -webkit-tap-highlight-color: transparent !important;
+  scrollbar-color: rgb(255, 90, 90) transparent;
+  scrollbar-width: thin;
 }
 
 html {
@@ -227,9 +229,4 @@ section:target {
   cursor: pointer;
   background: rgb(255, 90, 90);
   border: transparent;
-}
-
-* {
-  scrollbar-color: rgb(255, 90, 90) transparent;
-  scrollbar-width: thin;
 }
