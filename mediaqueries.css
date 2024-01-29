@@ -26,6 +26,11 @@
 
 
 @media screen and (max-width: 1200px) {
+  #section-container {
+    display: block;
+    align-items: center;
+
+  }
 
   h1,
   h2,
@@ -82,6 +87,8 @@
 }
 
 @media screen and (max-width: 600px) {
+
+
 
   h1,
   h2,

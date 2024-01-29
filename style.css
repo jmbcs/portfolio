@@ -122,6 +122,12 @@ section {
 }
 
 
+#section-container {
+  display: flex;
+  /* justify-content: space-between; */
+  align-items: flex-start;
+  /* Align items to the top of the section */
+}
 
 
 
@@ -206,8 +212,8 @@ section {
 
 .btn-color-1,
 .btn-color-2:hover {
+  background: rgb(255, 90, 90);
 
-  color: white;
 }
 
 .btn-color-1:hover {
