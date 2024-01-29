@@ -2,7 +2,6 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
 
-
 * {
   background-color: #1b1d24;
   color: white;
@@ -12,7 +11,6 @@
 html {
   scroll-behavior: smooth;
 }
-
 
 body {
   font-family: "Poppins", sans-serif;
@@ -27,7 +25,6 @@ ul {
   margin-right: 1.5vw;
   padding: 0px;
   list-style-type: none;
-
 }
 
 h1,
@@ -36,7 +33,6 @@ h3,
 h4 {
   margin-left: -1rem;
 }
-
 
 a {
   text-decoration: none;
@@ -47,10 +43,8 @@ a {
   }
 }
 
-
 p {
   margin: 2.35vw;
-
 }
 
 p,
@@ -68,7 +62,6 @@ footer p {
   color: white;
 }
 
-
 section {
   height: fit-content;
   margin: 2rem 2rem 2rem 2rem;
@@ -79,57 +72,15 @@ section {
   /* margin */
 }
 
-#section-cover {
-  height: 100vh;
-}
-
-#section-cover {
-  display: flex;
+dotlottie-player {
+  width: auto;
+  height: max-content;
   justify-content: center;
-
+  align-items: center;
+  /* max-width: 600px; */
 }
 
-
-
-#menu {
-  display: flex;
-  list-style: none;
-  gap: 0.5rem;
-
-}
-
-#nav{
-  background-color: transparent;
-}
-
-#menu a {
-  display: block;
-  padding: 0.5rem;
-  
-}
-
-#btn-mobile {
-
-  display: none;
-}
-
-
-
-#logo {
-  font-size: 1.5rem;
-  margin: 1.5vw;
-  font-weight: bold;
-  color: white;
-  background-color: transparent;
-}
-
-
-/* Apply adjustments only when the section is the target */
-:target {
-  padding-top: 5rem;
-  margin-top: -5rem;
-}
-
+/*--------------- Header Section   ---------------*/
 #header {
   position: fixed;
   z-index: 1000;
@@ -148,25 +99,52 @@ section {
   content: "";
   position: absolute;
   top: 0;
-  left: -1rem; /* Adjust the left position for the border */
-  width: calc(100% + 1rem); /* Adjust the width to include the negative left value */
+  left: -1rem;
+  /* Adjust the left position for the border */
+  width: calc(100% + 1rem);
+  /* Adjust the width to include the negative left value */
   height: 100%;
   border-bottom: #404453 solid 3.5px;
-  z-index: -1; /* Place the border behind the header content */
+  z-index: -1;
+  /* Place the border behind the header content */
 }
 
-
-
-dotlottie-player {
-
-  width: auto;
-  height: max-content;
-  justify-content: center;
-  align-items: center;
-  /* max-width: 600px; */
+#logo {
+  font-size: 1.5rem;
+  margin: 1.5vw;
+  font-weight: bold;
+  color: white;
+  background-color: transparent;
 }
 
-#sections-container{
+#menu {
+  display: flex;
+  list-style: none;
+  gap: 0.5rem;
+}
+
+#menu a {
+  display: block;
+  padding: 0.5rem;
+}
+
+#nav {
+  background-color: transparent;
+}
+
+#btn-mobile {
+  display: none;
+}
+
+/*--------------- Sections General   ---------------*/
+
+/* Apply adjustments only when the section is the target */
+section:target {
+  padding-top: 5rem;
+  margin-top: -5rem;
+}
+
+#sections-container {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -178,8 +156,14 @@ dotlottie-player {
   font-weight: bold;
 }
 
+#section-cover {
+  height: 100vh;
+}
 
-
+#section-cover {
+  display: flex;
+  justify-content: center;
+}
 
 /*--------------- Cover Section   ---------------*/
 
@@ -198,17 +182,14 @@ dotlottie-player {
 .title {
   font-size: 3rem;
   text-align: center;
-
 }
 
-.section__text__p1{
+.section__text__p1 {
   font-size: 1.75rem;
   margin-bottom: 1rem;
   color: rgb(255, 90, 90);
   font-weight: 600;
 }
-
-
 
 .techstack {
   display: flex;
@@ -222,10 +203,7 @@ dotlottie-player {
   margin: 5rem 1rem 0;
 }
 
-
-
 /*--------------- Buttons  ---------------*/
-
 
 .btn-container {
   display: block;
@@ -239,7 +217,6 @@ dotlottie-player {
   padding: 1rem;
   width: 15rem;
   border-radius: 2rem;
-
 }
 
 .btn-color-1 {
@@ -250,4 +227,4 @@ dotlottie-player {
   cursor: pointer;
   background: rgb(255, 90, 90);
   border: transparent;
-} 
+}
