@@ -67,32 +67,59 @@ function handleNavInteraction() {
   }
 }
 
-// Scroll event to dynamically change the name in the nav bar
+
+
+function getVisibleSection() {
+  const visibilityThreshold = 0.1; // Adjust this value as needed
+
+  for (const section of sections) {
+    const rect = section.getBoundingClientRect();
+    const visibleHeight = Math.min(rect.bottom, window.innerHeight) - Math.max(rect.top, 0);
+    const visiblePercentage = visibleHeight / rect.height;
+
+    if (visiblePercentage >= visibilityThreshold) {
+      return section;
+    }
+  }
+
+  return null;
+}
+
 window.addEventListener("scroll", () => {
-  sections.forEach((section) => {
-    const sectionTop = section.offsetTop - header.offsetHeight;
-    const sectionBottom = sectionTop + section.offsetHeight;
-    const link = document.querySelector(`#menu a[href="#${section.id}"]`);
-    const isAtTop = window.scrollY === 0;
-    const isInSection =
-      window.scrollY >= sectionTop && window.scrollY < sectionBottom;
 
-    const underlineColor = "#FF5A5A"; // Set the desired underline color
+  if (window.scrollY === 0) {
+    logo.textContent = sectionText["header"];
+  } else {
 
-    // Inside the scroll event listener
-    if (isAtTop) {
-      logo.textContent = sectionText["header"];
-      link.style.borderBottom = "none"; // Remove underline
-    } else if (isInSection) {
-      link.style.borderBottom = `3px solid ${underlineColor}`; // Add colored underline
-    } else {
-      link.style.borderBottom = "none"; // Remove underline
+    const visibleSection = getVisibleSection();
+
+    if (visibleSection) {
+      const link = document.querySelector(`#menu a[href="#${visibleSection.id}"]`);
+      const underlineColor = "#FF5A5A"; // Set the desired underline color
+
+      logo.textContent = sectionText[visibleSection.id];
+      link.style.borderBottom = `3px solid ${underlineColor}`;
+
+      // Remove underline from other links
+      document.querySelectorAll("#menu a").forEach((otherLink) => {
+        if (otherLink !== link) {
+          otherLink.style.borderBottom = "none";
+        }
+      });
     }
-
-    if (window.scrollY === 0) {
-      logo.textContent = sectionText["header"];
-    } else if (isInSection && !nav.classList.contains("active")) {
-      logo.textContent = sectionText[section.id];
-    }
-  });
+ 
+  }
 });
+
+
+
+window.addEventListener('scroll', () => {
+  console.log("START");
+  console.log("window.scrollY" + " " + window.scrollY);
+  console.log(window.scrollY === 0);
+  // console.log("sectionTop" + " " + sectionTop);
+  // console.log("sectionBottom" + " " + sectionBottom);
+  // console.log("isInSection" + " " + sectionBottom);
+  console.log("STOP");
+}
+)
