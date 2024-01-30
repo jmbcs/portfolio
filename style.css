@@ -54,6 +54,10 @@ li {
   color: rgb(168, 170, 177);
 }
 
+ul li {
+  margin-bottom: 10px;
+}
+
 footer {
   height: 26vh;
   margin: 0 1rem;
