@@ -9,7 +9,7 @@ const sections = document.querySelectorAll("section");
 
 // Define text for each section
 const sectionText = {
-  header: "Júlio Silva",
+  header: "Welcome",
   "section-cover": "Cover",
   "section-about": "About Me",
   "section-work": "Work Experience",
@@ -70,7 +70,7 @@ function handleNavInteraction() {
 
 
 function getVisibleSection() {
-  const visibilityThreshold = 0.1; // Adjust this value as needed
+  const visibilityThreshold = 0.35; // Adjust this value as needed
 
   for (const section of sections) {
     const rect = section.getBoundingClientRect();
