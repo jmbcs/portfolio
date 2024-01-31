@@ -20,6 +20,17 @@
     width: auto;
   }
 
+  .column~#computer{
+    /* position: relative; */
+    /* display: block; */
+
+    width: 50rem;
+    /* width: 50rem !important; */
+    /* align-items: center; */
+    
+  }
+  
+
   h1 {
     margin-left: -1.5rem;
   }
