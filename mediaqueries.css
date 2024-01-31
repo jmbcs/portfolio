@@ -61,8 +61,8 @@
   }
 
   .container {
-    margin-left: 3rem;
-    margin-right: 3rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
   }
 
   @media screen and (max-width: 600px) {
@@ -74,8 +74,8 @@
     }
 
     .container {
-      margin-left: 2rem;
-      margin-right: 2rem;
+      margin-left: 1rem;
+      margin-right: 1rem;
     }
 
     hr {
