@@ -8,6 +8,7 @@
   -webkit-tap-highlight-color: transparent !important;
   scrollbar-color: rgb(255, 90, 90) transparent;
   scrollbar-width: thin;
+  overflow: hidden;
 }
 
 html {
