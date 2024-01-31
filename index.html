@@ -1,349 +1,354 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My Portfolio</title>
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="mediaqueries.css" />
-  </head>
 
-  <body>
-    <header id="header">
-      <p id="logo">Welcome</p>
-      <nav id="nav">
-        <button id="btn-mobile">
-          <span id="hamburger"></span>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="mediaqueries.css" />
+</head>
+
+<body>
+  <header id="header">
+    <p id="logo">Welcome</p>
+    <nav id="nav">
+      <button id="btn-mobile">
+        <span id="hamburger"></span>
+      </button>
+      <ul id="menu" role="menu">
+        <li><a href="#section-cover">Cover</a></li>
+        <li><a href="#section-about">About</a></li>
+        <li><a href="#section-work">Experience</a></li>
+        <li><a href="#section-skills">Skills</a></li>
+        <li><a href="#section-projects">Projects</a></li>
+        <li><a href="#section-contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="container" id="section-cover">
+    <div class="section__pic-container">
+      <img src="assets/profile.jpg" alt="Júlio Silva Profile Picture" />
+    </div>
+    <div class="section__text">
+      <h4 class="title">Júlio Silva</h4>
+      <p class="section__text__p1">Software Engineer</p>
+
+      <div class="btn-container">
+        <button class="btn btn-color-1"
+          onclick="window.open('https://github.com/jmbcs/curriculum/blob/main/curriculum.pdf', '_blank')">
+          Check my Curriculum
         </button>
-        <ul id="menu" role="menu">
-          <li><a href="#section-cover">Cover</a></li>
-          <li><a href="#section-about">About Me</a></li>
-          <li><a href="#section-work">Work Experience</a></li>
-          <li><a href="#section-skills">Skills</a></li>
-          <li><a href="#section-projects">Projects</a></li>
-          <li><a href="#section-contact">Contact Me</a></li>
-        </ul>
-      </nav>
-    </header>
-
-    <section id="section-cover">
-      <div class="section__pic-container">
-        <img src="assets/profile.jpg" alt="Júlio Silva Profile Picture" />
-      </div>
-      <div class="section__text">
-        <h4 class="title">Júlio Silva</h4>
-        <p class="section__text__p1">Software Engineer</p>
-
-        <div class="btn-container">
-          <button
-            class="btn btn-color-1"
-            onclick="window.open('https://github.com/jmbcs/curriculum/blob/main/curriculum.pdf', '_blank')"
-          >
-            Check my Curriculum
-          </button>
-          <div class="techstack">
-            <img
-              src="https://img.icons8.com/color/96/000000/python.png"
-              alt="Python"
-            />
-            <img
-              src="https://www.svgrepo.com/download/331370/docker.svg"
-              alt="Docker"
-            />
-            <img
-              src="https://upload.wikimedia.org/wikipedia/commons/3/3b/Grafana_icon.svg"
-              alt="Grafana"
-            />
-            <img
-              src="https://static-00.iconduck.com/assets.00/prometheus-icon-2047x2048-b3aicxlu.png"
-              alt="Prometheus"
-            />
-            <img
-              src="https://cdn-icons-png.flaticon.com/512/5968/5968342.png"
-              alt="Your Alt Text"
-            />
-            <img
-              src="https://static-00.iconduck.com/assets.00/github-icon-512x497-oppthre2.png"
-              alt="GitHub"
-            />
-          </div>
+        <div class="techstack">
+          <img src="https://img.icons8.com/color/96/000000/python.png" alt="Python" />
+          <img src="https://www.svgrepo.com/download/331370/docker.svg" alt="Docker" />
+          <img src="https://upload.wikimedia.org/wikipedia/commons/3/3b/Grafana_icon.svg" alt="Grafana" />
+          <img src="https://static-00.iconduck.com/assets.00/prometheus-icon-2047x2048-b3aicxlu.png" alt="Prometheus" />
+          <img src="https://cdn-icons-png.flaticon.com/512/5968/5968342.png" alt="Your Alt Text" />
+          <img src="https://static-00.iconduck.com/assets.00/github-icon-512x497-oppthre2.png" alt="GitHub" />
         </div>
       </div>
-    </section>
-    <hr />
-    <div id="sections-container">
-      <section id="section-about">
-        <h1>About Me</h1>
-        <ul>
-          <li>Hi there! 👋</li>
-          <li>My name is Júlio Silva and I am a developer.</li>
-        </ul>
-        <ul>
-          <li>📅 <strong>Age</strong> 27</li>
-          <li>🇵🇹 <strong>Nationality</strong> Portuguese</li>
-          <li>
-            💼 <strong>Current Position</strong> Research & Development Engineer
-            at Wavecom
-          </li>
-          <li>
-            🎓 <strong>Education</strong> M.Sc Electronics and
-            Telecommunications Engineering, <br />University of Aveiro
-          </li>
-        </ul>
-        <h1>Hobbies & Interests</h1>
-        <ul>
-          <li>
-            😄 <strong>Comedy</strong> Ricky Gervais, Daniel Sloss, and Anthony
-            Jeselnik fan
-          </li>
-          <li>
-            📖 <strong>Reading</strong> Reading is essential to keep my mind
-            sharp
-          </li>
-          <li>
-            🎮 <strong>Videogames</strong> I am a certified gamer since 6 years
-            old
-          </li>
-          <li>
-            🍿 <strong>Movies & Series</strong> You know nothing Jon Snow!
-          </li>
-          <li>
-            🏞️ <strong>Hiking</strong> Hiking with the family is a time well
-            spent
-          </li>
-          <li>
-            💻 <strong>Coding</strong> I love bringing ideas to life with code
-          </li>
-          <li>
-            💪 <strong>Gym</strong> Keeping both my mind and body in shape is
-            crucial for my happiness
-          </li>
-          <li>🎵 <strong>Music</strong> Who doesn't like a good beat?</li>
-          <li>
-            🌇 <strong>Travelling</strong> There is so much to see out there
-          </li>
-          <li>
-            💵 <strong>Finances & Investing</strong> I like to keep up with
-            financial markets and exploring new investment opportunities
-          </li>
-        </ul>
-      </section>
+    </div>
+  </section>
 
-      <dotlottie-player
-        src="animations/about.json"
-        background="transparent"
-        speed="1"
-        direction="1"
-        playMode="normal"
-        loop
-        autoplay
-      >
+  <hr />
+
+  <section class="container" id="section-about">
+    <div class="column">
+      <h1>About Me</h1>
+      <ul>
+        <li>Hi there! 👋</li>
+        <li>My name is Júlio Silva and I am a developer.</li>
+      </ul>
+      <ul>
+        <li>📅 <strong>Age</strong> 27</li>
+        <li>🇵🇹 <strong>Nationality</strong> Portuguese</li>
+        <li>
+          💼 <strong>Current Position</strong> Research & Development Engineer
+          at Wavecom
+        </li>
+        <li>
+          🎓 <strong>Education</strong> M.Sc Electronics and
+          Telecommunications Engineering, <br />University of Aveiro
+        </li>
+      </ul>
+      <h1>Hobbies & Interests</h1>
+      <ul>
+        <li>
+          😄 <strong>Comedy</strong> Ricky Gervais, Daniel Sloss, and Anthony
+          Jeselnik fan
+        </li>
+        <li>
+          📖 <strong>Reading</strong> Reading is essential to keep my mind
+          sharp
+        </li>
+        <li>
+          🎮 <strong>Videogames</strong> I am a certified gamer since 6 years
+          old
+        </li>
+        <li>
+          🍿 <strong>Movies & Series</strong> You know nothing Jon Snow!
+        </li>
+        <li>
+          🏞️ <strong>Hiking</strong> Hiking with the family is a time well
+          spent
+        </li>
+        <li>
+          💻 <strong>Coding</strong> I love bringing ideas to life with code
+        </li>
+        <li>
+          💪 <strong>Gym</strong> Keeping both my mind and body in shape is
+          crucial for my happiness
+        </li>
+        <li>🎵 <strong>Music</strong> Who doesn't like a good beat?</li>
+        <li>
+          🌇 <strong>Travelling</strong> There is so much to see out there
+        </li>
+        <li>
+          💵 <strong>Finances & Investing</strong> I like to keep up with
+          financial markets and exploring new investment opportunities
+        </li>
+      </ul>
+    </div>
+    <div class="column">
+      <dotlottie-player src="animations/about.json" background="transparent" speed="1" direction="1" playMode="normal"
+        loop autoplay>
       </dotlottie-player>
     </div>
-    <hr />
-    <div id="sections-container">
-      <section id="section-work">
-        <h1>Work Experience</h1>
-        <ul>
-          <li>
-            📅 <strong style="color: white">Date</strong> 01/2021 - Present
-            (<strong style="color: rgb(255, 90, 90)">3</strong> years)
-          </li>
-          <li>
-            💼 <strong style="color: white">Position</strong> Research and
-            Development Engineer
-          </li>
-          <li>
-            🏢 <strong style="color: white">Company</strong>
-            <a
-              href="https://www.wavecom.com"
-              target="_blank"
-              style="color: rgb(255, 90, 90); text-decoration: underline"
-              >Wavecom Technologies</a
-            >
-          </li>
-        </ul>
+  </section>
+
+  <hr />
+
+  <section class="container" id="section-work">
+    <div class="column">
+      <h1>Work Experience</h1>
+      <ul>
+        <li>
+          📅 <strong style="color: white">Date</strong> 01/2021 - Present
+          (<strong style="color: rgb(255, 90, 90)">3</strong> years)
+        </li>
+        <li>
+          💼 <strong style="color: white">Position</strong> Research and
+          Development Engineer
+        </li>
+        <li>
+          🏢 <strong style="color: white">Company</strong>
+          <a href="https://www.wavecom.com" target="_blank"
+            style="color: rgb(255, 90, 90); text-decoration: underline">Wavecom Technologies</a>
+        </li>
+      </ul>
+      <br />
+      <ul>
+        <li>
+          ► Developed microservices in <strong>Python</strong> and
+          <strong>Golang</strong>
+        </li>
+
+        <li>
+          ► Designed and implemented <strong>ETL pipelines</strong> with
+          <strong>Telegraf</strong>
+        </li>
+
+        <li>
+          ► Developed <strong>monitoring frameworks</strong> for
+          <strong>HPC</strong> systems and <strong>WI-FI</strong> networks
+          with comprehensive <strong>Grafana</strong> dashboards
+        </li>
+
+        <li>► Automated workflows using <strong>Shell</strong> scripting</li>
+        <li>
+          ► Built <strong>APIs</strong> for <strong>SQL</strong> and
+          <strong>NoSQL</strong> databases
+        </li>
+        <li>► Engineered algorithms for <strong>data analytics</strong></li>
+        <li>
+          ► Operated databases systems including <strong>PostgreSQL</strong>,
+          <strong>Victoriametrics</strong>, and <strong>Elasticsearch</strong>
+        </li>
+        <li>
+          ► Implemented <strong>Protocol Buffers</strong> and
+          <strong>gRPC</strong> for microservices communication
+        </li>
+        <li>
+          ► Developed <strong>Docker</strong> images and orchestrated
+          applications using <strong>Docker Compose</strong>
+        </li>
+        <li>
+          ► Handled <strong>ONVIF</strong> protocol M to extract valuable
+          detections from camera metadata streams
+        </li>
+        <li>
+          ► Implemented <strong>Version Control Systems</strong> to ensure
+          code integrity
+        </li>
+        <li>
+          ► Worked across diverse funded projects from inception to production
+        </li>
+
+        <li>► Collaborated with global partners.</li>
+      </ul>
+    </div>
+    <div class="column">
+      <dotlottie-player src="animations/experience.json" background="transparent" speed="1" direction="1"
+        playMode="normal" loop autoplay>
+      </dotlottie-player>
+    </div>
+  </section>
+
+  <hr />
+
+  <section class="container" id="section-skills">
+    <div class="column">
+      <h1>Tech Skills</h1>
+      <div class="skill-type">Programming Languages</div>
+      <div class="skill-snippets">
+        <code>Python</code> <code>Golang</code> <code>Bash</code>
+        <code>Javascript</code>
+      </div>
+
+      <div class="skill-type">Web Development</div>
+
+      <code>HTML</code><code>CSS</code>
+
+      <div class="skill-type">Databases</div>
+      <div class="skill-snippets">
+        <code>SQL</code> <code>NoSQL</code> <code>PromQL</code><br />
+        <code>PostegreSQL</code> <code>TimescaleDB</code>
+        <code>ElasticSearch</code> <br />
+        <code>Victoriametrics</code>
+      </div>
+      <div class="skill-type">Monitoring & Dashboards</div>
+      <div class="skill-snippets">
+        <code>Grafana</code> <code>Kibana</code> <code>Prometheus</code>
+      </div>
+      <div class="skill-type">Containerization and Orchestration</div>
+      <div class="skill-snippets">
+        <code>Docker</code> <code>Docker Compose</code>
+      </div>
+      <div class="skill-type">Data serialization</div>
+      <div class="skill-snippets">
+        <code>JSON</code> <code>CSV</code> <code>Protobuf</code>
+        <code>YAML</code>
+      </div>
+      <div class="skill-type">Others</div>
+      <div class="skill-snippets">
+        <code>Git</code> <code>Linux</code> <code>Telegraf</code>
+        <code>Shell</code> <code>gRPC</code>
+      </div>
+    </div>
+
+    <div class="column">
+      <h1>Python Skills</h1>
+      <div class="skill-type">Software Development and APIs</div>
+      <div class="skill-snippets">
+        <code>FastAPI</code> <code>SQLAlchemy</code> <code>Psycopg</code>
         <br />
-        <ul>
-          <li>
-            ► Designed and implemented <strong>ETL pipelines</strong> with
-            <strong>Telegraf</strong>
-          </li>
-          <li>
-            ► Developed microservices in <strong>Python</strong> and
-            <strong>Golang</strong>
-          </li>
-          <li>► Automated workflows using <strong>Shell</strong> scripting</li>
-          <li>
-            ► Built <strong>APIs</strong> for <strong>SQL</strong> and
-            <strong>NoSQL</strong> databases
-          </li>
-          <li>► Engineered algorithms for <strong>data analytics</strong></li>
-          <li>
-            ► Operated databases systems including <strong>PostgreSQL</strong>,
-            <strong>Victoriametrics</strong>, and <strong>Elasticsearch</strong>
-          </li>
-          <li>
-            ► Implemented <strong>Protocol Buffers</strong> and
-            <strong>gRPC</strong> for microservices communication
-          </li>
-          <li>
-            ► Developed <strong>Docker</strong> images and orchestrated
-            applications using <strong>Docker Compose</strong>
-          </li>
-          <li>
-            ► Implemented <strong>Version Control Systems</strong> to ensure
-            code integrity
-          </li>
-          <li>
-            ► Worked across diverse funded projects from inception to
-            production.
-          </li>
-          <li>
-            ► Developed a <strong>monitoring framework</strong> for
-            <strong>HPC</strong> systems with comprehensive
-            <strong>Grafana</strong> dashboards.
-          </li>
-          <li>► Collaborated with global partners.</li>
-        </ul>
-      </section>
-      <dotlottie-player
-        src="animations/work.json"
-        background="transparent"
-        speed="1"
-        direction="1"
-        playMode="normal"
-        loop
-        autoplay
-      >
+        <code>Aiohttp</code> <code>Pydantic</code> <code>Asyncio</code>
+        <code>Requests</code>
+      </div>
+      <div class="skill-type">Data Analytics</div>
+      <div class="skill-snippets">
+        <code>Pandas</code> <code>Seaborn</code> <code>Numpy</code>
+        <code>Matplotlib</code> <br /><code>Tensorflow</code>
+      </div>
+      <div class="skill-type">Computer Vision</div>
+      <div class="skill-snippets">
+        <code>ImageAI</code> <code>OpenCV</code> <code>Ultralytics</code>
+      </div>
+    </div>
+
+    <div class="column">
+      <dotlottie-player src="animations/computer.json" background="transparent" speed="1" direction="1"
+        playMode="normal" loop autoplay>
       </dotlottie-player>
     </div>
-    <hr />
-    <section id="section-skills">
-      <h4></h4>
+  </section>
 
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam nam
-        labore quas doloribus. Magnam amet ut quae voluptatibus aliquid
-        repudiandae rem excepturi consequatur facere sequi eaque dolorum vel,
-        adipisci sunt. Temporibus ipsum, ea mollitia id voluptates recusandae,
-        magnam non adipisci molestiae ex debitis esse aspernatur repellendus
-        ipsam nulla? Molestiae assumenda numquam porro ex reiciendis qui sint
-        facere non mollitia nihil. Hic aspernatur soluta sint enim iusto sequi
-        facere nulla illo nesciunt quasi reiciendis amet architecto, deserunt
-        voluptatum repellendus quam est mollitia, alias deleniti ullam.
-        Blanditiis quam velit corporis vero quidem! Iusto totam voluptate eaque
-        nam quae error, quibusdam, esse sapiente facere nemo cupiditate
-        temporibus labore natus. Quos doloribus eveniet laboriosam excepturi
-        molestiae earum! Odit, praesentium! Possimus voluptatibus autem
-        veritatis cum! Reprehenderit earum natus excepturi mollitia perferendis,
-        deleniti quae vero, ab quidem molestias neque consequatur tempora saepe
-        reiciendis ut, repellat necessitatibus atque sunt harum fugiat provident
-        quas. Earum aperiam perferendis velit? Quis quia vitae quibusdam,
-        repudiandae distinctio modi asperiores eaque. Cum aperiam nam nulla
-        molestias totam velit temporibus facilis quaerat quam fugit, magnam, quo
-        ducimus ut. Cumque debitis dolores quia nemo. Nihil perferendis aliquam
-        beatae fuga praesentium quo libero saepe fugit nemo tenetur! Maxime
-        architecto similique, totam, esse fuga aperiam, ex placeat optio
-        explicabo ut nemo quasi natus et est. Nostrum. Vitae facere aspernatur
-        perspiciatis velit numquam perferendis magni atque officiis vel voluptas
-        dolore adipisci veritatis est saepe porro, et minus optio eos tenetur
-        veniam. Perferendis facere amet animi eveniet. Officiis. Deserunt minus
-        autem consequatur. Ipsam nisi amet vel iusto hic atque deserunt labore!
-        Quo nostrum, voluptatem porro delectus explicabo possimus totam, fugit
-        nisi sit culpa excepturi? Excepturi repellat hic maxime! Minus
-        accusantium officiis vero. Nemo earum fuga corrupti sit illo veritatis
-        omnis voluptate facere ex quaerat, non sint nostrum commodi magnam
-        voluptatum officia. Harum doloremque, possimus provident animi labore
-        exercitationem.
-      </p>
-    </section>
-    <hr />
-    <section id="section-projects">
-      <h4>PROJECTS</h4>
+  <hr />
+  <section id="section-projects">
+    <h4>PROJECTS</h4>
 
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam nam
-        labore quas doloribus. Magnam amet ut quae voluptatibus aliquid
-        repudiandae rem excepturi consequatur facere sequi eaque dolorum vel,
-        adipisci sunt. Temporibus ipsum, ea mollitia id voluptates recusandae,
-        magnam non adipisci molestiae ex debitis esse aspernatur repellendus
-        ipsam nulla? Molestiae assumenda numquam porro ex reiciendis qui sint
-        facere non mollitia nihil. Hic aspernatur soluta sint enim iusto sequi
-        facere nulla illo nesciunt quasi reiciendis amet architecto, deserunt
-        voluptatum repellendus quam est mollitia, alias deleniti ullam.
-        Blanditiis quam velit corporis vero quidem! Iusto totam voluptate eaque
-        nam quae error, quibusdam, esse sapiente facere nemo cupiditate
-        temporibus labore natus. Quos doloribus eveniet laboriosam excepturi
-        molestiae earum! Odit, praesentium! Possimus voluptatibus autem
-        veritatis cum! Reprehenderit earum natus excepturi mollitia perferendis,
-        deleniti quae vero, ab quidem molestias neque consequatur tempora saepe
-        reiciendis ut, repellat necessitatibus atque sunt harum fugiat provident
-        quas. Earum aperiam perferendis velit? Quis quia vitae quibusdam,
-        repudiandae distinctio modi asperiores eaque. Cum aperiam nam nulla
-        molestias totam velit temporibus facilis quaerat quam fugit, magnam, quo
-        ducimus ut. Cumque debitis dolores quia nemo. Nihil perferendis aliquam
-        beatae fuga praesentium quo libero saepe fugit nemo tenetur! Maxime
-        architecto similique, totam, esse fuga aperiam, ex placeat optio
-        explicabo ut nemo quasi natus et est. Nostrum. Vitae facere aspernatur
-        perspiciatis velit numquam perferendis magni atque officiis vel voluptas
-        dolore adipisci veritatis est saepe porro, et minus optio eos tenetur
-        veniam. Perferendis facere amet animi eveniet. Officiis. Deserunt minus
-        autem consequatur. Ipsam nisi amet vel iusto hic atque deserunt labore!
-        Quo nostrum, voluptatem porro delectus explicabo possimus totam, fugit
-        nisi sit culpa excepturi? Excepturi repellat hic maxime! Minus
-        accusantium officiis vero. Nemo earum fuga corrupti sit illo veritatis
-        omnis voluptate facere ex quaerat, non sint nostrum commodi magnam
-        voluptatum officia. Harum doloremque, possimus provident animi labore
-        exercitationem.
-      </p>
-    </section>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam nam
+      labore quas doloribus. Magnam amet ut quae voluptatibus aliquid
+      repudiandae rem excepturi consequatur facere sequi eaque dolorum vel,
+      adipisci sunt. Temporibus ipsum, ea mollitia id voluptates recusandae,
+      magnam non adipisci molestiae ex debitis esse aspernatur repellendus
+      ipsam nulla? Molestiae assumenda numquam porro ex reiciendis qui sint
+      facere non mollitia nihil. Hic aspernatur soluta sint enim iusto sequi
+      facere nulla illo nesciunt quasi reiciendis amet architecto, deserunt
+      voluptatum repellendus quam est mollitia, alias deleniti ullam.
+      Blanditiis quam velit corporis vero quidem! Iusto totam voluptate eaque
+      nam quae error, quibusdam, esse sapiente facere nemo cupiditate
+      temporibus labore natus. Quos doloribus eveniet laboriosam excepturi
+      molestiae earum! Odit, praesentium! Possimus voluptatibus autem
+      veritatis cum! Reprehenderit earum natus excepturi mollitia perferendis,
+      deleniti quae vero, ab quidem molestias neque consequatur tempora saepe
+      reiciendis ut, repellat necessitatibus atque sunt harum fugiat provident
+      quas. Earum aperiam perferendis velit? Quis quia vitae quibusdam,
+      repudiandae distinctio modi asperiores eaque. Cum aperiam nam nulla
+      molestias totam velit temporibus facilis quaerat quam fugit, magnam, quo
+      ducimus ut. Cumque debitis dolores quia nemo. Nihil perferendis aliquam
+      beatae fuga praesentium quo libero saepe fugit nemo tenetur! Maxime
+      architecto similique, totam, esse fuga aperiam, ex placeat optio
+      explicabo ut nemo quasi natus et est. Nostrum. Vitae facere aspernatur
+      perspiciatis velit numquam perferendis magni atque officiis vel voluptas
+      dolore adipisci veritatis est saepe porro, et minus optio eos tenetur
+      veniam. Perferendis facere amet animi eveniet. Officiis. Deserunt minus
+      autem consequatur. Ipsam nisi amet vel iusto hic atque deserunt labore!
+      Quo nostrum, voluptatem porro delectus explicabo possimus totam, fugit
+      nisi sit culpa excepturi? Excepturi repellat hic maxime! Minus
+      accusantium officiis vero. Nemo earum fuga corrupti sit illo veritatis
+      omnis voluptate facere ex quaerat, non sint nostrum commodi magnam
+      voluptatum officia. Harum doloremque, possimus provident animi labore
+      exercitationem.
+    </p>
+  </section>
 
-    <section id="section-contact">
-      <h4>Contact</h4>
+  <section id="section-contact">
+    <h4>Contact</h4>
 
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam nam
-        labore quas doloribus. Magnam amet ut quae voluptatibus aliquid
-        repudiandae rem excepturi consequatur facere sequi eaque dolorum vel,
-        adipisci sunt. Temporibus ipsum, ea mollitia id voluptates recusandae,
-        magnam non adipisci molestiae ex debitis esse aspernatur repellendus
-        ipsam nulla? Molestiae assumenda numquam porro ex reiciendis qui sint
-        facere non mollitia nihil. Hic aspernatur soluta sint enim iusto sequi
-        facere nulla illo nesciunt quasi reiciendis amet architecto, deserunt
-        voluptatum repellendus quam est mollitia, alias deleniti ullam.
-        Blanditiis quam velit corporis vero quidem! Iusto totam voluptate eaque
-        nam quae error, quibusdam, esse sapiente facere nemo cupiditate
-        temporibus labore natus. Quos doloribus eveniet laboriosam excepturi
-        molestiae earum! Odit, praesentium! Possimus voluptatibus autem
-        veritatis cum! Reprehenderit earum natus excepturi mollitia perferendis,
-        deleniti quae vero, ab quidem molestias neque consequatur tempora saepe
-        reiciendis ut, repellat necessitatibus atque sunt harum fugiat provident
-        quas. Earum aperiam perferendis velit? Quis quia vitae quibusdam,
-        repudiandae distinctio modi asperiores eaque. Cum aperiam nam nulla
-        molestias totam velit temporibus facilis quaerat quam fugit, magnam, quo
-        ducimus ut. Cumque debitis dolores quia nemo. Nihil perferendis aliquam
-        beatae fuga praesentium quo libero saepe fugit nemo tenetur! Maxime
-        architecto similique, totam, esse fuga aperiam, ex placeat optio
-        explicabo ut nemo quasi natus et est. Nostrum. Vitae facere aspernatur
-        perspiciatis velit numquam perferendis magni atque officiis vel voluptas
-        dolore adipisci veritatis est saepe porro, et minus optio eos tenetur
-        veniam. Perferendis facere amet animi eveniet. Officiis. Deserunt minus
-        autem consequatur. Ipsam nisi amet vel iusto hic atque deserunt labore!
-        Quo nostrum, voluptatem porro delectus explicabo possimus totam, fugit
-        nisi sit culpa excepturi? Excepturi repellat hic maxime! Minus
-        accusantium officiis vero. Nemo earum fuga corrupti sit illo veritatis
-        omnis voluptate facere ex quaerat, non sint nostrum commodi magnam
-        voluptatum officia. Harum doloremque, possimus provident animi labore
-        exercitationem.
-      </p>
-    </section>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam nam
+      labore quas doloribus. Magnam amet ut quae voluptatibus aliquid
+      repudiandae rem excepturi consequatur facere sequi eaque dolorum vel,
+      adipisci sunt. Temporibus ipsum, ea mollitia id voluptates recusandae,
+      magnam non adipisci molestiae ex debitis esse aspernatur repellendus
+      ipsam nulla? Molestiae assumenda numquam porro ex reiciendis qui sint
+      facere non mollitia nihil. Hic aspernatur soluta sint enim iusto sequi
+      facere nulla illo nesciunt quasi reiciendis amet architecto, deserunt
+      voluptatum repellendus quam est mollitia, alias deleniti ullam.
+      Blanditiis quam velit corporis vero quidem! Iusto totam voluptate eaque
+      nam quae error, quibusdam, esse sapiente facere nemo cupiditate
+      temporibus labore natus. Quos doloribus eveniet laboriosam excepturi
+      molestiae earum! Odit, praesentium! Possimus voluptatibus autem
+      veritatis cum! Reprehenderit earum natus excepturi mollitia perferendis,
+      deleniti quae vero, ab quidem molestias neque consequatur tempora saepe
+      reiciendis ut, repellat necessitatibus atque sunt harum fugiat provident
+      quas. Earum aperiam perferendis velit? Quis quia vitae quibusdam,
+      repudiandae distinctio modi asperiores eaque. Cum aperiam nam nulla
+      molestias totam velit temporibus facilis quaerat quam fugit, magnam, quo
+      ducimus ut. Cumque debitis dolores quia nemo. Nihil perferendis aliquam
+      beatae fuga praesentium quo libero saepe fugit nemo tenetur! Maxime
+      architecto similique, totam, esse fuga aperiam, ex placeat optio
+      explicabo ut nemo quasi natus et est. Nostrum. Vitae facere aspernatur
+      perspiciatis velit numquam perferendis magni atque officiis vel voluptas
+      dolore adipisci veritatis est saepe porro, et minus optio eos tenetur
+      veniam. Perferendis facere amet animi eveniet. Officiis. Deserunt minus
+      autem consequatur. Ipsam nisi amet vel iusto hic atque deserunt labore!
+      Quo nostrum, voluptatem porro delectus explicabo possimus totam, fugit
+      nisi sit culpa excepturi? Excepturi repellat hic maxime! Minus
+      accusantium officiis vero. Nemo earum fuga corrupti sit illo veritatis
+      omnis voluptate facere ex quaerat, non sint nostrum commodi magnam
+      voluptatum officia. Harum doloremque, possimus provident animi labore
+      exercitationem.
+    </p>
+  </section>
 
-    <script
-      src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs"
-      type="module"
-    ></script>
-    <script src="script.js"></script>
-  </body>
+  <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script>
+  <script src="script.js"></script>
+</body>
+
 </html>

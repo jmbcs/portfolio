@@ -11,11 +11,11 @@ const sections = document.querySelectorAll("section");
 const sectionText = {
   header: "Welcome",
   "section-cover": "Cover",
-  "section-about": "About Me",
-  "section-work": "Work Experience",
+  "section-about": "About",
+  "section-work": "Experience",
   "section-skills": "Skills",
   "section-projects": "Projects",
-  "section-contact": "Contact Me",
+  "section-contact": "Contact",
 };
 
 // Toggle menu function

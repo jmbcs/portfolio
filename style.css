@@ -16,23 +16,19 @@ html {
 
 body {
   font-family: "Poppins", sans-serif;
-}
-
-body.menu-open {
-  overflow: hidden;
-}
-
-body,
-ul {
   margin-right: 1.5vw;
   padding: 0px;
   list-style-type: none;
 }
 
-h1,
-h2,
-h3,
-h4 {
+ul {
+  margin-right: 1.5vw;
+  padding: 0px;
+  list-style-type: none;
+  margin-bottom: 10px;
+}
+
+h1 {
   margin-left: -1rem;
 }
 
@@ -47,14 +43,11 @@ a {
 
 p {
   margin: 2.35vw;
-}
-
-p,
-li {
   color: rgb(168, 170, 177);
 }
 
-ul li {
+li {
+  color: rgb(168, 170, 177);
   margin-bottom: 10px;
 }
 
@@ -74,115 +67,38 @@ hr {
   position: relative;
   z-index: 100;
 }
+
 section {
-  height: fit-content;
-  margin: 2rem 2rem 2rem 2rem;
-  box-sizing: border-box;
-  min-height: fit-content;
-  margin-left: 10rem;
-  margin-right: 10rem;
-
-  /* margin */
-}
-
-dotlottie-player {
-  height: max-content;
-  justify-content: center;
-  align-items: center;
-  flex: 1; /* Allow the player to take up remaining space */
-  max-width: auto; /* Set a maximum width for the animation container */
-}
-/*--------------- Header Section   ---------------*/
-#header {
-  position: fixed;
-  z-index: 1000;
-  top: 0;
-  width: 100vw;
-  box-sizing: border-box;
-  text-align: center;
-  height: 70px;
-  padding: 1rem;
   display: flex;
-  align-items: center;
   justify-content: space-between;
+
+  &:target {
+    padding-top: 5rem;
+    margin-top: -5rem;
+  }
 }
 
-#header::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: -1rem;
-  /* Adjust the left position for the border */
-  width: calc(100% + 1rem);
-  /* Adjust the width to include the negative left value */
-  height: 100%;
-  border-bottom: #404453 solid 3.5px;
-  z-index: -1;
-  /* Place the border behind the header content */
-}
-
-#logo {
-  font-size: 1.5rem;
-  margin: 1.5vw;
-  font-weight: bold;
-  color: white;
-  background-color: transparent;
-}
-
-#menu {
-  display: flex;
-  list-style: none;
-  gap: 0.5rem;
-}
-
-#menu a {
-  display: block;
-  padding: 0.5rem;
-}
-
-#nav {
-  background-color: transparent;
-}
-
-#btn-mobile {
-  display: none;
-}
-
-/*--------------- Sections General   ---------------*/
-
-/* Apply adjustments only when the section is the target */
-section:target {
-  padding-top: 5rem;
-  margin-top: -5rem;
-}
-
-#sections-container {
-  display: flex;
-  justify-content: space-between; /* Add space between the sections and the animation */
-  align-items: center;
-  flex-wrap: wrap; /* Allow items to wrap to the next line if necessary */
-}
-
-#section-about ul li strong {
+code {
   color: rgb(255, 90, 90);
-  font-weight: bold;
+  margin-right: 1.5rem;
+  line-height: 2rem;
+  font-size: 0.8rem;
 }
 
-#section-cover {
-  height: 100vh;
-}
-
-#section-cover {
+/*----Animation----*/
+dotlottie-player {
+  align-items: center;
+  width: 40rem;
   display: flex;
-  justify-content: center;
 }
 
-#section-work strong {
-  color: rgb(255, 90, 90); /* Red color */
+/*-------------------- Main.Class  --------------------*/
+body.menu-open {
+  overflow: hidden;
 }
 
-/*--------------- Cover Section   ---------------*/
-
+/*-------------------- Classes  --------------------*/
+/*----Cover----*/
 .section__pic-container {
   display: flex;
   height: 400px;
@@ -219,8 +135,7 @@ section:target {
   margin: 5rem 1rem 0;
 }
 
-/*--------------- Buttons  ---------------*/
-
+/*----Buttons----*/
 .btn-container {
   display: block;
   gap: 1rem;
@@ -237,10 +152,105 @@ section:target {
 
 .btn-color-1 {
   border: white 0.1rem solid;
+
+  &:hover {
+    cursor: pointer;
+    background: rgb(255, 90, 90);
+    border: transparent;
+  }
 }
 
-.btn-color-1:hover {
-  cursor: pointer;
-  background: rgb(255, 90, 90);
-  border: transparent;
+.container {
+  align-items: left;
+  text-align: left;
+  margin-left: 7.5rem;
+  margin-right: 7.5rem;
+}
+
+/*----skill type for work----*/
+.skill-type {
+  line-height: 3rem;
+  font-size: 1.25rem;
+  color: #8b8b99;
+}
+
+/*----Column for section----*/
+.column {
+  box-sizing: content-box;
+  justify-content: left;
+  padding: 10px;
+}
+
+/*-------------------- IDs  --------------------*/
+/*---- Header Section----*/
+#header {
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  width: 100vw;
+  box-sizing: border-box;
+  text-align: center;
+  height: 70px;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -1rem;
+    width: calc(100% + 1rem);
+    height: 100%;
+    border-bottom: #404453 solid 3.5px;
+    z-index: -1;
+  }
+}
+
+#logo {
+  font-size: 1.5rem;
+  margin: 1.5vw;
+  font-weight: bold;
+  color: white;
+  background-color: transparent;
+}
+
+#menu {
+  display: flex;
+  list-style: none;
+  gap: 0.5rem;
+}
+
+#menu a {
+  display: block;
+  padding: 0.5rem;
+}
+
+#nav {
+  background-color: transparent;
+}
+
+#btn-mobile {
+  display: none;
+}
+
+/*----Sections----*/
+
+#section-cover {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  margin: 2rem 2rem 2rem 2rem;
+  box-sizing: border-box;
+  min-height: fit-content;
+}
+
+#section-work strong {
+  color: rgb(255, 90, 90);
+  font-weight: bold;
+}
+
+#section-about strong {
+  color: rgb(255, 90, 90);
 }
