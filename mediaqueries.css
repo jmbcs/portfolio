@@ -36,8 +36,8 @@
   }
 
   #section-cover {
-    height: 83vh;
-    margin-bottom: 6rem;
+    height: 65vh;
+    margin-bottom: 15rem;
   }
 }
 
@@ -223,3 +223,9 @@
       }
     }
   }
+@media screen and (max-width: 600px) { 
+  #section-cover {
+    height: 50vh;
+    display: block;
+  }
+}
