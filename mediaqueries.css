@@ -3,6 +3,11 @@
     flex-wrap: wrap;
   }
 
+
+  .project-containers {
+    flex-wrap: wrap;
+  }
+
   .column {
     align-items: center;
   }
