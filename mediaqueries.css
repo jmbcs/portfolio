@@ -47,8 +47,8 @@
   }
 
   .container {
-    margin-left: 5rem;
-    margin-right: 5rem;
+    margin-left: 6rem;
+    margin-right: 6rem;
   }
 
   #section-cover {
@@ -72,8 +72,8 @@
   }
 
   .container {
-    margin-left: 2rem;
-    margin-right: 2rem;
+    margin-left: 3.5rem;
+    margin-right: 3.5rem;
   }
 
   @media screen and (max-width: 600px) {
