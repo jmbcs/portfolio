@@ -113,13 +113,6 @@ window.addEventListener("scroll", () => {
 
 
 
-window.addEventListener('scroll', () => {
-  console.log("START");
-  console.log("window.scrollY" + " " + window.scrollY);
-  console.log(window.scrollY === 0);
-  // console.log("sectionTop" + " " + sectionTop);
-  // console.log("sectionBottom" + " " + sectionBottom);
-  // console.log("isInSection" + " " + sectionBottom);
-  console.log("STOP");
-}
-)
+
+
+

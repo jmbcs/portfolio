@@ -8,6 +8,7 @@
   <title>My Portfolio</title>
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="mediaqueries.css" />
+  <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
 </head>
 
 <body>
@@ -268,106 +269,137 @@
   <hr>
 
 
-  <section id="section-projects">
-
+  <section class="container" id="section-projects">
     <h1>Projects</h1>
 
+    <div class="container-accordion">
+      <div class="accordion">
+        <div class="accordion-item" id="question1">
+          <a class="accordion-link" href="#question1">
+            <div class="flex">
+              <h3>BigHPC - Monitoring Framework</h3>
+              <ul>
+                <li>Python</li>
+                <li>PostgreSQL</li>
+                <li>Docker</li>
+                <li>Grafana</li>
+              </ul>
+            </div>
+            <i class="icon ion-md-arrow-forward"></i>
+            <i class="icon ion-md-arrow-down"></i>
+          </a>
+          <div class="answer">
+
+            <p>
+              - Development of framework capable of monitoring HPC clusters for Big Data and High-Performance
+              Computing.
+              <br>
+              - Participation as a Webinar Speaker.
+              <br>
+              - Worked with global partners.
+            </p>
 
 
-    <div class="projects-box-container">
-      <div class="project-containers">
-        <div class="details-container ">
-          <div class="project-container-img">
-            <img src="./assets/project-1.png" alt="Project 1" class="project-img" />
+
+            <div class="btn-container">
+              <button class="btn btn-color-1" onclick="window.open('https://bighpc.wavecom.pt/', '_blank')">
+                Website
+              </button>
+            </div>
+
+
+            <div class="btn-container">
+              <button class="btn btn-color-1"
+                onclick="window.open('  https://www.youtube.com/watch?v=5gaiovo9DD0', '_blank')">
+                Youtube
+              </button>
+            </div>
+
+
           </div>
-          <h2 class="project-title">BigHPC</h2>
-          <p>Python Bash Grafana Promscale</p>
-          <div class="btn-container">
-            <button class="btn btn-color-1" onclick="location.href='https://github.com/'">
-              Github
-            </button>
-            <button class="btn btn-color-1 " onclick="location.href='https://github.com/'">
-              Live Demo </nav>
-            </button>
 
-          </div>
         </div>
+        <div class="accordion-item" id="question2">
+          <a class="accordion-link" href="#question2">
+            <div class="flex">
+              <h3>UX/UI DESIGN</h3>
+              <ul>
+                <li>#Figma</li>
+                <li>#Sketch</li>
+                <li>#Adobe</li>
+                <li>#Invision</li>
+                <li>#Protopie</li>
+              </ul>
+            </div>
+            <i class="icon ion-md-arrow-forward"></i>
+            <i class="icon ion-md-arrow-down"></i>
+          </a>
+          <div class="answer">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+              labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+              laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+              voluptate velit esse cillum.</p>
+          </div>
 
-        <div class="details-container ">
-          <div class="project-container-img">
-            <img src="./assets/project-2.png" alt="Project 2" class="project-img" />
-          </div>
-          <h2 class="project-title">Project Two</h2>
-          <p>Python Streamlit</p>
-          <div class="btn-container">
-            <button class="btn btn-color-1 " onclick="location.href='https://github.com/'">
-              Github
-            </button>
-            <button class="btn btn-color-1 " onclick="location.href='https://github.com/'">
-              Live Demo
-            </button>
-          </div>
         </div>
-
-
-        <div class="details-container ">
-          <div class="project-container-img">
-            <img src="./assets/project-3.png" alt="Project 3" class="project-img" />
+        <div class="accordion-item" id="question3">
+          <a class="accordion-link" href="#question3">
+            <div class="flex">
+              <h3>FRONTEND DEVELOPMENT</h3>
+              <ul>
+                <li>#Figma</li>
+                <li>#Sketch</li>
+                <li>#Adobe</li>
+                <li>#Invision</li>
+                <li>#Protopie</li>
+              </ul>
+            </div>
+            <i class="icon ion-md-arrow-forward"></i>
+            <i class="icon ion-md-arrow-down"></i>
+          </a>
+          <div class="answer">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+              labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+              laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+              voluptate velit esse cillum.</p>
           </div>
-          <h2 class="project-title">Project Three</h2>
-          <p>HTML CSS Javascript</p>
-          <div class="btn-container">
-            <button class="btn btn-color-1 " onclick="location.href='https://github.com/'">
-              Github
-            </button>
-            <button class="btn btn-color-1 " onclick="location.href='https://github.com/'">
-              Live Demo
-            </button>
-          </div>
+
         </div>
+        <div class="accordion-item" id="question4">
+          <a class="accordion-link" href="#question4">
+            <div>
+              <h3>BACKEND DEVELOPMENT</h3>
+              <ul>
+                <li>#Figma</li>
+                <li>#Sketch</li>
+                <li>#Adobe</li>
+                <li>#Invision</li>
+                <li>#Protopie</li>
+              </ul>
+            </div>
+            <i class="icon ion-md-arrow-forward"></i>
+            <i class="icon ion-md-arrow-down"></i>
+          </a>
+          <div class="answer">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+              labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+              laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+              voluptate velit esse cillum.</p>
+          </div>
 
+        </div>
       </div>
     </div>
 
   </section>
-  <section id="section-contact">
-    <h4>Contact</h4>
+  <hr>
 
-    <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam nam
-      labore quas doloribus. Magnam amet ut quae voluptatibus aliquid
-      repudiandae rem excepturi consequatur facere sequi eaque dolorum vel,
-      adipisci sunt. Temporibus ipsum, ea mollitia id voluptates recusandae,
-      magnam non adipisci molestiae ex debitis esse aspernatur repellendus
-      ipsam nulla? Molestiae assumenda numquam porro ex reiciendis qui sint
-      facere non mollitia nihil. Hic aspernatur soluta sint enim iusto sequi
-      facere nulla illo nesciunt quasi reiciendis amet architecto, deserunt
-      voluptatum repellendus quam est mollitia, alias deleniti ullam.
-      Blanditiis quam velit corporis vero quidem! Iusto totam voluptate eaque
-      nam quae error, quibusdam, esse sapiente facere nemo cupiditate
-      temporibus labore natus. Quos doloribus eveniet laboriosam excepturi
-      molestiae earum! Odit, praesentium! Possimus voluptatibus autem
-      veritatis cum! Reprehenderit earum natus excepturi mollitia perferendis,
-      deleniti quae vero, ab quidem molestias neque consequatur tempora saepe
-      reiciendis ut, repellat necessitatibus atque sunt harum fugiat provident
-      quas. Earum aperiam perferendis velit? Quis quia vitae quibusdam,
-      repudiandae distinctio modi asperiores eaque. Cum aperiam nam nulla
-      molestias totam velit temporibus facilis quaerat quam fugit, magnam, quo
-      ducimus ut. Cumque debitis dolores quia nemo. Nihil perferendis aliquam
-      beatae fuga praesentium quo libero saepe fugit nemo tenetur! Maxime
-      architecto similique, totam, esse fuga aperiam, ex placeat optio
-      explicabo ut nemo quasi natus et est. Nostrum. Vitae facere aspernatur
-      perspiciatis velit numquam perferendis magni atque officiis vel voluptas
-      dolore adipisci veritatis est saepe porro, et minus optio eos tenetur
-      veniam. Perferendis facere amet animi eveniet. Officiis. Deserunt minus
-      autem consequatur. Ipsam nisi amet vel iusto hic atque deserunt labore!
-      Quo nostrum, voluptatem porro delectus explicabo possimus totam, fugit
-      nisi sit culpa excepturi? Excepturi repellat hic maxime! Minus
-      accusantium officiis vero. Nemo earum fuga corrupti sit illo veritatis
-      omnis voluptate facere ex quaerat, non sint nostrum commodi magnam
-      voluptatum officia. Harum doloremque, possimus provident animi labore
-      exercitationem.
-    </p>
+
+
+  <section class="container" id="section-contact">
+    <h1>Contact</h1>
+
+
   </section>
 
   <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script>
