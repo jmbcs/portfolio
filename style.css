@@ -148,7 +148,7 @@ body.menu-open {
   transition: all 300ms ease;
   padding: 1rem;
   width: 15rem;
-  border-radius: 2rem;
+  border-radius: 10px;
 }
 
 .btn-color-1 {
