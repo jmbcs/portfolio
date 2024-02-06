@@ -88,6 +88,17 @@
   @media screen and (max-width: 850px) {
     #section-projects .btn {
       width: 10rem;
+      font-size: 10px;
+    }
+
+    #section-projects h3 {
+      font-size: 17px;
+    }
+    #section-projects ul,
+    #section-projects li {
+      font-size: 8px;
+      align-items: left;
+      text-align: left;
     }
 
     .container-accordion {
@@ -101,11 +112,26 @@
     }
     .accordion-link {
       display: flex;
-      flex-wrap: wrap-reverse;
+    }
+    .accordion-link .ion-md-arrow-down,
+    .accordion-link .ion-md-arrow-forward {
+      font-size: 1rem;
+      margin: 1rem;
+    }
+    .accordion-item:target .accordion-link .ion-md-arrow-down {
+      margin-right: 1rem;
     }
     .accordion-item {
       width: 70vw;
     }
+
+    .accordion-link h3,
+    .accordion-link ul {
+      margin-left: 1rem;
+    }
+  }
+
+  @media screen and (max-width: 700px) {
   }
 
   @media screen and (max-width: 600px) {
