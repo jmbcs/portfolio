@@ -400,3 +400,11 @@ body.menu-open {
 .accordion-link:hover li {
   background-color: rgb(44, 45, 53);
 }
+
+.accordion-item:target .answer ul,
+.accordion-item .answer ul {
+  margin-left: 1rem;
+  padding: 0px;
+  list-style-type: none;
+  margin-bottom: 10px;
+}

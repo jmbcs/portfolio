@@ -92,15 +92,11 @@
       font-size: 10px;
     }
 
-    .answer p {
-      font-size: 12px;
-    }
-
     #section-projects h3 {
       font-size: 20px;
     }
-    #section-projects ul,
-    #section-projects li {
+    .flex ul,
+    .flex li {
       font-size: 10px;
       align-items: left;
       text-align: left;
