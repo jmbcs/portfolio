@@ -63,7 +63,7 @@ footer p {
 }
 
 hr {
-  margin: 2rem;
+  margin: 10rem;
   border: #4044533b solid 1px;
   position: relative;
   z-index: 100;
@@ -164,8 +164,9 @@ body.menu-open {
 .container {
   align-items: left;
   text-align: left;
-  margin-left: 8.5rem;
-  margin-right: 8.5rem;
+  margin-left: 10rem;
+  /* margin-left: 13.5rem;
+  margin-right: 8.5rem; */
 }
 
 /*----skill type for work----*/
@@ -257,7 +258,9 @@ body.menu-open {
 }
 
 /*--------------Projects------------- */
-
+#section-projects {
+  display: block;
+}
 #section-projects .btn {
   border-radius: 10px;
   margin: 1rem;
@@ -274,6 +277,7 @@ body.menu-open {
 }
 
 .container-accordion {
+  display: flex;
   /* margin-left: -6.5rem; */
 
   align-items: left;
@@ -287,6 +291,7 @@ body.menu-open {
   background-color: transparent;
   border-radius: 0.4rem;
   color: white;
+  margin-right: 10rem;
 }
 
 .accordion-item h3 {
@@ -294,11 +299,12 @@ body.menu-open {
 }
 
 .accordion-item:target .answer {
-  max-height: 50rem;
+  max-height: 20rem;
+
+  margin-left: 2.5rem;
   color: white;
   justify-content: space-evenly;
-  margin: 0 auto; /* Combine margin properties for simplicity */
-
+  margin-top: 1rem;
   display: flex;
 }
 
@@ -309,13 +315,10 @@ body.menu-open {
   background-color: transparent;
   display: flex;
   justify-content: center;
-  margin: 0 auto; /* Combine margin properties for simplicity */
-  transition: max-height 0.75s ease-in; /* Use max-height for the transition */
-}
 
-.answer p {
-  color: rgb(168, 170, 177);
-  line-height: 3rem;
+  transition: max-height 0.35s ease-in; /* Use max-height for the transition */
+
+  margin-left: 2.5rem;
 }
 
 .accordion-item:target .accordion-link .ion-md-arrow-forward {
@@ -339,6 +342,13 @@ body.menu-open {
   pointer-events: none;
 }
 
+.accordion-item:not(:target) .answer,
+.accordion-item:not(:target) .btn {
+  color: transparent;
+  border-color: transparent;
+  filter: blur(3.5px);
+}
+
 .accordion-link {
   margin-top: 2rem;
   border: #787c883b solid 2px;
@@ -348,6 +358,7 @@ body.menu-open {
   text-decoration: none;
   background-color: transparent;
   width: 100%;
+
   display: flex;
   align-items: center;
   justify-content: space-between;
