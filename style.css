@@ -325,7 +325,7 @@ body.menu-open {
   /* border: white solid 1px; */
   &:hover {
     cursor: pointer;
-    background: rgb(255, 90, 90);
+    background: #e91e63;
     border: transparent;
   }
 }
@@ -413,7 +413,7 @@ body.menu-open {
   border-radius: 4px;
   &:hover {
     cursor: pointer;
-    background: rgb(255, 90, 90);
+    background: #e91e63;
     border: transparent;
   }
 }
@@ -421,7 +421,7 @@ body.menu-open {
   outline: none;
   &:hover {
     cursor: pointer;
-    background: rgb(255, 90, 90);
+    background: #e91e63;
     border: transparent;
   }
 }

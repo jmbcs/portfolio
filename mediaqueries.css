@@ -80,6 +80,14 @@
     margin-right: 3.5rem;
   }
 
+  .services .service-items .item{
+	  flex:0 0 100%;
+      max-width: 100%;
+   }
+   .popup-box .popup-content{
+   	 width: calc(100% - 30px);
+   }
+
   @media screen and (max-width: 850px) {
     #section-projects .btn {
       width: 10rem;
@@ -244,3 +252,6 @@
   }
  
 }
+
+
+
