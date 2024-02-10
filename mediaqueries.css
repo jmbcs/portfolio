@@ -1,10 +1,4 @@
-@media screen and (max-width: 1500px) {
-  .accordion-item:target .answer,
-  .accordion-item .answer {
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-}
+
 
 @media screen and (max-width: 1400px) {
   section {
@@ -95,42 +89,7 @@
     #section-projects h3 {
       font-size: 20px;
     }
-    .flex ul,
-    .flex li {
-      font-size: 10px;
-      align-items: left;
-      text-align: left;
-    }
-
-    .container-accordion {
-      display: flex;
-      flex-wrap: wrap;
-    }
-    .flex,
-    ul {
-      display: flex;
-      flex-wrap: wrap;
-    }
-    .accordion-link {
-      display: flex;
-    }
-    .accordion-link .ion-md-arrow-down,
-    .accordion-link .ion-md-arrow-forward {
-      font-size: 1rem;
-      margin: 1rem;
-    }
-    .accordion-item:target .accordion-link .ion-md-arrow-down {
-      margin-right: 1rem;
-    }
-    .accordion-item {
-      width: 70vw;
-    }
-
-    .accordion-link h3,
-    .accordion-link ul {
-      margin-left: 1rem;
-    }
-  }
+ 
 
   @media screen and (max-width: 600px) {
     /*TESTING*/
@@ -283,8 +242,5 @@
     height: 50vh;
     display: block;
   }
-  #section-projects .btn {
-    width: 5rem;
-    text-align: center;
-  }
+ 
 }
