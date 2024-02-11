@@ -139,8 +139,9 @@ body.menu-open {
   margin-top: 4rem;
 }
 
-.btn {
+.btn-cover {
   font-weight: 600;
+  font-size: 12px;
   transition: all 300ms ease;
   padding: 1rem;
   width: 15rem;
@@ -153,7 +154,7 @@ body.menu-open {
   &:hover {
     cursor: pointer;
     background: #e91e63;
-    border: transparent;
+    border-color: transparent;
   }
 }
 
@@ -276,57 +277,54 @@ body.menu-open {
   max-width: 100%;
 }
 .container .service-items .item {
-  /* flex: 0 0 33.33%; */
+  flex: 0 0 25%;
   max-width: 25%;
-  margin-top: 2rem;
-  padding: 1rem;
+  padding: 1vw;
 }
 
 .container .service-items .item-inner {
-  border: 1px solid #dddddd;
+  border: #404453 solid 2px;
   padding: 30px;
+  padding-top: 10px;
+  border-radius: 10px;
 }
 .container .service-items .read-more-cont {
   display: none;
 }
 .container .service-items .item-inner h3 {
-  font-size: 20px;
-  /* color: #000000;
-   */
   color: #e91e63;
-  margin-bottom: 30px;
   position: relative;
-}
-.container .service-items .item-inner h3::before {
-  content: "";
-  height: 1px;
-  width: 80px;
-  background-color: #000000;
-  color: #e91e63;
-  position: absolute;
-  left: 0;
-  bottom: -10px;
 }
 
 .container .service-items .item-inner p {
   color: #555555;
-  font-size: 16px;
+  font-size: 14px;
   margin: 0 0 30px;
 }
 .container .service-items .item-inner .btn {
   font-size: 10px;
   background-color: transparent;
-
+  border: 1px solid #404453;
+  color: #404453;
   font-weight: 600;
   transition: all 300ms ease;
-  padding: 1rem;
-  width: 10rem;
-  border-radius: 10px;
-  /* border: white solid 1px; */
+  border-radius: 5px;
+  width: max-content;
+  padding-left: 25px;
+  padding-right: 25px;
+  padding-top: 8px;
+
+  margin-bottom: 5px;
+  margin-right: 10px;
+  padding-bottom: 8px;
+  height: min-content;
+  align-items: left;
+  text-align: left;
+
   &:hover {
     cursor: pointer;
     background: #e91e63;
-    border: transparent;
+    border-color: transparent;
   }
 }
 
@@ -414,7 +412,7 @@ body.menu-open {
   &:hover {
     cursor: pointer;
     background: #e91e63;
-    border: transparent;
+    border-color: transparent;
   }
 }
 .popup-box .popup-footer .btn:focus {
@@ -422,6 +420,6 @@ body.menu-open {
   &:hover {
     cursor: pointer;
     background: #e91e63;
-    border: transparent;
+    border-color: transparent;
   }
 }

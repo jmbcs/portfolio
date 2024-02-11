@@ -122,7 +122,8 @@ const popupCloseBtn = popup.querySelector(".popup-close-btn");
 const popupCloseIcon = popup.querySelector(".popup-close-icon");
 
 serviceItems.addEventListener("click",function(event){
-  if(event.target.tagName.toLowerCase() == "button"){
+  if(event.target.tagName.toLowerCase() == "button" &&
+  event.target.getAttribute("type") === "btn-readmore"){
      const item =event.target.parentElement;
      const h3 = item.querySelector("h3").innerHTML;
      const readMoreCont = item.querySelector(".read-more-cont").innerHTML;
