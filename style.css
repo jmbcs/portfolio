@@ -61,7 +61,7 @@ footer p {
 hr {
   margin: 10rem;
   border: #4044533b solid 1px;
-  position: relative;
+  position: sticky;
   z-index: 100;
 }
 
