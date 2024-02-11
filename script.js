@@ -24,6 +24,8 @@ function toggleMenu(event) {
 
   nav.classList.toggle("active");
   header.classList.toggle("active");
+  header.classList.remove("menu-interacted");
+
 }
 
 // Event listeners for mobile button
@@ -39,6 +41,8 @@ nav.addEventListener("click", handleNavInteraction);
 function handleMenuInteraction() {
   nav.classList.remove("active");
   header.classList.remove("active");
+  header.classList.toggle("menu-interacted");
+
 }
 
 function handleNavInteraction() {
@@ -146,6 +150,5 @@ popup.addEventListener("click", function(event){
 function popupBox(){
   popup.classList.toggle("open");
 }
-
 
 

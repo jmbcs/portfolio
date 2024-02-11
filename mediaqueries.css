@@ -147,24 +147,27 @@
 
     #header.active::before {
       border-bottom: transparent;
+      
     }
 
     #header.active ~ section,
     #header.active ~ hr {
-      transform: translateY(60vh); /* Adjust the value as needed */
+      transform: translateY(60vh);
       filter: blur(2px);
       color: #404453;
       transition: transform 0.5s;
-
     }
-
-    #header ~ section,
-    #header ~ hr {
-      transform: translateY(0); /* Adjust the value as needed */
+    
+    #header ~ *:not(.menu-interacted) {
+      transform: translateY(0);
       transition: transform 0.5s;  
       color: white;
+    }
     
-     
+    #header.menu-interacted ~ * {
+      transform: none;
+      transition: none;
+      color: transparent;
     }
 
 
@@ -251,6 +254,8 @@
       }
     }
   }
+
+
 
   #section-cover {
     height: 50vh;
