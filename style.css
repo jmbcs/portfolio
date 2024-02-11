@@ -10,7 +10,9 @@
   scrollbar-width: thin;
   /* overflow-x: hidden; */
 }
-
+h1 {
+  margin-left: -1rem;
+}
 html {
   scroll-behavior: smooth;
 }
@@ -164,8 +166,6 @@ body.menu-open {
   align-items: left;
   text-align: left;
   margin-left: 10rem;
-  /* margin-left: 13.5rem;
-  margin-right: 8.5rem; */
 }
 
 /*----skill type for work----*/
@@ -352,6 +352,7 @@ body.menu-open {
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
+
   font-size: 10px;
   border-radius: 8px;
 }
@@ -430,4 +431,8 @@ body.menu-open {
     color: #e91e63;
     border-color: #e91e63;
   }
+}
+
+#section-projects .container-projects {
+  margin-left: 1rem;
 }

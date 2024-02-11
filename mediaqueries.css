@@ -4,7 +4,6 @@
     flex-wrap: wrap;
     flex-direction: column;
     justify-content: center;
-    margin-left: -6.6rem;
   }
 
   .container .service-items .item-inner {
@@ -40,10 +39,6 @@
     width: 50rem;
   }
 
-  h1 {
-    margin-left: -1.5rem;
-  }
-
   #section-cover {
     height: 65vh;
     margin-bottom: 15rem;
@@ -51,10 +46,6 @@
 }
 
 @media screen and (max-width: 1250px) {
-  h1 {
-    margin-left: -0.8rem;
-  }
-
   .container {
     margin-left: 6rem;
     margin-right: 6rem;
@@ -93,17 +84,13 @@
     /* Adjust as needed */
   }
 
-  .container {
+  .container:not(#section-projects) {
     margin-left: 1rem;
     margin-right: 1rem;
   }
 
   hr {
     margin: 1rem;
-  }
-
-  h1 {
-    margin-left: -1rem;
   }
 
   .logo {
@@ -144,16 +131,20 @@
     transition: transform 0.5s;
   }
 
-  #header ~ *:not(.menu-interacted) {
+  #header ~ *:not(.menu-interacted, .popup-box) {
     transform: translateY(0);
     transition: transform 0.5s;
     color: white;
   }
 
-  #header.menu-interacted ~ * {
+  #header.menu-interacted ~ :not(.popup-box) {
     transform: none;
     transition: none;
     color: transparent;
+  }
+
+  .popup-box {
+    transition: all 0.5s ease-in-out;
   }
 
   #menu {
@@ -243,11 +234,11 @@
     height: 50vh;
     display: block;
   }
-
-  .container-projects {
-    margin-left: 1rem;
+  #section-projects h1 {
+    margin-left: -3rem;
   }
-  /* .row {
-    margin-left: 1px;
-  } */
+
+  #section-projects .container-projects {
+    margin-left: 2rem;
+  }
 }
