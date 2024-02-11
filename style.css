@@ -388,7 +388,8 @@ body.menu-open {
   padding: 15px;
   /* max-height: 300px; */
   overflow-y: auto;
-  height: 50vh;
+  max-height: 500px;
+  height: fit-content;
 }
 .popup-box .popup-body img {
   width: 100%;
