@@ -89,6 +89,12 @@
     margin-right: 1rem;
   }
 
+  .row {
+    margin-left: -8.5rem;
+
+    /* justify-content: center; */
+  }
+
   hr {
     margin: 1rem;
   }
