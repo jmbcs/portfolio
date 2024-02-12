@@ -270,21 +270,23 @@ body.menu-open {
 .row {
   display: flex;
   flex-wrap: wrap;
-  margin-top: 5rem;
-  margin-left: -7.5rem;
+  margin-top: 4rem;
+  margin-left: -6.5rem;
   /* justify-content: center; */
 }
 
 .container .service-items .item {
   max-width: 25vw;
 
-  padding: 1vw;
+  padding: 10px;
 }
 
 .container .service-items .item-inner {
   border: #404453 solid 2px;
-  padding: 30px;
-  padding-top: 10px;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-bottom: 15px;
+
   border-radius: 10px;
 }
 .container .service-items .read-more-cont {
@@ -299,7 +301,6 @@ body.menu-open {
   color: #555555;
   font-size: 14px;
   margin: 0 0 30px;
-  height: 4rem;
 }
 .container .service-items .item-inner .btn {
   font-size: 10px;
@@ -338,7 +339,7 @@ body.menu-open {
   z-index: 500;
   visibility: hidden;
   opacity: 0;
-  transition: all 0.5s ease-in-out;
+  transition: all 0.25s ease;
 }
 .popup-box.open {
   visibility: visible;
@@ -346,8 +347,8 @@ body.menu-open {
 }
 .popup-box .popup-content {
   /* background-color: #ffffff; */
-  width: 70%;
-  height: max-content;
+  width: 95%;
+  height: 60%;
   position: absolute;
   left: 50%;
   top: 50%;
