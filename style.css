@@ -351,6 +351,9 @@ body.menu-open {
 body.popup-open {
   overflow: hidden;
 }
+#header.popup-open {
+  display: none;
+}
 
 .popup-box .popup-content {
   border: #4044533b solid 4px;
@@ -400,7 +403,7 @@ body.popup-open {
   padding: 15px;
   /* max-height: 300px; */
   overflow-y: scroll;
-  max-height: 30dvh;
+  max-height: 50dvh;
   height: fit-content;
 }
 .popup-box .popup-body img {

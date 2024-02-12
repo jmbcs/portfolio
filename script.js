@@ -150,6 +150,7 @@ popup.addEventListener("click", function(event){
 function popupBox(){
   popup.classList.toggle("open");
   document.body.classList.toggle("popup-open");
+  document.getElementById("header").classList.toggle("popup-open");
 }
 
 
