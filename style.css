@@ -346,6 +346,10 @@ body.menu-open {
 .popup-box.open {
   visibility: visible;
   opacity: 1;
+  overflow: hidden;
+}
+body.popup-open {
+  overflow: hidden;
 }
 
 .popup-box .popup-content {
@@ -395,7 +399,7 @@ body.menu-open {
 .popup-box .popup-body {
   padding: 15px;
   /* max-height: 300px; */
-  overflow-y: auto;
+  overflow-y: scroll;
   max-height: 30dvh;
   height: fit-content;
 }
