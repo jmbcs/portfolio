@@ -185,6 +185,7 @@ body.menu-open {
 /*-------------------- IDs  --------------------*/
 /*---- Header Section----*/
 #header {
+  transition: transform 0.5s ease;
   position: fixed;
   z-index: 1000;
   top: 0;
@@ -352,7 +353,9 @@ body.popup-open {
   overflow: hidden;
 }
 #header.popup-open {
-  display: none;
+  /* display: none; */
+
+  transform: translateY(-100%);
 }
 
 .popup-box .popup-content {
