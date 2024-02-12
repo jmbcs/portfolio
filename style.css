@@ -350,9 +350,9 @@ body.menu-open {
 
 .popup-box .popup-content {
   /* background-color: #ffffff; */
-  width: 90vw;
+  width: 80dvw;
   height: min-content;
-  max-height: 60vh;
+  max-height: 40vdh;
   position: absolute;
 
   left: 50%;
