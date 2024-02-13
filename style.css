@@ -271,7 +271,7 @@ body.menu-open {
 .row {
   display: flex;
   flex-wrap: wrap;
-  margin-top: 4rem;
+  margin-top: 5rem;
   margin-left: -6.5rem;
   margin-bottom: 1rem;
   /* justify-content: center; */
@@ -300,17 +300,18 @@ body.menu-open {
 }
 
 .container .service-items .item-inner p {
-  color: #555555;
+  color: #8b8b99;
   font-size: 14px;
   margin: 0 0 30px;
 }
-.container .service-items .item-inner .btn {
-  font-size: 10px;
+.container .service-items .item-inner .btn,
+.popup-box .popup-footer .btn {
+  font-size: 12px;
   background-color: transparent;
   border: 1px solid #404453;
   color: #404453;
   font-weight: 600;
-  transition: all 300ms ease;
+  transition: all 200ms ease;
   border-radius: 5px;
   width: max-content;
   padding-left: 25px;
@@ -319,6 +320,7 @@ body.menu-open {
 
   margin-bottom: 5px;
   margin-right: 10px;
+  margin-left: 0px;
   padding-bottom: 8px;
   height: min-content;
   align-items: left;
@@ -342,7 +344,7 @@ body.menu-open {
   z-index: 0;
   visibility: hidden;
   opacity: 0;
-  transition: all 0.25s ease;
+  transition: all 0.2s ease;
 }
 .popup-box.open {
   visibility: visible;
@@ -365,12 +367,11 @@ body.popup-open {
   height: min-content;
   /* max-height: 39px; */
   position: absolute;
-
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
 
-  font-size: 10px;
+  font-size: 18px;
   border-radius: 8px;
 }
 
@@ -390,7 +391,7 @@ body.popup-open {
   height: 30px;
   width: 30px;
   text-align: center;
-  color: #555555;
+  color: rgb(168, 170, 177);
   font-size: 28px;
   line-height: 30px;
   right: 5px;
@@ -405,6 +406,7 @@ body.popup-open {
 .popup-box .popup-body {
   padding: 15px;
   /* max-height: 300px; */
+
   overflow-y: scroll;
   max-height: 50dvh;
   height: fit-content;
@@ -416,7 +418,7 @@ body.popup-open {
 }
 .popup-box .popup-body p {
   font-size: 16px;
-  color: #555555;
+  color: rgb(168, 170, 177);
   margin: 0 0 15px;
 }
 .popup-box .popup-footer {
@@ -426,11 +428,11 @@ body.popup-open {
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
 }
-.popup-box .popup-footer .btn {
+.popup-box .btn {
   padding: 8px 15px;
   border: 1px solid #555555;
 
-  color: #555555;
+  color: rgb(168, 170, 177);
   font-size: 16px;
   background-color: transparent;
   cursor: pointer;
@@ -441,7 +443,7 @@ body.popup-open {
     border-color: #e91e63;
   }
 }
-.popup-box .popup-footer .btn:focus {
+.popup-box .btn:focus {
   outline: none;
   &:hover {
     cursor: pointer;
