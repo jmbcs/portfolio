@@ -5,13 +5,17 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>My Portfolio</title>
+  <title>Portfolio</title>
+  <link rel="stylesheet" href="cssReset.css" />
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="mediaqueries.css" />
   <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
+  <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script>
+  <script src="script.js"></script>
 </head>
 
 <body>
+
   <header id="header">
     <p id="logo">Welcome</p>
     <nav id="nav">
@@ -29,344 +33,69 @@
     </nav>
   </header>
 
-  <section class="container" id="section-cover">
-    <div class="section__pic-container">
-      <img src="assets/profile.jpg" alt="Júlio Silva Profile Picture" />
-    </div>
-    <div class="section__text">
-      <h4 class="title">Júlio Silva</h4>
-      <p class="section__text__p1">Software Engineer</p>
+  <!-- <p>hello</p> -->
 
-      <div class="btn-container">
-        <button class="btn-cover btn-color-1"
-          onclick="window.open('https://github.com/jmbcs/curriculum/blob/main/curriculum.pdf', '_blank')">
-          Check my Curriculum
-        </button>
-        <div class="techstack">
-          <img src="https://img.icons8.com/color/96/000000/python.png" alt="Python" />
-          <img src="https://www.svgrepo.com/download/331370/docker.svg" alt="Docker" />
-          <img src="https://upload.wikimedia.org/wikipedia/commons/3/3b/Grafana_icon.svg" alt="Grafana" />
-          <img src="https://static-00.iconduck.com/assets.00/prometheus-icon-2047x2048-b3aicxlu.png" alt="Prometheus" />
-          <img src="https://cdn-icons-png.flaticon.com/512/5968/5968342.png" alt="Your Alt Text" />
-          <img src="https://static-00.iconduck.com/assets.00/github-icon-512x497-oppthre2.png" alt="GitHub" />
+  <section id="section-cover">
+    <h1>Section Cover</h1>
+
+    <div class="basic-grid">
+      <div class="card">
+        <h1>TECH SKILS</h1>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nobis quos vero mollitia officiis maiores culpa
+          voluptatem ullam, asperiores aperiam, excepturi error hic tempora ea veniam, fugiat reiciendis dolor sit
+          molestiae!</p>
+        <div class="basic-grid">
+          <div class="card">
+            <p>test</p>
+          </div>
+          <div class="card">
+            <p>test</p>
+          </div>
+          <div class="card">
+            <p>test</p>
+          </div>
+          <div class="card">
+            <p>test</p>
+          </div>
+          <div class="card">
+            <p>test</p>
+          </div>
+
         </div>
       </div>
+      <div class="card">
+        <h1>PYTHON SKILLS</h1>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nobis quos vero mollitia officiis maiores culpa
+          voluptatem ullam, asperiores aperiam, excepturi error hic tempora ea veniam, fugiat reiciendis dolor sit
+          molestiae!</p>
+      </div>
+      <div class="card">
+        <h1>animation SKILS</h1>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nobis quos vero mollitia officiis maiores culpa
+          voluptatem ullam, asperiores aperiam, excepturi error hic tempora ea veniam, fugiat reiciendis dolor sit
+          molestiae!</p>
+      </div>
+
+  </section>
+  <section id="section-about">
+    <h1>Section About</h1>
+
+
+  </section>
+
+  <section id="section-projects">
+    <div class=".content-box">
+      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolores doloribus hic aut impedit quidem eos fugit.
+        Corporis est quis, neque, velit labore deleniti omnis tempora mollitia possimus ratione accusamus. Culpa!</p>
+      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolores doloribus hic aut impedit quidem eos fugit.
+        Corporis est quis, neque, velit labore deleniti omnis tempora mollitia possimus ratione accusamus. Culpa!</p>
+      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolores doloribus hic aut impedit quidem eos fugit.
+        Corporis est quis, neque, velit labore deleniti omnis tempora mollitia possimus ratione accusamus. Culpa!</p>
+      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolores doloribus hic aut impedit quidem eos fugit.
+        Corporis est quis, neque, velit labore deleniti omnis tempora mollitia possimus ratione accusamus. Culpa!</p>
     </div>
   </section>
 
-  <hr />
-
-  <section class="container" id="section-about">
-    <div class="column">
-      <h1>About Me</h1>
-      <ul>
-        <li>Hi there! 👋</li>
-        <li>My name is Júlio Silva and I am a developer.</li>
-      </ul>
-      <ul>
-        <li>📅 <strong>Age</strong> 27</li>
-        <li>🇵🇹 <strong>Nationality</strong> Portuguese</li>
-        <li>
-          💼 <strong>Current Position</strong> Research & Development Engineer
-          at Wavecom
-        </li>
-        <li>
-          🎓 <strong>Education</strong> M.Sc Electronics and
-          Telecommunications Engineering, <br />University of Aveiro
-        </li>
-      </ul>
-      <h1>Hobbies & Interests</h1>
-      <ul>
-        <li>
-          😄 <strong>Comedy</strong> Ricky Gervais, Daniel Sloss, and Anthony
-          Jeselnik fan
-        </li>
-        <li>
-          📖 <strong>Reading</strong> Reading is essential to keep my mind
-          sharp
-        </li>
-        <li>
-          🎮 <strong>Videogames</strong> I am a certified gamer since 6 years
-          old
-        </li>
-        <li>
-          🍿 <strong>Movies & Series</strong> You know nothing Jon Snow!
-        </li>
-        <li>
-          🏞️ <strong>Hiking</strong> Hiking with the family is a time well
-          spent
-        </li>
-        <li>
-          💻 <strong>Coding</strong> I love bringing ideas to life with code
-        </li>
-        <li>
-          💪 <strong>Gym</strong> Keeping both my mind and body in shape is
-          crucial for my happiness
-        </li>
-        <li>🎵 <strong>Music</strong> Who doesn't like a good beat?</li>
-        <li>
-          🌇 <strong>Travelling</strong> There is so much to see out there
-        </li>
-        <li>
-          💵 <strong>Finances & Investing</strong> I like to keep up with
-          financial markets and exploring new investment opportunities
-        </li>
-      </ul>
-    </div>
-    <div class="column">
-      <dotlottie-player src="animations/about.json" background="transparent" speed="1" direction="1" playMode="normal"
-        loop autoplay>
-      </dotlottie-player>
-    </div>
-  </section>
-
-  <hr />
-
-  <section class="container" id="section-work">
-    <div class="column">
-      <h1>Work Experience</h1>
-      <ul>
-        <li>
-          📅 <strong style="color: white">Date</strong> 01/2021 - Present
-          (<strong style="color: #e91e63">3</strong> years)
-        </li>
-        <li>
-          💼 <strong style="color: white">Position</strong> Research and
-          Development Engineer
-        </li>
-        <li>
-          🏢 <strong style="color: white">Company</strong>
-          <a href="https://www.wavecom.com" target="_blank" style="color:#e91e63; text-decoration: underline">Wavecom
-            Technologies</a>
-        </li>
-      </ul>
-      <br />
-      <ul>
-        <li>
-          ► Developed microservices in <strong>Python</strong> and
-          <strong>Golang</strong>
-        </li>
-
-        <li>
-          ► Designed and implemented <strong>ETL pipelines</strong> with
-          <strong>Telegraf</strong>
-        </li>
-
-        <li>
-          ► Developed <strong>monitoring frameworks</strong> for
-          <strong>HPC</strong> systems and <strong>WI-FI</strong> networks
-          with comprehensive <strong>Grafana</strong> dashboards
-        </li>
-
-        <li>► Automated workflows using <strong>Shell</strong> scripting</li>
-        <li>
-          ► Built <strong>APIs</strong> for <strong>SQL</strong> and
-          <strong>NoSQL</strong> databases
-        </li>
-        <li>► Engineered algorithms for <strong>data analytics</strong></li>
-        <li>
-          ► Operated databases systems including <strong>PostgreSQL</strong>,
-          <strong>Victoriametrics</strong>, and <strong>Elasticsearch</strong>
-        </li>
-        <li>
-          ► Implemented <strong>Protocol Buffers</strong> and
-          <strong>gRPC</strong> for microservices communication
-        </li>
-        <li>
-          ► Developed <strong>Docker</strong> images and orchestrated
-          applications using <strong>Docker Compose</strong>
-        </li>
-        <li>
-          ► Handled <strong>ONVIF</strong> protocol M to extract valuable
-          detections from camera metadata streams
-        </li>
-        <li>
-          ► Implemented <strong>Version Control Systems</strong> to ensure
-          code integrity
-        </li>
-        <li>
-          ► Worked across diverse funded projects from inception to production
-        </li>
-
-        <li>► Collaborated with global partners.</li>
-      </ul>
-    </div>
-    <div class="column">
-      <dotlottie-player src="animations/experience.json" background="transparent" speed="1" direction="1"
-        playMode="normal" loop autoplay>
-      </dotlottie-player>
-    </div>
-  </section>
-
-  <hr />
-
-  <section class="container" id="section-skills">
-    <div class="column">
-      <h1>Tech Skills</h1>
-      <div class="skill-type">Languages</div>
-      <div class="skill-snippets">
-        <code>Python</code> <code>Golang</code> <code>Bash</code>
-        <code>Javascript</code>
-      </div>
-
-      <div class="skill-type">Web</div>
-
-      <code>HTML</code><code>CSS</code>
-
-      <div class="skill-type">Databases</div>
-      <div class="skill-snippets">
-        <code>SQL/NoSQL</code> <code>PromQL</code>
-        <code>PostegreSQL</code>
-        <code>ElasticSearch</code>
-        <code>Victoriametrics</code>
-      </div>
-      <div class="skill-type">Dashboards</div>
-      <div class="skill-snippets">
-        <code>Grafana</code> <code>Kibana</code>
-      </div>
-      <div class="skill-type">Containerization</div>
-      <div class="skill-snippets">
-        <code>Docker</code> <code>Docker Compose</code>
-      </div>
-      <div class="skill-type">Data serialization</div>
-      <div class="skill-snippets">
-        <code>JSON</code> <code>CSV</code> <code>Protobuf</code>
-        <code>YAML</code>
-      </div>
-      <div class="skill-type">Others</div>
-      <div class="skill-snippets">
-        <code>Git</code> <code>Linux</code> <code>Telegraf</code>
-        <code>Shell</code> <code>gRPC</code> <code>Prometheus</code>
-      </div>
-    </div>
-
-    <div class="column">
-      <h1>Python Skills</h1>
-      <div class="skill-type">Software Development</div>
-      <div class="skill-snippets">
-        <code>FastAPI</code> <code>SQLAlchemy</code> <code>Psycopg</code>
-        <code>Aiohttp</code> <code>Pydantic</code> <code>Asyncio</code>
-        <code>Requests</code>
-      </div>
-      <div class="skill-type">Data Analytics</div>
-      <div class="skill-snippets">
-        <code>Pandas</code> <code>Seaborn</code> <code>Numpy</code>
-        <code>Matplotlib</code> <code>Tensorflow</code>
-      </div>
-      <div class="skill-type">Computer Vision</div>
-      <div class="skill-snippets">
-        <code>ImageAI</code> <code>OpenCV</code> <code>Ultralytics</code>
-      </div>
-    </div>
-
-    <div class="column" id="computer">
-      <dotlottie-player src="animations/computer.json" background="transparent" speed="1" direction="1"
-        playMode="normal" loop autoplay>
-      </dotlottie-player>
-    </div>
-  </section>
-
-  <hr>
-
-
-  <section id="section-projects" class="container">
-
-    <h1>Projects</h1>
-
-    <div class="container-projects">
-
-      <div class="service-items">
-        <div class="row">
-          <!-- item start -->
-          <div class="item">
-            <div class="item-inner">
-              <h3>BigHPC</h3>
-              <p> Monitoring Framework for Big Data applications running in HPC clusters
-              </p>
-
-              <div class="read-more-cont">
-                <ul>
-                  <li>
-                    ► Developed microservices in <strong>Python</strong> and
-                    <strong>Golang</strong>
-                  </li>
-                </ul>
-
-
-              </div>
-
-              <button class="btn" type="btn-readmore">Read More</button>
-              <button class="btn" onclick="window.open('https://bighpc.wavecom.pt', '_blank')">Website</button>
-              <button class="btn"
-                onclick="window.open('https://www.youtube.com/watch?v=5gaiovo9DD0', '_blank')">Youtube</button>
-
-            </div>
-          </div>
-          <!-- item end -->
-          <!-- item start -->
-          <div class="item">
-            <div class="item-inner">
-              <h3>Portfolio</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed eiusm.</p>
-              <div class="read-more-cont">
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed eiusm.</p>
-
-
-
-              </div>
-              <button class="btn" type="btn-readmore">Read More</button>
-            </div>
-          </div>
-          <!-- item end -->
-          <!-- item start -->
-          <div class="item">
-            <div class="item-inner">
-              <h3>StreamLit Portfolio (deprecated)</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed eiusm.</p>
-              <div class="read-more-cont">
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed eiusm.</p>
-              </div>
-              <button class="btn" type="btn-readmore">Read More</button>
-
-            </div>
-          </div>
-          <!-- item end -->
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- read more popup box start -->
-  <div class="popup-box">
-    <div class="popup-content">
-      <div class="popup-header">
-        <h3></h3>
-        <span class="popup-close-icon">&times;</span>
-      </div>
-      <div class="popup-body">
-
-      </div>
-      <div class="popup-footer">
-        <button class="btn popup-close-btn">Close</button>
-
-      </div>
-    </div>
-  </div>
-  <!-- read more popup box end -->
-
-
-  <hr>
-
-
-
-  <!-- <section class="container" id="section-contact">
-    <h1>Contact</h1>
-
-
-  </section> -->
-
-  <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script>
-  <script src="script.js"></script>
 </body>
 
 </html>
