@@ -9,5 +9,9 @@
   & a:active {
     color: red;
   }
+  dotlottie-player {
+    top:0rem
+ 
+}
 
 }
