@@ -221,6 +221,7 @@ section {
     & img {
       max-width: 1.75rem;
       margin-top: 2rem;
+      cursor: pointer;
     }
   }
 }
