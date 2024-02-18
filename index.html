@@ -5,19 +5,20 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Portfolio</title>
-  <link rel="stylesheet" href="cssReset.css" />
+
   <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="mediaqueries.css" />
+  <link rel="stylesheet" href="mediaqueries.css" <link rel="stylesheet" href="mediaqueries.css" />
   <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
   <link rel="icon" href="assets/icon.png" type="image/x-icon" />
 
   <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script>
-  <script src="script.js"></script>
+  <!-- <script defer src="app.js"></script> -->
+  <script defer src="script.js"></script>
+
+  <title>Portfolio</title>
 </head>
 
 <body>
-
   <header id="header">
     <p id="logo">Welcome</p>
     <nav id="nav">
@@ -47,10 +48,20 @@
 
 
 
-      <button class="button"
+
+      <button class="btn-glow"
         onclick="window.open('https://github.com/jmbcs/curriculum/blob/main/curriculum.pdf', '_blank')">
         Check my Curriculum
       </button>
+
+
+
+
+
+
+
+
+
       <div class="techstack">
         <img onclick="window.open('https://www.python.org/', '_blank')"
           src="https://img.icons8.com/color/96/000000/python.png" alt="Python" />
@@ -71,10 +82,11 @@
 
 
   <section id="section-about">
-    <h1>About Me</h1>
 
+    <h1 class="hidden">About Me</h1>
+    <hr class="hidden" />
     <div class="basic-grid">
-      <div class="card">
+      <div class="card hidden">
         <h2>Who am I</h2>
         <ul>
           <li>Hi there! 👋</li>
@@ -131,7 +143,7 @@
         </ul>
       </div>
 
-      <div class="card centered">
+      <div class="card centered hidden">
 
         <dotlottie-player src=" animations/about.json" speed="1" playMode="normal" loop autoplay>
         </dotlottie-player>
@@ -141,31 +153,162 @@
   </section>
 
 
-  <section id="section-projects">
-    <h1>About Me</h1>
-
+  <section id="section-work">
+    <h1 class="hidden">Work Experience</h1>
+    <hr class="hidden" />
     <div class="basic-grid">
-      <div class="card">
-        <h2>Who I Am</h2>
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nobis quos vero mollitia officiis maiores culpa
-          voluptatem ullam, asperiores aperiam, excepturi error hic tempora ea veniam, fugiat reiciendis dolor sit
-          molestiae!</p>
+      <div class="card hidden">
 
-        <h2>Hobbies</h2>
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nobis quos vero mollitia officiis maiores culpa
-          voluptatem ullam, asperiores aperiam, excepturi error hic tempora ea veniam, fugiat reiciendis dolor sit
-          molestiae!</p>
+        <ul>
+          <li>
+            📅 <strong style="color: white">Date</strong> 01/2021 - Present
+            (<strong style="color: #e91e63">3</strong> years)
+          </li>
+          <li>
+            💼 <strong style="color: white">Position</strong> Research and
+            Development Engineer
+          </li>
+          <li>
+            🏢 <strong style="color: white">Company</strong>
+            <a href="https://www.wavecom.com" target="_blank" style="color:#e91e63; text-decoration: underline">Wavecom
+              Technologies</a>
+          </li>
+        </ul>
+        <br />
+        <ul>
+          <li>
+            ► Developed microservices in <strong>Python</strong> and
+            <strong>Golang</strong>
+          </li>
+
+          <li>
+            ► Designed and implemented <strong>ETL pipelines</strong> with
+            <strong>Telegraf</strong>
+          </li>
+
+          <li>
+            ► Developed <strong>monitoring frameworks</strong> for
+            <strong>HPC</strong> systems and <strong>WI-FI</strong> networks
+            with comprehensive <strong>Grafana</strong> dashboards
+          </li>
+
+          <li>► Automated workflows using <strong>Shell</strong> scripting</li>
+          <li>
+            ► Built <strong>APIs</strong> for <strong>SQL</strong> and
+            <strong>NoSQL</strong> databases
+          </li>
+          <li>► Engineered algorithms for <strong>data analytics</strong></li>
+          <li>
+            ► Operated databases systems including <strong>PostgreSQL</strong>,
+            <strong>Victoriametrics</strong>, and <strong>Elasticsearch</strong>
+          </li>
+          <li>
+            ► Implemented <strong>Protocol Buffers</strong> and
+            <strong>gRPC</strong> for microservices communication
+          </li>
+          <li>
+            ► Developed <strong>Docker</strong> images and orchestrated
+            applications using <strong>Docker Compose</strong>
+          </li>
+          <li>
+            ► Handled <strong>ONVIF</strong> protocol M to extract valuable
+            detections from camera metadata streams
+          </li>
+          <li>
+            ► Implemented <strong>Version Control Systems</strong> to ensure
+            code integrity
+          </li>
+          <li>
+            ► Worked across diverse funded projects from inception to production
+          </li>
+
+          <li>► Collaborated with global partners.</li>
+        </ul>
       </div>
-      <div class="card centered">
 
-        <dotlottie-player src=" animations/about.json" speed="1" playMode="normal" loop autoplay>
+      <div class="card centered hidden">
+        <dotlottie-player src="animations/experience.json" background="transparent" speed="1" direction="1"
+          playMode="normal" loop autoplay>
         </dotlottie-player>
       </div>
+    </div>
+  </section>
+
+
+
+  <section id="section-skills">
+    <h1 class="hidden">Skill Set</h1>
+    <hr class="hidden" />
+    <div class="basic-grid">
+      <div class="card hidden">
+
+        <h2>Tech Skills</h2>
+        <div class="skill-type">Languages</div>
+        <div class="skill-snippets">
+          <code>Python</code> <code>Golang</code> <code>Bash</code>
+          <code>Javascript</code>
+        </div>
+
+        <div class="skill-type">Web</div>
+        <div class="skill-snippets"> <code>HTML</code> <code>CSS</code></div>
+
+        <div class="skill-type">Databases</div>
+        <div class="skill-snippets">
+          <code>SQL/NoSQL</code> <code>PromQL</code>
+          <code>PostegreSQL</code>
+          <code>ElasticSearch</code>
+          <code>Victoriametrics</code>
+        </div>
+        <div class="skill-type">Dashboards</div>
+        <div class="skill-snippets">
+          <code>Grafana</code> <code>Kibana</code>
+        </div>
+        <div class="skill-type">Containerization</div>
+        <div class="skill-snippets">
+          <code>Docker</code> <code>Docker Compose</code>
+        </div>
+        <div class="skill-type">Data serialization</div>
+        <div class="skill-snippets">
+          <code>JSON</code> <code>CSV</code> <code>Protobuf</code>
+          <code>YAML</code>
+        </div>
+        <div class="skill-type">Others</div>
+        <div class="skill-snippets">
+          <code>Git</code> <code>Linux</code> <code>Telegraf</code>
+          <code>Shell</code> <code>gRPC</code> <code>Prometheus</code>
+        </div>
+      </div>
+
+
+      <div class="card hidden">
+        <h2>Python Skills</h2>
+        <div class="skill-type">Software Development</div>
+        <div class="skill-snippets">
+          <code>FastAPI</code> <code>SQLAlchemy</code> <code>Psycopg</code>
+          <code>Aiohttp</code> <code>Pydantic</code> <code>Asyncio</code>
+          <code>Requests</code>
+        </div>
+        <div class="skill-type">Data Analytics</div>
+        <div class="skill-snippets">
+          <code>Pandas</code> <code>Seaborn</code> <code>Numpy</code>
+          <code>Matplotlib</code> <code>Tensorflow</code>
+        </div>
+        <div class="skill-type">Computer Vision</div>
+        <div class="skill-snippets">
+          <code>ImageAI</code> <code>OpenCV</code> <code>Ultralytics</code>
+        </div>
+      </div>
+
+
+
 
     </div>
+
+
   </section>
 
 
 </body>
+
 
 </html>

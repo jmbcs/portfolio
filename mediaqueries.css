@@ -1,17 +1,124 @@
-
 @media only screen and (min-width: 1000px) {
-  & a:hover {
-    color: red;
+  a:hover {
+    color: var(--red-accent-color);
   }
 }
 
 @media only screen and (max-width: 1000px) {
-  & a:active {
-    color: red;
+  a:active {
+    color: var(--red-accent-color);
   }
+
+  section:not(#section-cover) {
+    margin-bottom: 0;
+  }
+
   dotlottie-player {
-    top:0rem
- 
+    top: 0rem;
+  }
+
+  #header {
+    border-bottom: var(--default-border-color) solid var(--main-border-size);
+    height: 50px;
+    & ~ * {
+      transform: translateY(0);
+      transition: transform 0.75s;
+      color: white;
+    }
+    &.active ~ * {
+      transform: translateY(37rem);
+      filter: blur(5px);
+      color: var(--default-background-color);
+      transition: transform 0.75s;
+    }
+    &.active {
+      border-bottom: transparent;
+    }
+  }
+
+  #menu {
+    display: block;
+    position: absolute;
+    visibility: hidden;
+    overflow-y: hidden;
+    box-sizing: content-box;
+
+    /* margin-top: 5%; */
+    width: 100%;
+    right: 0;
+    transition: 0.75s;
+    z-index: 1000;
+    height: 0px;
+    /* top: 0; */
+
+    border-bottom: var(--default-border-color) solid var(--main-border-size);
+
+    & a {
+      display: block;
+      font-weight: bold;
+      padding: 1rem 1rem 1rem 1rem;
+      background-color: rgb(255, 255, 255);
+      border-radius: 10px;
+      color: #1b1d24;
+      margin-top: 2rem;
+      margin-left: 5%;
+      margin-right: 5%;
+
+      &:hover {
+        background-color: var(--red-accent-color);
+        color: white;
+      }
+    }
+  }
+
+  #hamburger {
+    border-top: 2px solid;
+    margin-right: -5%;
+
+    &::after,
+    &::before {
+      content: "";
+      display: block;
+      width: 20px;
+      height: 2px;
+      background: currentColor;
+      margin-top: 5px;
+      transition: 0.3s;
+      position: relative;
+    }
+  }
+
+  #btn-mobile {
+    display: flex;
+    border: none;
+    cursor: pointer;
+    margin-right: -1rem;
+  }
+
+  #nav.active {
+    & #menu {
+      height: 37rem;
+      visibility: visible;
+    }
+
+    & #hamburger {
+      color: var(--red-accent-color);
+      border-top-color: transparent;
+
+      &::after {
+        transform: rotate(-135deg);
+        top: -7px;
+      }
+
+      &::before {
+        transform: rotate(135deg);
+      }
+    }
+  }
 }
 
+@media only screen and (max-width: 700px) {
+  li {
+    margin-left: -6.5%;
+  }
 }
