@@ -228,11 +228,13 @@ code {
   border: none;
   & .section__pic-container {
     display: flex;
-    aspect-ratio: 1;
-    /* height: 50vh; */
-    width: 50vw;
+    & img{
+
+    width : 50vw;
     min-width: 350px;
-    max-width: 500px;
+    max-width: 500px; 
+    }
+
   }
   & .section__text__p1 {
     font-size: 1.5rem;
@@ -245,6 +247,7 @@ code {
     gap: 2rem;
 
     & img {
+   
       max-width: 1.75rem;
       margin-top: 2rem;
       cursor: pointer;
