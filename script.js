@@ -20,29 +20,23 @@ document.addEventListener("DOMContentLoaded", function() {
 
   // Update logo text based on the current section or menu state
   function updateLogoText() {
-    
-    if (window.scrollY === 0) {
-      logo.textContent = "Welcome";
+    var isActive = nav.classList.contains('active') || header.classList.contains('active');
+    if (isActive) {
+      logo.textContent = "Menu";
     } else {
-      sections.forEach(section => {
-        const bounding = section.getBoundingClientRect();
-        if (bounding.top <= 50 && bounding.bottom >= 0) {
-          const sectionTitle = section.querySelector(".header-up");
-          if (sectionTitle) {
-            var isActive = nav.classList.contains('active') || header.classList.contains('active');
-            if (isActive) {
-           
-              logo.textContent = "Menu";
-            } else {
-             
-              logo.textContent = sectionTitle.textContent;
-            }
+      if (window.scrollY === 0) {
+        logo.textContent = "Welcome";
+      } else {
+        sections.forEach(section => {
+          const bounding = section.getBoundingClientRect();
+          if (bounding.top <= 50 && bounding.bottom >= 0) {
+            const sectionTitle = section.querySelector(".header-up");
+            logo.textContent = sectionTitle.textContent;
           }
-        }
-      });
+        }); // Added the missing closing parenthesis for forEach loop
+      }
     }
   }
-
 
   // Handle menu interaction
   function menuInteraction(event) {
