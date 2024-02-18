@@ -117,7 +117,7 @@ section:not(#section-cover) {
   justify-content: space-between;
   padding-left: 5%;
   padding-right: 5%;
-  height: 4rem;
+  height: 60px;
 
   border-bottom: var(--default-border-color) solid var(--main-border-size);
 
@@ -229,13 +229,15 @@ code {
   & .section__pic-container {
     display: flex;
     aspect-ratio: 1;
-    width: 35vh;
+    /* height: 50vh; */
+    width: 50vw;
+    min-width: 350px;
+    max-width: 500px;
   }
   & .section__text__p1 {
     font-size: 1.5rem;
     color: var(--red-accent-color);
     font-weight: 600;
-
   }
 
   & .techstack {

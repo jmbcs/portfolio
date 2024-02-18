@@ -19,8 +19,8 @@
 
   #header {
     border-bottom: var(--default-border-color) solid var(--main-border-size);
-    /* height:5%; */
-    z-index:1000;
+    /* height:10%; */
+    z-index: 1000;
     & ~ * {
       transform: translateY(0);
       transition: transform 0.75s;
@@ -41,17 +41,18 @@
     display: block;
     position: absolute;
     visibility: hidden;
-    overflow-y: hidden;
+    /* overflow-y: hidden; */
     box-sizing: content-box;
- 
+    overflow-y: scroll; /* Show vertical scrollbar */
 
     /* margin-top: 5%; */
     width: 100%;
     right: 0;
     transition: 0.75s;
 
-    height: 10%;
+    height: 10px;
     /* top: 0; */
+  
 
     border-bottom: var(--default-border-color) solid var(--main-border-size);
 
@@ -65,11 +66,17 @@
       margin-top: 2rem;
       margin-left: 5%;
       margin-right: 5%;
+      overflow-y: scroll; /* Show vertical scrollbar */
 
       &:hover {
         background-color: var(--red-accent-color);
         color: white;
       }
+    }
+    & ul {
+      overflow-y: scroll; /* Show vertical scrollbar */
+
+     
     }
   }
 
@@ -94,15 +101,15 @@
     display: flex;
     border: none;
     cursor: pointer;
- 
   }
-
+  body:has(#nav.active) {
+    overflow: hidden;
+  }
   #nav.active {
     & #menu {
-      height: 35rem;
       visibility: visible;
       z-index: -1111;
-  
+      height:550px;
     }
 
     & #hamburger {
@@ -121,7 +128,13 @@
   }
 }
 
-@media only screen and (max-width: 500px) {
-  section li {
-    margin-left:-6.5%
+@media only screen and (max-width: 700px) {
+  #nav.active {
+    & #menu {
+      visibility: visible;
+      z-index: -1111;
+      
+    }
   }
+}
+
