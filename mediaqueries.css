@@ -122,6 +122,6 @@
 }
 
 @media only screen and (max-width: 500px) {
-  li {
+  section li {
     margin-left:-6.5%
   }
