@@ -121,3 +121,7 @@
   }
 }
 
+@media only screen and (max-width: 500px) {
+  li {
+    margin-left:-6.5%
+  }
