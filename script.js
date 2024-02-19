@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
   // DOM elements
   const btnMobile = document.getElementById("btn-mobile");
   const header = document.getElementById("header");
@@ -20,8 +20,10 @@ document.addEventListener("DOMContentLoaded", function() {
 
   // Update logo text based on the current section or menu state
   function updateLogoText() {
+    // Check if the screen width is less than or equal to 800px
+
     var isActive = nav.classList.contains('active') || header.classList.contains('active');
-    if (isActive) {
+    if (isActive && window.innerWidth < 1000) {
       logo.textContent = "Menu";
     } else {
       if (window.scrollY === 0) {
@@ -29,27 +31,29 @@ document.addEventListener("DOMContentLoaded", function() {
       } else {
         sections.forEach(section => {
           const bounding = section.getBoundingClientRect();
-          if (bounding.top <= 50 && bounding.bottom >= 0) {
+          if (bounding.top <= -30 && bounding.bottom >= 0) {
             const sectionTitle = section.querySelector(".header-up");
             logo.textContent = sectionTitle.textContent;
           }
-        }); // Added the missing closing parenthesis for forEach loop
+        });
       }
     }
+
   }
+
 
   // Handle menu interaction
   function menuInteraction(event) {
-   
+
     if (event.type === 'touchstart') {
       event.preventDefault();
     }
 
     var isActive = nav.classList.contains('active') || header.classList.contains('active');
-    
+
     nav.classList.toggle('active', !isActive);
     header.classList.toggle('active', !isActive);
-  
+
 
     updateLogoText();
   }
