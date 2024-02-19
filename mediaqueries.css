@@ -18,25 +18,32 @@
   }
 
 
-  #section-cover{
+  #section-cover {
     gap: 0rem;
   }
 
   #header {
     border-bottom: var(--default-border-color) solid var(--main-border-size);
     /* height:10%; */
+
     z-index: 1000;
-    & ~ * {
+
+    &~* {
       transform: translateY(0);
       transition: transform 0.75s;
       color: white;
     }
-    &.active ~ * {
+
+    &.active~*:not(.anchor) {
       transform: translateY(35rem);
       filter: blur(5px);
       color: var(--default-background-color);
       transition: transform 0.75s;
+
     }
+
+
+
     &.active {
       border-bottom: transparent;
     }
@@ -48,7 +55,8 @@
     visibility: hidden;
     /* overflow-y: hidden; */
     box-sizing: content-box;
-    overflow-y: scroll; /* Show vertical scrollbar */
+    overflow-y: scroll;
+    /* Show vertical scrollbar */
 
     /* margin-top: 5%; */
     width: 100%;
@@ -57,7 +65,7 @@
 
     height: 10px;
     /* top: 0; */
-  
+
 
     border-bottom: var(--default-border-color) solid var(--main-border-size);
 
@@ -71,17 +79,20 @@
       margin-top: 2rem;
       margin-left: 5%;
       margin-right: 5%;
-      overflow-y: scroll; /* Show vertical scrollbar */
+      overflow-y: scroll;
+      /* Show vertical scrollbar */
 
       &:hover {
         background-color: var(--red-accent-color);
         color: white;
       }
     }
-    & ul {
-      overflow-y: scroll; /* Show vertical scrollbar */
 
-     
+    & ul {
+      overflow-y: scroll;
+      /* Show vertical scrollbar */
+
+
     }
   }
 
@@ -107,14 +118,16 @@
     border: none;
     cursor: pointer;
   }
+
   body:has(#nav.active) {
     overflow: hidden;
   }
+
   #nav.active {
     & #menu {
       visibility: visible;
       z-index: -1111;
-      height:450px;
+      height: 450px;
     }
 
     & #hamburger {
@@ -134,11 +147,8 @@
 }
 
 @media only screen and (max-width: 550px) {
-  ul{
-    margin-left :-7vw
+  ul {
+    margin-left: -7vw
   }
 
-  }
-
-
-
+}

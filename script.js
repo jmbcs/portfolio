@@ -20,9 +20,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Update logo text based on the current section or menu state
   function updateLogoText() {
-    // Check if the screen width is less than or equal to 800px
-
     var isActive = nav.classList.contains('active') || header.classList.contains('active');
+    // Check if the screen width is less than or equal to 800px
     if (isActive && window.innerWidth < 1000) {
       logo.textContent = "Menu";
     } else {
@@ -31,7 +30,7 @@ document.addEventListener("DOMContentLoaded", function () {
       } else {
         sections.forEach(section => {
           const bounding = section.getBoundingClientRect();
-          if (bounding.top <= -30 && bounding.bottom >= 0) {
+          if (bounding.top <= 100 && bounding.bottom >= 0) {
             const sectionTitle = section.querySelector(".header-up");
             logo.textContent = sectionTitle.textContent;
           }
@@ -65,4 +64,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Observe hidden elements
   hiddenElements.forEach((el) => observer.observe(el));
+
+
 });
