@@ -123,9 +123,7 @@ code {
 
 
 .anchor {
-  margin-bottom: -1vh;
-
-
+  margin-bottom: -1rem;
 }
 
 /*-------------------- header section -----------------------------*/
@@ -336,8 +334,11 @@ hr {
   text-align: center;
   justify-content: center;
   gap: 5rem;
+  padding-top: 10rem;
+  padding-bottom: 20rem;
+  min-height: 70vh;
 
-  min-height: 100vh;
+  /* min-height: 100%; */
   /* height: max-content; */
   /* padding-bottom: 10%; */
   /* padding-top: 10%; */
