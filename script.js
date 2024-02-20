@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", function () {
       } else {
         sections.forEach(section => {
           const bounding = section.getBoundingClientRect();
-          if (bounding.top <= 70 && bounding.bottom >= 0) {
+          if (bounding.top <= 30 && bounding.bottom >= 0) {
             const sectionTitle = section.querySelector(".header-up");
             logo.textContent = sectionTitle.textContent;
           }

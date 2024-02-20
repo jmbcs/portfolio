@@ -64,7 +64,7 @@ section {
   flex-wrap: wrap;
   flex-direction: column;
 
-  /* padding-bottom: 5rem; */
+  padding-bottom: 5rem;
   /* padding-top: 0rem; */
 
   /* border-bottom: var(--default-border-color) solid 0.125rem; */
