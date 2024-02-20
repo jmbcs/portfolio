@@ -122,8 +122,9 @@ code {
 }
 
 
-section:not(#section-cover) {
-  padding-top: 8vh;
+.anchor {
+  margin-bottom: -1vh;
+
 
 }
 
