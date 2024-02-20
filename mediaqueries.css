@@ -11,7 +11,7 @@
 
   section:not(#section-cover) {
     margin-bottom: 0;
-    padding-top: 20vh;
+    padding-top: 10vh;
   }
 
   dotlottie-player {
@@ -21,6 +21,8 @@
 
   #section-cover {
     gap: 0rem;
+    /* margin: 0; */
+    padding-top: 20%;
   }
 
   #header {
