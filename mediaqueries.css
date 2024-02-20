@@ -154,3 +154,12 @@
   }
 
 }
+
+@media only screen and (max-width: 625px) {
+  #section-about {
+    & dotlottie-player {
+      margin-left: -3%;
+    }
+  }
+
+}
