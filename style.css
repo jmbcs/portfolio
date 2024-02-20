@@ -377,8 +377,10 @@ hr {
 
     & img {
 
-      max-width: 1.75rem;
-      margin-top: 2rem;
+      width: 2rem;
+      min-width: 25px;
+      /* min-width: 1.8rem; */
+      margin-top: 3rem;
       cursor: pointer;
     }
   }
