@@ -63,7 +63,7 @@ section {
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
-  margin-bottom: 15rem;
+
 
 
   & h1 {
@@ -104,6 +104,10 @@ section {
 
   }
 
+  &:not(#section-cover) {
+    margin-bottom: 10rem;
+
+  }
 
 }
 

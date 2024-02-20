@@ -15,10 +15,7 @@
     color: var(--red-accent-color);
   }
 
-  section:not(#section-cover) {
-    margin-bottom: 0;
 
-  }
 
   /* dotlottie-player {
     top: 0rem;
