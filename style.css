@@ -63,17 +63,8 @@ section {
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
+  margin-bottom: 15rem;
 
-  padding-bottom: 5rem;
-  /* padding-top: 0rem; */
-
-  /* border-bottom: var(--default-border-color) solid 0.125rem; */
-
-  /* margin-top: 5rem; */
-
-  /* &:first-of-type {
-    margin-top: 10rem;
-  } */
 
   & h1 {
     font-size: 3rem;
@@ -93,6 +84,8 @@ section {
 
     font-size: 1.5rem;
     color: white;
+    padding: 0;
+    margin: 0;
     font-weight: 500;
   }
 
@@ -106,19 +99,20 @@ section {
   }
 
   & ul {
-
-    line-height: 1.75rem;
-    margin-top: 0.5rem;
+    line-height: 2rem;
     list-style-type: none;
+
   }
+
+
 }
 
 
 code {
   color: var(--red-accent-color);
   margin-right: 1.5rem;
-  line-height: 2rem;
-  font-size: 0.8rem;
+  line-height: 2.5rem;
+  font-size: 0.85rem;
 }
 
 
@@ -164,8 +158,6 @@ dotlottie-player {
   background: "transparent";
   direction: "1";
   position: relative;
-  top: -7.5rem;
-  min-width: 35rem;
 
 }
 
@@ -203,10 +195,14 @@ hr {
 /*------------------------ Class section-------------------------*/
 
 .basic-grid {
-
+  margin-top: 1rem;
   display: grid;
   gap: 5rem;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+
+  align-content: start;
+
+  grid-template-columns: 1fr 1fr;
+
 
 }
 
@@ -282,6 +278,7 @@ hr {
     letter-spacing: 0.1rem;
     transition: 0.3s;
     color: var(--red-accent-color);
+
   }
 
   &:before {
@@ -321,12 +318,13 @@ hr {
   }
 }
 
-/* 
+
 .anchor {
-  padding: 1rem;
-} */
+  padding-bottom: -1rem;
+}
 
 /*-------------------sections-----------------------------*/
+
 
 #section-cover {
   flex-direction: row;
@@ -387,8 +385,11 @@ hr {
   }
 }
 
+
+
 #section-work {
-  & ul {
-    margin-top: 2rem;
+  & ul:first-child {
+    margin-top: 1rem;
   }
+
 }

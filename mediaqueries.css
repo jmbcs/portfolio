@@ -4,6 +4,12 @@
   }
 }
 
+@media only screen and (max-width: 1350px) {
+  .basic-grid {
+    grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
+  }
+}
+
 @media only screen and (max-width: 1000px) {
   a:active {
     color: var(--red-accent-color);
@@ -14,10 +20,10 @@
 
   }
 
-  dotlottie-player {
+  /* dotlottie-player {
     top: 0rem;
 
-  }
+  } */
 
   #section-cover {
     flex-direction: column;
@@ -149,10 +155,23 @@
   }
 }
 
+
+@media only screen and (max-width: 650px) {
+  .basic-grid {
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  }
+}
+
 @media only screen and (max-width: 550px) {
   ul {
     margin-left: -7vw
   }
+
+  .basic-grid {
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  }
+
+
 
 }
 
@@ -163,5 +182,6 @@
       margin-left: -3%;
     }
   }
+
 
 }
