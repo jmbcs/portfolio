@@ -11,19 +11,18 @@
 
   section:not(#section-cover) {
     margin-bottom: 0;
-    padding-top: 10vh;
+
   }
 
   dotlottie-player {
     top: 0rem;
-  }
 
+  }
 
   #section-cover {
-    gap: 0rem;
-    /* margin: 0; */
-    padding-top: 20%;
+    flex-direction: column;
   }
+
 
   #header {
     border-bottom: var(--default-border-color) solid var(--main-border-size);
