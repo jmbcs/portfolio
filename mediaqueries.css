@@ -155,6 +155,7 @@
 
 }
 
+/* helps to center this animation*/
 @media only screen and (max-width: 625px) {
   #section-about {
     & dotlottie-player {
