@@ -55,7 +55,7 @@ body {
   margin-left: 5%;
   margin-right: 5%;
   display: block;
-  animation: animation-fadeIn 5s;
+  animation: animation-fadeIn 2.5s;
   overflow-x: hidden;
 }
 
@@ -64,11 +64,12 @@ section {
   flex-wrap: wrap;
   flex-direction: column;
 
-  padding-bottom: 5rem;
-  padding-top: 0rem;
+  /* padding-bottom: 5rem; */
+  /* padding-top: 0rem; */
+
   /* border-bottom: var(--default-border-color) solid 0.125rem; */
 
-  margin-top: 5rem;
+  /* margin-top: 5rem; */
 
   &:first-of-type {
     margin-top: 10rem;
@@ -76,6 +77,8 @@ section {
 
   & h1 {
     font-size: 3rem;
+    padding: 0;
+    margin: 0;
     color: white;
     font-weight: 600;
     position: relative;
@@ -87,6 +90,7 @@ section {
   }
 
   & h2 {
+
     font-size: 1.5rem;
     color: white;
     font-weight: 500;
@@ -111,16 +115,17 @@ section {
 
 
 code {
-  color: #e91e63;
+  color: var(--red-accent-color);
   margin-right: 1.5rem;
   line-height: 2rem;
   font-size: 0.8rem;
 }
 
-
+/* 
 section:not(#section-cover) {
-  margin-bottom: -10rem;
-}
+  margin-bottom: -30rem;
+
+} */
 
 /*-------------------- header section -----------------------------*/
 #header {
@@ -167,7 +172,6 @@ dotlottie-player {
 
 hr {
   margin: 0px;
-  margin-top: -2rem;
   margin-bottom: 1rem;
   border: var(--default-border-color) solid 1px;
   position: sticky;
@@ -328,6 +332,7 @@ hr {
   gap: 5rem;
   height: auto;
   min-height: 80vh;
+  margin-bottom: 20%;
   border: none;
 
 
@@ -337,15 +342,23 @@ hr {
     & img {
       width: 50vw;
       min-width: 300px;
-      max-width: 500px;
+      max-width: 400px;
     }
 
+  }
+
+  & .section__title {
+    padding: 0;
+    margin: 0;
+    font-size: 4rem;
   }
 
   & .section__text__p1 {
     font-size: 1.5rem;
     color: var(--red-accent-color);
     font-weight: 600;
+    padding: 0;
+    margin: 0;
 
   }
 
