@@ -121,11 +121,11 @@ code {
   font-size: 0.8rem;
 }
 
-/* 
-section:not(#section-cover) {
-  margin-bottom: -30rem;
 
-} */
+section:not(#section-cover) {
+  padding-top: 10vh;
+
+}
 
 /*-------------------- header section -----------------------------*/
 #header {
@@ -256,7 +256,7 @@ hr {
 
 .btn-glow {
   -webkit--user-select: none;
-
+  padding: 1rem;
   text-align: center;
   margin: 1rem;
   padding: 1rem;
@@ -332,7 +332,7 @@ hr {
   gap: 5rem;
   height: auto;
   min-height: 80vh;
-  margin-bottom: 20%;
+  margin-bottom: 10%;
   border: none;
 
 
@@ -348,7 +348,7 @@ hr {
   }
 
   & .section__title {
-    padding: 0;
+    padding: 1rem;
     margin: 0;
     font-size: 4rem;
   }
@@ -357,7 +357,7 @@ hr {
     font-size: 1.5rem;
     color: var(--red-accent-color);
     font-weight: 600;
-    padding: 0;
+    padding: 1rem;
     margin: 0;
 
   }
