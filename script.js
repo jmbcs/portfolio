@@ -32,7 +32,8 @@ document.addEventListener("DOMContentLoaded", function () {
           const bounding = section.getBoundingClientRect();
           if (bounding.top <= 30 && bounding.bottom >= 0) {
             const sectionTitle = section.querySelector(".header-up");
-            logo.textContent = sectionTitle.textContent;
+            const sectionTitleValue = sectionTitle.dataset.value; // Accessing data-value attribute
+            logo.textContent = sectionTitleValue;
           }
         });
       }
@@ -72,67 +73,48 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+let intervals = []; // Store intervals for each element
 
-let interval = null;
-
-const startAnimation = (target) => {
+// Function to start the animation for a specific element
+function startAnimationForElement(element, index) {
   let iteration = 0;
+  clearInterval(intervals[index]);
 
-  clearInterval(interval);
-
-  interval = setInterval(() => {
-    target.innerText = target.innerText
+  intervals[index] = setInterval(() => {
+    element.innerText = element.innerText
       .split("")
-      .map((letter, index) => {
-        if (index < iteration) {
-          return target.dataset.value[index];
+      .map((letter, idx) => {
+        if (idx < iteration) {
+          return element.dataset.value[idx];
         }
-
         return letters[Math.floor(Math.random() * 26)];
       })
       .join("");
 
-    if (iteration >= target.dataset.value.length) {
-      clearInterval(interval);
+    if (iteration >= element.dataset.value.length) {
+      clearInterval(intervals[index]);
     }
-
     iteration += 1 / 3;
   }, 30);
-};
+}
 
-const isInViewport = (element) => {
-  const bounding = element.getBoundingClientRect();
-  return (
-    bounding.top >= 0 &&
-    bounding.left >= 0 &&
-    bounding.bottom <=
-    (window.innerHeight || document.documentElement.clientHeight) &&
-    bounding.right <=
-    (window.innerWidth || document.documentElement.clientWidth)
-  );
-};
-
-const handleScroll = () => {
-  document.querySelectorAll(".animated-text").forEach((element) => {
-    if (isInViewport(element)) {
-      startAnimation(element);
+// Function to handle intersection changes
+function handleIntersection(entries, observer) {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      const animatedText = entry.target;
+      const index = Array.from(document.querySelectorAll('.animated-text')).indexOf(animatedText); // Find the index of animated text among all .animated-text elements
+      startAnimationForElement(animatedText, index);
     }
   });
-};
+}
 
-// Listen for scroll events
-window.addEventListener("scroll", handleScroll);
 
-// Listen for initial load
-window.addEventListener("DOMContentLoaded", handleScroll);
 
-// Listen for mouse hover events
-document.querySelectorAll(".animated-text").forEach((element) => {
-  element.addEventListener("mouseenter", (event) => {
-    startAnimation(event.target);
-  });
+// Create Intersection Observer instance
+const observer = new IntersectionObserver(handleIntersection, { threshold: 0.10 });
 
-  element.addEventListener("mouseover", (event) => {
-    startAnimation(event.target);
-  });
+// Observe each ".animated-text" element
+document.querySelectorAll('.animated-text').forEach(animatedText => {
+  observer.observe(animatedText);
 });
