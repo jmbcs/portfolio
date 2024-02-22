@@ -1,78 +1,66 @@
 document.addEventListener("DOMContentLoaded", function () {
   // DOM elements
-  const btnMobile = document.getElementById("btn-mobile");
-  const header = document.getElementById("header");
-  const logo = document.getElementById("logo");
-  const menu = document.getElementById("menu");
-  const sections = document.querySelectorAll("section");
-  const hiddenElements = document.querySelectorAll('.hidden');
+  const btnMobile = document.getElementById("btn-mobile"); // Button for mobile
+  const header = document.getElementById("header"); // Header element
+  const logo = document.getElementById("logo"); // Logo element
+  const menu = document.getElementById("menu"); // Menu element
+  const sections = document.querySelectorAll("section"); // All sections
+  const hiddenElements = document.querySelectorAll('.hidden'); // Hidden elements
 
-  // Intersection Observer to show/hide content
+  //! Animation Hide/Show content
   const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
-        entry.target.classList.add('show');
+        entry.target.classList.add('show'); // Add 'show' class if element is intersecting
       } else {
-        entry.target.classList.remove('show');
+        entry.target.classList.remove('show'); // Remove 'show' class if not intersecting
       }
     });
   });
 
-  // Update logo text based on the current section or menu state
+  //! Update Header left text based on the current section or menu state
   function updateLogoText() {
-    var isActive = nav.classList.contains('active') || header.classList.contains('active');
-    // Check if the screen width is less than or equal to 800px
+    var isActive = nav.classList.contains('active') || header.classList.contains('active'); // Check if menu or header is active
     if (isActive && window.innerWidth < 1000) {
-      logo.textContent = "Menu";
+      logo.textContent = "Menu"; // Change logo text to "Menu" if menu or header is active and screen width is less than 1000px
     } else {
       if (window.scrollY === 0) {
-        logo.textContent = "Welcome";
+        logo.textContent = "Welcome"; // Change logo text to "Welcome" if scrolled to top
       } else {
         sections.forEach(section => {
           const bounding = section.getBoundingClientRect();
           if (bounding.top <= 30 && bounding.bottom >= 0) {
             const sectionTitle = section.querySelector(".header-up");
             const sectionTitleValue = sectionTitle.dataset.value; // Accessing data-value attribute
-            logo.textContent = sectionTitleValue;
+            logo.textContent = sectionTitleValue; // Set logo text to section title value
           }
         });
       }
     }
-
   }
 
-
-  // Handle menu interaction
+  //! Toggle/Untogle Menu & Update header text
   function menuInteraction(event) {
-
     if (event.type === 'touchstart') {
-      event.preventDefault();
+      event.preventDefault(); // Prevent default touchstart event
     }
-
-    var isActive = nav.classList.contains('active') || header.classList.contains('active');
-
-    nav.classList.toggle('active', !isActive);
-    header.classList.toggle('active', !isActive);
-
-
-    updateLogoText();
+    var isActive = nav.classList.contains('active') || header.classList.contains('active'); // Check if menu or header is active
+    nav.classList.toggle('active', !isActive); // Toggle 'active' class for nav
+    header.classList.toggle('active', !isActive); // Toggle 'active' class for header
+    updateLogoText(); // Update logo text after interaction
   }
 
   // Event listeners
-  btnMobile.addEventListener('click', menuInteraction);
-  menu.addEventListener('click', menuInteraction);
-  window.addEventListener("scroll", updateLogoText);
+  btnMobile.addEventListener('click', menuInteraction); // Event listener for mobile button click
+  menu.addEventListener('click', menuInteraction); // Event listener for menu click
+  window.addEventListener("scroll", updateLogoText); // Event listener for window scroll
 
   // Observe hidden elements
-  hiddenElements.forEach((el) => observer.observe(el));
-
-
+  hiddenElements.forEach((el) => observer.observe(el)); // Observe hidden elements with Intersection Observer
 });
 
-
-
-
-const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+//! TEXT GLITCH ANIMATION
+const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"; // Letters for animation
 let intervals = []; // Store intervals for each element
 
 // Function to start the animation for a specific element
@@ -98,23 +86,21 @@ function startAnimationForElement(element, index) {
   }, 40);
 }
 
-// Function to handle intersection changes
+//! Function to handle intersection changes
 function handleIntersection(entries, observer) {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
       const animatedText = entry.target;
       const index = Array.from(document.querySelectorAll('.animated-text')).indexOf(animatedText); // Find the index of animated text among all .animated-text elements
-      startAnimationForElement(animatedText, index);
+      startAnimationForElement(animatedText, index); // Start animation for animated text
     }
   });
 }
 
-
-
-// Create Intersection Observer instance
-const observer = new IntersectionObserver(handleIntersection, { threshold: 0.10 });
+// Create Intersection Observer instance for text animation
+const animationObserver = new IntersectionObserver(handleIntersection, { threshold: 0.10 });
 
 // Observe each ".animated-text" element
 document.querySelectorAll('.animated-text').forEach(animatedText => {
-  observer.observe(animatedText);
+  animationObserver.observe(animatedText); // Observe each animated text element
 });

@@ -160,6 +160,16 @@
 }
 
 @media only screen and (max-width: 550px) {
+
+  #section-skills {
+
+    & .card .skill-type,
+    .card .skill-snippets {
+      margin-left: 0;
+    }
+
+  }
+
   ul {
     margin-left: -7vw
   }
