@@ -95,7 +95,7 @@ function startAnimationForElement(element, index) {
       clearInterval(intervals[index]);
     }
     iteration += 1 / 3;
-  }, 30);
+  }, 40);
 }
 
 // Function to handle intersection changes
