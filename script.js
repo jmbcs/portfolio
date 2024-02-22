@@ -82,8 +82,8 @@ function startAnimationForElement(element, index) {
     if (iteration >= element.dataset.value.length) {
       clearInterval(intervals[index]);
     }
-    iteration += 1 / 3;
-  }, 40);
+    iteration += 1 / 4;
+  }, 30);
 }
 
 //! Function to handle intersection changes

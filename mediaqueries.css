@@ -11,27 +11,10 @@
 }
 
 @media only screen and (max-width: 1000px) {
-  a:active {
-    color: var(--red-accent-color);
-  }
-
-
-
-  /* dotlottie-player {
-    top: 0rem;
-
-  } */
-
-  #section-cover {
-    flex-direction: column;
-    gap: 10vh;
-  }
 
 
   #header {
     border-bottom: var(--default-border-color) solid var(--main-border-size);
-    /* height:10%; */
-
     z-index: 1000;
 
     &~* {
@@ -48,8 +31,6 @@
 
     }
 
-
-
     &.active {
       border-bottom: transparent;
     }
@@ -59,20 +40,12 @@
     display: block;
     position: absolute;
     visibility: hidden;
-    /* overflow-y: hidden; */
     box-sizing: content-box;
     overflow-y: scroll;
-    /* Show vertical scrollbar */
-
-    /* margin-top: 5%; */
     width: 100%;
     right: 0;
     transition: 0.75s;
-
     height: 10px;
-    /* top: 0; */
-
-
     border-bottom: var(--default-border-color) solid var(--main-border-size);
 
     & a {
@@ -86,7 +59,7 @@
       margin-left: 5%;
       margin-right: 5%;
       overflow-y: scroll;
-      /* Show vertical scrollbar */
+
 
       &:hover {
         background-color: var(--red-accent-color);
@@ -96,9 +69,6 @@
 
     & ul {
       overflow-y: scroll;
-      /* Show vertical scrollbar */
-
-
     }
   }
 
@@ -125,9 +95,6 @@
     cursor: pointer;
   }
 
-  body:has(#nav.active) {
-    overflow: hidden;
-  }
 
   #nav.active {
     & #menu {
@@ -150,6 +117,24 @@
       }
     }
   }
+
+
+
+
+  #section-cover {
+    flex-direction: column;
+    gap: 10vh;
+  }
+
+
+  body:has(#nav.active) {
+    overflow: hidden;
+  }
+
+  a:active {
+    color: var(--red-accent-color);
+  }
+
 }
 
 
@@ -157,29 +142,6 @@
   .basic-grid {
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   }
-}
-
-@media only screen and (max-width: 550px) {
-
-  #section-skills {
-
-    & .card .skill-type,
-    .card .skill-snippets {
-      margin-left: 0;
-    }
-
-  }
-
-  ul {
-    margin-left: -7vw
-  }
-
-  .basic-grid {
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  }
-
-
-
 }
 
 /* helps to center this animation*/
@@ -190,5 +152,17 @@
     }
   }
 
+
+}
+
+@media only screen and (max-width: 550px) {
+
+  .basic-grid {
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  }
+
+  ul {
+    margin-left: -7vw
+  }
 
 }

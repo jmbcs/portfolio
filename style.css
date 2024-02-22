@@ -74,12 +74,14 @@ section {
     color: white;
     font-weight: 600;
     position: relative;
+
+    &:before {
+      content: "";
+      position: absolute;
+    }
   }
 
-  & h1:before {
-    content: "";
-    position: absolute;
-  }
+
 
   & h2 {
     font-size: 1.5rem;
@@ -201,7 +203,7 @@ hr {
 .basic-grid {
   display: grid;
   align-content: start;
-  margin-top: 1rem;
+  margin-top: 2rem;
   gap: 5rem;
   grid-template-columns: 1fr 1fr;
 
@@ -320,6 +322,11 @@ hr {
   font-family: 'Space Mono', monospace;
 }
 
+.text-link {
+  color: #e91e63;
+  text-decoration: underline;
+  text-underline-offset: 0.25rem;
+}
 
 
 /*-------------------sections-----------------------------*/
@@ -333,7 +340,7 @@ hr {
   border: none;
 
   gap: 5rem;
-  padding-top: 10rem;
+  padding-top: 7.5rem;
   padding-bottom: 20rem;
   min-height: 70vh;
 
@@ -380,27 +387,4 @@ hr {
       cursor: pointer;
     }
   }
-}
-
-
-#section-about {
-  & h2 {
-    margin-top: 2rem;
-  }
-}
-
-#section-work {
-  & ul:first-child {
-    margin-top: 1rem;
-  }
-
-}
-
-#section-skills {
-
-  & .card .skill-type,
-  .card .skill-snippets {
-    margin-left: 5%;
-  }
-
 }
