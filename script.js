@@ -104,3 +104,9 @@ const animationObserver = new IntersectionObserver(handleIntersection, { thresho
 document.querySelectorAll('.animated-text').forEach(animatedText => {
   animationObserver.observe(animatedText); // Observe each animated text element
 });
+
+
+function flipCard(button) {
+  var card = button.closest('.project__card');
+  card.classList.toggle('flipped');
+}

@@ -1,311 +1,438 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="mediaqueries.css" <link rel="stylesheet" href="mediaqueries.css" />
-  <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
-  <link rel="icon" href="assets/icon.png" type="image/x-icon" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="mediaqueries.css" <link rel="stylesheet"
+      href="mediaqueries.css" />
+    <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css"
+      rel="stylesheet">
+    <link rel="icon" href="assets/icon.png" type="image/x-icon" />
 
-  <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script>
-  <!-- <script defer src="app.js"></script> -->
-  <script defer src="script.js"></script>
+    <script
+      src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs"
+      type="module"></script>
+    <!-- <script defer src="app.js"></script> -->
+    <script defer src="script.js"></script>
 
-  <title>Portfolio</title>
-</head>
+    <title>Portfolio</title>
+  </head>
 
-<body>
+  <body>
 
-  <header id="header">
-    <p id="logo">Welcome</p>
+    <header id="header">
+      <p id="logo">Welcome</p>
 
-    <nav id="nav">
-      <button id="btn-mobile">
-        <span id="hamburger"></span>
-      </button>
+      <nav id="nav">
+        <button id="btn-mobile">
+          <span id="hamburger"></span>
+        </button>
 
-      <ul id="menu" role="menu">
-        <li><a href="#anchor-cover">Cover</a></li>
-        <li><a href="#anchor-about">About</a></li>
-        <li><a href="#anchor-work">Experience</a></li>
-        <li><a href="#anchor-skills">Skills</a></li>
-        <li><a href="#anchor-projects">Projects</a></li>
-        <li><a href="#anchor-contact">Contact</a></li>
+        <ul id="menu" role="menu">
+          <li><a href="#anchor-cover">Cover</a></li>
+          <li><a href="#anchor-about">About</a></li>
+          <li><a href="#anchor-work">Experience</a></li>
+          <li><a href="#anchor-skills">Skills</a></li>
+          <li><a href="#anchor-projects">Projects</a></li>
+          <li><a href="#anchor-contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <div id="anchor-cover" class="anchor"></div>
+
+    <section id="section-cover">
+
+      <div class="section__pic-container">
+        <img src="assets/profile.jpg" alt="Júlio Silva Profile Picture" />
+      </div>
+      <div class="about_container">
+        <h1 class="section__title header-up" data-value="Júlio Silva">Júlio
+          Silva</h1>
+        <p class=" section__text__p1 animated-text"
+          data-value="Software Engineer">Software Engineer</p>
+
+        <button class="btn-glow"
+          onclick="window.open('https://github.com/jmbcs/curriculum/blob/main/curriculum.pdf', '_blank')">
+          Check my Curriculum
+        </button>
+
+        <div class="techstack">
+          <img onclick="window.open('https://www.python.org/', '_blank')"
+            src="https://img.icons8.com/color/96/000000/python.png"
+            alt="Python" />
+          <img onclick="window.open('https://www.docker.com/', '_blank')"
+            src="https://www.svgrepo.com/download/331370/docker.svg"
+            alt="Docker" />
+          <img onclick="window.open('https://grafana.com/', '_blank')"
+            src="https://upload.wikimedia.org/wikipedia/commons/3/3b/Grafana_icon.svg"
+            alt="Grafana" />
+          <img onclick="window.open('https://prometheus.io/', '_blank')"
+            src="https://static-00.iconduck.com/assets.00/prometheus-icon-2047x2048-b3aicxlu.png"
+            alt="Prometheus" />
+          <img onclick="window.open('https://www.postgresql.org/', '_blank')"
+            src="https://cdn-icons-png.flaticon.com/512/5968/5968342.png"
+            alt="postgresql" />
+          <img onclick="window.open('https://github.com/', '_blank')"
+            src="https://static-00.iconduck.com/assets.00/github-icon-512x497-oppthre2.png"
+            alt="GitHub" />
+        </div>
+
+      </div>
+    </section>
+
+    <div id="anchor-about" class="anchor"></div>
+    <section id="section-about">
+
+      <h1 class="hidden header-up" data-value="About Me">About Me</h1>
+      <hr class="hidden" />
+      <div class="basic-grid">
+        <div class="card hidden">
+          <h2>Who am I</h2>
+          <ul>
+            <li>Hi there! 👋</li>
+            <li>My name is Júlio Silva and I am a Software Engineer from
+              Viseu.</li>
+          </ul>
+          <ul>
+            <li>📅 <strong>Age</strong> 27</li>
+            <li>🇵🇹 <strong>Nationality</strong> Portuguese</li>
+            <li>
+              💼 <strong>Current Work Position</strong> Research & Development
+              Engineer
+              at Wavecom
+            </li>
+            <li>
+              🎓 <strong>Education</strong> M.Sc Electronics and
+              Telecommunications Engineering, <br />University of Aveiro
+            </li>
+          </ul>
+          <h2>Hobbies & Interests</h2>
+          <ul>
+            <li>
+              😄 <strong>Comedy</strong> Ricky Gervais, Daniel Sloss, and
+              Anthony
+              Jeselnik fan
+            </li>
+            <li>
+              📖 <strong>Reading</strong> Reading is essential to keep my mind
+              sharp
+            </li>
+            <li>
+              🎮 <strong>Videogames</strong> I am a certified gamer since 6
+              years
+              old
+            </li>
+            <li>
+              🍿 <strong>Movies & Series</strong> You know nothing Jon Snow!
+            </li>
+            <li>
+              🏞️ <strong>Hiking</strong> Hiking with the family is a time well
+              spent
+            </li>
+            <li>
+              💻 <strong class="animated-text"
+                data-value="Coding">Coding</strong> I love bringing ideas to
+              life with code
+            </li>
+            <li>
+              💪 <strong>Gym</strong> Keeping both my mind and body in shape is
+              crucial for my happiness
+            </li>
+            <li>🎵 <strong>Music</strong> Who doesn't like a good beat?</li>
+            <li>
+              🌇 <strong>Travelling</strong> There is so much to see out there
+            </li>
+            <li>
+              💵 <strong>Finances & Investing</strong> I like to keep up with
+              financial markets and exploring new investment opportunities
+            </li>
+          </ul>
+        </div>
+
+        <div class="card hidden">
+
+          <dotlottie-player src=" animations/about.json" speed="1"
+            playMode="normal" loop autoplay>
+          </dotlottie-player>
+        </div>
+
+      </div>
+    </section>
+
+    <div id="anchor-work" class="anchor"></div>
+    <section id="section-work">
+      <h1 class="hidden header-up" data-value="Work Experience">Work
+        Experience</h1>
+      <hr class="hidden" />
+      <div class="basic-grid">
+        <div class="card hidden">
+
+          <ul>
+            <li>
+              📅 <strong style="color: white ">Date</strong> 01/2021 - Present
+              (<strong style="color: #e91e63">3</strong> years)
+            </li>
+            <li>
+              💼 <strong style="color: white">Position</strong> Research and
+              Development Engineer
+            </li>
+            <li>
+              🏢 <strong style="color: white">Company</strong>
+              <a href="https://www.wavecom.com" target="_blank" ,
+                class="text-link animated-text"
+                data-value="Wavecom Technologies">Wavecom
+                Technologies</a>
+            </li>
+          </ul>
+          <br />
+          <ul>
+            <li>
+              ► Developed microservices in <strong>Python</strong> and
+              <strong>Golang</strong>
+            </li>
+
+            <li>
+              ► Designed and implemented <strong>ETL pipelines</strong> with
+              <strong>Telegraf</strong>
+            </li>
+
+            <li>
+              ► Developed <strong>monitoring frameworks</strong> for
+              <strong>HPC</strong> systems and <strong>WI-FI</strong> networks
+              with comprehensive <strong>Grafana</strong> dashboards
+            </li>
+
+            <li>► Automated workflows using <strong>Shell</strong>
+              scripting</li>
+            <li>
+              ► Built <strong>APIs</strong> for <strong>SQL</strong> and
+              <strong>NoSQL</strong> databases
+            </li>
+            <li>► Engineered algorithms for <strong>data analytics</strong></li>
+            <li>
+              ► Operated databases systems including
+              <strong>PostgreSQL</strong>,
+              <strong>Victoriametrics</strong>, and
+              <strong>Elasticsearch</strong>
+            </li>
+            <li>
+              ► Implemented <strong>Protocol Buffers</strong> and
+              <strong>gRPC</strong> for microservices communication
+            </li>
+            <li>
+              ► Developed <strong>Docker</strong> images and orchestrated
+              applications using <strong>Docker Compose</strong>
+            </li>
+            <li>
+              ► Handled <strong>ONVIF</strong> protocol M to extract valuable
+              detections from camera metadata streams
+            </li>
+            <li>
+              ► Implemented <strong>Version Control Systems</strong> to ensure
+              code integrity
+            </li>
+            <li>
+              ► Worked across diverse funded projects from inception to
+              production
+            </li>
+
+            <li>► Collaborated with global partners.</li>
+          </ul>
+        </div>
+
+        <div class="card hidden">
+          <dotlottie-player src="animations/experience.json"
+            background="transparent" speed="1" direction="1"
+            playMode="normal" loop autoplay>
+          </dotlottie-player>
+        </div>
+      </div>
+    </section>
+
+    <div id="anchor-skills" class="anchor"></div>
+    <section id="section-skills">
+      <h1 class="hidden header-up " data-value="Skill Set">Skill Set</h1>
+      <hr class="hidden" />
+      <div class="basic-grid">
+        <div class="card hidden">
+
+          <h2>Tech Skills</h2>
+          <ul>
+            <div class="skill-type">Languages</div>
+            <div class="skill-snippets">
+              <code>Python</code> <code>Golang</code> <code>Bash</code>
+              <code>Javascript</code>
+            </div>
+
+            <div class="skill-type">Web</div>
+            <div class="skill-snippets"> <code>HTML</code>
+              <code>CSS</code></div>
+
+            <div class="skill-type">Databases</div>
+            <div class="skill-snippets">
+              <code>SQL/NoSQL</code> <code>PromQL</code>
+              <code>PostegreSQL</code>
+              <code>ElasticSearch</code>
+              <code>Victoriametrics</code>
+            </div>
+            <div class="skill-type">Dashboards</div>
+            <div class="skill-snippets">
+              <code>Grafana</code> <code>Kibana</code>
+            </div>
+            <div class="skill-type">Containerization</div>
+            <div class="skill-snippets">
+              <code>Docker</code> <code>Docker Compose</code>
+            </div>
+            <div class="skill-type">Data serialization</div>
+            <div class="skill-snippets">
+              <code>JSON</code> <code>CSV</code> <code>Protobuf</code>
+              <code>YAML</code>
+            </div>
+            <div class="skill-type">Others</div>
+            <div class="skill-snippets">
+              <code>Git</code> <code>Linux</code> <code>Telegraf</code>
+              <code>Shell</code> <code>gRPC</code> <code>Prometheus</code>
+            </div>
+          </div>
+        </ul>
+
+        <div class="card hidden">
+          <h2>Python Skills</h2>
+          <ul>
+            <div class="skill-type">Software Development</div>
+            <div class="skill-snippets">
+              <code>FastAPI</code> <code>SQLAlchemy</code> <code>Psycopg</code>
+              <code>Aiohttp</code> <code>Pydantic</code> <code>Asyncio</code>
+              <code>Requests</code>
+            </div>
+            <div class="skill-type">Data Analytics</div>
+            <div class="skill-snippets">
+              <code>Pandas</code> <code>Seaborn</code> <code>Numpy</code>
+              <code>Matplotlib</code> <code>Tensorflow</code>
+            </div>
+            <div class="skill-type">Computer Vision</div>
+            <div class="skill-snippets">
+              <code>ImageAI</code> <code>OpenCV</code> <code>Ultralytics</code>
+            </div>
+          </div>
+
+        </ul>
+
+      </div>
+
+    </section>
+
+    <div id="anchor-projects" class="anchor"></div>
+    <section id="section-">
+      <h1 class="hidden header-up " data-value="Skill Set">Projects</h1>
+      <hr class="hidden" />
+      <ul class="project__cards">
+        <li class="project__cards__item">
+          <div class="project__card">
+            <div class="content_box">
+              <div class="project__card_front">
+                <div class="project__card__image image--bighpc"
+                  onclick="flipCard(this)"></div>
+                <div class="project__card__title">BigHPC</div>
+                <div class="project__card__content">
+                  <p class="project__card__text">Development of a
+                    monitoring framework for High Performance
+                    Computing.
+                  </p>
+                </div>
+                <p class="tech-text"> #Python #Grafana #Docker
+                  #Promscale #HPC</p>
+              </div>
+
+              <div class="read_more_block project__card_back">
+                <div class="project__card__title">BigHPC</div>
+                <p>The monitoring framework was composed of a
+                  multi-stage approach to gather and analyze data
+                  from compute nodes.</p>
+                <p>The first stage involved deploying monitoring
+                  python probe on individual compute nodes.
+                  This agent continuously collected a
+                  comprehensive range of metrics.</p>
+
+                <p>The raw data collected from this agent then
+                  underwent processing to become more usable for
+                  analysis. This involved filtering out irrelevant
+                  information, converting data to consistent
+                  formats, and combining individual data points
+                  into meaningful summaries.</p>
+
+                <p>Finally, the stored data was presented to users
+                  through dashboards. These
+                  visualization tools enabled users to not only
+                  monitor resource utilization in real-time but
+                  also to analyze trends and identify potential
+                  bottlenecks or performance issues over time.
+                </p>
+              </div>
+            </div>
+
+            <div class="project__card_front">
+              <div class="btns-container">
+                <button
+                  class="btn btn--block project__card__btn"
+                  onclick="window.open('https://bighpc.wavecom.pt', '_blank')">Website</button>
+                <button
+                  class="btn btn--block project__card__btn"
+                  onclick="window.open('https://www.youtube.com/watch?v=5gaiovo9DD0', '_blank')">Youtube</button>
+                <button class="btn btn--block project__card__btn"
+                  onclick="flipCard(this)">Read More</button>
+              </div>
+            </div>
+
+            <div class="project__card_back">
+              <div class="btns-container read_more_btn_container">
+                <button class="btn btn--block project__card__btn"
+                  onclick="flipCard(this)">Read Less</button>
+              </div>
+            </div>
+
+          </div>
+
+        </li>
+
+        <li class="project__cards__item">
+          <div class="project__card">
+            <div class="content_box">
+              <div class="project__card_front">
+                <div class="project__card__image image--portfolio"
+                  onclick="flipCard(this)"></div>
+                <div class="project__card__title">Portfolio</div>
+                <div class="project__card__content">
+                  <p class="project__card__text">Development of my portfolio
+                    website.
+                  </p>
+                </div>
+                <p class="tech-text"> #HTML #CSS #Javascript</p>
+              </div>
+
+            </div>
+
+            <div class="project__card_front">
+              <div class="btns-container">
+                <button
+                  class="btn btn--block project__card__btn"
+                  onclick="window.open('https://github.com/jmbcs/portfolio', '_blank')">Github</button>
+
+              </div>
+            </div>
+
+          </div>
+
+        </li>
+
       </ul>
-    </nav>
-  </header>
 
-  <div id="anchor-cover" class="anchor"></div>
-
-  <section id="section-cover">
-
-    <div class="section__pic-container">
-      <img src="assets/profile.jpg" alt="Júlio Silva Profile Picture" />
-    </div>
-    <div class="about_container">
-      <h1 class="section__title header-up" data-value="Júlio Silva">Júlio Silva</h1>
-      <p class=" section__text__p1 animated-text" data-value="Software Engineer">Software Engineer</p>
-
-      <button class="btn-glow"
-        onclick="window.open('https://github.com/jmbcs/curriculum/blob/main/curriculum.pdf', '_blank')">
-        Check my Curriculum
-      </button>
-
-      <div class="techstack">
-        <img onclick="window.open('https://www.python.org/', '_blank')"
-          src="https://img.icons8.com/color/96/000000/python.png" alt="Python" />
-        <img onclick="window.open('https://www.docker.com/', '_blank')"
-          src="https://www.svgrepo.com/download/331370/docker.svg" alt="Docker" />
-        <img onclick="window.open('https://grafana.com/', '_blank')"
-          src="https://upload.wikimedia.org/wikipedia/commons/3/3b/Grafana_icon.svg" alt="Grafana" />
-        <img onclick="window.open('https://prometheus.io/', '_blank')"
-          src="https://static-00.iconduck.com/assets.00/prometheus-icon-2047x2048-b3aicxlu.png" alt="Prometheus" />
-        <img onclick="window.open('https://www.postgresql.org/', '_blank')"
-          src="https://cdn-icons-png.flaticon.com/512/5968/5968342.png" alt="postgresql" />
-        <img onclick="window.open('https://github.com/', '_blank')"
-          src="https://static-00.iconduck.com/assets.00/github-icon-512x497-oppthre2.png" alt="GitHub" />
-      </div>
-
-    </div>
-  </section>
-
-  <div id="anchor-about" class="anchor"></div>
-  <section id="section-about">
-
-
-    <h1 class="hidden header-up" data-value="About Me">About Me</h1>
-    <hr class="hidden" />
-    <div class="basic-grid">
-      <div class="card hidden">
-        <h2>Who am I</h2>
-        <ul>
-          <li>Hi there! 👋</li>
-          <li>My name is Júlio Silva and I am a Software Engineer from Viseu.</li>
-        </ul>
-        <ul>
-          <li>📅 <strong>Age</strong> 27</li>
-          <li>🇵🇹 <strong>Nationality</strong> Portuguese</li>
-          <li>
-            💼 <strong>Current Work Position</strong> Research & Development Engineer
-            at Wavecom
-          </li>
-          <li>
-            🎓 <strong>Education</strong> M.Sc Electronics and
-            Telecommunications Engineering, <br />University of Aveiro
-          </li>
-        </ul>
-        <h2>Hobbies & Interests</h2>
-        <ul>
-          <li>
-            😄 <strong>Comedy</strong> Ricky Gervais, Daniel Sloss, and Anthony
-            Jeselnik fan
-          </li>
-          <li>
-            📖 <strong>Reading</strong> Reading is essential to keep my mind
-            sharp
-          </li>
-          <li>
-            🎮 <strong>Videogames</strong> I am a certified gamer since 6 years
-            old
-          </li>
-          <li>
-            🍿 <strong>Movies & Series</strong> You know nothing Jon Snow!
-          </li>
-          <li>
-            🏞️ <strong>Hiking</strong> Hiking with the family is a time well
-            spent
-          </li>
-          <li>
-            💻 <strong class="animated-text" data-value="Coding">Coding</strong> I love bringing ideas to life with code
-          </li>
-          <li>
-            💪 <strong>Gym</strong> Keeping both my mind and body in shape is
-            crucial for my happiness
-          </li>
-          <li>🎵 <strong>Music</strong> Who doesn't like a good beat?</li>
-          <li>
-            🌇 <strong>Travelling</strong> There is so much to see out there
-          </li>
-          <li>
-            💵 <strong>Finances & Investing</strong> I like to keep up with
-            financial markets and exploring new investment opportunities
-          </li>
-        </ul>
-      </div>
-
-      <div class="card hidden">
-
-        <dotlottie-player src=" animations/about.json" speed="1" playMode="normal" loop autoplay>
-        </dotlottie-player>
-      </div>
-
-    </div>
-  </section>
-
-  <div id="anchor-work" class="anchor"></div>
-  <section id="section-work">
-    <h1 class="hidden header-up" data-value="Work Experience">Work Experience</h1>
-    <hr class="hidden" />
-    <div class="basic-grid">
-      <div class="card hidden">
-
-        <ul>
-          <li>
-            📅 <strong style="color: white ">Date</strong> 01/2021 - Present
-            (<strong style="color: #e91e63">3</strong> years)
-          </li>
-          <li>
-            💼 <strong style="color: white">Position</strong> Research and
-            Development Engineer
-          </li>
-          <li>
-            🏢 <strong style="color: white">Company</strong>
-            <a href="https://www.wavecom.com" target="_blank" , class="text-link animated-text"
-              data-value="Wavecom Technologies">Wavecom
-              Technologies</a>
-          </li>
-        </ul>
-        <br />
-        <ul>
-          <li>
-            ► Developed microservices in <strong>Python</strong> and
-            <strong>Golang</strong>
-          </li>
-
-          <li>
-            ► Designed and implemented <strong>ETL pipelines</strong> with
-            <strong>Telegraf</strong>
-          </li>
-
-          <li>
-            ► Developed <strong>monitoring frameworks</strong> for
-            <strong>HPC</strong> systems and <strong>WI-FI</strong> networks
-            with comprehensive <strong>Grafana</strong> dashboards
-          </li>
-
-          <li>► Automated workflows using <strong>Shell</strong> scripting</li>
-          <li>
-            ► Built <strong>APIs</strong> for <strong>SQL</strong> and
-            <strong>NoSQL</strong> databases
-          </li>
-          <li>► Engineered algorithms for <strong>data analytics</strong></li>
-          <li>
-            ► Operated databases systems including <strong>PostgreSQL</strong>,
-            <strong>Victoriametrics</strong>, and <strong>Elasticsearch</strong>
-          </li>
-          <li>
-            ► Implemented <strong>Protocol Buffers</strong> and
-            <strong>gRPC</strong> for microservices communication
-          </li>
-          <li>
-            ► Developed <strong>Docker</strong> images and orchestrated
-            applications using <strong>Docker Compose</strong>
-          </li>
-          <li>
-            ► Handled <strong>ONVIF</strong> protocol M to extract valuable
-            detections from camera metadata streams
-          </li>
-          <li>
-            ► Implemented <strong>Version Control Systems</strong> to ensure
-            code integrity
-          </li>
-          <li>
-            ► Worked across diverse funded projects from inception to production
-          </li>
-
-          <li>► Collaborated with global partners.</li>
-        </ul>
-      </div>
-
-      <div class="card hidden">
-        <dotlottie-player src="animations/experience.json" background="transparent" speed="1" direction="1"
-          playMode="normal" loop autoplay>
-        </dotlottie-player>
-      </div>
-    </div>
-  </section>
-
-
-  <div id="anchor-skills" class="anchor"></div>
-  <section id="section-skills">
-    <h1 class="hidden header-up " data-value="Skill Set">Skill Set</h1>
-    <hr class="hidden" />
-    <div class="basic-grid">
-      <div class="card hidden">
-
-        <h2>Tech Skills</h2>
-        <ul>
-          <div class="skill-type">Languages</div>
-          <div class="skill-snippets">
-            <code>Python</code> <code>Golang</code> <code>Bash</code>
-            <code>Javascript</code>
-          </div>
-
-          <div class="skill-type">Web</div>
-          <div class="skill-snippets"> <code>HTML</code> <code>CSS</code></div>
-
-          <div class="skill-type">Databases</div>
-          <div class="skill-snippets">
-            <code>SQL/NoSQL</code> <code>PromQL</code>
-            <code>PostegreSQL</code>
-            <code>ElasticSearch</code>
-            <code>Victoriametrics</code>
-          </div>
-          <div class="skill-type">Dashboards</div>
-          <div class="skill-snippets">
-            <code>Grafana</code> <code>Kibana</code>
-          </div>
-          <div class="skill-type">Containerization</div>
-          <div class="skill-snippets">
-            <code>Docker</code> <code>Docker Compose</code>
-          </div>
-          <div class="skill-type">Data serialization</div>
-          <div class="skill-snippets">
-            <code>JSON</code> <code>CSV</code> <code>Protobuf</code>
-            <code>YAML</code>
-          </div>
-          <div class="skill-type">Others</div>
-          <div class="skill-snippets">
-            <code>Git</code> <code>Linux</code> <code>Telegraf</code>
-            <code>Shell</code> <code>gRPC</code> <code>Prometheus</code>
-          </div>
-      </div>
-      </ul>
-
-      <div class="card hidden">
-        <h2>Python Skills</h2>
-        <ul>
-          <div class="skill-type">Software Development</div>
-          <div class="skill-snippets">
-            <code>FastAPI</code> <code>SQLAlchemy</code> <code>Psycopg</code>
-            <code>Aiohttp</code> <code>Pydantic</code> <code>Asyncio</code>
-            <code>Requests</code>
-          </div>
-          <div class="skill-type">Data Analytics</div>
-          <div class="skill-snippets">
-            <code>Pandas</code> <code>Seaborn</code> <code>Numpy</code>
-            <code>Matplotlib</code> <code>Tensorflow</code>
-          </div>
-          <div class="skill-type">Computer Vision</div>
-          <div class="skill-snippets">
-            <code>ImageAI</code> <code>OpenCV</code> <code>Ultralytics</code>
-          </div>
-      </div>
-
-      </ul>
-
-
-    </div>
-
-
-  </section>
-
-
-</body>
-
+    </section>
+  </body>
 
 </html>
