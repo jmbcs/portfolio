@@ -658,6 +658,7 @@ hr {
   color: var(--red-accent-color);
   display: block;
   font-size: 2rem;
+  max-width: 25rem;
   font-weight: 600;
 }
 
