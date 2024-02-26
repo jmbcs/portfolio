@@ -1,161 +1,138 @@
-// Get DOM elements
-const btnMobile = document.getElementById("btn-mobile");
-const nav = document.getElementById("nav");
-const header = document.getElementById("header");
-const logo = document.getElementById("logo");
-const menu = document.getElementById("menu");
-const body = document.body;
-const sections = document.querySelectorAll("section");
+document.addEventListener("DOMContentLoaded", function () {
+  // DOM elements
+  const btnMobile = document.getElementById("btn-mobile"); // Button for mobile
+  const header = document.getElementById("header"); // Header element
+  const logo = document.getElementById("logo"); // Logo element
+  const menu = document.getElementById("menu"); // Menu element
+  const sections = document.querySelectorAll("section"); // All sections
+  const hiddenElements = document.querySelectorAll('.hidden'); // Hidden elements
 
-// Define text for each section
-const sectionText = {
-  header: "Welcome",
-  "section-cover": "Cover",
-  "section-about": "About",
-  "section-work": "Experience",
-  "section-skills": "Skills",
-  "section-projects": "Projects",
-  "section-contact": "Contact",
-};
-
-// Toggle menu function
-function toggleMenu(event) {
-  if (event.type === "touchstart") event.preventDefault();
-
-  nav.classList.toggle("active");
-  header.classList.toggle("active");
-  header.classList.remove("menu-interacted");
-
-}
-
-// Event listeners for mobile button
-
-btnMobile.addEventListener("click", toggleMenu);
-
-// Event listener for menu item click and touchstart
-menu.addEventListener("click", handleMenuInteraction);
-
-// Event listener for nav click and touchstart
-nav.addEventListener("click", handleNavInteraction);
-
-function handleMenuInteraction() {
-  nav.classList.remove("active");
-  header.classList.remove("active");
-  header.classList.toggle("menu-interacted");
-
-}
-
-function handleNavInteraction() {
-  console.log(nav.classList.contains("active"));
-  if (nav.classList.contains("active")) {
-    body.classList.toggle("menu-open");
-    logo.textContent = "Menu";
-  } else {
-    body.classList.remove("menu-open");
-
-    sections.forEach((section) => {
-      const sectionTop = section.offsetTop - header.offsetHeight;
-      const sectionBottom = sectionTop + section.offsetHeight;
-
-      if (window.scrollY === 0) {
-        logo.textContent = sectionText["header"];
+  //! Animation Hide/Show content
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('show'); // Add 'show' class if element is intersecting
       } else {
-        const isInSection =
-          window.scrollY >= sectionTop && window.scrollY < sectionBottom;
-
-        if (isInSection) {
-          logo.textContent = sectionText[section.id];
-        }
+        entry.target.classList.remove('show'); // Remove 'show' class if not intersecting
       }
     });
-  }
-}
+  });
 
-
-
-function getVisibleSection() {
-  const visibilityThreshold = 0.35; // Adjust this value as needed
-
-  for (const section of sections) {
-    const rect = section.getBoundingClientRect();
-    const visibleHeight = Math.min(rect.bottom, window.innerHeight) - Math.max(rect.top, 0);
-    const visiblePercentage = visibleHeight / rect.height;
-
-    if (visiblePercentage >= visibilityThreshold) {
-      return section;
+  //! Update Header left text based on the current section or menu state
+  function updateLogoText() {
+    var isActive = nav.classList.contains('active') || header.classList.contains('active'); // Check if menu or header is active
+    if (isActive && window.innerWidth < 1000) {
+      logo.textContent = "Menu"; // Change logo text to "Menu" if menu or header is active and screen width is less than 1000px
+    } else {
+      if (window.scrollY === 0) {
+        logo.textContent = "Welcome"; // Change logo text to "Welcome" if scrolled to top
+      } else {
+        sections.forEach(section => {
+          const bounding = section.getBoundingClientRect();
+          if (bounding.top <= 30 && bounding.bottom >= 0) {
+            const sectionTitle = section.querySelector(".header-up");
+            const sectionTitleValue = sectionTitle.dataset.value; // Accessing data-value attribute
+            logo.textContent = sectionTitleValue; // Set logo text to section title value
+          }
+        });
+      }
     }
   }
 
-  return null;
-}
-
-window.addEventListener("scroll", () => {
-
-  if (window.scrollY === 0) {
-    logo.textContent = sectionText["header"];
-  } else {
-
-    const visibleSection = getVisibleSection();
-
-    if (visibleSection) {
-      const link = document.querySelector(`#menu a[href="#${visibleSection.id}"]`);
-      const underlineColor = "#e91e63"; // Set the desired underline color
-
-      logo.textContent = sectionText[visibleSection.id];
-      link.style.borderBottom = `3px solid ${underlineColor}`;
-
-      // Remove underline from other links
-      document.querySelectorAll("#menu a").forEach((otherLink) => {
-        if (otherLink !== link) {
-          otherLink.style.borderBottom = "none";
-        }
-      });
+  //! Toggle/Untogle Menu & Update header text
+  function menuInteraction(event) {
+    if (event.type === 'touchstart') {
+      event.preventDefault(); // Prevent default touchstart event
     }
- 
+    var isActive = nav.classList.contains('active') || header.classList.contains('active'); // Check if menu or header is active
+    nav.classList.toggle('active', !isActive); // Toggle 'active' class for nav
+    header.classList.toggle('active', !isActive); // Toggle 'active' class for header
+    updateLogoText(); // Update logo text after interaction
   }
+
+  // Event listeners
+  btnMobile.addEventListener('click', menuInteraction); // Event listener for mobile button click
+  menu.addEventListener('click', menuInteraction); // Event listener for menu click
+  window.addEventListener("scroll", updateLogoText); // Event listener for window scroll
+
+  // Observe hidden elements
+  hiddenElements.forEach((el) => observer.observe(el)); // Observe hidden elements with Intersection Observer
 });
 
 
 
-
-
-
-const serviceItems = document.querySelector(".service-items");
-const popup = document.querySelector(".popup-box")
-const popupCloseBtn = popup.querySelector(".popup-close-btn");
-const popupCloseIcon = popup.querySelector(".popup-close-icon");
-
-serviceItems.addEventListener("click",function(event){
-  if(event.target.tagName.toLowerCase() == "button" &&
-  event.target.getAttribute("type") === "btn-readmore"){
-     const item =event.target.parentElement;
-     const h3 = item.querySelector("h3").innerHTML;
-     const readMoreCont = item.querySelector(".read-more-cont").innerHTML;
-     popup.querySelector("h3").innerHTML = h3;
-     popup.querySelector(".popup-body").innerHTML = readMoreCont;
-     popupBox();
-  }
-
-})
-
-popupCloseBtn.addEventListener("click", popupBox);
-popupCloseIcon.addEventListener("click", popupBox);
-
-popup.addEventListener("click", function(event){
-   if(event.target == popup){
-      popupBox();
-   }
-})
-
-function popupBox(){
-  popup.classList.toggle("open");
-  document.body.classList.toggle("popup-open");
-  document.getElementById("header").classList.toggle("popup-open");
+function flipCard(button) {
+  var card = button.closest('.project__card');
+  card.classList.toggle('flipped');
 }
 
 
 
+//! TEXT GLITCH ANIMATION
+const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"; // Letters for animation
+let intervals = []; // Store intervals for each element
 
+// Function to start the animation for a specific element
+function startAnimationForElement(element, index) {
+  let iteration = 0;
+  clearInterval(intervals[index]);
+
+  intervals[index] = setInterval(() => {
+    element.innerText = element.innerText
+      .split("")
+      .map((letter, idx) => {
+        if (idx < iteration) {
+          return element.dataset.value[idx];
+        }
+        return letters[Math.floor(Math.random() * 26)];
+      })
+      .join("");
+
+    if (iteration >= element.dataset.value.length) {
+      clearInterval(intervals[index]);
+    }
+    iteration += 1 / 4;
+  }, 30);
+}
+
+//! Function to handle intersection changes
+function handleIntersection(entries, observer) {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      const animatedText = entry.target;
+      const index = Array.from(document.querySelectorAll('.animated-text')).indexOf(animatedText); // Find the index of animated text among all .animated-text elements
+      startAnimationForElement(animatedText, index); // Start animation for animated text
+    }
+  });
+}
+
+// Create Intersection Observer instance for text animation
+const animationObserver = new IntersectionObserver(handleIntersection, { threshold: 0.10 });
+
+// Observe each ".animated-text" element
+document.querySelectorAll('.animated-text').forEach(animatedText => {
+  animationObserver.observe(animatedText); // Observe each animated text element
+});
+
+// Function to handle hover effect
+function handleHover(element) {
+  const index = Array.from(document.querySelectorAll('.animated-text__hover')).indexOf(element);
+  startAnimationForElement(element, index);
+}
+
+// // Function to handle mouse leave
+// function handleMouseLeave(element) {
+//   const index = Array.from(document.querySelectorAll('.animated-text__hover')).indexOf(element);
+//   clearInterval(intervals[index]);
+//   element.innerText = element.dataset.value;
+// }
+
+// Observe each ".animated-text__hover" element
+document.querySelectorAll('.animated-text__hover').forEach(animatedText => {
+  // Add hover effect
+  animatedText.addEventListener('mouseenter', () => handleHover(animatedText));
+  // animatedText.addEventListener('mouseleave', () => handleMouseLeave(animatedText));
+});
 
 
 
