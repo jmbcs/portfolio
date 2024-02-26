@@ -532,6 +532,7 @@ hr {
   color: var(--red-accent-color);
   animation: animation-fadeIn 1s;
   transition: 0.5s;
+
 }
 
 .project__card__text {
