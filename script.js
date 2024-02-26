@@ -59,6 +59,15 @@ document.addEventListener("DOMContentLoaded", function () {
   hiddenElements.forEach((el) => observer.observe(el)); // Observe hidden elements with Intersection Observer
 });
 
+
+
+function flipCard(button) {
+  var card = button.closest('.project__card');
+  card.classList.toggle('flipped');
+}
+
+
+
 //! TEXT GLITCH ANIMATION
 const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"; // Letters for animation
 let intervals = []; // Store intervals for each element
@@ -105,8 +114,25 @@ document.querySelectorAll('.animated-text').forEach(animatedText => {
   animationObserver.observe(animatedText); // Observe each animated text element
 });
 
-
-function flipCard(button) {
-  var card = button.closest('.project__card');
-  card.classList.toggle('flipped');
+// Function to handle hover effect
+function handleHover(element) {
+  const index = Array.from(document.querySelectorAll('.animated-text__hover')).indexOf(element);
+  startAnimationForElement(element, index);
 }
+
+// // Function to handle mouse leave
+// function handleMouseLeave(element) {
+//   const index = Array.from(document.querySelectorAll('.animated-text__hover')).indexOf(element);
+//   clearInterval(intervals[index]);
+//   element.innerText = element.dataset.value;
+// }
+
+// Observe each ".animated-text__hover" element
+document.querySelectorAll('.animated-text__hover').forEach(animatedText => {
+  // Add hover effect
+  animatedText.addEventListener('mouseenter', () => handleHover(animatedText));
+  // animatedText.addEventListener('mouseleave', () => handleMouseLeave(animatedText));
+});
+
+
+

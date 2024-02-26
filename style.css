@@ -1,4 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+@import url(https://fonts.googleapis.com/css?family=Lato);
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css);
+
 /*------------------ Constant variables -----------------*/
 
 :root {
@@ -373,26 +376,57 @@ hr {
 
   }
 
-  & .techstack {
-    display: flex;
-    gap: 2rem;
-    align-items: center;
-    justify-content: center;
 
-    & img {
+}
 
-      width: 2rem;
-      min-width: 25px;
-      /* min-width: 1.8rem; */
-      margin-top: 3rem;
-      cursor: pointer;
-    }
+
+.techstack {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  justify-content: center;
+
+  & img {
+
+    width: 2rem;
+    min-width: 25px;
+    /* min-width: 1.8rem; */
+    margin-top: 3rem;
+    cursor: pointer;
   }
 }
 
 
+.socialstack {
 
-/*Projects*/
+  gap: 2rem;
+
+  /* align-items: center; */
+  /* justify-content: center; */
+
+  & img {
+
+    width: 2rem;
+    min-width: 25px;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+
+    /* min-width: 1.8rem; */
+    /* margin-top: 3rem; */
+    cursor: pointer;
+  }
+}
+
+.footer {
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+  text-align: center;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  line-height: 2rem;
+}
 
 
 
@@ -670,28 +704,42 @@ fieldset {
 
 
 #contact button[type="submit"] {
-
-  cursor: pointer;
-  width: 7.5rem;
-  border-radius: 10px;
-  background-color: var(--red-accent-color);
-  color: #FFF;
-  /* margin-top: 1rem; */
-  padding: 10px;
   border: none;
+  /* box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24); */
+  border-radius: 10px;
+  color: white;
+  width: 10rem;
+  padding: 0.5rem;
+  transition: 0.25s;
+  background-color: var(--red-accent-color);
+  ;
 
+  &:hover {
+    /* color: var(--red-accent-color); */
+    /* box-shadow: rgb(77, 38, 46) 0px 20px 30px -10px; */
+    filter: contrast(65%);
+    cursor: pointer;
+    letter-spacing: 0.8rem;
+    border-color: var(--red-accent-color);
+    transition: 0.25s;
+
+  }
 }
 
+/* 
 #contact button[type="submit"]:hover {
-  /* background: red; */
-  -webkit-transition: background 0.3s ease-in-out;
-  -moz-transition: background 0.3s ease-in-out;
-  transition: background-color 0.3s ease-in-out;
-}
 
-#contact button[type="submit"]:active {
+
+  transform: scale(1.03);
+  cursor: pointer;
+  background-color: var(--red-accent-color);
+  transition: transform .5s;
+
+} */
+
+/* #contact button[type="submit"]:active {
   box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.5);
-}
+} */
 
 #contact input:focus,
 #contact textarea:focus {

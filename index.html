@@ -53,7 +53,7 @@
       <div class="about_container">
         <h1 class="section__title header-up" data-value="Júlio Silva">Júlio
           Silva</h1>
-        <p class=" section__text__p1 animated-text"
+        <p class=" section__text__p1 animated-text animated-text__hover"
           data-value="Software Engineer">Software Engineer</p>
 
         <button class="btn-glow"
@@ -62,24 +62,23 @@
         </button>
 
         <div class="techstack">
+
           <img onclick="window.open('https://www.python.org/', '_blank')"
-            src="https://img.icons8.com/color/96/000000/python.png"
+            src="images/python.png"
             alt="Python" />
           <img onclick="window.open('https://www.docker.com/', '_blank')"
-            src="https://www.svgrepo.com/download/331370/docker.svg"
+            src="images/docker.svg"
             alt="Docker" />
           <img onclick="window.open('https://grafana.com/', '_blank')"
-            src="https://upload.wikimedia.org/wikipedia/commons/3/3b/Grafana_icon.svg"
+            src="images/grafana.png"
             alt="Grafana" />
           <img onclick="window.open('https://prometheus.io/', '_blank')"
-            src="https://static-00.iconduck.com/assets.00/prometheus-icon-2047x2048-b3aicxlu.png"
+            src="images/prometheus.png"
             alt="Prometheus" />
           <img onclick="window.open('https://www.postgresql.org/', '_blank')"
-            src="https://cdn-icons-png.flaticon.com/512/5968/5968342.png"
+            src="images/postgresql.png"
             alt="postgresql" />
-          <img onclick="window.open('https://github.com/', '_blank')"
-            src="https://static-00.iconduck.com/assets.00/github-icon-512x497-oppthre2.png"
-            alt="GitHub" />
+
         </div>
 
       </div>
@@ -435,38 +434,56 @@
 
     <div id="anchor-contact" class="anchor"></div>
     <section id="section-contact">
-      <h1 class="hidden header-up " data-value="Contact">Contact</h1>
+      <h1 class="hidden header-up" data-value="Contact">Contact</h1>
       <hr class="hidden" />
       <div class="hidden contact_container">
-        <form id="contact"
-          action="https://formsubmit.co/el/yukawa"
-          method="post">
-          <h3 class="animated-text" data-value="Send me a Message!">Send me a
+        <form id="contact" action="https://formspree.io/f/mleqnnpd"
+          method="POST">
+          <h3 class="animated-text__hover" data-value="Send me a Message!">Send
+            me a
             Message!</h3>
+
+          <input type="text" name="_gotcha" style="display:none" />
+
           <fieldset>
-            <input placeholder="Name (Required)" type="text"
-              tabindex="1"
-              required autofocus>
+            <input placeholder="Name (Required)" type="text" name="name"
+              tabindex="1" required autofocus>
           </fieldset>
           <fieldset>
-            <input placeholder="Email (Required)" type="email"
+            <input placeholder="Email (Required)" type="email" name="email"
               tabindex="2" required>
           </fieldset>
           <fieldset>
-            <input placeholder="Company (Required)"
-              type="company" tabindex="4" required>
+            <input placeholder="Company (Required)" type="text" name="company"
+              tabindex="3" required>
           </fieldset>
           <fieldset>
-            <textarea placeholder="Type your Message Here...."
-              tabindex="5" required></textarea>
+            <textarea placeholder="Type your Message Here...." name="message"
+              tabindex="4" required></textarea>
           </fieldset>
           <fieldset>
-            <button name="submit" type="submit" id="contact-submit"
+            <button
+              type="submit" id="contact-submit"
               data-submit="...Sending">Submit</button>
           </fieldset>
         </form>
+      </div>
 
+      <div class="footer">
+        <p>Find me at</p>
+        <div class="socialstack">
+
+          <img
+            onclick="window.open('https://www.linkedin.com/in/julio-miguel-silva/', '_blank')"
+            src="images/linkdin.png"
+            alt="Python" />
+          <img onclick="window.open('https://github.com/jmbcs', '_blank')"
+            src="images/github.png"
+            alt="Docker" />
+        </div>
+        <p>Thanks for checking my portfolio! 😊</p>
       </div>
     </body>
+  </section>
 
-  </html>
+</html>
