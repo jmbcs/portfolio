@@ -47,7 +47,7 @@
     position: absolute;
     visibility: hidden;
     box-sizing: content-box;
-    overflow-y: scroll;
+    overflow: hidden;
     width: 100%;
     right: 0;
     transition: 0.75s;
