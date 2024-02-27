@@ -667,8 +667,9 @@ fieldset {
 
 
   margin: 0 0 5px;
+
   padding: 10px;
-  width: 90%;
+  min-width: 95%;
 }
 
 #contact input[type="text"]:hover,
