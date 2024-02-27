@@ -14,19 +14,23 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Function to update logo text based on current section or menu state
   function updateLogoText() {
-    const isActive = menu.classList.contains('active') || header.classList.contains('active');
-    logo.textContent = (isActive && window.innerWidth < 1000) ? "Menu" : (window.scrollY === 0 ? "Welcome" : getCurrentSectionTitle());
-  }
-
-  // Function to get title of current visible section
-  function getCurrentSectionTitle() {
-    for (const section of sections) {
-      const boundingBox = section.getBoundingClientRect();
-      if (boundingBox.top <= 30 && boundingBox.bottom >= 0) {
-        return section.querySelector(".header-up").dataset.value;
+    var isActive = nav.classList.contains('active') || header.classList.contains('active'); // Check if menu or header is active
+    if (isActive && window.innerWidth < 1000) {
+      logo.textContent = "Menu"; // Change logo text to "Menu" if menu or header is active and screen width is less than 1000px
+    } else {
+      if (window.scrollY === 0) {
+        logo.textContent = "Welcome"; // Change logo text to "Welcome" if scrolled to top
+      } else {
+        sections.forEach(section => {
+          const bounding = section.getBoundingClientRect();
+          if (bounding.top <= 30 && bounding.bottom >= 0) {
+            const sectionTitle = section.querySelector(".header-up");
+            const sectionTitleValue = sectionTitle.dataset.value; // Accessing data-value attribute
+            logo.textContent = sectionTitleValue; // Set logo text to section title value
+          }
+        });
       }
     }
-    return '';
   }
 
 
