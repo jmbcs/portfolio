@@ -120,18 +120,12 @@ function handleHover(element) {
   startAnimationForElement(element, index);
 }
 
-// // Function to handle mouse leave
-// function handleMouseLeave(element) {
-//   const index = Array.from(document.querySelectorAll('.animated-text__hover')).indexOf(element);
-//   clearInterval(intervals[index]);
-//   element.innerText = element.dataset.value;
-// }
 
 // Observe each ".animated-text__hover" element
 document.querySelectorAll('.animated-text__hover').forEach(animatedText => {
   // Add hover effect
   animatedText.addEventListener('mouseenter', () => handleHover(animatedText));
-  // animatedText.addEventListener('mouseleave', () => handleMouseLeave(animatedText));
+
 });
 
 

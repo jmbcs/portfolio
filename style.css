@@ -548,12 +548,12 @@ hr {
 }
 
 .image--bighpc {
-  background-image: url(images/logo.png);
+  background-image: url(assets/logo.png);
 
 }
 
 .image--portfolio {
-  background-image: url(images/portfolio.png);
+  background-image: url(assets/portfolio.png);
 }
 
 
