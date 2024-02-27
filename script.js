@@ -29,7 +29,10 @@ document.addEventListener("DOMContentLoaded", function () {
       } else {
         sections.forEach(section => {
           const bounding = section.getBoundingClientRect();
-          if (bounding.top <= 30 && bounding.bottom >= 0) {
+          console.log("-----------------------------------------------------------------------------------------------------------------")
+          console.log(section)
+          console.log(bounding)
+          if (bounding.top <= 30 && bounding.bottom >= 0 || bounding.y >= 350 && bounding.y <= 550) {
             const sectionTitle = section.querySelector(".header-up");
             const sectionTitleValue = sectionTitle.dataset.value; // Accessing data-value attribute
             logo.textContent = sectionTitleValue; // Set logo text to section title value
