@@ -1,118 +1,94 @@
-document.addEventListener("DOMContentLoaded", function () {
+// Execute when DOM content is loaded
+document.addEventListener("DOMContentLoaded", () => {
   // DOM elements
-  const btnMobile = document.getElementById("btn-mobile"); // Button for mobile
-  const header = document.getElementById("header"); // Header element
-  const logo = document.getElementById("logo"); // Logo element
-  const menu = document.getElementById("menu"); // Menu element
-  const sections = document.querySelectorAll("section"); // All sections
-  const hiddenElements = document.querySelectorAll('.hidden'); // Hidden elements
-
-  //! Animation Hide/Show content
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('show'); // Add 'show' class if element is intersecting
-      } else {
-        entry.target.classList.remove('show'); // Remove 'show' class if not intersecting
-      }
-    });
+  const mobileButton = document.getElementById("btn-mobile");
+  const header = document.getElementById("header");
+  const logo = document.getElementById("logo");
+  const menu = document.getElementById("menu");
+  const sections = document.querySelectorAll("section");
+  const hiddenElements = document.querySelectorAll('.hidden');
+  // Intersection observer to show/hide elements
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => entry.target.classList.toggle('show', entry.isIntersecting));
   });
 
-  //! Update Header left text based on the current section or menu state
+  // Function to update logo text based on current section or menu state
   function updateLogoText() {
-    var isActive = nav.classList.contains('active') || header.classList.contains('active'); // Check if menu or header is active
-    if (isActive && window.innerWidth < 1000) {
-      logo.textContent = "Menu"; // Change logo text to "Menu" if menu or header is active and screen width is less than 1000px
-    } else {
-      if (window.scrollY === 0) {
-        logo.textContent = "Welcome"; // Change logo text to "Welcome" if scrolled to top
-      } else {
-        sections.forEach(section => {
-          const bounding = section.getBoundingClientRect();
-          if (bounding.top <= 30 && bounding.bottom >= 0) {
-            const sectionTitle = section.querySelector(".header-up");
-            const sectionTitleValue = sectionTitle.dataset.value; // Accessing data-value attribute
-            logo.textContent = sectionTitleValue; // Set logo text to section title value
-          }
-        });
-      }
-    }
+    const isActive = menu.classList.contains('active') || header.classList.contains('active');
+    logo.textContent = (isActive && window.innerWidth < 1000) ? "Menu" : (window.scrollY === 0 ? "Welcome" : getCurrentSectionTitle());
   }
 
-  //! Toggle/Untogle Menu & Update header text
-  function menuInteraction(event) {
+  // Function to get title of current visible section
+  function getCurrentSectionTitle() {
+    for (const section of sections) {
+      const boundingBox = section.getBoundingClientRect();
+      if (boundingBox.top <= 30 && boundingBox.bottom >= 0) {
+        return section.querySelector(".header-up").dataset.value;
+      }
+    }
+    return '';
+  }
+
+
+  function toggleMenu(event) {
     if (event.type === 'touchstart') {
       event.preventDefault(); // Prevent default touchstart event
     }
-    var isActive = nav.classList.contains('active') || header.classList.contains('active'); // Check if menu or header is active
-    nav.classList.toggle('active', !isActive); // Toggle 'active' class for nav
-    header.classList.toggle('active', !isActive); // Toggle 'active' class for header
-    updateLogoText(); // Update logo text after interaction
+
+    const isMenuActive = nav.classList.contains('active');
+    const isHeaderActive = header.classList.contains('active');
+
+    const shouldActivate = !(isMenuActive || isHeaderActive);
+
+    nav.classList.toggle('active', shouldActivate);
+    header.classList.toggle('active', shouldActivate);
+
+    updateLogoText();
   }
 
-  // Event listeners
-  btnMobile.addEventListener('click', menuInteraction); // Event listener for mobile button click
-  menu.addEventListener('click', menuInteraction); // Event listener for menu click
-  window.addEventListener("scroll", updateLogoText); // Event listener for window scroll
 
-  // Observe hidden elements
-  hiddenElements.forEach((el) => observer.observe(el)); // Observe hidden elements with Intersection Observer
+  // Event listeners
+  mobileButton.addEventListener('click', toggleMenu);
+  menu.addEventListener('click', toggleMenu);
+  window.addEventListener("scroll", updateLogoText);
+  hiddenElements.forEach(el => observer.observe(el)); // Observe hidden elements
 });
 
-
-
+// Function to flip card on button click
 function flipCard(button) {
-  var card = button.closest('.project__card');
-  card.classList.toggle('flipped');
+  button.closest('.project__card').classList.toggle('flipped');
 }
 
+// Animation letters
+const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+const intervals = [];
 
-
-//! TEXT GLITCH ANIMATION
-const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"; // Letters for animation
-let intervals = []; // Store intervals for each element
-
-// Function to start the animation for a specific element
+// Function to start text animation for element
 function startAnimationForElement(element, index) {
   let iteration = 0;
   clearInterval(intervals[index]);
-
   intervals[index] = setInterval(() => {
-    element.innerText = element.innerText
-      .split("")
-      .map((letter, idx) => {
-        if (idx < iteration) {
-          return element.dataset.value[idx];
-        }
-        return letters[Math.floor(Math.random() * 26)];
-      })
-      .join("");
-
-    if (iteration >= element.dataset.value.length) {
-      clearInterval(intervals[index]);
-    }
-    iteration += 1 / 4;
+    element.innerText = element.innerText.split("").map((letter, idx) => {
+      return (idx < iteration) ? element.dataset.value[idx] : letters[Math.floor(Math.random() * 26)];
+    }).join("");
+    if (iteration >= element.dataset.value.length) clearInterval(intervals[index]);
+    iteration += 1 / 3;
   }, 30);
 }
 
-//! Function to handle intersection changes
-function handleIntersection(entries, observer) {
+// Function to handle intersection changes
+function handleIntersection(entries) {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
-      const animatedText = entry.target;
-      const index = Array.from(document.querySelectorAll('.animated-text')).indexOf(animatedText); // Find the index of animated text among all .animated-text elements
-      startAnimationForElement(animatedText, index); // Start animation for animated text
+      const index = Array.from(document.querySelectorAll('.animated-text')).indexOf(entry.target);
+      startAnimationForElement(entry.target, index);
     }
   });
 }
 
-// Create Intersection Observer instance for text animation
+// Intersection observer for text animation
 const animationObserver = new IntersectionObserver(handleIntersection, { threshold: 0.10 });
-
-// Observe each ".animated-text" element
-document.querySelectorAll('.animated-text').forEach(animatedText => {
-  animationObserver.observe(animatedText); // Observe each animated text element
-});
+document.querySelectorAll('.animated-text').forEach(animatedText => animationObserver.observe(animatedText));
 
 // Function to handle hover effect
 function handleHover(element) {
@@ -120,13 +96,11 @@ function handleHover(element) {
   startAnimationForElement(element, index);
 }
 
-
-// Observe each ".animated-text__hover" element
+// Add hover effect to animated text
 document.querySelectorAll('.animated-text__hover').forEach(animatedText => {
-  // Add hover effect
   animatedText.addEventListener('mouseenter', () => handleHover(animatedText));
-
 });
+
 
 
 
