@@ -29,7 +29,7 @@ document.addEventListener("DOMContentLoaded", function () {
       } else {
         sections.forEach(section => {
           const bounding = section.getBoundingClientRect();
-          if (bounding.top <= 30 && bounding.bottom >= 0) {
+          if (bounding.top <= 30 && bounding.bottom >= 0 || bounding.top > 0 && bounding.top < 0) {
             const sectionTitle = section.querySelector(".header-up");
             const sectionTitleValue = sectionTitle.dataset.value; // Accessing data-value attribute
             logo.textContent = sectionTitleValue; // Set logo text to section title value
@@ -47,7 +47,12 @@ document.addEventListener("DOMContentLoaded", function () {
     var isActive = nav.classList.contains('active') || header.classList.contains('active'); // Check if menu or header is active
     nav.classList.toggle('active', !isActive); // Toggle 'active' class for nav
     header.classList.toggle('active', !isActive); // Toggle 'active' class for header
-    updateLogoText(); // Update logo text after interaction
+    setTimeout(
+      function () {
+        updateLogoText();
+      }, 2000 // Update logo text after interaction
+    )
+
   }
 
   // Event listeners
