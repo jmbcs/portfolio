@@ -21,23 +21,23 @@ document.addEventListener("DOMContentLoaded", function () {
   //! Update Header left text based on the current section or menu state
   function updateLogoText() {
     var isActive = nav.classList.contains('active') || header.classList.contains('active'); // Check if menu or header is active
-    if (isActive && window.innerWidth < 1000) {
-      logo.textContent = "Menu"; // Change logo text to "Menu" if menu or header is active and screen width is less than 1000px
+    // if (isActive && window.innerWidth < 1000) {
+    //   logo.textContent = "Menu"; // Change logo text to "Menu" if menu or header is active and screen width is less than 1000px
+    // } else {
+    if (window.scrollY === 0) {
+      logo.textContent = "Welcome"; // Change logo text to "Welcome" if scrolled to top
     } else {
-      if (window.scrollY === 0) {
-        logo.textContent = "Welcome"; // Change logo text to "Welcome" if scrolled to top
-      } else {
-        sections.forEach(section => {
-          const bounding = section.getBoundingClientRect();
-          if (bounding.top <= 30 && bounding.bottom >= 0 || bounding.top > 0 && bounding.top < 0) {
-            const sectionTitle = section.querySelector(".header-up");
-            const sectionTitleValue = sectionTitle.dataset.value; // Accessing data-value attribute
-            logo.textContent = sectionTitleValue; // Set logo text to section title value
-          }
-        });
-      }
+      sections.forEach(section => {
+        const bounding = section.getBoundingClientRect();
+        if (bounding.top <= 30 && bounding.bottom >= 0 || bounding.top > 0 && bounding.top < 0) {
+          const sectionTitle = section.querySelector(".header-up");
+          const sectionTitleValue = sectionTitle.dataset.value; // Accessing data-value attribute
+          logo.textContent = sectionTitleValue; // Set logo text to section title value
+        }
+      });
     }
   }
+  // }
 
   //! Toggle/Untogle Menu & Update header text
   function menuInteraction(event) {
@@ -47,11 +47,11 @@ document.addEventListener("DOMContentLoaded", function () {
     var isActive = nav.classList.contains('active') || header.classList.contains('active'); // Check if menu or header is active
     nav.classList.toggle('active', !isActive); // Toggle 'active' class for nav
     header.classList.toggle('active', !isActive); // Toggle 'active' class for header
-    setTimeout(
-      function () {
-        updateLogoText();
-      }, 2000 // Update logo text after interaction
-    )
+    // setTimeout(
+    //   function () {
+    //     updateLogoText();
+    //   }, 2000 // Update logo text after interaction
+    // )
 
   }
 
