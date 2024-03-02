@@ -1,6 +1,6 @@
 @media only screen and (min-width: 1000px) {
   a:hover {
-    color: var(--red-accent-color);
+    color: var(--accent-color);
   }
 }
 
@@ -69,7 +69,7 @@
 
 
         &:hover {
-          background-color: var(--red-accent-color);
+          background-color: var(--accent-color);
           color: white;
         }
       }
@@ -111,7 +111,7 @@
       }
 
       & #hamburger {
-        color: var(--red-accent-color);
+        color: var(--accent-color);
         border-top-color: transparent;
 
         &::after {
@@ -139,7 +139,7 @@
     }
 
     a:active {
-      color: var(--red-accent-color);
+      color: var(--accent-color);
     }
 
   }
@@ -148,6 +148,7 @@
 
 
   @media only screen and (max-width: 650px) {
+
     .basic-grid {
       grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     }
