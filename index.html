@@ -357,6 +357,59 @@
           <div class="project__card">
             <div class="content_box">
               <div class="project__card_front">
+                <div class="project__card__image image--taskmate"
+                  onclick="flipCard(this)"></div>
+                <div class="project__card__title">TaskMate</div>
+                <div class="project__card__content">
+                  <p class="project__card__text">A modern todo app to manage your personal life.
+                  </p>
+                </div>
+                <p class="tech-text"> #Python #Django #HTMX
+                  #Tailwind</p>
+              </div>
+
+              <div class="read_more_block project__card_back">
+                <div class="project__card__title">Taskmate</div>
+                <p>This tool is built with Django framework and utilizes htmx for seamless backend calls.</p>
+
+                <p>Features:</p>
+               <p>    ► Create an Account: Start your journey by creating a personalized account.</p>
+                <p>   ► Add and Manage Tasks: Effortlessly add and organize your tasks to stay on top of your to-do list.</p>
+                <p>   ► Edit Tasks: Easily modify task details and keep your plans up-to-date.</p>
+                <p>   ► Filter Tasks: Quickly find what you need by filtering tasks based on various criteria.</p>
+                <p>   ► Tag Tasks: Prioritize and categorize tasks by assigning tags for better organization.</p>
+               
+              </div>
+            </div>
+
+            <div class="project__card_front">
+              <div class="btns-container">
+                <button class="btn btn--block project__card__btn"
+                  onclick="window.open('https://taskmate-fxue.onrender.com', '_blank')">Website</button>
+              
+                  <button class="btn btn--block project__card__btn"
+                  onclick="window.open('https://github.com/jmbcs/taskmate', '_blank')">Github</button>
+
+                  <button class="btn btn--block project__card__btn"
+                  onclick="flipCard(this)">Read More</button>
+              </div>
+              
+            </div>
+
+            <div class="project__card_back">
+              <div class="btns-container read_more_btn_container">
+                <button class="btn btn--block project__card__btn"
+                  onclick="flipCard(this)">Read Less</button>
+              </div>
+            </div>
+
+          </div>
+
+        </li>
+        <li class="project__cards__item">
+          <div class="project__card">
+            <div class="content_box">
+              <div class="project__card_front">
                 <div class="project__card__image image--bighpc"
                   onclick="flipCard(this)"></div>
                 <div class="project__card__title">BigHPC</div>

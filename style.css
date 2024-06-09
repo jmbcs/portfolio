@@ -515,6 +515,9 @@ hr {
   background-image: url(assets/logo.png);
 
 }
+.image--taskmate{
+  background-image: url(assets/taskmate.png);
+}
 
 .image--portfolio {
   background-image: url(assets/portfolio.png);
