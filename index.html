@@ -1,561 +1,523 @@
 <!DOCTYPE html>
 <html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Júlio Silva</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%233b82f6'><path d='M3 3h18a1 1 0 0 1 1 1v16a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1zm1 2v14h16V5H4zm8 10a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm-3-1a1 1 0 1 1 0-2 1 1 0 0 1 0 2zm6 0a1 1 0 1 1 0-2 1 1 0 0 1 0 2z'/></svg>" type="image/svg+xml">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="dark-mode">
+    <div class="page-transition"></div>
 
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="mediaqueries.css" <link rel="stylesheet"
-      href="mediaqueries.css" />
-
-    <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css"
-      rel="stylesheet">
-    <link rel="icon" href="assets/icon.png" type="image/x-icon" />
-
-    <script
-      src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs"
-      type="module"></script>
-    <script defer src="script.js"></script>
-
-    <title>Júlio Silva Portfolio</title>
-  </head>
-
-  <body>
-
-    <header id="header">
-      <p id="logo">Welcome</p>
-
-      <nav id="nav">
-        <button id="btn-mobile">
-          <span id="hamburger"></span>
-        </button>
-
-        <ul id="menu" role="menu">
-          <li><a href="#anchor-cover">Cover</a></li>
-          <li><a href="#anchor-about">About</a></li>
-          <li><a href="#anchor-work">Experience</a></li>
-          <li><a href="#anchor-skills">Skills</a></li>
-          <li><a href="#anchor-projects">Projects</a></li>
-          <li><a href="#anchor-contact">Contact</a></li>
-        </ul>
-      </nav>
+    <header>
+        <nav class="navbar">
+            <div class="theme-toggle">
+                <i class="fas fa-moon"></i>
+                <i class="fas fa-sun"></i>
+                <div class="toggle-ball"></div>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#experience" class="nav-link">Experience</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#relevant-links" class="nav-link">Additional Info</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+        </nav>
     </header>
 
-    <div id="anchor-cover" class="anchor"></div>
-
-    <section id="section-cover">
-      <div class="section__pic-container">
-        <img src="assets/profile.png" alt="Júlio Silva Profile Picture" />
-      </div>
-      <div class="about_container">
-        <h1 class="section__title header-up" data-value="Cover">Júlio Silva</h1>
-        <p class=" section__text__p1 animated-text animated-text__hover"
-          data-value="Software Engineer">Software Engineer
-        </p>
-
-        <button class="btn-glow"
-          onclick="window.open('https://github.com/jmbcs/curriculum/blob/main/CV_JULIO_SILVA.pdf', '_blank')">
-          Check my Curriculum
-        </button>
-
-        <div class="techstack">
-
-          <img onclick="window.open('https://www.python.org/', '_blank')"
-            src="assets/python.png" alt="Python" />
-          <img onclick="window.open('https://www.docker.com/', '_blank')"
-            src="assets/docker.svg" alt="Docker" />
-          <img onclick="window.open('https://grafana.com/', '_blank')"
-            src="assets/grafana.png" alt="Grafana" />
-          <img onclick="window.open('https://prometheus.io/', '_blank')"
-            src="assets/prometheus.png" alt="Prometheus" />
-          <img onclick="window.open('https://www.postgresql.org/', '_blank')"
-            src="assets/postgresql.png"
-            alt="postgresql" />
-
-          <img
-            onclick="window.open('https://www.influxdata.com/time-series-platform/telegraf/', '_blank')"
-            src="assets/telegraf.svg" alt="telegraf" />
-
-        </div>
-
-      </div>
-    </section>
-
-    <div id="anchor-about" class="anchor"></div>
-    <section id="section-about">
-
-      <h1 class="hidden header-up" data-value="About Me">About Me</h1>
-      <hr class="hidden" />
-      <div class="basic-grid">
-        <div class="card hidden">
-          <h2>Who am I</h2>
-          <ul>
-            <li>Hi there! 👋</li>
-            <li>My name is Júlio Silva and I am a Software Engineer from
-              Viseu.</li>
-          </ul>
-          <ul>
-            <li>📅 <strong>Age</strong> 28</li>
-            <li>🇵🇹 <strong>Nationality</strong> Portuguese</li>
-            <li>
-              💼 <strong>Current Work Position</strong> Mid Software Engineer
-              at Wavecom
-            </li>
-            <li>
-              🎓 <strong>Education</strong> M.Sc Electronics and
-              Telecommunications Engineering, <br />University of Aveiro
-            </li>
-          </ul>
-          <h2>Hobbies & Interests</h2>
-          <ul>
-            <li>
-              😄 <strong>Comedy</strong> Iam a Ricky Gervais, Daniel Sloss, and
-              Anthony
-              Jeselnik fan
-            </li>
-            <li>
-              📖 <strong>Reading</strong> Whenever I get the time, I like too
-              read a book on my e-reader
-            </li>
-            <li>
-              🎮 <strong>Videogames</strong> I am a certified gamer since 6
-              years
-              old
-            </li>
-            <li>
-              🍿 <strong>Movies & Series</strong> You know nothing Jon Snow!
-            </li>
-            <li>
-              🏞️ <strong>Hiking</strong> I love to hike around nature,
-              especially in familly vacations
-            </li>
-            <li>
-              💻 <strong data-value="Coding">Coding</strong> Code brings me joy
-              through
-              the power of creativity and accomplisment
-            </li>
-            <li>
-              💪 <strong>Gym</strong> Keeping both my mind and body in shape is
-              crucial for my happiness
-            </li>
-            <li>🎵 <strong>Music</strong> Who doesn't like a good beat?</li>
-            <li>
-              🌇 <strong>Travelling</strong> Exploring new cities is one of my
-              favorite things to do
-            </li>
-            <li>
-              💵 <strong>Finances & Investing</strong> I like to keep up with
-              financial markets and explore new investment opportunities
-            </li>
-          </ul>
-        </div>
-
-        <div class="card hidden">
-
-          <dotlottie-player src=" assets/animations/about.json" speed="1"
-            playMode="normal" loop autoplay>
-          </dotlottie-player>
-        </div>
-
-      </div>
-    </section>
-
-    <div id="anchor-work" class="anchor"></div>
-    <section id="section-work">
-      <h1 class="hidden header-up" data-value="Work Experience">Work
-        Experience</h1>
-      <hr class="hidden" />
-      <div class="basic-grid">
-        <div class="card hidden">
-
-          <ul>
-            <li>
-              📅 <strong style="color: white ">Date</strong> 01/2023 - Present
-
-            </li>
-            <li>
-              💼 <strong style="color: white">Position</strong> Mid Software
-              Engineer
-            </li>
-            <li>
-              🏢 <strong style="color: white">Company</strong>
-              <a href="https://www.wavecom.com" target="_blank" ,
-                class="text-link animated-text"
-                data-value="Wavecom Technologies">Wavecom
-                Technologies</a>
-            </li>
-          </ul>
-          <br />
-          <ul>
-            <li>► Defined roadmap for a pioneering product, contributing
-              significantly to its complete development lifecycle, undertaking
-              the majority of the coding and design work.</li>
-            <li>► Implemented features by engaging with clients and
-              understanding their requirements.</li>
-            <li>► Developed microservices in <strong>Python</strong> and
-              <strong>Golang</strong>.
-            </li>
-            <li>► Implemented <strong>Protocol Buffers</strong> and
-              <strong>gRPC</strong> for microservices communication.
-            </li>
-            <li>► Built <strong>REST APIs</strong> to communicate with
-              <strong>SQL</strong> and <strong>NoSQL</strong> databases.
-            </li>
-            <li>► Developed <strong>Helm Charts</strong> to deploy the product
-              within a <strong>Kubernetes</strong> infrastructure.</li>
-            <li>► Developed <strong>Docker</strong> images and orchestrated
-              deployments with <strong>Docker Compose</strong>.</li>
-            <li>► Extensively worked in <strong>query optimization</strong> for
-              faster dashboard loading in <strong>Grafana</strong>, and created
-              fully featured and ready-to-use dashboards for clients.</li>
-            <li>► Designed and implemented <strong>ETL pipelines</strong> using
-              <strong>Telegraf</strong>.
-            </li>
-            <li>► Utilized the <strong>ONVIF</strong> protocol to extract
-              detections from camera metadata streams.</li>
-            <li>► Engineered data analytics algorithms recurring to the
-              <strong>Pandas</strong> library.
-            </li>
-          </ul>
-          <hr class="hidden dashed" />
-
-          <ul>
-            <li>
-              📅 <strong style="color: white ">Date</strong> 01/2021 - 01/2023
-
-            </li>
-            <li>
-              💼 <strong style="color: white">Position</strong> Junior Software
-              Engineer
-            </li>
-            <li>
-              🏢 <strong style="color: white">Company</strong>
-              <a href="https://www.wavecom.com" target="_blank" ,
-                class="text-link animated-text"
-                data-value="Wavecom Technologies">Wavecom
-                Technologies</a>
-            </li>
-          </ul>
-          <br />
-          <ul>
-            <li>► Contributed to funded projects and the development
-              lifecycle.</li>
-            <li>► Developed a monitoring framework for <strong>High-Performance
-                Computing (HPC)</strong> with
-              <strong>Grafana</strong>, <strong>VictoriaMetrics</strong>, and
-              <strong>Python</strong>.</li>
-            <li>► Leveraged <strong>SQL</strong> and <strong>NoSQL</strong>
-              databases (<strong>PostgreSQL</strong>,
-              <strong>VictoriaMetrics</strong>,
-              <strong>Elasticsearch</strong>).</li>
-            <li>► Automated tasks using <strong>Makefiles</strong> and
-              <strong>Bash scripts</strong>.</li>
-            <li>► Refactored code to improve readability and performance.</li>
-            <li>► Evaluated new technologies for project suitability.</li>
-            <li>► Used <strong>version control systems</strong> for codebase
-              management.</li>
-            <li>► Developed Proofs of Concept (<strong>PoCs</strong>).</li>
-             
-          </ul>
-        </div>
-
-
-        <div class="card hidden">
-          <dotlottie-player src="assets/animations//experience.json"
-            background="transparent" speed="1" direction="1"
-            playMode="normal" loop autoplay>
-          </dotlottie-player>
-        </div>
-      </div>
-    </section>
-
-    <div id="anchor-skills" class="anchor"></div>
-    <section id="section-skills">
-      <h1 class="hidden header-up " data-value="Skill Set">Skill Set</h1>
-      <hr class="hidden" />
-      <div class="basic-grid">
-        <div class="card hidden">
-
-          <h2>Tech Skills</h2>
-          <ul>
-            <div class="skill-type">Languages</div>
-            <div class="skill-snippets">
-              <code>Python</code> <code>Golang</code> <code>Bash</code>
-
-            </div>
-
-            <div class="skill-type">Web</div>
-            <div class="skill-snippets"> <code>HTML</code>
-              <code>CSS</code>
-              <code>HTMX</code>
-              <code>REST APIs</code>
-              <code>Tailwind</code>
-            </div>
-
-            <div class="skill-type">Databases</div>
-            <div class="skill-snippets">
-              <code>SQL/NoSQL</code> <code>PromQL</code>
-              <code>PostegreSQL</code>
-              <code>Victoriametrics</code>
-            </div>
-            <div class="skill-type">Dashboards</div>
-            <div class="skill-snippets">
-              <code>Grafana</code> <code>Kibana</code>
-            </div>
-            <div class="skill-type">Containerization</div>
-            <div class="skill-snippets">
-              <code>Docker</code> <code>Docker Compose</code>
-            </div>
-            <div class="skill-type">Data serialization</div>
-            <div class="skill-snippets">
-              <code>JSON</code> <code>CSV</code> <code>Protobuf</code>
-              <code>YAML</code>
-            </div>
-            <div class="skill-type">Others</div>
-            <div class="skill-snippets">
-              <code>Git</code> <code>Linux</code> <code>Telegraf</code>
-              <code>Shell</code> <code>gRPC</code> <code>Prometheus</code>
-              <code>Helm Charts</code>
-            </div>
-          </div>
-        </ul>
-
-        <div class="card hidden">
-          <h2>Python Skills</h2>
-          <ul>
-            <div class="skill-type">Software Development</div>
-            <div class="skill-snippets">
-              <code>FastAPI</code> <code>SQLAlchemy</code>
-              <code>Pydantic</code> <code>Asyncio</code>
-              <code>Requests</code> <code>Django</code> 
-            </div>
-            <div class="skill-type">Data Analytics</div>
-            <div class="skill-snippets">
-              <code>Pandas</code> <code>Seaborn</code> <code>Numpy</code>
-              <code>Matplotlib</code> <code>Tensorflow</code>
-            </div>
-            <div class="skill-type">Computer Vision</div>
-            <div class="skill-snippets">
-              <code>ImageAI</code> <code>OpenCV</code> <code>Ultralytics</code>
-            </div>
-          </div>
-
-        </ul>
-
-      </div>
-
-    </section>
-
-    <div id="anchor-projects" class="anchor"></div>
-    <section id="section-projects">
-      <h1 class="hidden header-up " data-value="Projects">Projects</h1>
-      <hr class="hidden" />
-      <ul class=" hidden project__cards">
-        <li class="project__cards__item">
-          <div class="project__card">
-            <div class="content_box">
-              <div class="project__card_front">
-                <div class="project__card__image image--taskmate"
-                  onclick="flipCard(this)"></div>
-                <div class="project__card__title">TaskMate</div>
-                <div class="project__card__content">
-                  <p class="project__card__text">A modern todo app to manage your personal life.
-                  </p>
+    <main>
+        <section id="home" class="hero">
+            <div class="tech-icons-container">
+                <div class="tech-icons">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" class="tech-icon">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt="Docker" class="tech-icon">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" alt="PostgreSQL" class="tech-icon">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg" alt="Django" class="tech-icon">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/grafana/grafana-original.svg" alt="Grafana" class="tech-icon">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/go/go-original.svg" alt="Golang" class="tech-icon">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" class="tech-icon">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML" class="tech-icon">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS" class="tech-icon">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redis/redis-original.svg" alt="Redis" class="tech-icon">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/fastapi/fastapi-original.svg" alt="FastAPI" class="tech-icon">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" alt="Linux" class="tech-icon">
+                    <div class="tech-icon" style="--delay: 13s;">
+                        <i class="fab fa-aws"></i>
+                    </div>
+                    <div class="tech-icon" style="--delay: 14s;">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" alt="VS Code" />
+                    </div>
+                    <div class="tech-icon" style="--delay: 15s;">
+                        <img src="https://www.vectorlogo.zone/logos/datadoghq/datadoghq-icon.svg" alt="Datadog" />
+                    </div>
+                    <div class="tech-icon" style="--delay: 16s;">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pycharm/pycharm-original.svg" alt="PyCharm" />
+                    </div>
+                    <div class="tech-icon" style="--delay: 17s;">
+                        <i class="fab fa-docker"></i>
+                    </div>
+                    <div class="tech-icon" style="--delay: 18s;">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" alt="PostgreSQL" />
+                    </div>
+                    <div class="tech-icon" style="--delay: 19s;">
+                        <i class="fab fa-github"></i>
+                    </div>
+                    <div class="tech-icon" style="--delay: 20s;">
+                        <i class="fab fa-linux"></i>
+                    </div>
                 </div>
-                <p class="tech-text"> #Python #Django #HTMX
-                  #Tailwind</p>
-              </div>
-
-              <div class="read_more_block project__card_back">
-                <div class="project__card__title">Taskmate</div>
-                <p>This tool is built with Django framework and utilizes htmx for seamless backend calls.</p>
-
-                <p>Features:</p>
-               <p>    ► Create an Account: Start your journey by creating a personalized account.</p>
-                <p>   ► Add and Manage Tasks: Effortlessly add and organize your tasks to stay on top of your to-do list.</p>
-                <p>   ► Edit Tasks: Easily modify task details and keep your plans up-to-date.</p>
-                <p>   ► Filter Tasks: Quickly find what you need by filtering tasks based on various criteria.</p>
-                <p>   ► Tag Tasks: Prioritize and categorize tasks by assigning tags for better organization.</p>
-               
-              </div>
             </div>
-
-            <div class="project__card_front">
-              <div class="btns-container">
-                <button class="btn btn--block project__card__btn"
-                  onclick="window.open('https://taskmate-fxue.onrender.com', '_blank')">Website</button>
-              
-                  <button class="btn btn--block project__card__btn"
-                  onclick="window.open('https://github.com/jmbcs/taskmate', '_blank')">Github</button>
-
-                  <button class="btn btn--block project__card__btn"
-                  onclick="flipCard(this)">Read More</button>
-              </div>
-              
-            </div>
-
-            <div class="project__card_back">
-              <div class="btns-container read_more_btn_container">
-                <button class="btn btn--block project__card__btn"
-                  onclick="flipCard(this)">Read Less</button>
-              </div>
-            </div>
-
-          </div>
-
-        </li>
-        <li class="project__cards__item">
-          <div class="project__card">
-            <div class="content_box">
-              <div class="project__card_front">
-                <div class="project__card__image image--bighpc"
-                  onclick="flipCard(this)"></div>
-                <div class="project__card__title">BigHPC</div>
-                <div class="project__card__content">
-                  <p class="project__card__text">Development of a
-                    monitoring framework for High Performance
-                    Computing.
-                  </p>
+            <div class="container">
+                <div class="hero-text">
+                    <h1 class="fade-in">Júlio Silva</h1>
+                    <div class="typewriter-container">
+                        <span class="typewriter-prefix">I'm a </span>
+                        <span class="typewriter-text" data-wait="3000" data-words='["Software Engineer", "Problem Solver","Backend Developer", "Coding Enthusiast", "Tech Lover"]'></span>
+                    </div>
+                    <p class="fade-in-delay">Turning complex challenges into elegant solutions</p>
+                    <div class="hero-cta fade-in-delay">
+                        <a href="#contact" class="btn primary-btn">Get in Touch</a>
+                        <a href="https://github.com/jmbcs/curriculum/blob/main/output/CV_JULIO_SILVA.pdf" target="_blank" class="btn secondary-btn">View CV</a>
+                    </div>
                 </div>
-                <p class="tech-text"> #Python #Grafana #Docker
-                  #Promscale #HPC</p>
-              </div>
-
-              <div class="read_more_block project__card_back">
-                <div class="project__card__title">BigHPC</div>
-                <p>The monitoring framework was composed of a
-                  multi-stage approach to gather and analyze data
-                  from compute nodes.</p>
-                <p>The first stage involved deploying monitoring
-                  python probe on individual compute nodes.
-                  This agent continuously collected a
-                  comprehensive range of metrics.</p>
-
-                <p>The raw data collected from this agent then
-                  underwent processing to become more usable for
-                  analysis. This involved filtering out irrelevant
-                  information, converting data to consistent
-                  formats, and combining individual data points
-                  into meaningful summaries.</p>
-
-                <p>Finally, the stored data was presented to users
-                  through dashboards. These
-                  visualization tools enabled users to not only
-                  monitor resource utilization in real-time but
-                  also to analyze trends and identify potential
-                  bottlenecks or performance issues over time.
-                </p>
-              </div>
             </div>
 
-            <div class="project__card_front">
-              <div class="btns-container">
-                <button class="btn btn--block project__card__btn"
-                  onclick="window.open('https://bighpc.wavecom.pt', '_blank')">Website</button>
-                <button class="btn btn--block project__card__btn"
-                  onclick="window.open('https://www.youtube.com/watch?v=5gaiovo9DD0', '_blank')">Youtube</button>
-                <button class="btn btn--block project__card__btn"
-                  onclick="flipCard(this)">Read More</button>
-              </div>
-            </div>
-
-            <div class="project__card_back">
-              <div class="btns-container read_more_btn_container">
-                <button class="btn btn--block project__card__btn"
-                  onclick="flipCard(this)">Read Less</button>
-              </div>
-            </div>
-
-          </div>
-
-        </li>
-
-        <li class="project__cards__item">
-          <div class="project__card">
-            <div class="content_box">
-              <div class="project__card_front">
-                <div class="project__card__image image--portfolio"></div>
-                <div class="project__card__title">Portfolio</div>
-                <div class="project__card__content">
-                  <p class="project__card__text">Development of my portfolio
-                    website.
-                  </p>
+            <div class="scroll-down">
+                <div class="mouse">
+                    <div class="wheel"></div>
                 </div>
-                <p class="tech-text"> #HTML #CSS #Javascript</p>
-              </div>
-
+                <div class="arrow">
+                    <span></span>
+                </div>
             </div>
+        </section>
 
-            <div class="project__card_front">
-              <div class="btns-container">
-                <button class="btn btn--block project__card__btn"
-                  onclick="window.open('https://github.com/jmbcs/portfolio', '_blank')">Github</button>
+        <section id="about" class="about section-padding">
+            <div class="container">
+                <h2 class="section-title">About Me</h2>
+                <div class="about-content">
+                    <div class="about-image">
+                        <img src="https://avatars.githubusercontent.com/jmbcs" alt="Júlio Silva">
+                    </div>
+                    <div class="about-text">
+                        <h3>Who am I</h3>
+                        <p>Hi there! 👋</p>
+                        <p>My name is Júlio Silva and I am a Software Engineer from Viseu, Portugal.</p>
 
-              </div>
+                        <div class="about-details">
+                            <div class="about-item">
+                                <i class="far fa-calendar"></i>
+                                <div class="about-item-content">
+                                    <span class="about-item-label">Age</span>
+                                    <span>29</span>
+                                </div>
+                            </div>
+
+                            <div class="about-item">
+                                <i class="fas fa-flag"></i>
+                                <div class="about-item-content">
+                                    <span class="about-item-label">Nationality</span>
+                                    <span>Portuguese</span>
+                                </div>
+                            </div>
+
+                            <div class="about-item">
+                                <i class="fas fa-briefcase"></i>
+                                <div class="about-item-content">
+                                    <span class="about-item-label">Current Position</span>
+                                    <span>Mid Backend Developer at GuestReady</span>
+                                </div>
+                            </div>
+
+                            <div class="about-item">
+                                <i class="fas fa-graduation-cap"></i>
+                                <div class="about-item-content">
+                                    <span class="about-item-label">Education</span>
+                                    <span>M.Sc Electronics and Telecommunications, University of Aveiro</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <h3>Hobbies & Interests</h3>
+                        <div class="interests">
+                            <div class="interest-item"><i class="fas fa-laugh"></i> Comedy</div>
+                            <div class="interest-item"><i class="fas fa-book"></i> Reading</div>
+                            <div class="interest-item"><i class="fas fa-gamepad"></i> Videogames</div>
+                            <div class="interest-item"><i class="fas fa-film"></i> Movies & Series</div>
+                            <div class="interest-item"><i class="fas fa-hiking"></i> Hiking</div>
+                            <div class="interest-item"><i class="fas fa-code"></i> Coding</div>
+                            <div class="interest-item"><i class="fas fa-dumbbell"></i> Gym</div>
+                            <div class="interest-item"><i class="fas fa-music"></i> Music</div>
+                            <div class="interest-item"><i class="fas fa-plane"></i> Travelling</div>
+                            <div class="interest-item"><i class="fas fa-chart-line"></i> Finances & Investing</div>
+                        </div>
+                    </div>
+                </div>
             </div>
+        </section>
 
-          </div>
+        <section id="experience" class="experience section-padding">
+            <div class="container">
+                <h2 class="section-title">Experience</h2>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-date">
+                            <i class="far  fa-calendar-alt"></i>
+                            <span>Oct 2024 - Present</span>
+                             <div class="timeline-location">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>Remote</span>
+                            </div>
+                        </div>
+                        <div class="timeline-content">
+                            <h4>Mid Backend Developer</h4>
+                            <div class="company-name">
+                                <i class="fas fa-building company-icon"></i>
+                                <span>GuestReady / RentalReady</span>
+                            </div>
+                            <ul>
+                                <li>Contributed to a large-scale Property Management Software (PMS) built with <span class="tech-keyword">Django</span>, serving thousands of properties.</li>
+                                <li>Focused on <span class="tech-keyword">backend development</span> within a team of 40+ developers, with occasional front-end contributions.</li>
+                                <li>Developed and maintained integrations with third-party <span class="tech-keyword">APIs</span> such as Booking.com, Airbnb, and Vrbo.</li>
+                                <li>Investigated and resolved user-reported bugs, improving system <span class="tech-keyword">reliability</span> and user satisfaction.</li>
+                                <li>Diagnosed production issues using <span class="tech-keyword">Sentry</span> and <span class="tech-keyword">Datadog</span>.</li>
+                                <li>Executed bulk updates on <span class="tech-keyword">PostgreSQL</span> production databases with minimal downtime.</li>
+                                <li>Participated in code reviews, ensuring clean code practices and team collaboration.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-date">
+                            <i class="fas  fa-calendar-alt"></i>
+                            <span>Jan 2021 - Oct 2024</span>
+                            <div class="timeline-location">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>Aveiro, Portugal (Hybrid)</span>
+                            </div>
+                        </div>
+                        <div class="timeline-content">
+                            <h3>Software Engineer</h3>
+                            <h4><i class="fas fa-building"></i> Wavecom</h4>
+                            <ul>
+                                <li>Worked closely with clients to define and develop software features.</li>
+                                <li>Built <span class="tech-keyword">microservices</span> using <span class="tech-keyword">Python</span> and <span class="tech-keyword">Golang</span>; implemented <span class="tech-keyword">gRPC</span> and <span class="tech-keyword">Protocol Buffers</span> for inter-service communication.</li>
+                                <li>Designed and developed <span class="tech-keyword">REST APIs</span> for both <span class="tech-keyword">SQL</span> and <span class="tech-keyword">NoSQL</span> databases.</li>
+                                <li>Containerized applications using <span class="tech-keyword">Docker</span>; managed services with <span class="tech-keyword">Docker Compose</span>.</li>
+                                <li>Improved <span class="tech-keyword">Grafana</span> dashboard performance by optimizing database queries.</li>
+                                <li>Created <span class="tech-keyword">ETL</span> pipelines using <span class="tech-keyword">Telegraf</span> and performed data analysis with <span class="tech-keyword">Pandas</span>.</li>
+                                <li>Developed a monitoring system for <span class="tech-keyword">High-Performance Computing (HPC)</span> environments using <span class="tech-keyword">Grafana</span>, <span class="tech-keyword">VictoriaMetrics</span>, and <span class="tech-keyword">Python</span>.</li>
+                                <li>Automated workflows with <span class="tech-keyword">Makefiles</span> and <span class="tech-keyword">Bash</span> scripts.</li>
+                                <li>Researched emerging technologies and built Proofs of Concept (PoCs).</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-date">
+                            <i class="fas fa-calendar-alt"></i>
+                            <span>2014 - 2020</span>
+                            <div class="timeline-location">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>Aveiro, Portugal</span>
+                            </div>
+                        </div>
+                        <div class="timeline-content">
+                            <h4>Master in Electronics/Telecommunications Engineering</h4>
+                            <div class="company-name">
+                                <i class="fas fa-university company-icon"></i>
+                                <span>University of Aveiro</span>
+                            </div>
+                            <p><strong>Thesis:</strong> Recovery and Identification of Moments - Grade: 19/20</p>
+                            <p>Development of a <span class="tech-keyword">Python</span> automatic image retrieval system capable of associating images to moments described in text</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-        </li>
+        <section id="skills" class="skills section-padding">
+            <div class="container">
+                <h2 class="section-title">Tech Skills</h2>
+                <div class="skills-container">
+                    <div class="skills-category">
+                        <h3>Programming</h3>
+                        <div class="skills-grid">
+                            <div class="skill-item">Python</div>
+                            <div class="skill-item">Golang</div>
+                            <div class="skill-item">JavaScript</div>
+                        </div>
+                    </div>
 
-      </ul>
+                    <div class="skills-category">
+                        <h3>Web</h3>
+                        <div class="skills-grid">
+                            <div class="skill-item">HTML</div>
+                            <div class="skill-item">CSS</div>
+                            <div class="skill-item">REST APIs</div>
+                        </div>
+                    </div>
 
-    </section>
+                    <div class="skills-category">
+                        <h3>Frameworks</h3>
+                        <div class="skills-grid">
+                            <div class="skill-item">Django</div>
+                            <div class="skill-item">FastAPI</div>
+                            <div class="skill-item">SQLAlchemy</div>
+                            <div class="skill-item">Pandas</div>
+                        </div>
+                    </div>
 
-    <div id="anchor-contact" class="anchor"></div>
-    <section id="section-contact">
-      <h1 class="hidden header-up" data-value="Contact">Contact</h1>
-      <hr class="hidden" />
-      <div class="hidden contact_container">
-        <form id="contact" action="https://formspree.io/f/mleqnnpd"
-          method="POST">
-          <h3 class="animated-text animated-text__hover"
-            data-value="Send me a Message!">Send
-            me a
-            Message!</h3>
+                    <div class="skills-category">
+                        <h3>Databases</h3>
+                        <div class="skills-grid">
+                            <div class="skill-item">PostgreSQL</div>
+                            <div class="skill-item">VictoriaMetrics</div>
+                            <div class="skill-item">Redis</div>
+                            <div class="skill-item">SQL</div>
+                            <div class="skill-item">NoSQL</div>
+                        </div>
+                    </div>
 
-          <!-- <input type="text" name="_gotcha" style="display:none" /> -->
+                    <div class="skills-category">
+                        <h3>Monitoring & Logging</h3>
+                        <div class="skills-grid">
+                            <div class="skill-item">Grafana</div>
+                            <div class="skill-item">Sentry</div>
+                            <div class="skill-item">Telegraf</div>
+                        </div>
+                    </div>
 
-          <fieldset>
-            <input placeholder="Name (Required)" type="text" name="name"
-              tabindex="1" required>
-          </fieldset>
-          <fieldset>
-            <input placeholder="Email (Required)" type="email" name="email"
-              tabindex="2" required>
-          </fieldset>
-          <fieldset>
-            <input placeholder="Company (Required)" type="text" name="company"
-              tabindex="3" required>
-          </fieldset>
-          <fieldset>
-            <textarea placeholder="Type your Message Here...." name="message"
-              tabindex="4" required></textarea>
-          </fieldset>
-          <fieldset>
-            <button type="submit" id="contact-submit"
-              data-submit="...Sending">Submit</button>
-          </fieldset>
-        </form>
-      </div>
+                    <div class="skills-category">
+                        <h3>Data Formats</h3>
+                        <div class="skills-grid">
+                            <div class="skill-item">JSON</div>
+                            <div class="skill-item">CSV</div>
+                            <div class="skill-item">YAML</div>
+                        </div>
+                    </div>
 
-      <div class="footer">
-        <p>Find me at</p>
-        <div class="socialstack">
+                    <div class="skills-category">
+                        <h3>Others</h3>
+                        <div class="skills-grid">
+                            <div class="skill-item">Docker</div>
+                            <div class="skill-item">Git</div>
+                            <div class="skill-item">Linux</div>
+                            <div class="skill-item">Shell scripts</div>
+                            <div class="skill-item">RabbitMQ</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-          <img
-            onclick="window.open('https://www.linkedin.com/in/julio-miguel-silva/', '_blank')"
-            src="assets/linkdin.png"
-            alt="Python" />
-          <img onclick="window.open('https://github.com/jmbcs', '_blank')"
-            src="assets/github.png" alt="Docker" />
+        <section id="projects" class="projects section-padding">
+            <div class="container">
+                <h2 class="section-title">Projects</h2>
+                <div class="projects-grid">
+                    <div class="project-card">
+                        <div class="project-image">
+                            <h2>TaskMate</h2>
+                        </div>
+                        <div class="project-content">
+                            <p class="project-description">A comprehensive task management application designed to help users organize their daily activities.</p>
+                            <div class="project-tech">
+                                <span>Python</span>
+                                <span>Django</span>
+                                <span>PostgreSQL</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/jmbcs/taskmate" target="_blank" class="btn btn-sm">
+                                    <i class="fab fa-github"></i> GitHub
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-image">
+                            <h2>BigHPC</h2>
+                        </div>
+                        <div class="project-content">
+                            <p class="project-description">A management software for HPC clusters, focused on monitoring and improving system performance.</p>
+                            <div class="project-tech">
+                                <span>Python</span>
+                                <span>Docker</span>
+                                <span>Kubernetes</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://www.youtube.com/watch?v=5gaiovo9DD0" target="_blank" class="btn btn-sm">
+                                    <i class="fab fa-youtube"></i> Video
+                                </a>
+                                <a href="https://bighpc.wavecom.pt/" target="_blank" class="btn btn-sm">
+                                    <i class="fas fa-globe"></i> Website
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-image">
+                            <h2>Portfolio</h2>
+                        </div>
+                        <div class="project-content">
+                            <p class="project-description">Development of my portfolio website.</p>
+                            <div class="project-tech">
+                                <span>HTML</span>
+                                <span>CSS</span>
+                                <span>JavaScript</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/jmbcs/portfolio" target="_blank" class="btn btn-sm">
+                                    <i class="fab fa-github"></i> GitHub
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-image">
+                            <h2>RentalReady</h2>
+                        </div>
+                        <div class="project-content">
+                            <p class="project-description">Streamline all aspects of property management and short-term rentals, maximising efficiency and enhancing guest experiences. Owned by GuestReady.</p>
+                            <div class="project-tech">
+                                <span>Python</span>
+                                <span>Django</span>
+                                <span>React</span>
+                                <span>Sentry</span>
+                                <span>Datadog</span>
+                                <span>RabbitMQ</span>
+                                <span>Celery</span>
+                                <span>Redis</span>
+                                <span>APIs</span>
+                                <span>PostgreSQL</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://www.rentalready.com/" target="_blank" class="btn btn-sm">
+                                    <i class="fas fa-globe"></i> Website
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="relevant-links" class="additional-info section-padding">
+            <div class="container">
+                <h2 class="section-title">Additional Information</h2>
+                <div class="additional-info-container">
+                    <div class="relevant-links-column">
+                        <h3 class="skills-category">Relevant Links</h3>
+                        <div class="relevant-links-container">
+                            <div class="relevant-link-item">
+                                <i class="fas fa-link"></i>
+                                <span>BigHPC Project: </span>
+                                <a href="https://bighpc.wavecom.pt/" target="_blank" class="btn btn-sm">Visit Website</a>
+                            </div>
+                            <div class="relevant-link-item">
+                                <i class="fab fa-youtube"></i>
+                                <span>BigHPC Speaker: </span>
+                                <a href="https://www.youtube.com/watch?v=5gaiovo9DD0" target="_blank" class="btn btn-sm">Watch Video</a>
+                            </div>
+                            <div class="relevant-link-item">
+                                <i class="fas fa-graduation-cap"></i>
+                                <span>Thesis Link: </span>
+                                <a href="https://ria.ua.pt/handle/10773/30553" target="_blank" class="btn btn-sm">View Thesis</a>
+                            </div>
+                            <div class="relevant-link-item">
+                                <i class="fas fa-file-pdf"></i>
+                                <span>Thesis Paper: </span>
+                                <a href="https://ceur-ws.org/Vol-2696/paper_91.pdf" target="_blank" class="btn btn-sm">View Paper</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="languages-column">
+                        <h3 class="skills-category">Languages</h3>
+                        <div class="languages-container">
+                            <div class="language-card">
+                                <div class="language-details">
+                                    <h4>Portuguese</h4>
+                                    <div class="language-level">
+                                        <div class="level-indicator native">Native</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="language-card">
+                                <div class="language-details">
+                                    <h4>English</h4>
+                                    <div class="language-level">
+                                        <div class="level-indicator fluent">Fluent</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="section">
+            <div class="container">
+                <h2 class="section-title">Contact Me</h2>
+                <div class="underline"></div>
+
+                <form id="contact-form" action="https://formspree.io/f/mleqnnpd" method="POST">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <input type="text" name="name" id="name" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" name="email" id="email" placeholder="Your Email" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" name="subject" id="subject" placeholder="Subject" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea name="message" id="message" rows="6" placeholder="Your Message" required></textarea>
+                    </div>
+                    <button type="submit" id="submit-btn" class="btn primary-btn">
+                        <span class="btn-text">Send Message</span>
+                        <div class="btn-loader"></div>
+                    </button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h3>Júlio Silva</h3>
+                    <p>Software Engineer</p>
+                </div>
+                <div class="footer-social">
+                    <a href="https://github.com/jmbcs" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="https://linkedin.com/in/julio-miguel-silva" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    <a href="mailto:julio.m.b.c.silva@gmail.com"><i class="fas fa-envelope"></i></a>
+                </div>
+            </div>
+            <div class="footer-message">
+                <p>Thanks for checking out my website!</p>
+            </div>
         </div>
-        <p>Thanks for checking my portfolio! 😊</p>
-      </div>
+    </footer>
 
-    </section>
-  </body>
-
+    <script src="script.js"></script>
+</body>
 </html>
