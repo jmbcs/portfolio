@@ -2460,3 +2460,392 @@ body:not(.dark-mode) .timeline-location i {
         padding-top: 3rem; /* Make space for the location at top right */
     }
 }
+
+/* Better mobile responsiveness for timeline sections */
+@media (max-width: 576px) {
+    /* Timeline structure improvements */
+    .timeline-item {
+        padding-left: 2rem;
+        margin-bottom: 2.5rem;
+    }
+
+    .timeline-dot {
+        left: 0;
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+
+    /* Card spacing and padding */
+    .timeline-card {
+        padding: 1.5rem;
+        margin-bottom: 0.5rem;
+    }
+
+    /* Header organization */
+    .timeline-header {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin-bottom: 1.5rem;
+        gap: 0.75rem;
+    }
+
+    /* Date display */
+    .timeline-date-container {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        margin-bottom: 0.5rem;
+        font-size: 1rem;
+    }
+
+    /* Location positioning */
+    .timeline-location {
+        position: absolute;
+        top: 1.5rem;
+        right: 1.5rem;
+        font-size: 0.9rem;
+    }
+
+    /* Job/degree title */
+    .timeline-content .job-title,
+    .timeline-content h3 {
+        font-size: 1.25rem;
+        margin-bottom: 0.75rem;
+        line-height: 1.4;
+    }
+
+    /* Company/university */
+    .timeline-content .company,
+    .timeline-content .institution {
+        font-size: 1rem;
+        margin-bottom: 1rem;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+    /* Thesis section */
+    .timeline-content .thesis-title {
+        margin-top: 1.25rem;
+        margin-bottom: 0.5rem;
+        font-weight: 600;
+    }
+
+    /* Bullet points */
+    .timeline-content ul {
+        padding-left: 1.25rem;
+    }
+
+    .timeline-content li {
+        margin-bottom: 0.75rem;
+        line-height: 1.5;
+    }
+
+    /* Highlighted tech words */
+    .timeline-content .highlight {
+        padding: 0.15rem 0.35rem;
+        margin: 0 0.1rem;
+        border-radius: 4px;
+        white-space: nowrap;
+        display: inline-block;
+    }
+
+    /* Fix issue with long words breaking layout */
+    .timeline-content p,
+    .timeline-content li {
+        word-break: break-word;
+        hyphens: auto;
+    }
+}
+
+/* Extra small screens like Galaxy S23 in portrait */
+@media (max-width: 380px) {
+    .timeline-card {
+        padding: 1.25rem;
+        padding-top: 2.5rem; /* Extra space for location at top */
+    }
+
+    .timeline-location {
+        top: 1.25rem;
+        right: 1.25rem;
+        font-size: 0.85rem;
+    }
+
+    .timeline-content .job-title,
+    .timeline-content h3 {
+        font-size: 1.15rem;
+        margin-top: 0.75rem; /* Add space after the location */
+    }
+
+    /* Smaller font sizes */
+    .timeline-content p,
+    .timeline-content li {
+        font-size: 0.95rem;
+    }
+
+    /* Stack education details vertically */
+    .timeline-content .thesis-title,
+    .timeline-content .thesis-grade {
+        display: block;
+        margin-bottom: 0.5rem;
+    }
+}
+
+/* Education section improvements for mobile */
+.education-item .timeline-content {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.education-details {
+    margin-top: 1rem;
+}
+
+.thesis-container {
+    margin-top: 0.75rem;
+    padding-top: 0.75rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.thesis-title {
+    font-weight: 600;
+    margin-right: 0.5rem;
+}
+
+.thesis-grade {
+    color: var(--primary-light);
+    font-weight: 500;
+}
+
+body.dark-mode .thesis-grade {
+    color: var(--primary-dark-mode);
+}
+
+/* For very small screens */
+@media (max-width: 380px) {
+    .thesis-container {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+}
+
+/* Regular timeline for larger screens */
+@media (min-width: 768px) {
+    /* Keep existing timeline styling */
+    .timeline-mobile {
+        display: none;
+    }
+}
+
+/* Mobile-optimized UI for smaller screens */
+@media (max-width: 767px) {
+    /* Hide regular timeline and show mobile version */
+    .timeline {
+        display: none;
+    }
+
+    .timeline-mobile {
+        display: block;
+        margin: 2rem 0;
+    }
+
+    /* Card-based mobile timeline */
+    .mobile-card {
+        background-color: var(--card-bg-dark);
+        border-radius: 12px;
+        margin-bottom: 1.5rem;
+        overflow: hidden;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        border: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    /* Card header with date and location */
+    .mobile-card-header {
+        background-color: rgba(59, 130, 246, 0.15);
+        padding: 1rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .mobile-date {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        font-weight: 500;
+    }
+
+    .mobile-location {
+        display: flex;
+        align-items: center;
+        gap: 0.25rem;
+        font-size: 0.9rem;
+    }
+
+    .mobile-date i, .mobile-location i {
+        color: var(--primary-dark-mode);
+    }
+
+    /* Card body content */
+    .mobile-card-body {
+        padding: 1.25rem;
+    }
+
+    .mobile-title {
+        color: var(--primary-dark-mode);
+        font-size: 1.2rem;
+        font-weight: 600;
+        margin-bottom: 0.5rem;
+    }
+
+    .mobile-subtitle {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        margin-bottom: 1rem;
+        font-size: 1rem;
+    }
+
+    .mobile-subtitle i {
+        color: var(--primary-dark-mode);
+        font-size: 1.1rem;
+    }
+
+    /* Content sections */
+    .mobile-content {
+        margin-top: 1rem;
+    }
+
+    .mobile-content p {
+        margin-bottom: 0.75rem;
+        line-height: 1.5;
+    }
+
+    /* Better list styling */
+    .mobile-content ul {
+        padding-left: 1.25rem;
+        margin-bottom: 0.75rem;
+    }
+
+    .mobile-content li {
+        margin-bottom: 0.75rem;
+        position: relative;
+        line-height: 1.5;
+    }
+
+    /* Thesis section */
+    .mobile-thesis {
+        margin-top: 1rem;
+        padding-top: 1rem;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .mobile-thesis-title {
+        font-weight: 600;
+        margin-bottom: 0.5rem;
+    }
+
+    .mobile-thesis-grade {
+        color: var(--primary-dark-mode);
+        font-weight: 500;
+        margin-bottom: 0.75rem;
+    }
+
+    /* Tech highlights */
+    .mobile-highlight {
+        background-color: rgba(59, 130, 246, 0.15);
+        color: var(--primary-dark-mode);
+        padding: 0.2rem 0.4rem;
+        border-radius: 4px;
+        font-weight: 500;
+        display: inline-block;
+        margin: 0 0.1rem;
+    }
+
+    /* Light mode adjustments */
+    body:not(.dark-mode) .mobile-card {
+        background-color: var(--card-bg);
+        border: 1px solid rgba(0, 0, 0, 0.1);
+    }
+
+    body:not(.dark-mode) .mobile-card-header {
+        background-color: rgba(59, 130, 246, 0.1);
+    }
+
+    body:not(.dark-mode) .mobile-title,
+    body:not(.dark-mode) .mobile-date i,
+    body:not(.dark-mode) .mobile-location i,
+    body:not(.dark-mode) .mobile-subtitle i,
+    body:not(.dark-mode) .mobile-thesis-grade {
+        color: var(--primary-light);
+    }
+
+    body:not(.dark-mode) .mobile-highlight {
+        background-color: rgba(59, 130, 246, 0.1);
+        color: var(--primary-light);
+    }
+
+    body:not(.dark-mode) .mobile-thesis {
+        border-top: 1px solid rgba(0, 0, 0, 0.1);
+    }
+}
+
+/* Enhanced bullet points for mobile timeline */
+.mobile-content ul {
+    list-style: none; /* Remove default bullets */
+    padding-left: 0; /* Remove default padding */
+    margin-bottom: 0.75rem;
+}
+
+.mobile-content li {
+    position: relative;
+    padding-left: 1.75rem; /* Space for custom bullet */
+    margin-bottom: 1rem;
+    line-height: 1.5;
+}
+
+/* Custom styled bullets */
+.mobile-content li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0.5rem; /* Vertically center with first line of text */
+    width: 0.5rem;
+    height: 0.5rem;
+    background-color: var(--primary-dark-mode);
+    border-radius: 50%;
+}
+
+/* Subtle connector line between bullets */
+.mobile-content li:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    left: 0.25rem; /* Center with bullet */
+    top: 1rem; /* Start below the bullet */
+    width: 2px;
+    height: calc(100% - 0.5rem);
+    background-color: rgba(59, 130, 246, 0.3);
+}
+
+/* Light mode styling for bullets */
+body:not(.dark-mode) .mobile-content li::before {
+    background-color: var(--primary-light);
+}
+
+body:not(.dark-mode) .mobile-content li:not(:last-child)::after {
+    background-color: rgba(59, 130, 246, 0.2);
+}
+
+/* Extra styling for better visual hierarchy */
+.mobile-content li strong {
+    font-weight: 600;
+    color: var(--text-dark-mode);
+}
+
+/* Ensure first line aligns with bullet */
+.mobile-content li p {
+    margin: 0;
+}
