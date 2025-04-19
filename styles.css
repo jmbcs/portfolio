@@ -924,7 +924,7 @@ body.dark-mode .bar {
 
     .nav-links {
         position: fixed;
-        left: 0;
+        right: -100%; /* Changed from left:0 to right:-100% */
         top: 0;
         flex-direction: column;
         background-color: var(--background-light);
@@ -938,7 +938,7 @@ body.dark-mode .bar {
         display: flex;
         justify-content: center;
         align-items: center;
-        transform: translateX(-100%);
+        transform: translateX(0); /* Changed from translateX(-100%) */
         opacity: 0;
         pointer-events: none;
     }
@@ -948,7 +948,7 @@ body.dark-mode .bar {
     }
 
     .nav-links.active {
-        transform: translateX(0);
+        right: 0; /* Changed from transform: translateX(0) */
         opacity: 1;
         pointer-events: all;
     }
