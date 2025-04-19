@@ -1294,7 +1294,7 @@ body.dark-mode .typewriter-text::after {
 /* Scroll Down Indicator */
 .scroll-down {
     position: absolute;
-    bottom: 20px;
+    bottom: 10vh; /* Changed from 20px to 15% of viewport height */
     left: 50%;
     transform: translateX(-50%);
     display: flex;
