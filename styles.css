@@ -2307,7 +2307,7 @@ body:not(.dark-mode) .project-tech span {
 
 /* Preserve dark mode styling */
 body.dark-mode .project-content {
-    background-color: var(--card-dark-mode);
+    background-color: var(--background-dark-mode);
     color: var(--text-dark-mode);
 }
 
@@ -3517,4 +3517,93 @@ body.dark-mode .subsection-title {
   .about-image {
     max-width: 280px;
   }
+}
+
+/* Mobile card color fixes */
+.mobile-card {
+  background-color: var(--card-light);
+  color: var(--text-light);
+}
+
+body.dark-mode .mobile-card {
+  background-color: var(--card-dark-mode);
+  color: var(--text-dark-mode);
+}
+
+.mobile-card-header {
+  color: var(--text-secondary-light);
+}
+
+body.dark-mode .mobile-card-header {
+  color: var(--text-secondary-dark-mode);
+}
+
+.mobile-date span, .mobile-location span {
+  color: var(--text-secondary-light);
+}
+
+body.dark-mode .mobile-date span,
+body.dark-mode .mobile-location span {
+  color: var(--text-secondary-dark-mode);
+}
+
+.mobile-card-header i {
+  color: var(--primary-light);
+}
+
+body.dark-mode .mobile-card-header i {
+  color: var(--primary-dark-mode);
+}
+
+.mobile-title {
+  color: var(--heading-light);
+}
+
+body.dark-mode .mobile-title {
+  color: var(--heading-dark-mode);
+}
+
+.mobile-subtitle {
+  color: var(--text-secondary-light);
+}
+
+body.dark-mode .mobile-subtitle {
+  color: var(--text-secondary-dark-mode);
+}
+
+.mobile-subtitle i {
+  color: var(--primary-light);
+}
+
+body.dark-mode .mobile-subtitle i {
+  color: var(--primary-dark-mode);
+}
+
+.mobile-thesis-title {
+  color: var(--heading-light);
+}
+
+body.dark-mode .mobile-thesis-title {
+  color: var(--heading-dark-mode);
+}
+
+.mobile-thesis-grade {
+  color: var(--primary-light);
+}
+
+body.dark-mode .mobile-thesis-grade {
+  color: var(--primary-dark-mode);
+}
+
+.mobile-content {
+  color: var(--text-light);
+}
+
+body.dark-mode .mobile-content {
+  color: var(--text-dark-mode);
+}
+
+/* Fix approach-text color for dark mode */
+body.dark-mode .approach-text {
+  color: var(--text-dark-mode);
 }
