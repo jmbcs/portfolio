@@ -259,7 +259,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Scroll Animations
   const scrollElements = document.querySelectorAll(
-    ".section-title, .about-content, .timeline-item, .skills-category, .project-card, .contact-content"
+    ".section-title, .about-content, .timeline-item, .skills-category, .project-card, .contact-content, .reveal-left, .reveal-right, .reveal-bottom, .approach-item, .about-item"
   );
 
   const elementInView = (el, dividend = 1) => {
@@ -289,8 +289,18 @@ document.addEventListener("DOMContentLoaded", function () {
     scrollElements.forEach((el) => {
       if (elementInView(el, 1.25)) {
         displayScrollElement(el);
+
+        // Apply sequential animation delays to children
+        if (el.hasAttribute("data-animation-delay")) {
+          setTimeout(() => {
+            el.classList.add("active");
+          }, parseInt(el.getAttribute("data-animation-delay")));
+        } else {
+          el.classList.add("active");
+        }
       } else if (elementOutofView(el)) {
         hideScrollElement(el);
+        el.classList.remove("active");
       }
     });
   };
@@ -474,4 +484,109 @@ document.addEventListener("DOMContentLoaded", function () {
     // Initial update
     setTimeout(forceUpdateActiveNavLink, 100);
   });
+
+  // Enhanced Animation System
+
+  document.addEventListener("DOMContentLoaded", () => {
+    // Animation timing and easing variables for consistency
+    const animationConfig = {
+      duration: 800, // milliseconds
+      stagger: 100, // milliseconds between staggered items
+      easingIn: "cubic-bezier(0.25, 0.46, 0.45, 0.94)",
+      easingOut: "cubic-bezier(0.55, 0.085, 0.68, 0.53)",
+      threshold: 0.15, // Intersection observer threshold
+    };
+
+    // Initialize animation for all elements with data-animate attribute
+    const animateElements = document.querySelectorAll("[data-animate]");
+
+    // Create the intersection observer
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            // Get animation type and delay from data attributes
+            const element = entry.target;
+            const animationType = element.dataset.animate;
+            const delay = parseInt(element.dataset.delay || 0);
+
+            // Add animation classes after specified delay
+            setTimeout(() => {
+              element.classList.add("animate", animationType);
+
+              // Handle children with staggered animations if needed
+              if (element.hasAttribute("data-stagger-children")) {
+                const children = element.querySelectorAll(
+                  "[data-stagger-item]"
+                );
+                children.forEach((child, index) => {
+                  setTimeout(() => {
+                    child.classList.add(
+                      "animate",
+                      child.dataset.animate || "fade-in"
+                    );
+                  }, index * animationConfig.stagger);
+                });
+              }
+            }, delay);
+
+            // Stop observing after animation is triggered
+            observer.unobserve(element);
+          }
+        });
+      },
+      {
+        threshold: animationConfig.threshold,
+        rootMargin: "0px 0px -50px 0px",
+      }
+    );
+
+    // Start observing all animate elements
+    animateElements.forEach((element) => {
+      observer.observe(element);
+    });
+
+    // Initialize hover animations
+    const hoverElements = document.querySelectorAll("[data-hover]");
+    hoverElements.forEach((element) => {
+      element.addEventListener("mouseenter", () => {
+        element.classList.add(element.dataset.hover);
+      });
+
+      element.addEventListener("mouseleave", () => {
+        element.classList.remove(element.dataset.hover);
+      });
+    });
+  });
+
+  // Enhanced scroll animations that reset when elements leave viewport
+  const animatedElements = document.querySelectorAll(".animate-on-scroll");
+
+  const checkElementsInView = () => {
+    animatedElements.forEach((element) => {
+      const elementPosition = element.getBoundingClientRect();
+      const elementTop = elementPosition.top;
+      const elementBottom = elementPosition.bottom;
+      const windowHeight = window.innerHeight;
+
+      // Check if element is in viewport
+      const isInViewport =
+        elementTop < windowHeight - 100 && elementBottom > 100;
+
+      if (isInViewport) {
+        element.classList.add("visible");
+      } else {
+        element.classList.remove("visible");
+      }
+    });
+  };
+
+  // Initial check
+  checkElementsInView();
+
+  // Check on scroll
+  window.addEventListener("scroll", checkElementsInView);
+
+  // Also check on resize
+  window.addEventListener("resize", checkElementsInView);
 });

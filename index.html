@@ -188,52 +188,136 @@
 
       <section id="about" class="about section-padding">
         <div class="container">
-          <h2 class="section-title">About Me</h2>
-          <div class="about-content">
-            <div class="about-image">
-              <img
-                src="https://avatars.githubusercontent.com/jmbcs"
-                alt="Júlio Silva"
-              />
+          <h2 class="section-title animate-on-scroll fade-up">About Me</h2>
+
+          <!-- Main two-column layout -->
+          <div class="about-layout">
+            <!-- Left column with photo -->
+            <div class="about-left">
+              <div class="about-image animate-on-scroll photo-zoom">
+                <img src="imgs/profile.jpg" alt="Júlio Silva" />
+              </div>
+
+              <!-- Left column subsections -->
+              <div class="subsection-container">
+                <h3 class="subsection-title animate-on-scroll fade-left">
+                  My Journey
+                </h3>
+
+                <div
+                  class="content-block animate-on-scroll fade-up fade-in-delay-1"
+                >
+                  <p>
+                    My journey into software engineering began during my studies
+                    at the University of Aveiro. While working on my thesis—an
+                    image retrieval system that associated images with text—I
+                    discovered the power and flexibility of Python. That project
+                    turned a passing curiosity into a lasting passion for
+                    programming.
+                  </p>
+
+                  <p>
+                    Since then, I’ve worked in both hybrid and remote
+                    environments, building backend systems, microservices, and
+                    scalable APIs using technologies like Django, FastAPI,
+                    Golang, and PostgreSQL. From contributing to large-scale
+                    property management platforms at GuestReady to developing
+                    monitoring systems and PoCs for HPC environments at Wavecom,
+                    every experience has shaped the developer I am today.
+                  </p>
+
+                  <p>
+                    What really drives me is the thrill of problem-solving—it
+                    gives me a certain high to face a challenge I don’t yet know
+                    how to solve, and then piece things together until the
+                    solution clicks.
+                  </p>
+                  <p>
+                    It’s this constant learning and creative process that keeps
+                    me excited about writing code.
+                  </p>
+                </div>
+
+                <h3 class="subsection-title animate-on-scroll fade-left">
+                  Goals & Aspirations
+                </h3>
+                <div
+                  class="content-block animate-on-scroll fade-up fade-in-delay-1"
+                >
+                  <ul>
+                    <p>
+                      Professionally, my goal is to grow into a technical
+                      leadership role where I can guide and support a small team
+                      working on a product. I see myself mentoring junior and
+                      mid-level developers, helping them grow while fostering a
+                      collaborative and healthy team dynamic.
+                  </p>
+
+                  <p>
+                    At the same time, I want to stay close to the code. Writing
+                    and reviewing code is something I genuinely enjoy, and I
+                    believe being hands-on helps me make better architectural
+                    and strategic decisions. Ideally, I want to strike a balance
+                    between technical leadership and active development—building
+                    meaningful software while enabling others to do the same.
+                  </p>
+                </div>
+              </div>
             </div>
-            <div class="about-text">
-              <h3>Who am I</h3>
-              <p>Hi there! 👋</p>
-              <p>
-                My name is Júlio Silva and I am a Software Engineer from Viseu,
-                Portugal.
-              </p>
 
-              <div class="about-details">
-                <div class="about-item">
+            <!-- Right column with intro and approach -->
+            <div class="about-right">
+              <h3 class="subsection-title animate-on-scroll fade-right">
+                Who am I
+              </h3>
+              <div
+                class="content-block animate-on-scroll fade-up fade-in-delay-1"
+              >
+                <p>Hi there! 👋</p>
+                <p>
+                  My name is Júlio Silva and I am a Software Engineer from
+                  Viseu, Portugal.
+                </p>
+                <p>
+                  With a background in Electronics and Telecommunications, I've
+                  transitioned into software development with a passion for
+                  building efficient backend systems.
+                </p>
+              </div>
+
+              <!-- Details Grid -->
+              <div class="details-grid">
+                <div class="detail-item animate-on-scroll fade-up">
                   <i class="far fa-calendar"></i>
-                  <div class="about-item-content">
-                    <span class="about-item-label">Age</span>
-                    <span>29</span>
+                  <div class="detail-content">
+                    <span class="detail-label">Age</span>
+                    <span class="detail-value">29</span>
                   </div>
                 </div>
 
-                <div class="about-item">
+                <div class="detail-item animate-on-scroll fade-up">
                   <i class="fas fa-flag"></i>
-                  <div class="about-item-content">
-                    <span class="about-item-label">Nationality</span>
-                    <span>Portuguese</span>
+                  <div class="detail-content">
+                    <span class="detail-label">Nationality</span>
+                    <span class="detail-value">Portuguese</span>
                   </div>
                 </div>
 
-                <div class="about-item">
+                <div class="detail-item animate-on-scroll fade-up">
                   <i class="fas fa-briefcase"></i>
-                  <div class="about-item-content">
-                    <span class="about-item-label">Current Position</span>
-                    <span>Mid Backend Developer at GuestReady</span>
+                  <div class="detail-content">
+                    <span class="detail-label">Current Position</span>
+                    <span class="detail-value"
+                      >Mid Backend Developer at GuestReady</span
+                    >
                   </div>
                 </div>
 
-                <div class="about-item">
+                <div class="detail-item animate-on-scroll fade-up">
                   <i class="fas fa-graduation-cap"></i>
-                  <div class="about-item-content">
-                    <span class="about-item-label">Education</span>
-                    <span
+                  <div class="detail-content">
+                    <span class="detail-label">Education</span>
+                    <span class="detail-value"
                       >M.Sc Electronics and Telecommunications, University of
                       Aveiro</span
                     >
@@ -241,37 +325,61 @@
                 </div>
               </div>
 
-              <h3>Hobbies & Interests</h3>
-              <div class="interests">
-                <div class="interest-item">
-                  <i class="fas fa-laugh"></i> Comedy
+              <h3 class="subsection-title animate-on-scroll fade-right">
+                My Approach
+              </h3>
+              <div class="approach-list">
+                <div class="approach-item animate-on-scroll fade-up">
+                  <div class="approach-header">
+                    <i class="fas fa-lightbulb"></i>
+                    <h4>Problem Solver</h4>
+                  </div>
+                  <p class="approach-text">
+                    I approach challenges methodically, breaking down complex
+                    problems into manageable components.
+                  </p>
                 </div>
-                <div class="interest-item">
-                  <i class="fas fa-book"></i> Reading
+
+                <div
+                  class="approach-item animate-on-scroll fade-up"
+                  data-delay="100"
+                >
+                  <div class="approach-header">
+                    <i class="fas fa-users"></i>
+                    <h4>Team Player</h4>
+                  </div>
+                  <p class="approach-text">
+                    I believe great software comes from collaboration,
+                    knowledge-sharing, and diverse perspectives.
+                  </p>
                 </div>
-                <div class="interest-item">
-                  <i class="fas fa-gamepad"></i> Videogames
+
+                <div
+                  class="approach-item animate-on-scroll fade-up"
+                  data-delay="200"
+                >
+                  <div class="approach-header">
+                    <i class="fas fa-book-open"></i>
+                    <h4>Continuous Learner</h4>
+                  </div>
+                  <p class="approach-text">
+                    The tech world evolves rapidly, and I'm committed to growing
+                    my skills and exploring new technologies.
+                  </p>
                 </div>
-                <div class="interest-item">
-                  <i class="fas fa-film"></i> Movies & Series
-                </div>
-                <div class="interest-item">
-                  <i class="fas fa-hiking"></i> Hiking
-                </div>
-                <div class="interest-item">
-                  <i class="fas fa-code"></i> Coding
-                </div>
-                <div class="interest-item">
-                  <i class="fas fa-dumbbell"></i> Gym
-                </div>
-                <div class="interest-item">
-                  <i class="fas fa-music"></i> Music
-                </div>
-                <div class="interest-item">
-                  <i class="fas fa-plane"></i> Travelling
-                </div>
-                <div class="interest-item">
-                  <i class="fas fa-chart-line"></i> Finances & Investing
+
+                <div
+                  class="approach-item animate-on-scroll fade-up"
+                  data-delay="300"
+                >
+                  <div class="approach-header">
+                    <i class="fas fa-code"></i>
+                    <h4>Clean Code Advocate</h4>
+                  </div>
+                  <p class="approach-text">
+                    I value readability, maintainability, and testability in
+                    every line of code I write.
+                  </p>
                 </div>
               </div>
             </div>
@@ -349,8 +457,11 @@
                 </div>
               </div>
               <div class="timeline-content">
-                <h3>Software Engineer</h3>
-                <h4><i class="fas fa-building"></i> Wavecom</h4>
+                <h4>Software Engineer</h4>
+                <div class="company-name">
+                  <i class="fas fa-building company-icon"></i>
+                  <span>Wavecom</span>
+                </div>
                 <ul>
                   <li>
                     Worked closely with clients to define and develop software
@@ -371,7 +482,7 @@
                     <span class="tech-keyword">NoSQL</span> databases.
                   </li>
                   <li>
-                    Containerized applications using
+                    wavecom Containerized applications using
                     <span class="tech-keyword">Docker</span>; managed services
                     with <span class="tech-keyword">Docker Compose</span>.
                   </li>
@@ -704,7 +815,7 @@
         <div class="container">
           <h2 class="section-title">Projects</h2>
           <div class="projects-grid">
-            <div class="project-card">
+            <div class="project-card animate-on-scroll fade-up">
               <div class="project-image">
                 <h2>TaskMate</h2>
               </div>
@@ -730,7 +841,7 @@
               </div>
             </div>
 
-            <div class="project-card">
+            <div class="project-card animate-on-scroll fade-up">
               <div class="project-image">
                 <h2>BigHPC</h2>
               </div>
@@ -763,7 +874,7 @@
               </div>
             </div>
 
-            <div class="project-card">
+            <div class="project-card animate-on-scroll fade-up">
               <div class="project-image">
                 <h2>Portfolio</h2>
               </div>
@@ -788,7 +899,7 @@
               </div>
             </div>
 
-            <div class="project-card">
+            <div class="project-card animate-on-scroll fade-up">
               <div class="project-image">
                 <h2>RentalReady</h2>
               </div>

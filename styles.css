@@ -1727,7 +1727,7 @@ body.dark-mode .timeline-content .company-icon {
 }
 
 .timeline-content {
-    background-color: var(--card-bg-dark);
+    background-color: var(--card-light);
     padding: 1.5rem;
     color: var(--text-dark-mode);
     flex-grow: 1;
@@ -1840,11 +1840,11 @@ body.light-mode .skill-item {
     overflow: hidden;
     box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
     transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
-    background-color: var(--card-bg-dark);
+    background-color: var(--card-light);
 }
 
 body.dark-mode .project-card {
-    background-color: var(--card-bg-dark);
+    background-color: var(--card-light);
     border: 2px solid var(--primary-dark-mode);
 }
 
@@ -1879,12 +1879,14 @@ body.dark-mode .project-image {
 
 .project-content {
     padding: 1.5rem;
-    background-color: var(--card-bg-dark);
+    background-color: var(--card-light);
     color: var(--text-dark-mode);
     flex-grow: 1;
     display: flex;
     flex-direction: column;
 }
+
+
 
 .project-description {
     text-align: center;
@@ -2051,6 +2053,17 @@ body.dark-mode .relevant-links .btn:hover {
 
 body.light-mode .language-card {
     background-color: var(--card-light);
+}
+
+body.light-mode .approach-text {
+    color: var(--text-light);
+}
+
+body.light-mode .detail-value {
+    color: var(--text-light);
+}
+body.light-mode .subsection-title {
+    color: var(--text-dark-mode);
 }
 
 .language-card:hover {
@@ -2294,7 +2307,7 @@ body:not(.dark-mode) .project-tech span {
 
 /* Preserve dark mode styling */
 body.dark-mode .project-content {
-    background-color: var(--card-bg-dark);
+    background-color: var(--card-dark-mode);
     color: var(--text-dark-mode);
 }
 
@@ -2654,7 +2667,7 @@ body.dark-mode .thesis-grade {
 
     /* Card-based mobile timeline */
     .mobile-card {
-        background-color: var(--card-bg-dark);
+        background-color: var(--card-light);
         border-radius: 12px;
         margin-bottom: 1.5rem;
         overflow: hidden;
@@ -2848,4 +2861,660 @@ body:not(.dark-mode) .mobile-content li:not(:last-child)::after {
 /* Ensure first line aligns with bullet */
 .mobile-content li p {
     margin: 0;
+}
+/* About Section - Improved Layout */
+.about-intro {
+  display: flex;
+  flex-direction: row;
+  gap: 3rem;
+  width: 100%;
+  margin-bottom: 3.5rem;
+  align-items: flex-start;
+}
+
+.about-image {
+  width: 100%; /* Allow container to use full width */
+  max-width: 500px; /* Increase this value as needed */
+  height: auto; /* Let height adjust automatically */
+  overflow: visible; /* Ensure image isn't cropped by overflow */
+}
+
+.about-intro-text {
+  flex: 2;
+}
+
+.about-image img {
+  width: 100%;
+  height: auto;
+  object-fit: contain; /* Change from 'cover' to 'contain' to prevent cropping */
+  border-radius: 10px; /* Keep rounded corners if desired */
+}
+
+.about-image img:hover {
+  transform: scale(1.02);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+}
+
+/* Subsection title styling - matching the provided example */
+.subsection-title {
+  display: inline-block;
+  background-color: #4a9eff; /* Blue background */
+  color: #000000; /* Black text color */
+  padding: 0.5rem 1rem;
+  border-radius: 8px; /* Less rounded corners to match the image */
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+  font-weight: 500;
+  text-align: center;
+  min-width: 80px; /* Ensures minimum width */
+}
+
+/* No hover animations for a cleaner look matching the example */
+body.dark-mode .subsection-title {
+  color: #000000; /* Keep text dark even in dark mode */
+}
+
+@media screen and (max-width: 992px) {
+  .about-intro {
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .about-image {
+    max-width: 280px; /* Even smaller on mobile */
+  }
+
+  .about-details {
+    grid-template-columns: 1fr;
+  }
+
+  .subsection-title {
+    font-size: 1.1rem;
+    padding: 0.4rem 1.2rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .approach-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Approach items styling to match the new design */
+.approach-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.approach-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.approach-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.5rem;
+}
+
+.approach-header i {
+  font-size: 1.5rem;
+  color: #4a9eff;
+}
+
+.detail-label {
+  color: #4a9eff;
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+
+/* Animation for approach items */
+.approach-item.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.approach-item.animate-on-scroll.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Remove previous card-style approach item styling */
+.approach-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* Two-column layout for about section */
+.about-layout {
+  display: grid;
+  grid-template-columns: 42% 58%;
+  gap: 2.5rem;
+  width: 100%;
+}
+
+/* Left column styling */
+.about-left {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* Right column styling */
+.about-right {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* Image styling */
+.about-image {
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.about-image img {
+  width: 100%;
+  max-height: 350px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.about-image img:hover {
+  transform: scale(1.02);
+  transition: transform 0.3s ease;
+}
+
+/* Subsection title styling */
+.subsection-title {
+  display: inline-block;
+  background-color: #4a9eff;
+  color: #000000;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+  font-weight: 500;
+  text-align: center;
+  min-width: 80px;
+}
+
+/* Content blocks */
+.content-block {
+  margin-bottom: 2rem;
+}
+
+.content-block p {
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+.content-block p:last-child {
+  margin-bottom: 0;
+}
+
+/* Details grid styling */
+.details-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.detail-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+}
+
+.detail-item i {
+  color: #4a9eff;
+  font-size: 1.2rem;
+  width: 1.5rem;
+  text-align: center;
+  margin-top: 0.25rem;
+}
+
+.detail-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.detail-label {
+  color: #4a9eff;
+  font-weight: 600;
+  font-size: 1.2rem;
+  margin-bottom: 0.25rem;
+}
+
+.detail-value {
+  color: var(--text-dark-mode);
+  line-height: 1.4;
+}
+
+/* Approach list styling */
+.approach-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.approach-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.5rem;
+}
+
+.approach-header i {
+  font-size: 1.2rem;
+  color: #4a9eff;
+}
+
+.approach-header h4 {
+  color: #4a9eff;
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.approach-item p {
+  margin: 0;
+  line-height: 1.6;
+  padding-left: 2.25rem;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 992px) {
+  .about-layout {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .details-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .approach-list {
+    gap: 1.25rem;
+  }
+}
+
+/* Basic animation classes */
+.animate-on-scroll {
+  opacity: 0;
+  transition: opacity 0.6s ease, transform 0.6s ease;
+  will-change: opacity, transform;
+}
+
+.animate-on-scroll.visible {
+  opacity: 1;
+}
+
+/* Specific animations with faster transitions for better repeated animation */
+.fade-up {
+  transform: translateY(30px);
+  transition-duration: 0.5s;
+}
+
+.fade-up.visible {
+  transform: translateY(0);
+}
+
+.fade-left {
+  transform: translateX(-30px);
+  transition-duration: 0.5s;
+}
+
+.fade-left.visible {
+  transform: translateX(0);
+}
+
+.fade-right {
+  transform: translateX(30px);
+  transition-duration: 0.5s;
+}
+
+.fade-right.visible {
+  transform: translateX(0);
+}
+
+/* Photo animation */
+.photo-zoom {
+  transform: scale(0.9);
+  transition-duration: 0.5s;
+}
+
+.photo-zoom.visible {
+  transform: scale(1);
+}
+
+/* Approach items styling with animations */
+.approach-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.approach-item {
+  padding: 0.5rem 0;
+}
+
+.approach-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.5rem;
+}
+
+.approach-header i {
+  font-size: 1.5rem;
+  color: #4a9eff;
+  transition: transform 0.4s ease;
+}
+
+.approach-item.visible .approach-header i {
+  transform: scale(1.2);
+  transition-delay: 0.1s;
+}
+
+.approach-header h4 {
+  color: #4a9eff;
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin: 0;
+  transform: translateX(-10px);
+  opacity: 0;
+  transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+.approach-item.visible .approach-header h4 {
+  transform: translateX(0);
+  opacity: 1;
+  transition-delay: 0.2s;
+}
+
+.approach-item p {
+  margin: 0;
+  line-height: 1.6;
+  padding-left: 2.25rem;
+  transform: translateY(10px);
+  opacity: 0;
+  transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+.approach-item.visible p {
+  transform: translateY(0);
+  opacity: 1;
+  transition-delay: 0.3s;
+}
+
+/* Specific animation for each item */
+.approach-item:nth-child(1).visible .approach-header i {
+  transition-delay: 0.1s;
+}
+.approach-item:nth-child(2).visible .approach-header i {
+  transition-delay: 0.2s;
+}
+.approach-item:nth-child(3).visible .approach-header i {
+  transition-delay: 0.3s;
+}
+.approach-item:nth-child(4).visible .approach-header i {
+  transition-delay: 0.4s;
+}
+
+.approach-item:nth-child(1).visible .approach-header h4 {
+  transition-delay: 0.2s;
+}
+.approach-item:nth-child(2).visible .approach-header h4 {
+  transition-delay: 0.3s;
+}
+.approach-item:nth-child(3).visible .approach-header h4 {
+  transition-delay: 0.4s;
+}
+.approach-item:nth-child(4).visible .approach-header h4 {
+  transition-delay: 0.5s;
+}
+
+.approach-item:nth-child(1).visible p {
+  transition-delay: 0.3s;
+}
+.approach-item:nth-child(2).visible p {
+  transition-delay: 0.4s;
+}
+.approach-item:nth-child(3).visible p {
+  transition-delay: 0.5s;
+}
+.approach-item:nth-child(4).visible p {
+  transition-delay: 0.6s;
+}
+
+/* Consistent styling for all headings */
+.detail-label,
+.approach-header h4 {
+  color: #4a9eff;
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin: 0 0 0.3rem 0;
+  line-height: 1.4;
+}
+
+/* Icons consistent sizing and positioning */
+.detail-item i,
+.approach-header i {
+  color: #4a9eff;
+  font-size: 1.5rem;
+  width: 1.5rem;
+  text-align: center;
+  margin-top: 0.25rem;
+}
+
+/* Detail and approach items layout */
+.detail-item,
+.approach-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Consistent value and paragraph text */
+.detail-value,
+.approach-item p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--text-dark-mode);
+  margin: 0;
+}
+
+/* Wrapper for detail content */
+.detail-content {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Grid layout adjustments */
+.details-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem 2rem;
+  margin-bottom: 2.5rem;
+}
+
+/* Section title styling (My Approach) */
+.subsection-title {
+  display: inline-block;
+  background-color: #4a9eff;
+  color: #000000;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+  font-weight: 500;
+  text-align: center;
+  min-width: 100px;
+}
+
+/* My Approach section title */
+.subsection-title {
+  display: inline-block;
+  background-color: #4a9eff;
+  color: #000000;
+  padding: 0.5rem 1.5rem;
+  border-radius: 8px;
+  font-size: 1.2rem;
+  margin-bottom: 2.5rem;
+  font-weight: 500;
+  text-align: center;
+  min-width: 120px;
+  width: 100%;
+}
+
+/* Approach list container */
+.approach-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  padding: 0 0.5rem;
+}
+
+/* Approach item */
+.approach-item {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Icon and heading container */
+.approach-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 0.75rem;
+}
+
+/* Icon styling */
+.approach-header i {
+  font-size: 1.5rem;
+  color: #4a9eff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 1.5rem;
+}
+
+/* Heading styling */
+.approach-header h4 {
+  color: #4a9eff;
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* Description text */
+.approach-text {
+  margin: 0;
+  padding-left: 2.25rem; /* Aligned with text, not icon */
+  line-height: 1.6;
+  color: var(--text-light);
+}
+
+
+/* Animation for approach items */
+.approach-item.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.approach-item.animate-on-scroll.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.about-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem 1.5rem;
+  gap: 2rem;
+}
+
+.about-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.about-image {
+  width: 100%;
+  max-width: 350px;
+  align-self: center;
+  border-radius: 12px; /* This creates the rounded border effect */
+  overflow: hidden; /* This ensures the image is cropped to the border */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Optional subtle shadow */
+}
+
+.about-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* This ensures the image fills the container */
+  display: block;
+}
+
+.about-text {
+  flex: 1;
+}
+
+.journey-button {
+  width: 100%;
+  max-width: 350px;
+  margin: 1rem auto;
+}
+
+/* Media queries for responsive design */
+@media (min-width: 768px) {
+  .about-content {
+    flex-direction: row;
+    align-items: center;
+    gap: 3rem;
+  }
+
+  .about-image {
+    max-width: 320px;
+    flex-shrink: 0;
+    aspect-ratio: 1 / 1; /* Makes the container square for a consistent crop */
+  }
+
+  .about-text {
+    flex: 1;
+  }
+}
+
+@media (min-width: 1024px) {
+  .about-image {
+    max-width: 350px;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-section {
+    padding: 1.5rem 1rem;
+  }
+
+  .about-image {
+    max-width: 280px;
+  }
 }
