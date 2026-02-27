@@ -3,383 +3,114 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portfolio - Júlio Silva</title>
-    <link
-      rel="icon"
-      href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%233b82f6'><path d='M3 3h18a1 1 0 0 1 1 1v16a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1zm1 2v14h16V5H4zm8 10a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm-3-1a1 1 0 1 1 0-2 1 1 0 0 1 0 2zm6 0a1 1 0 1 1 0-2 1 1 0 0 1 0 2z'/></svg>"
-      type="image/svg+xml"
-    />
+    <title>Júlio Silva — Software Engineer</title>
+    <script>document.documentElement.setAttribute('data-theme', localStorage.getItem('theme') || 'dark')</script>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%232563eb'><path d='M3 3h18a1 1 0 0 1 1 1v16a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1zm1 2v14h16V5H4zm8 10a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm-3-1a1 1 0 1 1 0-2 1 1 0 0 1 0 2zm6 0a1 1 0 1 1 0-2 1 1 0 0 1 0 2z'/></svg>" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
     <link rel="stylesheet" href="styles.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
   </head>
-  <body class="dark-mode">
-    <div class="page-transition"></div>
-
-    <header>
-      <nav class="navbar">
-        <div class="theme-toggle">
-          <i class="fas fa-moon"></i>
-          <i class="fas fa-sun"></i>
-          <div class="toggle-ball"></div>
-        </div>
+  <body>
+    <nav id="nav">
+      <div class="nav-inner">
+        <a href="#hero" class="nav-logo">JS</a>
         <ul class="nav-links">
-          <li><a href="#home" class="nav-link">Home</a></li>
-          <li><a href="#about" class="nav-link">About</a></li>
-          <li><a href="#experience" class="nav-link">Experience</a></li>
-          <li><a href="#skills" class="nav-link">Skills</a></li>
-          <li><a href="#projects" class="nav-link">Projects</a></li>
-          <li>
-            <a href="#relevant-links" class="nav-link">Additional Info</a>
-          </li>
-          <li><a href="#contact" class="nav-link">Contact</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
         </ul>
-        <div class="hamburger">
-          <div class="bar"></div>
-          <div class="bar"></div>
-          <div class="bar"></div>
+        <div class="nav-actions">
+          <button class="theme-toggle" aria-label="Toggle theme">
+            <i id="theme-icon" class="fas fa-sun"></i>
+          </button>
+          <button class="nav-toggle" aria-label="Toggle menu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
         </div>
-      </nav>
-    </header>
+      </div>
+    </nav>
 
     <main>
-      <section id="home" class="hero">
-        <div class="tech-icons-container">
-          <div class="tech-icons">
-            <img
-              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"
-              alt="Python"
-              class="tech-icon"
-            />
-            <img
-              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg"
-              alt="Docker"
-              class="tech-icon"
-            />
-            <img
-              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg"
-              alt="PostgreSQL"
-              class="tech-icon"
-            />
-            <img
-              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg"
-              alt="Django"
-              class="tech-icon"
-            />
-            <img
-              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/grafana/grafana-original.svg"
-              alt="Grafana"
-              class="tech-icon"
-            />
-            <img
-              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/go/go-original.svg"
-              alt="Golang"
-              class="tech-icon"
-            />
-            <img
-              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
-              alt="JavaScript"
-              class="tech-icon"
-            />
-            <img
-              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"
-              alt="HTML"
-              class="tech-icon"
-            />
-            <img
-              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"
-              alt="CSS"
-              class="tech-icon"
-            />
-            <img
-              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redis/redis-original.svg"
-              alt="Redis"
-              class="tech-icon"
-            />
-            <img
-              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/fastapi/fastapi-original.svg"
-              alt="FastAPI"
-              class="tech-icon"
-            />
-            <img
-              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg"
-              alt="Linux"
-              class="tech-icon"
-            />
-            <div class="tech-icon" style="--delay: 13s">
-              <i class="fab fa-aws"></i>
-            </div>
-            <div class="tech-icon" style="--delay: 14s">
-              <img
-                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg"
-                alt="VS Code"
-              />
-            </div>
-            <div class="tech-icon" style="--delay: 15s">
-              <img
-                src="https://www.vectorlogo.zone/logos/datadoghq/datadoghq-icon.svg"
-                alt="Datadog"
-              />
-            </div>
-            <div class="tech-icon" style="--delay: 16s">
-              <img
-                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pycharm/pycharm-original.svg"
-                alt="PyCharm"
-              />
-            </div>
-            <div class="tech-icon" style="--delay: 17s">
-              <i class="fab fa-docker"></i>
-            </div>
-            <div class="tech-icon" style="--delay: 18s">
-              <img
-                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg"
-                alt="PostgreSQL"
-              />
-            </div>
-            <div class="tech-icon" style="--delay: 19s">
+      <!-- Hero -->
+      <section id="hero">
+        <div class="container">
+          <p class="hero-label">Software Engineer</p>
+          <h1>Júlio Silva</h1>
+          <p class="hero-desc">
+            Backend engineer based in Portugal. I build reliable systems and
+            distributed architecture with Python, Django, and Go.
+          </p>
+          <div class="hero-cta">
+            <a href="#contact" class="btn btn-primary">Get in touch</a>
+            <a
+              href="https://github.com/jmbcs/curriculum/blob/main/output/CV_JULIO_SILVA.pdf"
+              target="_blank"
+              rel="noopener"
+              class="btn btn-outline"
+              >View CV</a
+            >
+          </div>
+          <div class="hero-socials">
+            <a href="https://github.com/jmbcs" target="_blank" rel="noopener" aria-label="GitHub">
               <i class="fab fa-github"></i>
-            </div>
-            <div class="tech-icon" style="--delay: 20s">
-              <i class="fab fa-linux"></i>
-            </div>
-          </div>
-        </div>
-        <div class="container">
-          <div class="hero-text">
-            <h1 class="fade-in">Júlio Silva</h1>
-            <div class="typewriter-container">
-              <span class="typewriter-prefix">I'm a </span>
-              <span
-                class="typewriter-text"
-                data-wait="3000"
-                data-words='["Software Engineer", "Problem Solver","Backend Developer", "Coding Enthusiast", "Tech Lover"]'
-              ></span>
-            </div>
-            <p class="fade-in-delay">
-              Turning complex challenges into elegant solutions
-            </p>
-            <div class="hero-cta fade-in-delay">
-              <a href="#contact" class="btn primary-btn">Get in Touch</a>
-              <a
-                href="https://github.com/jmbcs/curriculum/blob/main/output/CV_JULIO_SILVA.pdf"
-                target="_blank"
-                class="btn secondary-btn"
-                >View CV</a
-              >
-            </div>
-          </div>
-        </div>
-
-        <div class="scroll-down">
-          <div class="mouse">
-            <div class="wheel"></div>
-          </div>
-          <div class="arrow">
-            <span></span>
+            </a>
+            <a href="https://linkedin.com/in/julio-miguel-silva" target="_blank" rel="noopener" aria-label="LinkedIn">
+              <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="mailto:julio.m.b.c.silva@gmail.com" aria-label="Email">
+              <i class="fas fa-envelope"></i>
+            </a>
           </div>
         </div>
       </section>
 
-      <section id="about" class="about section-padding">
+      <!-- About -->
+      <section id="about">
         <div class="container">
-          <h2 class="section-title animate-on-scroll fade-up">About Me</h2>
-
-          <!-- Main two-column layout -->
-          <div class="about-layout">
-            <!-- Left column with photo -->
-            <div class="about-left">
-              <div class="about-image animate-on-scroll photo-zoom">
-                <img src="imgs/profile.jpg" alt="Júlio Silva" />
-              </div>
-
-              <!-- Left column subsections -->
-              <div class="subsection-container">
-                <h3 class="subsection-title animate-on-scroll fade-left">
-                  My Journey
-                </h3>
-
-                <div
-                  class="content-block animate-on-scroll fade-up fade-in-delay-1"
-                >
-                  <p>
-                    My journey into software engineering began during my studies
-                    at the University of Aveiro. While working on my thesis—an
-                    image retrieval system that associated images with text—I
-                    discovered the power and flexibility of Python. That project
-                    turned a passing curiosity into a lasting passion for
-                    programming.
-                  </p>
-
-                  <p>
-                    Since then, I’ve worked in both hybrid and remote
-                    environments, building backend systems, microservices, and
-                    scalable APIs using technologies like Django, FastAPI,
-                    Golang, and PostgreSQL. From contributing to large-scale
-                    property management platforms at GuestReady to developing
-                    monitoring systems and PoCs for HPC environments at Wavecom,
-                    every experience has shaped the developer I am today.
-                  </p>
-
-                  <p>
-                    What really drives me is the thrill of problem-solving—it
-                    gives me a certain high to face a challenge I don’t yet know
-                    how to solve, and then piece things together until the
-                    solution clicks.
-                  </p>
-                  <p>
-                    It’s this constant learning and creative process that keeps
-                    me excited about writing code.
-                  </p>
-                </div>
-
-                <h3 class="subsection-title animate-on-scroll fade-left">
-                  Goals & Aspirations
-                </h3>
-                <div
-                  class="content-block animate-on-scroll fade-up fade-in-delay-1"
-                >
-                  <ul>
-                    <p>
-                      Professionally, my goal is to grow into a technical
-                      leadership role where I can guide and support a small team
-                      working on a product. I see myself mentoring junior and
-                      mid-level developers, helping them grow while fostering a
-                      collaborative and healthy team dynamic.
-                  </p>
-
-                  <p>
-                    At the same time, I want to stay close to the code. Writing
-                    and reviewing code is something I genuinely enjoy, and I
-                    believe being hands-on helps me make better architectural
-                    and strategic decisions. Ideally, I want to strike a balance
-                    between technical leadership and active development—building
-                    meaningful software while enabling others to do the same.
-                  </p>
-                </div>
-              </div>
+          <h2 class="section-label">About</h2>
+          <div class="about-grid">
+            <div class="about-photo">
+              <img src="imgs/profile.jpg" alt="Júlio Silva" width="200" height="200" />
             </div>
-
-            <!-- Right column with intro and approach -->
-            <div class="about-right">
-              <h3 class="subsection-title animate-on-scroll fade-right">
-                Who am I
-              </h3>
-              <div
-                class="content-block animate-on-scroll fade-up fade-in-delay-1"
-              >
-                <p>Hi there! 👋</p>
-                <p>
-                  My name is Júlio Silva and I am a Software Engineer from
-                  Viseu, Portugal.
-                </p>
-                <p>
-                  With a background in Electronics and Telecommunications, I've
-                  transitioned into software development with a passion for
-                  building efficient backend systems.
-                </p>
-              </div>
-
-              <!-- Details Grid -->
-              <div class="details-grid">
-                <div class="detail-item animate-on-scroll fade-up">
-                  <i class="far fa-calendar"></i>
-                  <div class="detail-content">
-                    <span class="detail-label">Age</span>
-                    <span class="detail-value">29</span>
-                  </div>
+            <div class="about-text">
+              <p>
+                My name is Júlio Silva and I'm a Software Engineer from Viseu,
+                Portugal. With a background in Electronics and Telecommunications,
+                I transitioned into software development with a focus on building
+                efficient backend systems.
+              </p>
+              <p>
+                My journey started during my thesis at the University of Aveiro —
+                an image retrieval system that associated images with text — where
+                I discovered the power and flexibility of Python. Since then, I've
+                worked in both hybrid and remote environments, building
+                microservices, REST APIs, and scalable backend architecture using
+                Django, FastAPI, Golang, and PostgreSQL.
+              </p>
+              <p>
+                What drives me is the thrill of problem-solving. I enjoy facing a
+                challenge I don't yet know how to solve, and piecing things
+                together until the solution clicks. Professionally, I aim to grow
+                into a technical leadership role while staying hands-on with code.
+              </p>
+              <div class="about-details">
+                <div>
+                  <span class="detail-label">Location</span>
+                  Viseu, Portugal
                 </div>
-
-                <div class="detail-item animate-on-scroll fade-up">
-                  <i class="fas fa-flag"></i>
-                  <div class="detail-content">
-                    <span class="detail-label">Nationality</span>
-                    <span class="detail-value">Portuguese</span>
-                  </div>
+                <div>
+                  <span class="detail-label">Role</span>
+                  Mid Backend Developer at GuestReady
                 </div>
-
-                <div class="detail-item animate-on-scroll fade-up">
-                  <i class="fas fa-briefcase"></i>
-                  <div class="detail-content">
-                    <span class="detail-label">Current Position</span>
-                    <span class="detail-value"
-                      >Mid Backend Developer at GuestReady</span
-                    >
-                  </div>
-                </div>
-
-                <div class="detail-item animate-on-scroll fade-up">
-                  <i class="fas fa-graduation-cap"></i>
-                  <div class="detail-content">
-                    <span class="detail-label">Education</span>
-                    <span class="detail-value"
-                      >M.Sc Electronics and Telecommunications, University of
-                      Aveiro</span
-                    >
-                  </div>
-                </div>
-              </div>
-
-              <h3 class="subsection-title animate-on-scroll fade-right">
-                My Approach
-              </h3>
-              <div class="approach-list">
-                <div class="approach-item animate-on-scroll fade-up">
-                  <div class="approach-header">
-                    <i class="fas fa-lightbulb"></i>
-                    <h4>Problem Solver</h4>
-                  </div>
-                  <p class="approach-text">
-                    I approach challenges methodically, breaking down complex
-                    problems into manageable components.
-                  </p>
-                </div>
-
-                <div
-                  class="approach-item animate-on-scroll fade-up"
-                  data-delay="100"
-                >
-                  <div class="approach-header">
-                    <i class="fas fa-users"></i>
-                    <h4>Team Player</h4>
-                  </div>
-                  <p class="approach-text">
-                    I believe great software comes from collaboration,
-                    knowledge-sharing, and diverse perspectives.
-                  </p>
-                </div>
-
-                <div
-                  class="approach-item animate-on-scroll fade-up"
-                  data-delay="200"
-                >
-                  <div class="approach-header">
-                    <i class="fas fa-book-open"></i>
-                    <h4>Continuous Learner</h4>
-                  </div>
-                  <p class="approach-text">
-                    The tech world evolves rapidly, and I'm committed to growing
-                    my skills and exploring new technologies.
-                  </p>
-                </div>
-
-                <div
-                  class="approach-item animate-on-scroll fade-up"
-                  data-delay="300"
-                >
-                  <div class="approach-header">
-                    <i class="fas fa-code"></i>
-                    <h4>Clean Code Advocate</h4>
-                  </div>
-                  <p class="approach-text">
-                    I value readability, maintainability, and testability in
-                    every line of code I write.
-                  </p>
+                <div>
+                  <span class="detail-label">Education</span>
+                  M.Sc Electronics &amp; Telecommunications, University of Aveiro
                 </div>
               </div>
             </div>
@@ -387,711 +118,296 @@
         </div>
       </section>
 
-      <section id="experience" class="experience section-padding">
+      <!-- Experience -->
+      <section id="experience">
         <div class="container">
-          <h2 class="section-title">Experience</h2>
+          <h2 class="section-label">Experience</h2>
           <div class="timeline">
             <div class="timeline-item">
-              <div class="timeline-dot"></div>
-              <div class="timeline-date">
-                <i class="far fa-calendar-alt"></i>
-                <span>Oct 2024 - Present</span>
-                <div class="timeline-location">
-                  <i class="fas fa-map-marker-alt"></i>
-                  <span>Remote</span>
-                </div>
+              <div class="timeline-meta">
+                <span class="timeline-period">Oct 2024 — Present</span>
+                <span class="timeline-loc">Remote</span>
               </div>
-              <div class="timeline-content">
-                <h4>Mid Backend Developer</h4>
-                <div class="company-name">
-                  <i class="fas fa-building company-icon"></i>
-                  <span>GuestReady / RentalReady</span>
-                </div>
+              <div class="timeline-body">
+                <h3>Mid Backend Developer</h3>
+                <p class="timeline-org">GuestReady / RentalReady</p>
                 <ul>
-                  <li>
-                    Contributed to a large-scale Property Management Software
-                    (PMS) built with <span class="tech-keyword">Django</span>,
-                    serving thousands of properties.
-                  </li>
-                  <li>
-                    Focused on
-                    <span class="tech-keyword">backend development</span> within
-                    a team of 40+ developers, with occasional front-end
-                    contributions.
-                  </li>
-                  <li>
-                    Developed and maintained integrations with third-party
-                    <span class="tech-keyword">APIs</span> such as Booking.com,
-                    Airbnb, and Vrbo.
-                  </li>
-                  <li>
-                    Investigated and resolved user-reported bugs, improving
-                    system <span class="tech-keyword">reliability</span> and
-                    user satisfaction.
-                  </li>
-                  <li>
-                    Diagnosed production issues using
-                    <span class="tech-keyword">Sentry</span> and
-                    <span class="tech-keyword">Datadog</span>.
-                  </li>
-                  <li>
-                    Executed bulk updates on
-                    <span class="tech-keyword">PostgreSQL</span> production
-                    databases with minimal downtime.
-                  </li>
-                  <li>
-                    Participated in code reviews, ensuring clean code practices
-                    and team collaboration.
-                  </li>
+                  <li>Contributed to a large-scale Property Management Software (PMS) built with Django, serving thousands of properties</li>
+                  <li>Developed and maintained integrations with Booking.com, Airbnb, and Vrbo APIs</li>
+                  <li>Diagnosed production issues with Sentry and Datadog; executed bulk updates on PostgreSQL with minimal downtime</li>
+                  <li>Participated in code reviews within a team of 40+ developers</li>
                 </ul>
+                <div class="tag-row">
+                  <span>Django</span><span>PostgreSQL</span><span>Sentry</span><span>Datadog</span><span>REST APIs</span>
+                </div>
               </div>
             </div>
+
             <div class="timeline-item">
-              <div class="timeline-dot"></div>
-              <div class="timeline-date">
-                <i class="fas fa-calendar-alt"></i>
-                <span>Jan 2021 - Oct 2024</span>
-                <div class="timeline-location">
-                  <i class="fas fa-map-marker-alt"></i>
-                  <span>Aveiro, Portugal (Hybrid)</span>
-                </div>
+              <div class="timeline-meta">
+                <span class="timeline-period">Jan 2021 — Oct 2024</span>
+                <span class="timeline-loc">Aveiro, PT (Hybrid)</span>
               </div>
-              <div class="timeline-content">
-                <h4>Software Engineer</h4>
-                <div class="company-name">
-                  <i class="fas fa-building company-icon"></i>
-                  <span>Wavecom</span>
-                </div>
+              <div class="timeline-body">
+                <h3>Software Engineer</h3>
+                <p class="timeline-org">Wavecom</p>
                 <ul>
-                  <li>
-                    Worked closely with clients to define and develop software
-                    features.
-                  </li>
-                  <li>
-                    Built <span class="tech-keyword">microservices</span> using
-                    <span class="tech-keyword">Python</span> and
-                    <span class="tech-keyword">Golang</span>; implemented
-                    <span class="tech-keyword">gRPC</span> and
-                    <span class="tech-keyword">Protocol Buffers</span> for
-                    inter-service communication.
-                  </li>
-                  <li>
-                    Designed and developed
-                    <span class="tech-keyword">REST APIs</span> for both
-                    <span class="tech-keyword">SQL</span> and
-                    <span class="tech-keyword">NoSQL</span> databases.
-                  </li>
-                  <li>
-                    wavecom Containerized applications using
-                    <span class="tech-keyword">Docker</span>; managed services
-                    with <span class="tech-keyword">Docker Compose</span>.
-                  </li>
-                  <li>
-                    Improved <span class="tech-keyword">Grafana</span> dashboard
-                    performance by optimizing database queries.
-                  </li>
-                  <li>
-                    Created <span class="tech-keyword">ETL</span> pipelines
-                    using <span class="tech-keyword">Telegraf</span> and
-                    performed data analysis with
-                    <span class="tech-keyword">Pandas</span>.
-                  </li>
-                  <li>
-                    Developed a monitoring system for
-                    <span class="tech-keyword"
-                      >High-Performance Computing (HPC)</span
-                    >
-                    environments using
-                    <span class="tech-keyword">Grafana</span>,
-                    <span class="tech-keyword">VictoriaMetrics</span>, and
-                    <span class="tech-keyword">Python</span>.
-                  </li>
-                  <li>
-                    Automated workflows with
-                    <span class="tech-keyword">Makefiles</span> and
-                    <span class="tech-keyword">Bash</span> scripts.
-                  </li>
-                  <li>
-                    Researched emerging technologies and built Proofs of Concept
-                    (PoCs).
-                  </li>
+                  <li>Built microservices using Python and Golang with gRPC and Protocol Buffers for inter-service communication</li>
+                  <li>Designed REST APIs for SQL and NoSQL databases; containerized applications with Docker and Docker Compose</li>
+                  <li>Developed a monitoring system for HPC environments using Grafana, VictoriaMetrics, and Python</li>
+                  <li>Created ETL pipelines with Telegraf and performed data analysis with Pandas</li>
+                  <li>Automated workflows with Makefiles and Bash scripts; researched emerging technologies and built PoCs</li>
                 </ul>
+                <div class="tag-row">
+                  <span>Python</span><span>Golang</span><span>gRPC</span><span>Docker</span><span>Grafana</span><span>VictoriaMetrics</span>
+                </div>
               </div>
             </div>
+
             <div class="timeline-item">
-              <div class="timeline-dot"></div>
-              <div class="timeline-date">
-                <i class="fas fa-calendar-alt"></i>
-                <span>2014 - 2020</span>
-                <div class="timeline-location">
-                  <i class="fas fa-map-marker-alt"></i>
-                  <span>Aveiro, Portugal</span>
-                </div>
+              <div class="timeline-meta">
+                <span class="timeline-period">2014 — 2020</span>
+                <span class="timeline-loc">Aveiro, PT</span>
               </div>
-              <div class="timeline-content">
-                <h4>Master in Electronics/Telecommunications Engineering</h4>
-                <div class="company-name">
-                  <i class="fas fa-university company-icon"></i>
-                  <span>University of Aveiro</span>
-                </div>
-                <p>
-                  <strong>Thesis:</strong> Recovery and Identification of
-                  Moments - Grade: 19/20
+              <div class="timeline-body">
+                <h3>M.Sc Electronics &amp; Telecommunications Engineering</h3>
+                <p class="timeline-org">University of Aveiro</p>
+                <p class="timeline-note">
+                  <strong>Thesis:</strong> Recovery and Identification of Moments
+                  — Grade: 19/20
                 </p>
                 <ul>
-                  <li>
-                    Development of a
-                    <span class="tech-keyword">Python</span> automatic image
-                    retrieval system capable of associating images to moments
-                    described in text
-                  </li>
+                  <li>Developed a Python image retrieval system associating images to moments described in natural language text</li>
                 </ul>
-              </div>
-            </div>
-          </div>
-
-          <!-- Mobile-optimized timeline with all experience -->
-          <div class="timeline-mobile">
-            <!-- GuestReady/RentalReady -->
-            <div class="mobile-card">
-              <div class="mobile-card-header">
-                <div class="mobile-date">
-                  <i class="far fa-calendar"></i>
-                  <span>Oct 2024 - Present</span>
-                </div>
-                <div class="mobile-location">
-                  <i class="fas fa-map-marker-alt"></i>
-                  <span>Remote</span>
-                </div>
-              </div>
-              <div class="mobile-card-body">
-                <h3 class="mobile-title">Mid Backend Developer</h3>
-                <div class="mobile-subtitle">
-                  <i class="far fa-building"></i>
-                  <span>GuestReady / RentalReady</span>
-                </div>
-
-                <div class="mobile-content">
-                  <ul>
-                    <li>
-                      Contributed to a large-scale Property Management Software
-                      (PMS) built with <span class="tech-keyword">Django</span>,
-                      serving thousands of properties.
-                    </li>
-                    <li>
-                      Focused on
-                      <span class="tech-keyword">backend development</span>
-                      within a team of 40+ developers, with occasional front-end
-                      contributions.
-                    </li>
-                    <li>
-                      Developed and maintained integrations with third-party
-                      <span class="tech-keyword">APIs</span> such as
-                      Booking.com, Airbnb, and Vrbo.
-                    </li>
-                    <li>
-                      Investigated and resolved user-reported bugs, improving
-                      system <span class="tech-keyword">reliability</span> and
-                      user satisfaction.
-                    </li>
-                    <li>
-                      Diagnosed production issues using
-                      <span class="tech-keyword">Sentry</span> and
-                      <span class="tech-keyword">Datadog</span>.
-                    </li>
-                    <li>
-                      Executed bulk updates on
-                      <span class="tech-keyword">PostgreSQL</span> production
-                      databases with minimal downtime.
-                    </li>
-                    <li>
-                      Participated in code reviews, ensuring clean code
-                      practices and team collaboration.
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-
-            <!-- Wavecom - Updated with detailed information -->
-            <div class="mobile-card">
-              <div class="mobile-card-header">
-                <div class="mobile-date">
-                  <i class="far fa-calendar"></i>
-                  <span>Apr 2021 - Sep 2024</span>
-                </div>
-                <div class="mobile-location">
-                  <i class="fas fa-map-marker-alt"></i>
-                  <span>Aveiro, Portugal</span>
-                </div>
-              </div>
-              <div class="mobile-card-body">
-                <h3 class="mobile-title">Software Engineer</h3>
-                <div class="mobile-subtitle">
-                  <i class="far fa-building"></i>
-                  <span>Wavecom</span>
-                </div>
-
-                <div class="mobile-content">
-                  <ul>
-                    <li>
-                      Worked closely with clients to define and develop software
-                      features.
-                    </li>
-                    <li>
-                      Built
-                      <span class="tech-keyword">microservices</span> using
-                      <span class="tech-keyword">Python</span> and
-                      <span class="tech-keyword">Golang</span>; implemented
-                      <span class="tech-keyword">gRPC</span> and
-                      <span class="tech-keyword">Protocol Buffers</span> for
-                      inter-service communication.
-                    </li>
-                    <li>
-                      Designed and developed
-                      <span class="tech-keyword">REST APIs</span> for both
-                      <span class="tech-keyword">SQL</span> and
-                      <span class="tech-keyword">NoSQL</span> databases.
-                    </li>
-                    <li>
-                      Containerized applications using
-                      <span class="tech-keyword">Docker</span>; managed services
-                      with <span class="tech-keyword">Docker Compose</span>.
-                    </li>
-                    <li>
-                      Improved
-                      <span class="tech-keyword">Grafana</span> dashboard
-                      performance by optimizing database queries.
-                    </li>
-                    <li>
-                      Created <span class="tech-keyword">ETL</span> pipelines
-                      using <span class="tech-keyword">Telegraf</span> and
-                      performed data analysis with
-                      <span class="tech-keyword">Pandas</span>.
-                    </li>
-                    <li>
-                      Developed a monitoring system for
-                      <span class="tech-keyword"
-                        >High-Performance Computing (HPC)</span
-                      >
-                      environments using
-                      <span class="tech-keyword">Grafana</span>,
-                      <span class="tech-keyword">VictoriaMetrics</span>, and
-                      <span class="tech-keyword">Python</span>.
-                    </li>
-                    <li>
-                      Automated workflows with
-                      <span class="tech-keyword">Makefiles</span> and
-                      <span class="tech-keyword">Bash</span> scripts.
-                    </li>
-                    <li>
-                      Researched emerging technologies and built Proofs of
-                      Concept (PoCs).
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-
-            <!-- Education - Updated with bullet for thesis -->
-            <div class="mobile-card">
-              <div class="mobile-card-header">
-                <div class="mobile-date">
-                  <i class="far fa-calendar"></i>
-                  <span>2014 - 2020</span>
-                </div>
-                <div class="mobile-location">
-                  <i class="fas fa-map-marker-alt"></i>
-                  <span>Aveiro, Portugal</span>
-                </div>
-              </div>
-              <div class="mobile-card-body">
-                <h3 class="mobile-title">
-                  Master in Electronics/Telecommunications Engineering
-                </h3>
-                <div class="mobile-subtitle">
-                  <i class="fas fa-university"></i>
-                  <span>University of Aveiro</span>
-                </div>
-
-                <div class="mobile-thesis">
-                  <div class="mobile-thesis-title">
-                    Thesis: Recovery and Identification of Moments
-                  </div>
-                  <div class="mobile-thesis-grade">Grade: 19/20</div>
-                  <div class="mobile-content">
-                    <ul>
-                      <li>
-                        Development of a
-                        <span class="tech-keyword">Python</span> automatic image
-                        retrieval system capable of associating images to
-                        moments described in text.
-                      </li>
-                    </ul>
-                  </div>
-                </div>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      <section id="skills" class="skills section-padding">
+      <!-- Skills -->
+      <section id="skills">
         <div class="container">
-          <h2 class="section-title">Tech Skills</h2>
-          <div class="skills-container">
-            <div class="skills-category">
-              <h3>Programming</h3>
-              <div class="skills-grid">
-                <div class="skill-item">Python</div>
-                <div class="skill-item">Golang</div>
-                <div class="skill-item">JavaScript</div>
+          <h2 class="section-label">Skills</h2>
+          <div class="skills-grid">
+            <div class="skill-group">
+              <h3>Languages</h3>
+              <div class="tag-row">
+                <span>Python</span><span>Golang</span><span>JavaScript</span>
               </div>
             </div>
-
-            <div class="skills-category">
-              <h3>Web</h3>
-              <div class="skills-grid">
-                <div class="skill-item">HTML</div>
-                <div class="skill-item">CSS</div>
-                <div class="skill-item">REST APIs</div>
-              </div>
-            </div>
-
-            <div class="skills-category">
+            <div class="skill-group">
               <h3>Frameworks</h3>
-              <div class="skills-grid">
-                <div class="skill-item">Django</div>
-                <div class="skill-item">FastAPI</div>
-                <div class="skill-item">SQLAlchemy</div>
-                <div class="skill-item">Pandas</div>
+              <div class="tag-row">
+                <span>Django</span><span>FastAPI</span><span>SQLAlchemy</span><span>Pandas</span>
               </div>
             </div>
-
-            <div class="skills-category">
+            <div class="skill-group">
               <h3>Databases</h3>
-              <div class="skills-grid">
-                <div class="skill-item">PostgreSQL</div>
-                <div class="skill-item">VictoriaMetrics</div>
-                <div class="skill-item">Redis</div>
-                <div class="skill-item">SQL</div>
-                <div class="skill-item">NoSQL</div>
+              <div class="tag-row">
+                <span>PostgreSQL</span><span>Redis</span><span>VictoriaMetrics</span><span>SQL</span><span>NoSQL</span>
               </div>
             </div>
-
-            <div class="skills-category">
-              <h3>Monitoring & Logging</h3>
-              <div class="skills-grid">
-                <div class="skill-item">Grafana</div>
-                <div class="skill-item">Sentry</div>
-                <div class="skill-item">Telegraf</div>
+            <div class="skill-group">
+              <h3>Infrastructure</h3>
+              <div class="tag-row">
+                <span>Docker</span><span>Linux</span><span>RabbitMQ</span><span>gRPC</span>
               </div>
             </div>
-
-            <div class="skills-category">
-              <h3>Data Formats</h3>
-              <div class="skills-grid">
-                <div class="skill-item">JSON</div>
-                <div class="skill-item">CSV</div>
-                <div class="skill-item">YAML</div>
+            <div class="skill-group">
+              <h3>Observability</h3>
+              <div class="tag-row">
+                <span>Grafana</span><span>Sentry</span><span>Datadog</span><span>Telegraf</span>
               </div>
             </div>
-
-            <div class="skills-category">
-              <h3>Others</h3>
-              <div class="skills-grid">
-                <div class="skill-item">Docker</div>
-                <div class="skill-item">Git</div>
-                <div class="skill-item">Linux</div>
-                <div class="skill-item">Shell scripts</div>
-                <div class="skill-item">RabbitMQ</div>
+            <div class="skill-group">
+              <h3>Web &amp; APIs</h3>
+              <div class="tag-row">
+                <span>REST APIs</span><span>HTML</span><span>CSS</span>
+              </div>
+            </div>
+            <div class="skill-group">
+              <h3>Tooling</h3>
+              <div class="tag-row">
+                <span>Git</span><span>Shell scripts</span><span>JSON</span><span>YAML</span>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      <section id="projects" class="projects section-padding">
+      <!-- Projects -->
+      <section id="projects">
         <div class="container">
-          <h2 class="section-title">Projects</h2>
+          <h2 class="section-label">Projects</h2>
           <div class="projects-grid">
-            <div class="project-card animate-on-scroll fade-up">
-              <div class="project-image">
-                <h2>TaskMate</h2>
-              </div>
-              <div class="project-content">
-                <p class="project-description">
-                  A comprehensive task management application designed to help
-                  users organize their daily activities.
-                </p>
-                <div class="project-tech">
-                  <span>Python</span>
-                  <span>Django</span>
-                  <span>PostgreSQL</span>
-                </div>
+            <div class="project-card">
+              <div class="project-top">
+                <h3>TaskMate</h3>
                 <div class="project-links">
-                  <a
-                    href="https://github.com/jmbcs/taskmate"
-                    target="_blank"
-                    class="btn btn-sm"
-                  >
-                    <i class="fab fa-github"></i> GitHub
+                  <a href="https://github.com/jmbcs/taskmate" target="_blank" rel="noopener" aria-label="GitHub">
+                    <i class="fab fa-github"></i>
                   </a>
                 </div>
+              </div>
+              <p>A task management application for organizing daily activities.</p>
+              <div class="tag-row">
+                <span>Python</span><span>Django</span><span>PostgreSQL</span>
               </div>
             </div>
 
-            <div class="project-card animate-on-scroll fade-up">
-              <div class="project-image">
-                <h2>BigHPC</h2>
-              </div>
-              <div class="project-content">
-                <p class="project-description">
-                  A management software for HPC clusters, focused on monitoring
-                  and improving system performance.
-                </p>
-                <div class="project-tech">
-                  <span>Python</span>
-                  <span>Docker</span>
-                  <span>VictoriaMetrics</span>
-                  <span>Grafana</span>
-
-                </div>
+            <div class="project-card">
+              <div class="project-top">
+                <h3>BigHPC</h3>
                 <div class="project-links">
-                  <a
-                    href="https://www.youtube.com/watch?v=5gaiovo9DD0"
-                    target="_blank"
-                    class="btn btn-sm"
-                  >
-                    <i class="fab fa-youtube"></i> Video
+                  <a href="https://www.youtube.com/watch?v=5gaiovo9DD0" target="_blank" rel="noopener" aria-label="Video">
+                    <i class="fab fa-youtube"></i>
                   </a>
-                  <a
-                    href="https://bighpc.wavecom.pt/"
-                    target="_blank"
-                    class="btn btn-sm"
-                  >
-                    <i class="fas fa-globe"></i> Website
+                  <a href="https://bighpc.wavecom.pt/" target="_blank" rel="noopener" aria-label="Website">
+                    <i class="fas fa-arrow-up-right-from-square"></i>
                   </a>
                 </div>
+              </div>
+              <p>Management software for HPC clusters focused on monitoring and improving system performance.</p>
+              <div class="tag-row">
+                <span>Python</span><span>Docker</span><span>VictoriaMetrics</span><span>Grafana</span>
               </div>
             </div>
 
-            <div class="project-card animate-on-scroll fade-up">
-              <div class="project-image">
-                <h2>Portfolio</h2>
-              </div>
-              <div class="project-content">
-                <p class="project-description">
-                  Development of my portfolio website.
-                </p>
-                <div class="project-tech">
-                  <span>HTML</span>
-                  <span>CSS</span>
-                  <span>JavaScript</span>
-                </div>
+            <div class="project-card">
+              <div class="project-top">
+                <h3>Portfolio</h3>
                 <div class="project-links">
-                  <a
-                    href="https://github.com/jmbcs/portfolio"
-                    target="_blank"
-                    class="btn btn-sm"
-                  >
-                    <i class="fab fa-github"></i> GitHub
+                  <a href="https://github.com/jmbcs/portfolio" target="_blank" rel="noopener" aria-label="GitHub">
+                    <i class="fab fa-github"></i>
                   </a>
                 </div>
+              </div>
+              <p>This portfolio website, built with vanilla HTML, CSS, and JavaScript.</p>
+              <div class="tag-row">
+                <span>HTML</span><span>CSS</span><span>JavaScript</span>
               </div>
             </div>
 
-            <div class="project-card animate-on-scroll fade-up">
-              <div class="project-image">
-                <h2>RentalReady</h2>
-              </div>
-              <div class="project-content">
-                <p class="project-description">
-                  Streamline all aspects of property management and short-term
-                  rentals, maximising efficiency and enhancing guest
-                  experiences. Owned by GuestReady.
-                </p>
-                <div class="project-tech">
-                  <span>Python</span>
-                  <span>Django</span>
-                  <span>React</span>
-                  <span>Sentry</span>
-                  <span>Datadog</span>
-                  <span>RabbitMQ</span>
-                  <span>Celery</span>
-                  <span>Redis</span>
-                  <span>APIs</span>
-                  <span>PostgreSQL</span>
-                  <span>Docker</span>
-                  <span>AWS</span>
-                </div>
+            <div class="project-card">
+              <div class="project-top">
+                <h3>RentalReady</h3>
                 <div class="project-links">
-                  <a
-                    href="https://www.rentalready.com/"
-                    target="_blank"
-                    class="btn btn-sm"
-                  >
-                    <i class="fas fa-globe"></i> Website
+                  <a href="https://www.rentalready.com/" target="_blank" rel="noopener" aria-label="Website">
+                    <i class="fas fa-arrow-up-right-from-square"></i>
                   </a>
                 </div>
+              </div>
+              <p>Large-scale property management platform streamlining short-term rentals and maximising efficiency for thousands of properties.</p>
+              <div class="tag-row">
+                <span>Django</span><span>PostgreSQL</span><span>RabbitMQ</span><span>Redis</span><span>AWS</span>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      <section id="relevant-links" class="additional-info section-padding">
+      <!-- Additional Info -->
+      <section id="additional">
         <div class="container">
-          <h2 class="section-title">Additional Information</h2>
-          <div class="additional-info-container">
-            <div class="relevant-links-column">
-              <h3 class="skills-category">Relevant Links</h3>
-              <div class="relevant-links-container">
-                <div class="relevant-link-item">
-                  <i class="fas fa-link"></i>
-                  <span>BigHPC Project </span>
-                  <a
-                    href="https://bighpc.wavecom.pt/"
-                    target="_blank"
-                    class="btn btn-sm"
-                    >Visit Website</a
-                  >
-                </div>
-                <div class="relevant-link-item">
-                  <i class="fab fa-youtube"></i>
-                  <span>BigHPC Speaker </span>
-                  <a
-                    href="https://www.youtube.com/watch?v=5gaiovo9DD0"
-                    target="_blank"
-                    class="btn btn-sm"
-                    >Watch Video</a
-                  >
-                </div>
-                <div class="relevant-link-item">
-                  <i class="fas fa-graduation-cap"></i>
-                  <span>Thesis Link </span>
-                  <a
-                    href="https://ria.ua.pt/handle/10773/30553"
-                    target="_blank"
-                    class="btn btn-sm"
-                    >View Thesis</a
-                  >
-                </div>
-                <div class="relevant-link-item">
-                  <i class="fas fa-file-pdf"></i>
-                  <span>Thesis Paper </span>
-                  <a
-                    href="https://ceur-ws.org/Vol-2696/paper_91.pdf"
-                    target="_blank"
-                    class="btn btn-sm"
-                    >View Paper</a
-                  >
-                </div>
-              </div>
+          <h2 class="section-label">Additional</h2>
+          <div class="additional-grid">
+            <div>
+              <h3 class="sub-label">Relevant Links</h3>
+              <ul class="link-list">
+                <li>
+                  <a href="https://bighpc.wavecom.pt/" target="_blank" rel="noopener">
+                    BigHPC — Project Website
+                    <i class="fas fa-arrow-up-right-from-square"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.youtube.com/watch?v=5gaiovo9DD0" target="_blank" rel="noopener">
+                    BigHPC — Conference Talk
+                    <i class="fas fa-arrow-up-right-from-square"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://ria.ua.pt/handle/10773/30553" target="_blank" rel="noopener">
+                    Thesis — UA Repository
+                    <i class="fas fa-arrow-up-right-from-square"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://ceur-ws.org/Vol-2696/paper_91.pdf" target="_blank" rel="noopener">
+                    Thesis Paper — CEUR Proceedings
+                    <i class="fas fa-arrow-up-right-from-square"></i>
+                  </a>
+                </li>
+              </ul>
             </div>
-            <div class="languages-column">
-              <h3 class="skills-category">Languages</h3>
-              <div class="languages-container">
-                <div class="language-card">
-                  <div class="language-details">
-                    <h4>Portuguese</h4>
-                    <div class="language-level">
-                      <div class="level-indicator native">Native</div>
-                    </div>
-                  </div>
-                </div>
-                <div class="language-card">
-                  <div class="language-details">
-                    <h4>English</h4>
-                    <div class="language-level">
-                      <div class="level-indicator fluent">Fluent</div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+            <div>
+              <h3 class="sub-label">Languages</h3>
+              <ul class="lang-list">
+                <li>
+                  <span>Portuguese</span>
+                  <span class="lang-badge">Native</span>
+                </li>
+                <li>
+                  <span>English</span>
+                  <span class="lang-badge">Fluent</span>
+                </li>
+              </ul>
             </div>
           </div>
         </div>
       </section>
 
-      <section id="contact" class="section">
+      <!-- Contact -->
+      <section id="contact">
         <div class="container">
-          <h2 class="section-title">Contact Me</h2>
-          <div class="underline"></div>
-
-          <form
-            id="contact-form"
-            action="https://formspree.io/f/mleqnnpd"
-            method="POST"
-          >
-            <div class="form-row">
-              <div class="form-group">
-                <input
-                  type="text"
-                  name="name"
-                  id="name"
-                  placeholder="Your Name"
-                  required
-                />
+          <h2 class="section-label">Contact</h2>
+          <p class="contact-intro">Available for opportunities and collaborations.</p>
+          <div class="contact-grid">
+            <div class="contact-info">
+              <a href="mailto:julio.m.b.c.silva@gmail.com" class="contact-link">
+                <i class="fas fa-envelope"></i>
+                <span>julio.m.b.c.silva@gmail.com</span>
+              </a>
+              <a href="https://github.com/jmbcs" target="_blank" rel="noopener" class="contact-link">
+                <i class="fab fa-github"></i>
+                <span>github.com/jmbcs</span>
+              </a>
+              <a href="https://linkedin.com/in/julio-miguel-silva" target="_blank" rel="noopener" class="contact-link">
+                <i class="fab fa-linkedin"></i>
+                <span>linkedin.com/in/julio-miguel-silva</span>
+              </a>
+            </div>
+            <form id="contact-form">
+              <div class="form-row">
+                <input type="text" name="name" placeholder="Name" required autocomplete="name" />
+                <input type="email" name="email" placeholder="Email" required autocomplete="email" />
               </div>
-              <div class="form-group">
-                <input
-                  type="email"
-                  name="email"
-                  id="email"
-                  placeholder="Your Email"
-                  required
-                />
-              </div>
-            </div>
-            <div class="form-group">
-              <input
-                type="text"
-                name="subject"
-                id="subject"
-                placeholder="Subject"
-                required
-              />
-            </div>
-            <div class="form-group">
-              <textarea
-                name="message"
-                id="message"
-                rows="6"
-                placeholder="Your Message"
-                required
-              ></textarea>
-            </div>
-            <button type="submit" id="submit-btn" class="btn primary-btn">
-              <span class="btn-text">Send Message</span>
-              <div class="btn-loader"></div>
-            </button>
-          </form>
+              <textarea name="message" placeholder="Message" rows="5" required></textarea>
+              <button type="submit" id="submit-btn">
+                <span class="btn-text">Send message</span>
+              </button>
+            </form>
+          </div>
         </div>
       </section>
     </main>
 
     <footer>
       <div class="container">
-        <div class="footer-content">
-          <div class="footer-logo">
-            <h3>Júlio Silva</h3>
-            <p>Software Engineer</p>
+        <div class="footer-inner">
+          <span class="footer-name">Júlio Silva</span>
+          <div class="footer-socials">
+            <a href="https://github.com/jmbcs" target="_blank" rel="noopener" aria-label="GitHub">
+              <i class="fab fa-github"></i>
+            </a>
+            <a href="https://linkedin.com/in/julio-miguel-silva" target="_blank" rel="noopener" aria-label="LinkedIn">
+              <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="mailto:julio.m.b.c.silva@gmail.com" aria-label="Email">
+              <i class="fas fa-envelope"></i>
+            </a>
           </div>
-          <div class="footer-social">
-            <a href="https://github.com/jmbcs" target="_blank"
-              ><i class="fab fa-github"></i
-            ></a>
-            <a href="https://linkedin.com/in/julio-miguel-silva" target="_blank"
-              ><i class="fab fa-linkedin"></i
-            ></a>
-            <a href="mailto:julio.m.b.c.silva@gmail.com"
-              ><i class="fas fa-envelope"></i
-            ></a>
-          </div>
-        </div>
-        <div class="footer-message">
-          <p>Thanks for checking out my website!</p>
         </div>
       </div>
     </footer>
