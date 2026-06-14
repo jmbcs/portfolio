@@ -186,12 +186,21 @@ section[id] { scroll-margin-top: var(--nav-h); }
 }
 
 #nav.scrolled,
-#nav.menu-open {
+#nav.menu-open { border-bottom-color: var(--c-border); }
+
+/* Blur lives on a ::before layer, NOT on #nav itself — putting backdrop-filter
+   on #nav would make it the containing block for the fixed .nav-links overlay
+   and collapse the mobile menu. */
+#nav.scrolled::before,
+#nav.menu-open::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
   background: var(--c-bg);
   background: color-mix(in srgb, var(--c-bg) 82%, transparent);
   -webkit-backdrop-filter: blur(12px);
           backdrop-filter: blur(12px);
-  border-bottom-color: var(--c-border);
 }
 
 .nav-inner {
