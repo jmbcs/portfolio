@@ -259,6 +259,29 @@ section[id] { scroll-margin-top: var(--nav-h); }
 }
 .theme-toggle .icon { width: 17px; height: 17px; }
 
+.lang-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 38px;
+  padding: 0 10px;
+  background: transparent;
+  border: 1px solid var(--c-border);
+  border-radius: var(--r-sm);
+  color: var(--c-muted);
+  cursor: pointer;
+  font-family: var(--font-mono);
+  font-size: var(--fs-sm);
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  transition: color var(--dur), border-color var(--dur), background var(--dur);
+}
+.lang-toggle:hover {
+  color: var(--c-text);
+  border-color: var(--c-border-strong);
+  background: var(--c-surface);
+}
+
 .nav-toggle {
   display: none;
   flex-direction: column;

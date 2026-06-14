@@ -11,9 +11,10 @@
     <meta name="author" content="Júlio Silva" />
     <meta name="theme-color" content="#0a0a0b" />
 
-    <!-- Set theme before paint to avoid flash -->
+    <!-- Set theme + language before paint to avoid flash -->
     <script>
       document.documentElement.setAttribute('data-theme', localStorage.getItem('theme') || 'dark')
+      document.documentElement.setAttribute('lang', localStorage.getItem('lang') || 'en')
     </script>
 
     <!-- Canonical & social -->
@@ -28,6 +29,7 @@
     <meta property="og:image" content="https://jmbcs.github.io/portfolio/imgs/profile.jpg" />
     <meta property="og:image:alt" content="Júlio Silva" />
     <meta property="og:locale" content="en_US" />
+    <meta property="og:locale:alternate" content="pt_PT" />
     <meta property="profile:first_name" content="Júlio" />
     <meta property="profile:last_name" content="Silva" />
     <meta name="twitter:card" content="summary" />
@@ -78,7 +80,7 @@
     </script>
   </head>
   <body>
-    <a href="#main" class="skip-link">Skip to content</a>
+    <a href="#main" class="skip-link" data-i18n="skip">Skip to content</a>
 
     <!-- Icon sprite (inline SVG; replaces Font Awesome) -->
     <svg class="sprite" aria-hidden="true" focusable="false" width="0" height="0">
@@ -113,13 +115,14 @@
       <div class="nav-inner">
         <a href="#hero" class="nav-logo" aria-label="Home">js<span class="accent">_</span></a>
         <ul class="nav-links">
-          <li><a href="#about">about</a></li>
-          <li><a href="#experience">experience</a></li>
-          <li><a href="#skills">skills</a></li>
-          <li><a href="#projects">projects</a></li>
-          <li><a href="#contact">contact</a></li>
+          <li><a href="#about" data-i18n="nav_about">about</a></li>
+          <li><a href="#experience" data-i18n="nav_experience">experience</a></li>
+          <li><a href="#skills" data-i18n="nav_skills">skills</a></li>
+          <li><a href="#projects" data-i18n="nav_projects">projects</a></li>
+          <li><a href="#contact" data-i18n="nav_contact">contact</a></li>
         </ul>
         <div class="nav-actions">
+          <button class="lang-toggle" aria-label="Mudar para Português" data-lang-toggle>PT</button>
           <button class="theme-toggle" aria-label="Toggle theme" aria-pressed="true">
             <svg class="icon" aria-hidden="true"><use href="#i-sun" /></svg>
           </button>
@@ -136,21 +139,21 @@
       <!-- Hero -->
       <section id="hero">
         <div class="container">
-          <p class="hero-label">~/ backend-engineer<span class="caret" aria-hidden="true"></span></p>
+          <p class="hero-label"><span data-i18n="hero_label">~/ backend-engineer</span><span class="caret" aria-hidden="true"></span></p>
           <h1>Júlio Silva</h1>
-          <p class="hero-desc">
+          <p class="hero-desc" data-i18n="hero_desc">
             I build production-grade backend systems — REST APIs, OTA channel integrations, and
             distributed event pipelines that keep thousands of short-term rental properties in
             sync across Booking.com, Airbnb, and Vrbo. Python and Django.
           </p>
           <div class="hero-cta">
-            <a href="#contact" class="btn btn-primary">get in touch</a>
+            <a href="#contact" class="btn btn-primary" data-i18n="cta_contact">get in touch</a>
             <a
               href="https://github.com/jmbcs/curriculum/blob/main/output/CV_JULIO_SILVA.pdf"
               target="_blank"
               rel="noopener"
               class="btn btn-ghost"
-              >view cv <span class="arrow" aria-hidden="true">→</span></a
+              ><span data-i18n="cta_cv">view cv</span> <span class="arrow" aria-hidden="true">→</span></a
             >
           </div>
           <div class="hero-socials">
@@ -170,20 +173,20 @@
       <!-- About -->
       <section id="about">
         <div class="container">
-          <h2 class="section-label"><span class="idx">01</span> about</h2>
+          <h2 class="section-label"><span class="idx">01</span> <span data-i18n="sec_about">about</span></h2>
           <div class="about-grid">
             <div class="about-photo">
               <img src="imgs/profile.jpg" alt="Júlio Silva" width="779" height="1038" />
               <span class="photo-caption">profile.jpg</span>
             </div>
             <div class="about-text">
-              <p>
+              <p data-i18n="about_p1">
                 Backend engineer with six years of production experience, focused on API design,
                 distributed systems, and performance-critical services — the kind that stay
                 reliable under load, integrate cleanly with external systems, and remain
                 maintainable as they scale.
               </p>
-              <p>
+              <p data-i18n="about_p2">
                 Currently at GuestReady / RentalReady, building integration and pricing features
                 for a Django-based property management platform that orchestrates availability,
                 rates, and channel distribution for thousands of properties across Booking.com,
@@ -191,23 +194,23 @@
                 built real-time monitoring infrastructure for HPC clusters, and delivered ETL
                 pipelines from greenfield to production.
               </p>
-              <p>
+              <p data-i18n="about_p3">
                 I care about the hard parts — data consistency, service boundaries, database
                 performance, and clean API contracts — and I write code every day, using AI tools
                 like Claude Code and Cursor to move faster without losing the thread.
               </p>
               <dl class="about-details">
                 <div>
-                  <dt>location</dt>
+                  <dt data-i18n="about_loc_label">location</dt>
                   <dd>Viseu, Portugal</dd>
                 </div>
                 <div>
-                  <dt>role</dt>
-                  <dd>Backend Engineer @ GuestReady / RentalReady</dd>
+                  <dt data-i18n="about_role_label">role</dt>
+                  <dd data-i18n="about_role_val">Backend Engineer @ GuestReady / RentalReady</dd>
                 </div>
                 <div>
-                  <dt>education</dt>
-                  <dd>M.Sc Electronics &amp; Telecommunications, University of Aveiro</dd>
+                  <dt data-i18n="about_edu_label">education</dt>
+                  <dd data-i18n="about_edu_val">M.Sc Electronics &amp; Telecommunications, University of Aveiro</dd>
                 </div>
               </dl>
             </div>
@@ -218,27 +221,27 @@
       <!-- Experience -->
       <section id="experience">
         <div class="container">
-          <h2 class="section-label"><span class="idx">02</span> experience</h2>
+          <h2 class="section-label"><span class="idx">02</span> <span data-i18n="sec_experience">experience</span></h2>
           <div class="timeline">
             <div class="timeline-item">
               <div class="timeline-meta">
-                <span class="timeline-period">Oct 2024 — Present</span>
-                <span class="timeline-loc">Remote</span>
+                <span class="timeline-period" data-i18n="exp1_period">Oct 2024 — Present</span>
+                <span class="timeline-loc" data-i18n="exp1_loc">Remote</span>
               </div>
               <div class="timeline-body">
-                <h3>Backend Engineer</h3>
+                <h3 data-i18n="exp1_role">Backend Engineer</h3>
                 <p class="timeline-org">GuestReady / RentalReady</p>
                 <ul>
-                  <li>Built and maintained live channel integrations with Booking.com, Airbnb, and Vrbo — real-time sync of availability, rates, and reservations for thousands of short-term rental properties</li>
-                  <li>Delivered promotions features connecting GuestReady to Airbnb, Vrbo, and Booking.com, enabling dynamic discount campaigns across OTA channels</li>
-                  <li>Built scheduled and recurring background tasks with Celery to automate time-based workflows — for example, activating promotions when a property goes live</li>
-                  <li>Built a Redis hash-based deduplication layer that prevents reprocessing of stale events, cutting redundant work in the channel pipeline</li>
-                  <li>Implemented New Relic monitoring alarms for proactive production observability and faster incident response</li>
-                  <li>Triaged production incidents with Sentry and Datadog; ran zero-downtime bulk operations on large PostgreSQL tables</li>
-                  <li>Maintained engineering quality through code review on a distributed team of 40+ engineers</li>
-                  <li>Mentored junior developers, sharing backend best practices through code review and pairing</li>
-                  <li>Delivered frontend work alongside backend, including a full revamp of the Amenities page</li>
-                  <li>Accelerated delivery with AI coding tools (Claude Code, Cursor)</li>
+                  <li data-i18n="exp1_b1">Built and maintained live channel integrations with Booking.com, Airbnb, and Vrbo — real-time sync of availability, rates, and reservations for thousands of short-term rental properties</li>
+                  <li data-i18n="exp1_b2">Delivered promotions features connecting GuestReady to Airbnb, Vrbo, and Booking.com, enabling dynamic discount campaigns across OTA channels</li>
+                  <li data-i18n="exp1_b3">Built scheduled and recurring background tasks with Celery to automate time-based workflows — for example, activating promotions when a property goes live</li>
+                  <li data-i18n="exp1_b4">Built a Redis hash-based deduplication layer that prevents reprocessing of stale events, cutting redundant work in the channel pipeline</li>
+                  <li data-i18n="exp1_b5">Implemented New Relic monitoring alarms for proactive production observability and faster incident response</li>
+                  <li data-i18n="exp1_b6">Triaged production incidents with Sentry and Datadog; ran zero-downtime bulk operations on large PostgreSQL tables</li>
+                  <li data-i18n="exp1_b7">Maintained engineering quality through code review on a distributed team of 40+ engineers</li>
+                  <li data-i18n="exp1_b8">Mentored junior developers, sharing backend best practices through code review and pairing</li>
+                  <li data-i18n="exp1_b9">Delivered frontend work alongside backend, including a full revamp of the Amenities page</li>
+                  <li data-i18n="exp1_b10">Accelerated delivery with AI coding tools (Claude Code, Cursor)</li>
                 </ul>
                 <div class="tag-row">
                   <span>Django</span><span>PostgreSQL</span><span>Redis</span><span>Celery</span><span>Sentry</span><span>Datadog</span><span>New Relic</span><span>REST APIs</span>
@@ -248,18 +251,18 @@
 
             <div class="timeline-item">
               <div class="timeline-meta">
-                <span class="timeline-period">Jan 2021 — Oct 2024</span>
-                <span class="timeline-loc">Aveiro, PT (Hybrid)</span>
+                <span class="timeline-period" data-i18n="exp2_period">Jan 2021 — Oct 2024</span>
+                <span class="timeline-loc" data-i18n="exp2_loc">Aveiro, PT (Hybrid)</span>
               </div>
               <div class="timeline-body">
-                <h3>Software Engineer</h3>
+                <h3 data-i18n="exp2_role">Software Engineer</h3>
                 <p class="timeline-org">Wavecom</p>
                 <ul>
-                  <li>Designed and built microservices in Python and Go, using gRPC and Protocol Buffers for typed inter-service communication</li>
-                  <li>Built REST APIs backed by SQL and NoSQL stores; containerized all services with Docker and Docker Compose</li>
-                  <li>Architected a real-time monitoring platform for HPC clusters using Grafana and VictoriaMetrics as the time-series backend</li>
-                  <li>Built ETL pipelines with Telegraf and Pandas to process, aggregate, and analyze infrastructure telemetry at scale</li>
-                  <li>Automated build and deployment workflows with Makefiles and Bash; evaluated technologies through research and PoCs</li>
+                  <li data-i18n="exp2_b1">Designed and built microservices in Python and Go, using gRPC and Protocol Buffers for typed inter-service communication</li>
+                  <li data-i18n="exp2_b2">Built REST APIs backed by SQL and NoSQL stores; containerized all services with Docker and Docker Compose</li>
+                  <li data-i18n="exp2_b3">Architected a real-time monitoring platform for HPC clusters using Grafana and VictoriaMetrics as the time-series backend</li>
+                  <li data-i18n="exp2_b4">Built ETL pipelines with Telegraf and Pandas to process, aggregate, and analyze infrastructure telemetry at scale</li>
+                  <li data-i18n="exp2_b5">Automated build and deployment workflows with Makefiles and Bash; evaluated technologies through research and PoCs</li>
                 </ul>
                 <div class="tag-row">
                   <span>Python</span><span>Golang</span><span>gRPC</span><span>Docker</span><span>Grafana</span><span>VictoriaMetrics</span>
@@ -269,17 +272,17 @@
 
             <div class="timeline-item">
               <div class="timeline-meta">
-                <span class="timeline-period">2014 — 2020</span>
-                <span class="timeline-loc">Aveiro, PT</span>
+                <span class="timeline-period" data-i18n="edu_period">2014 — 2020</span>
+                <span class="timeline-loc" data-i18n="edu_loc">Aveiro, PT</span>
               </div>
               <div class="timeline-body">
-                <h3>M.Sc Electronics &amp; Telecommunications Engineering</h3>
+                <h3 data-i18n="edu_role">M.Sc Electronics &amp; Telecommunications Engineering</h3>
                 <p class="timeline-org">University of Aveiro</p>
-                <p class="timeline-note">
+                <p class="timeline-note" data-i18n-html="edu_note">
                   <strong>Thesis:</strong> Recovery and Identification of Moments — Grade: 19/20
                 </p>
                 <ul>
-                  <li>Developed a Python image retrieval system associating images to moments described in natural language text</li>
+                  <li data-i18n="edu_b1">Developed a Python image retrieval system associating images to moments described in natural language text</li>
                 </ul>
               </div>
             </div>
@@ -290,53 +293,53 @@
       <!-- Skills -->
       <section id="skills">
         <div class="container">
-          <h2 class="section-label"><span class="idx">03</span> skills</h2>
-          <p class="section-note">Core stack <span class="primary-marker">highlighted</span>.</p>
+          <h2 class="section-label"><span class="idx">03</span> <span data-i18n="sec_skills">skills</span></h2>
+          <p class="section-note" data-i18n-html="skills_note">Core stack <span class="primary-marker">highlighted</span>.</p>
           <div class="skills-grid">
             <div class="skill-group">
-              <h3>Languages</h3>
+              <h3 data-i18n="sk_languages">Languages</h3>
               <div class="tag-row">
                 <span class="primary">Python</span><span class="primary">SQL</span><span>JavaScript</span><span>React</span><span>HTML</span>
               </div>
             </div>
             <div class="skill-group">
-              <h3>Frameworks</h3>
+              <h3 data-i18n="sk_frameworks">Frameworks</h3>
               <div class="tag-row">
                 <span class="primary">Django</span><span class="primary">FastAPI</span><span>SQLAlchemy</span><span>Pandas</span>
               </div>
             </div>
             <div class="skill-group">
-              <h3>Databases</h3>
+              <h3 data-i18n="sk_databases">Databases</h3>
               <div class="tag-row">
                 <span class="primary">PostgreSQL</span><span class="primary">Redis</span><span>VictoriaMetrics</span>
               </div>
             </div>
             <div class="skill-group">
-              <h3>APIs &amp; Messaging</h3>
+              <h3 data-i18n="sk_apis">APIs &amp; Messaging</h3>
               <div class="tag-row">
                 <span class="primary">REST</span><span>gRPC</span><span class="primary">RabbitMQ</span><span class="primary">Celery</span><span>Protocol Buffers</span>
               </div>
             </div>
             <div class="skill-group">
-              <h3>Infrastructure</h3>
+              <h3 data-i18n="sk_infra">Infrastructure</h3>
               <div class="tag-row">
                 <span class="primary">Docker</span><span class="primary">Linux</span><span>AWS</span><span>Qovery</span>
               </div>
             </div>
             <div class="skill-group">
-              <h3>Observability</h3>
+              <h3 data-i18n="sk_observability">Observability</h3>
               <div class="tag-row">
                 <span>Grafana</span><span class="primary">Sentry</span><span>Datadog</span><span class="primary">New Relic</span><span>Telegraf</span>
               </div>
             </div>
             <div class="skill-group">
-              <h3>Tooling</h3>
+              <h3 data-i18n="sk_tooling">Tooling</h3>
               <div class="tag-row">
                 <span class="primary">Git</span><span>Bash</span><span>Make</span><span>YAML</span>
               </div>
             </div>
             <div class="skill-group">
-              <h3>AI Tooling</h3>
+              <h3 data-i18n="sk_ai">AI Tooling</h3>
               <div class="tag-row">
                 <span class="primary">Claude Code</span><span>Cursor</span>
               </div>
@@ -348,7 +351,7 @@
       <!-- Projects -->
       <section id="projects">
         <div class="container">
-          <h2 class="section-label"><span class="idx">04</span> projects</h2>
+          <h2 class="section-label"><span class="idx">04</span> <span data-i18n="sec_projects">projects</span></h2>
           <div class="projects-grid">
             <div class="project-card">
               <div class="project-top">
@@ -359,7 +362,7 @@
                   </a>
                 </div>
               </div>
-              <p>Task management app built with Django and PostgreSQL. REST API design with structured data modeling and a maintainable backend architecture.</p>
+              <p data-i18n="proj1_desc">Task management app built with Django and PostgreSQL. REST API design with structured data modeling and a maintainable backend architecture.</p>
               <div class="tag-row">
                 <span>Python</span><span>Django</span><span>PostgreSQL</span>
               </div>
@@ -374,7 +377,7 @@
                   </a>
                 </div>
               </div>
-              <p>Because someone has to be held accountable. Log production incidents, name the culprit, and watch the shame leaderboard do the rest.</p>
+              <p data-i18n="proj2_desc">Because someone has to be held accountable. Log production incidents, name the culprit, and watch the shame leaderboard do the rest.</p>
               <div class="tag-row">
                 <span>Python</span><span>FastAPI</span><span>HTMX</span><span>SQLite</span>
               </div>
@@ -392,7 +395,7 @@
                   </a>
                 </div>
               </div>
-              <p>Real-time monitoring platform for HPC clusters. Aggregates metrics from distributed compute nodes using Python collectors, VictoriaMetrics as the time-series backend, and Grafana for visualization.</p>
+              <p data-i18n="proj3_desc">Real-time monitoring platform for HPC clusters. Aggregates metrics from distributed compute nodes using Python collectors, VictoriaMetrics as the time-series backend, and Grafana for visualization.</p>
               <div class="tag-row">
                 <span>Python</span><span>Docker</span><span>VictoriaMetrics</span><span>Grafana</span>
               </div>
@@ -407,7 +410,7 @@
                   </a>
                 </div>
               </div>
-              <p>This site — built without frameworks as a static page with vanilla HTML, CSS, and JavaScript.</p>
+              <p data-i18n="proj4_desc">This site — built without frameworks as a static page with vanilla HTML, CSS, and JavaScript.</p>
               <div class="tag-row">
                 <span>HTML</span><span>CSS</span><span>JavaScript</span>
               </div>
@@ -422,7 +425,7 @@
                   </a>
                 </div>
               </div>
-              <p>Enterprise PMS for short-term rentals. Backend powered by Django, PostgreSQL, RabbitMQ, and Redis — managing multi-channel distribution across global OTA platforms at scale.</p>
+              <p data-i18n="proj5_desc">Enterprise PMS for short-term rentals. Backend powered by Django, PostgreSQL, RabbitMQ, and Redis — managing multi-channel distribution across global OTA platforms at scale.</p>
               <div class="tag-row">
                 <span>Django</span><span>PostgreSQL</span><span>RabbitMQ</span><span>Redis</span><span>AWS</span>
               </div>
@@ -434,47 +437,47 @@
       <!-- Additional Info -->
       <section id="additional">
         <div class="container">
-          <h2 class="section-label"><span class="idx">05</span> additional</h2>
+          <h2 class="section-label"><span class="idx">05</span> <span data-i18n="sec_additional">additional</span></h2>
           <div class="additional-grid">
             <div>
-              <h3 class="sub-label">Relevant Links</h3>
+              <h3 class="sub-label" data-i18n="add_links_label">Relevant Links</h3>
               <ul class="link-list">
                 <li>
                   <a href="https://bighpc.wavecom.pt/" target="_blank" rel="noopener">
-                    BigHPC — Project Website
+                    <span data-i18n="link_bighpc_site">BigHPC — Project Website</span>
                     <svg class="icon" aria-hidden="true"><use href="#i-external" /></svg>
                   </a>
                 </li>
                 <li>
                   <a href="https://www.youtube.com/watch?v=5gaiovo9DD0" target="_blank" rel="noopener">
-                    BigHPC — Conference Talk
+                    <span data-i18n="link_bighpc_talk">BigHPC — Conference Talk</span>
                     <svg class="icon" aria-hidden="true"><use href="#i-external" /></svg>
                   </a>
                 </li>
                 <li>
                   <a href="https://ria.ua.pt/handle/10773/30553" target="_blank" rel="noopener">
-                    Thesis — UA Repository
+                    <span data-i18n="link_thesis">Thesis — UA Repository</span>
                     <svg class="icon" aria-hidden="true"><use href="#i-external" /></svg>
                   </a>
                 </li>
                 <li>
                   <a href="https://ceur-ws.org/Vol-2696/paper_91.pdf" target="_blank" rel="noopener">
-                    Thesis Paper — CEUR Proceedings
+                    <span data-i18n="link_thesis_paper">Thesis Paper — CEUR Proceedings</span>
                     <svg class="icon" aria-hidden="true"><use href="#i-external" /></svg>
                   </a>
                 </li>
               </ul>
             </div>
             <div>
-              <h3 class="sub-label">Languages</h3>
+              <h3 class="sub-label" data-i18n="add_languages_label">Languages</h3>
               <ul class="lang-list">
                 <li>
-                  <span>Portuguese</span>
-                  <span class="lang-badge">Native</span>
+                  <span data-i18n="lang_pt">Portuguese</span>
+                  <span class="lang-badge" data-i18n="lang_pt_badge">Native</span>
                 </li>
                 <li>
-                  <span>English</span>
-                  <span class="lang-badge">Fluent</span>
+                  <span data-i18n="lang_en">English</span>
+                  <span class="lang-badge" data-i18n="lang_en_badge">Fluent</span>
                 </li>
               </ul>
             </div>
@@ -485,8 +488,8 @@
       <!-- Contact -->
       <section id="contact">
         <div class="container">
-          <h2 class="section-label"><span class="idx">06</span> contact</h2>
-          <p class="contact-intro">
+          <h2 class="section-label"><span class="idx">06</span> <span data-i18n="sec_contact">contact</span></h2>
+          <p class="contact-intro" data-i18n="contact_intro">
             Open to backend and full-stack engineering roles. Based in Portugal — fully remote.
           </p>
           <div class="contact-grid">
@@ -507,18 +510,18 @@
             <form id="contact-form">
               <div class="form-row">
                 <div class="field">
-                  <label for="name" class="sr-only">Name</label>
-                  <input id="name" type="text" name="name" placeholder="Name" required autocomplete="name" />
+                  <label for="name" class="sr-only" data-i18n="form_name">Name</label>
+                  <input id="name" type="text" name="name" placeholder="Name" required autocomplete="name" data-i18n-ph="form_name" />
                 </div>
                 <div class="field">
-                  <label for="email" class="sr-only">Email</label>
-                  <input id="email" type="email" name="email" placeholder="Email" required autocomplete="email" />
+                  <label for="email" class="sr-only" data-i18n="form_email">Email</label>
+                  <input id="email" type="email" name="email" placeholder="Email" required autocomplete="email" data-i18n-ph="form_email" />
                 </div>
               </div>
-              <label for="message" class="sr-only">Message</label>
-              <textarea id="message" name="message" placeholder="Message" rows="5" required></textarea>
+              <label for="message" class="sr-only" data-i18n="form_message">Message</label>
+              <textarea id="message" name="message" placeholder="Message" rows="5" required data-i18n-ph="form_message"></textarea>
               <button type="submit" id="submit-btn">
-                <span class="btn-text">send message</span>
+                <span class="btn-text" data-i18n="btn_send">send message</span>
               </button>
             </form>
           </div>
@@ -530,7 +533,7 @@
       <div class="container">
         <div class="footer-inner">
           <span class="footer-name">© 2026 Júlio Silva</span>
-          <span class="footer-built">built with vanilla html · css · js</span>
+          <span class="footer-built" data-i18n="footer_built">built with vanilla html · css · js</span>
           <div class="footer-socials">
             <a href="https://github.com/jmbcs" target="_blank" rel="noopener" aria-label="GitHub">
               <svg class="icon" aria-hidden="true"><use href="#i-github" /></svg>
