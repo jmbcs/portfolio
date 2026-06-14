@@ -1,75 +1,59 @@
-# Júlio Silva - Portfolio Website
+# Júlio Silva — Portfolio
 
-A professional portfolio website showcasing my skills, experience, and projects as a Software Engineer.
+A personal portfolio site showcasing my skills, experience, and projects as a Backend Engineer.
+Single static page, built with vanilla HTML, CSS, and JavaScript — no frameworks, no build step.
+
+Live: https://jmbcs.github.io/portfolio/
 
 ## Features
 
-- **Responsive Design**: Works on all devices and screen sizes
-- **Light/Dark Mode**: Toggle between light and dark themes
-- **Animations**: Smooth animations when scrolling and opening the website
-- **Type Animation**: Dynamic text typing effect in the hero section
-- **Interactive Elements**: Hover effects and interactive components
-- **Contact Form**: Fully functional contact form
-- **Modern UI**: Clean and professional interface
+- **Technical/terminal aesthetic**: monospace accents, precise grid, dark-first palette with a single blue accent
+- **Light/dark mode**: persisted to `localStorage`, applied before first paint (no flash)
+- **Responsive**: mobile-first, works across phone, tablet, and desktop
+- **Tasteful animations**: staggered scroll reveals, hover lifts; fully disabled under `prefers-reduced-motion`
+- **Accessible**: keyboard focus indicators, skip link, labelled form fields, ARIA on icon-only controls
+- **SEO ready**: Open Graph / Twitter Card metadata, canonical URL, and `Person` JSON-LD structured data
+- **Contact form**: submits to Formspree with inline success/error states
 
-## Technologies Used
+## Technologies
 
 - HTML5
-- CSS3
-- JavaScript (Vanilla)
-- Font Awesome (for icons)
-- Google Fonts
+- CSS3 (custom properties, Grid, Flexbox)
+- Vanilla JavaScript (IntersectionObserver, `requestAnimationFrame`-throttled scroll)
+- Inline SVG icons (no icon-font dependency)
+- Google Fonts — Inter (body) and JetBrains Mono (accents)
 
 ## Sections
 
-1. **Home**: Introduction with animated typing text
-2. **About**: Personal information and interests
-3. **Experience**: Work history with timeline
-4. **Skills**: Technical skills organized by category
-5. **Projects**: Featured projects with descriptions and links
-6. **Education**: Academic background and relevant links
-7. **Languages**: Language proficiency with progress bars
-8. **Contact**: Contact information and form
+1. **Hero** — intro and primary calls to action
+2. **About** — background and key details
+3. **Experience** — work history as a timeline
+4. **Skills** — technical skills by category (core stack highlighted)
+5. **Projects** — selected projects with links
+6. **Additional** — relevant links and languages
+7. **Contact** — direct links and a contact form
 
-## Setup and Installation
+## Run locally
 
-1. Clone the repository:
-   ```
-   git clone https://github.com/jmbcs/portfolio.git
-   ```
-
-2. Navigate to the project directory:
-   ```
-   cd portfolio
-   ```
-
-3. Open `index.html` in your browser or use a local server:
-   ```
-   python -m http.server
-   ```
+```bash
+git clone https://github.com/jmbcs/portfolio.git
+cd portfolio
+python -m http.server 8000
+# open http://localhost:8000
+```
 
 ## Customization
 
-To customize the portfolio for your own use:
-
-1. Replace personal information in `index.html`
-2. Update project details and images
-3. Modify the color scheme in `styles.css` by changing the CSS variables
-4. Adjust animations and effects in `script.js` as needed
-
-## Development
-
-- The website is built with vanilla JavaScript for optimal performance
-- CSS variables are used for consistent theming
-- Responsive design implemented with CSS Grid and Flexbox
-- Animations are created using CSS transitions and keyframes
+- Content and metadata: `index.html` (including the `<head>` SEO/OG tags and JSON-LD)
+- Theme tokens (colors, spacing, type scale): the `:root` / `[data-theme="dark"]` blocks in `styles.css`
+- Behavior (theme toggle, nav, reveals, form): `script.js`
 
 ## License
 
-This project is open source and available under the [MIT License](LICENSE).
+Open source under the [MIT License](LICENSE).
 
 ## Contact
 
-Júlio Silva - [julio.m.b.c.silva@gmail.com](mailto:julio.m.b.c.silva@gmail.com)
+Júlio Silva — [julio.m.b.c.silva@gmail.com](mailto:julio.m.b.c.silva@gmail.com)
 
-Project Link: [https://github.com/jmbcs/portfolio](https://github.com/jmbcs/portfolio)
+Project link: [https://github.com/jmbcs/portfolio](https://github.com/jmbcs/portfolio)
