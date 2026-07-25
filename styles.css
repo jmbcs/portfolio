@@ -454,6 +454,7 @@ section[id] { scroll-margin-top: var(--nav-h); }
 }
 
 .about-photo { position: relative; width: max-content; }
+.about-photo picture { display: block; }
 .about-photo img {
   width: 240px;
   height: 300px;
