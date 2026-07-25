@@ -878,8 +878,10 @@ footer {
     gap: var(--sp-2);
     background: var(--c-bg);
     opacity: 0;
+    /* visibility, not just opacity — keeps closed links out of the tab order */
+    visibility: hidden;
     pointer-events: none;
-    transition: opacity 300ms var(--ease);
+    transition: opacity 300ms var(--ease), visibility 300ms var(--ease);
     z-index: 99;
   }
   .nav-links li {
@@ -892,7 +894,7 @@ footer {
     padding: var(--sp-3) var(--sp-5);
     display: block;
   }
-  #nav.menu-open .nav-links { opacity: 1; pointer-events: auto; }
+  #nav.menu-open .nav-links { opacity: 1; visibility: visible; pointer-events: auto; }
   #nav.menu-open .nav-links li { opacity: 1; transform: none; }
   #nav.menu-open .nav-links li:nth-child(1) { transition-delay: 60ms; }
   #nav.menu-open .nav-links li:nth-child(2) { transition-delay: 120ms; }

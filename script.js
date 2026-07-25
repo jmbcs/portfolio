@@ -137,6 +137,11 @@ document.addEventListener('DOMContentLoaded', () => {
   // ── Theme ────────────────────────────────────────────────────────────────
   const themeToggle = document.querySelector('.theme-toggle');
   const themeIcon = themeToggle.querySelector('use');
+  const themeMeta = document.querySelector('meta[name="theme-color"]');
+
+  function cssVar(name) {
+    return getComputedStyle(document.documentElement).getPropertyValue(name).trim();
+  }
 
   function setTheme(theme) {
     const dark = theme === 'dark';
@@ -144,6 +149,7 @@ document.addEventListener('DOMContentLoaded', () => {
     localStorage.setItem('theme', theme);
     themeIcon.setAttribute('href', dark ? '#i-sun' : '#i-moon');
     themeToggle.setAttribute('aria-pressed', String(dark));
+    themeMeta.setAttribute('content', cssVar('--c-bg'));
   }
 
   setTheme(localStorage.getItem('theme') || 'dark');
@@ -241,6 +247,19 @@ document.addEventListener('DOMContentLoaded', () => {
     const open = nav.classList.toggle('menu-open');
     navToggle.setAttribute('aria-expanded', String(open));
     document.body.style.overflow = open ? 'hidden' : '';
+    if (open) navLinks[0].focus();
+  });
+
+  document.addEventListener('keydown', e => {
+    if (e.key !== 'Escape' || !nav.classList.contains('menu-open')) return;
+    closeMenu();
+    navToggle.focus();
+  });
+
+  // Leaving the mobile breakpoint hides the toggle — without this the open
+  // menu would leave the body scroll-locked with no way to unlock it.
+  window.matchMedia('(max-width: 680px)').addEventListener('change', e => {
+    if (!e.matches) closeMenu();
   });
 
   // ── Smooth scroll ──────────────────────────────────────────────────────────
@@ -253,7 +272,7 @@ document.addEventListener('DOMContentLoaded', () => {
       e.preventDefault();
       closeMenu();
       window.scrollTo({
-        top: target.offsetTop - 64,
+        top: target.offsetTop - parseInt(cssVar('--nav-h'), 10),
         behavior: prefersReducedMotion ? 'auto' : 'smooth',
       });
     });
@@ -296,6 +315,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
   revealTargets.forEach(el => revealObserver.observe(el));
 
+  document.getElementById('year').textContent = new Date().getFullYear();
+
   // ── Contact form ───────────────────────────────────────────────────────────
   const form = document.getElementById('contact-form');
   const submitBtn = document.getElementById('submit-btn');
@@ -307,14 +328,12 @@ document.addEventListener('DOMContentLoaded', () => {
     btnText.textContent = t('form_sending');
 
     try {
-      const res = await Promise.race([
-        fetch('https://formspree.io/f/mleqnnpd', {
-          method: 'POST',
-          body: new FormData(form),
-          headers: { Accept: 'application/json' },
-        }),
-        new Promise((_, rej) => setTimeout(() => rej(new Error('timeout')), 10_000)),
-      ]);
+      const res = await fetch('https://formspree.io/f/mleqnnpd', {
+        method: 'POST',
+        body: new FormData(form),
+        headers: { Accept: 'application/json' },
+        signal: AbortSignal.timeout(10_000),
+      });
 
       if (!res.ok) throw new Error('error');
       submitBtn.classList.add('success');
