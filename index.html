@@ -14,11 +14,15 @@
     <!-- Set theme + language before paint to avoid flash -->
     <script>
       document.documentElement.setAttribute('data-theme', localStorage.getItem('theme') || 'dark')
-      document.documentElement.setAttribute('lang', localStorage.getItem('lang') || 'en')
+      var lang = new URLSearchParams(location.search).get('lang') || localStorage.getItem('lang')
+      document.documentElement.setAttribute('lang', lang === 'pt' ? 'pt' : 'en')
     </script>
 
     <!-- Canonical & social -->
     <link rel="canonical" href="https://jmbcs.github.io/portfolio/" />
+    <link rel="alternate" hreflang="en" href="https://jmbcs.github.io/portfolio/" />
+    <link rel="alternate" hreflang="pt-PT" href="https://jmbcs.github.io/portfolio/?lang=pt" />
+    <link rel="alternate" hreflang="x-default" href="https://jmbcs.github.io/portfolio/" />
     <meta property="og:type" content="profile" />
     <meta property="og:title" content="Júlio Silva — Backend Engineer" />
     <meta
@@ -44,7 +48,7 @@
 
     <link
       rel="icon"
-      href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%2358a6ff'><path d='M3 3h18a1 1 0 0 1 1 1v16a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1zm1 2v14h16V5H4zm8 10a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm-3-1a1 1 0 1 1 0-2 1 1 0 0 1 0 2zm6 0a1 1 0 1 1 0-2 1 1 0 0 1 0 2z'/></svg>"
+      href="data:image/svg+xml,%3Csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20viewBox=%270%200%2024%2024%27%20fill=%27%2358a6ff%27%3E%3Cpath%20d=%27M3%203h18a1%201%200%200%201%201%201v16a1%201%200%200%201-1%201H3a1%201%200%200%201-1-1V4a1%201%200%200%201%201-1zm1%202v14h16V5H4zm8%2010a1%201%200%201%201%200%202%201%201%200%200%201%200-2zm-3-1a1%201%200%201%201%200-2%201%201%200%200%201%200%202zm6%200a1%201%200%201%201%200-2%201%201%200%200%201%200%202z%27/%3E%3C/svg%3E"
       type="image/svg+xml"
     />
 
@@ -66,13 +70,22 @@
         "url": "https://jmbcs.github.io/portfolio/",
         "image": "https://jmbcs.github.io/portfolio/imgs/profile.jpg",
         "email": "mailto:julio.m.b.c.silva@gmail.com",
-        "worksFor": { "@type": "Organization", "name": "GuestReady" },
-        "alumniOf": { "@type": "CollegeOrUniversity", "name": "University of Aveiro" },
+        "worksFor": {
+          "@type": "Organization",
+          "name": "GuestReady",
+          "url": "https://www.rentalready.com/"
+        },
+        "alumniOf": {
+          "@type": "CollegeOrUniversity",
+          "name": "University of Aveiro",
+          "url": "https://www.ua.pt/"
+        },
         "address": { "@type": "PostalAddress", "addressLocality": "Viseu", "addressCountry": "PT" },
         "knowsLanguage": ["pt", "en"],
         "knowsAbout": [
-          "Python", "JavaScript", "React", "Django", "FastAPI", "PostgreSQL", "Redis",
-          "Distributed Systems", "REST APIs", "gRPC", "Celery", "Event-driven architecture"
+          "Python", "Go", "JavaScript", "React", "Django", "FastAPI", "PostgreSQL", "Redis",
+          "Distributed Systems", "REST APIs", "gRPC", "Celery", "RabbitMQ",
+          "Event-driven architecture", "Docker", "AWS", "Grafana", "Observability"
         ],
         "sameAs": [
           "https://github.com/jmbcs",

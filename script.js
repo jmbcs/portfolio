@@ -97,6 +97,9 @@
 
   // ── Language ───────────────────────────────────────────────────────────────
   const langToggle = document.querySelector('[data-lang-toggle]');
+  const canonicalLink = document.querySelector('link[rel="canonical"]');
+  const ogUrl = document.querySelector('meta[property="og:url"]');
+  const canonicalBase = canonicalLink.href;
   const I18N_PROPS = [
     ['data-i18n', 'textContent'],
     ['data-i18n-html', 'innerHTML'],
@@ -133,6 +136,16 @@
 
     langToggle.textContent = pt ? 'EN' : 'PT';
     langToggle.setAttribute('aria-label', pt ? 'Switch to English' : 'Mudar para Português');
+
+    // ?lang=pt makes the translation shareable and gives crawlers a URL to index
+    const url = new URL(location.href);
+    if (pt) url.searchParams.set('lang', 'pt');
+    else url.searchParams.delete('lang');
+    history.replaceState(null, '', url);
+
+    const canonical = canonicalBase + (pt ? '?lang=pt' : '');
+    canonicalLink.href = canonical;
+    ogUrl.setAttribute('content', canonical);
   }
 
   function t(key) {
@@ -140,7 +153,7 @@
     return dict[key] ?? EN[key] ?? key;
   }
 
-  applyLang(localStorage.getItem('lang'));
+  applyLang(new URLSearchParams(location.search).get('lang') || localStorage.getItem('lang'));
 
   langToggle.addEventListener('click', () => {
     applyLang(document.documentElement.getAttribute('lang') === 'pt' ? 'en' : 'pt');
