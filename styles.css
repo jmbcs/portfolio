@@ -622,6 +622,8 @@ section[id] { scroll-margin-top: var(--nav-h); }
 /* =============================================================================
    Projects
    ============================================================================= */
+.projects-group + .projects-group { margin-top: var(--sp-7); }
+
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -657,6 +659,14 @@ section[id] { scroll-margin-top: var(--nav-h); }
   font-weight: 500;
 }
 .card-idx { font-size: var(--fs-xs); color: var(--c-faint); }
+
+.project-top:has(+ .project-role) { margin-bottom: var(--sp-1); }
+.project-role {
+  font-family: var(--font-mono);
+  font-size: var(--fs-xs);
+  color: var(--c-faint);
+  margin-bottom: var(--sp-3);
+}
 
 .project-links { display: flex; gap: var(--sp-3); flex-shrink: 0; }
 .project-links a {

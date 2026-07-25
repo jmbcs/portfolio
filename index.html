@@ -352,82 +352,94 @@
       <section id="projects">
         <div class="container">
           <h2 class="section-label"><span class="idx">04</span> <span data-i18n="sec_projects">projects</span></h2>
-          <div class="projects-grid">
-            <div class="project-card">
-              <div class="project-top">
-                <h3><span class="card-idx">01</span>TaskMate</h3>
-                <div class="project-links">
-                  <a href="https://github.com/jmbcs/taskmate" target="_blank" rel="noopener" aria-label="TaskMate on GitHub">
-                    <svg class="icon" aria-hidden="true"><use href="#i-github" /></svg>
-                  </a>
+          <p class="section-note" data-i18n="projects_note">Personal projects, then team products I worked on — owned by their companies.</p>
+
+          <div class="projects-group">
+            <h3 class="sub-label" data-i18n="proj_group_personal">Personal</h3>
+            <div class="projects-grid">
+              <div class="project-card">
+                <div class="project-top">
+                  <h3><span class="card-idx">01</span>TaskMate</h3>
+                  <div class="project-links">
+                    <a href="https://github.com/jmbcs/taskmate" target="_blank" rel="noopener" aria-label="TaskMate on GitHub">
+                      <svg class="icon" aria-hidden="true"><use href="#i-github" /></svg>
+                    </a>
+                  </div>
+                </div>
+                <p data-i18n="proj1_desc">Task management app built with Django and PostgreSQL. REST API design with structured data modeling and a maintainable backend architecture.</p>
+                <div class="tag-row">
+                  <span>Python</span><span>Django</span><span>PostgreSQL</span>
                 </div>
               </div>
-              <p data-i18n="proj1_desc">Task management app built with Django and PostgreSQL. REST API design with structured data modeling and a maintainable backend architecture.</p>
-              <div class="tag-row">
-                <span>Python</span><span>Django</span><span>PostgreSQL</span>
+
+              <div class="project-card">
+                <div class="project-top">
+                  <h3><span class="card-idx">02</span>prod-killer</h3>
+                  <div class="project-links">
+                    <a href="https://github.com/jmbcs/prod-killer" target="_blank" rel="noopener" aria-label="prod-killer on GitHub">
+                      <svg class="icon" aria-hidden="true"><use href="#i-github" /></svg>
+                    </a>
+                  </div>
+                </div>
+                <p data-i18n="proj2_desc">Because someone has to be held accountable. Log production incidents, name the culprit, and watch the shame leaderboard do the rest.</p>
+                <div class="tag-row">
+                  <span>Python</span><span>FastAPI</span><span>HTMX</span><span>SQLite</span>
+                </div>
+              </div>
+
+              <div class="project-card">
+                <div class="project-top">
+                  <h3><span class="card-idx">03</span>Portfolio</h3>
+                  <div class="project-links">
+                    <a href="https://github.com/jmbcs/portfolio" target="_blank" rel="noopener" aria-label="Portfolio on GitHub">
+                      <svg class="icon" aria-hidden="true"><use href="#i-github" /></svg>
+                    </a>
+                  </div>
+                </div>
+                <p data-i18n="proj4_desc">This site — built without frameworks as a static page with vanilla HTML, CSS, and JavaScript.</p>
+                <div class="tag-row">
+                  <span>HTML</span><span>CSS</span><span>JavaScript</span>
+                </div>
               </div>
             </div>
+          </div>
 
-            <div class="project-card">
-              <div class="project-top">
-                <h3><span class="card-idx">02</span>prod-killer</h3>
-                <div class="project-links">
-                  <a href="https://github.com/jmbcs/prod-killer" target="_blank" rel="noopener" aria-label="prod-killer on GitHub">
-                    <svg class="icon" aria-hidden="true"><use href="#i-github" /></svg>
-                  </a>
+          <div class="projects-group">
+            <h3 class="sub-label" data-i18n="proj_group_work">Team products I worked on</h3>
+            <div class="projects-grid">
+              <div class="project-card">
+                <div class="project-top">
+                  <h3><span class="card-idx">04</span>BigHPC</h3>
+                  <div class="project-links">
+                    <a href="https://www.youtube.com/watch?v=5gaiovo9DD0" target="_blank" rel="noopener" aria-label="BigHPC conference talk">
+                      <svg class="icon" aria-hidden="true"><use href="#i-youtube" /></svg>
+                    </a>
+                    <a href="https://bighpc.wavecom.pt/" target="_blank" rel="noopener" aria-label="BigHPC website">
+                      <svg class="icon" aria-hidden="true"><use href="#i-external" /></svg>
+                    </a>
+                  </div>
+                </div>
+                <p class="project-role" data-i18n="proj3_role">Wavecom · Software Engineer</p>
+                <p data-i18n="proj3_desc">Research project at Wavecom. I built the real-time monitoring platform for HPC clusters — Python collectors, VictoriaMetrics as the time-series backend, and Grafana dashboards.</p>
+                <div class="tag-row">
+                  <span>Python</span><span>Docker</span><span>VictoriaMetrics</span><span>Grafana</span>
                 </div>
               </div>
-              <p data-i18n="proj2_desc">Because someone has to be held accountable. Log production incidents, name the culprit, and watch the shame leaderboard do the rest.</p>
-              <div class="tag-row">
-                <span>Python</span><span>FastAPI</span><span>HTMX</span><span>SQLite</span>
-              </div>
-            </div>
 
-            <div class="project-card">
-              <div class="project-top">
-                <h3><span class="card-idx">03</span>BigHPC</h3>
-                <div class="project-links">
-                  <a href="https://www.youtube.com/watch?v=5gaiovo9DD0" target="_blank" rel="noopener" aria-label="BigHPC conference talk">
-                    <svg class="icon" aria-hidden="true"><use href="#i-youtube" /></svg>
-                  </a>
-                  <a href="https://bighpc.wavecom.pt/" target="_blank" rel="noopener" aria-label="BigHPC website">
-                    <svg class="icon" aria-hidden="true"><use href="#i-external" /></svg>
-                  </a>
+              <div class="project-card">
+                <div class="project-top">
+                  <h3><span class="card-idx">05</span>RentalReady</h3>
+                  <div class="project-links">
+                    <a href="https://www.rentalready.com/" target="_blank" rel="noopener" aria-label="RentalReady website">
+                      <svg class="icon" aria-hidden="true"><use href="#i-external" /></svg>
+                    </a>
+                  </div>
                 </div>
-              </div>
-              <p data-i18n="proj3_desc">Real-time monitoring platform for HPC clusters. Aggregates metrics from distributed compute nodes using Python collectors, VictoriaMetrics as the time-series backend, and Grafana for visualization.</p>
-              <div class="tag-row">
-                <span>Python</span><span>Docker</span><span>VictoriaMetrics</span><span>Grafana</span>
-              </div>
-            </div>
-
-            <div class="project-card">
-              <div class="project-top">
-                <h3><span class="card-idx">04</span>Portfolio</h3>
-                <div class="project-links">
-                  <a href="https://github.com/jmbcs/portfolio" target="_blank" rel="noopener" aria-label="Portfolio on GitHub">
-                    <svg class="icon" aria-hidden="true"><use href="#i-github" /></svg>
-                  </a>
+                <p class="project-role" data-i18n="proj5_role">GuestReady · Backend Engineer</p>
+                <p data-i18n="proj5_desc">Commercial PMS owned by GuestReady, built by a distributed engineering team. I work on the channel integration layer — availability and rate sync, promotions, and pricing.</p>
+                <div class="tag-row">
+                  <span>Django</span><span>PostgreSQL</span><span>RabbitMQ</span><span>Redis</span><span>AWS</span>
                 </div>
-              </div>
-              <p data-i18n="proj4_desc">This site — built without frameworks as a static page with vanilla HTML, CSS, and JavaScript.</p>
-              <div class="tag-row">
-                <span>HTML</span><span>CSS</span><span>JavaScript</span>
-              </div>
-            </div>
-
-            <div class="project-card">
-              <div class="project-top">
-                <h3><span class="card-idx">05</span>RentalReady</h3>
-                <div class="project-links">
-                  <a href="https://www.rentalready.com/" target="_blank" rel="noopener" aria-label="RentalReady website">
-                    <svg class="icon" aria-hidden="true"><use href="#i-external" /></svg>
-                  </a>
-                </div>
-              </div>
-              <p data-i18n="proj5_desc">Enterprise PMS for short-term rentals. Backend powered by Django, PostgreSQL, RabbitMQ, and Redis — managing multi-channel distribution across global OTA platforms at scale.</p>
-              <div class="tag-row">
-                <span>Django</span><span>PostgreSQL</span><span>RabbitMQ</span><span>Redis</span><span>AWS</span>
               </div>
             </div>
           </div>
