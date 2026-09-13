@@ -58,6 +58,7 @@
     proj4_desc: 'Este site — construído sem frameworks, como uma página estática em HTML, CSS e JavaScript puros.',
     proj5_role: 'GuestReady · Engenheiro Backend',
     proj5_desc: 'PMS comercial propriedade da GuestReady, construído por uma equipa de engenharia distribuída. Trabalho na camada de integração de canais — sincronização de disponibilidade e tarifas, promoções e preços.',
+    proj6_desc: 'Crawler web concorrente, restrito a um único domínio. Pool de workers em asyncio sobre uma fila com deduplicação, correspondência de robots.txt conforme a RFC 9309, e uma API de jobs opcional com Postgres.',
     add_links_label: 'Links Relevantes', add_languages_label: 'Idiomas',
     link_bighpc_site: 'BigHPC — Site do Projeto',
     link_bighpc_talk: 'BigHPC — Palestra em Conferência',
